@@ -5,6 +5,11 @@ backed by a deterministic synthetic SQLite dataset (read-only).
 
 ## Quick start
 
+```Shell
+py -m venv venv
+venv/scripts/activate
+```
+
 ```bash
 pip install -r requirements.txt     # backend deps (fastapi, uvicorn, pytest, ...)
 npm install --prefix static         # frontend deps (react, vite, recharts)
