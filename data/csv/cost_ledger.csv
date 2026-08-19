@@ -1,0 +1,202 @@
+cost_id,batch_id,cost_date,cost_category,quantity,unit,unit_cost_aud,total_cost_aud,notes
+C00001,B001,2025-01-08,Sorting Labour,35.0,h,48.0,1680.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00002,B001,2025-01-14,Inspection,19.4,h,55.0,1067.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00003,B001,2025-01-17,Processing,40.2,h,80.0,3216.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00004,B001,2025-01-20,Special Handling,1.99,t,80.0,159.52,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00005,B001,2025-01-20,Disposal,2.12,t,45.0,95.22,Residual tonnes x synthetic disposal cost / t.
+C00006,B001,2025-01-08,Transport,35.0,t,25.0,875.0,Inbound transport (reported separately from Total Recovery Cost).
+C00007,B002,2025-01-17,Sorting Labour,42.2,h,48.0,2025.6,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00008,B002,2025-01-23,Inspection,13.3,h,55.0,731.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00009,B002,2025-01-29,Processing,57.2,h,80.0,4576.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00010,B002,2025-01-29,Special Handling,3.52,t,80.0,281.36,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00011,B002,2025-01-29,Disposal,0.26,t,45.0,11.47,Residual tonnes x synthetic disposal cost / t.
+C00012,B002,2025-01-17,Transport,49.7,t,25.0,1242.5,Inbound transport (reported separately from Total Recovery Cost).
+C00013,B002,2025-01-27,Other,432.78,aud,1.0,432.78,Small miscellaneous equipment / consumable cost (reported separately).
+C00014,B003,2025-01-24,Sorting Labour,10.7,h,48.0,513.6,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00015,B003,2025-01-30,Inspection,4.7,h,55.0,258.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00016,B003,2025-01-30,Processing,27.3,h,80.0,2184.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00017,B003,2025-02-05,Disposal,1.28,t,45.0,57.64,Residual tonnes x synthetic disposal cost / t.
+C00018,B003,2025-01-24,Transport,23.7,t,25.0,592.5,Inbound transport (reported separately from Total Recovery Cost).
+C00019,B003,2025-02-03,Other,366.13,aud,1.0,366.13,Small miscellaneous equipment / consumable cost (reported separately).
+C00020,B004,2025-02-07,Sorting Labour,40.7,h,48.0,1953.6,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00021,B004,2025-02-13,Inspection,11.2,h,55.0,616.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00022,B004,2025-02-18,Processing,46.8,h,80.0,3744.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00023,B004,2025-02-19,Special Handling,0.28,t,80.0,22.48,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00024,B004,2025-02-07,Transport,40.7,t,25.0,1017.5,Inbound transport (reported separately from Total Recovery Cost).
+C00025,B004,2025-02-17,Other,563.24,aud,1.0,563.24,Small miscellaneous equipment / consumable cost (reported separately).
+C00026,B005,2025-02-13,Sorting Labour,28.0,h,48.0,1344.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00027,B005,2025-02-19,Inspection,7.3,h,55.0,401.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00028,B005,2025-02-21,Processing,40.2,h,80.0,3216.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00029,B005,2025-02-25,Special Handling,2.21,t,80.0,176.56,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00030,B005,2025-02-13,Transport,35.0,t,25.0,875.0,Inbound transport (reported separately from Total Recovery Cost).
+C00031,B006,2025-02-24,Sorting Labour,70.5,h,48.0,3384.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00032,B006,2025-03-02,Inspection,39.1,h,55.0,2150.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00033,B006,2025-03-04,Inspection,561.37,aud,1.0,561.37,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00034,B006,2025-03-13,Processing,32.4,h,80.0,2592.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00035,B006,2025-03-08,Special Handling,5.03,t,80.0,402.48,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00036,B006,2025-03-08,Disposal,2.37,t,45.0,106.83,Residual tonnes x synthetic disposal cost / t.
+C00037,B006,2025-02-24,Transport,28.2,t,25.0,705.0,Inbound transport (reported separately from Total Recovery Cost).
+C00038,B007,2025-03-05,Sorting Labour,36.5,h,48.0,1752.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00039,B007,2025-03-11,Inspection,15.7,h,55.0,863.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00040,B007,2025-03-16,Processing,49.3,h,80.0,3944.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00041,B007,2025-03-17,Special Handling,1.65,t,80.0,131.68,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00042,B007,2025-03-17,Disposal,1.79,t,45.0,80.55,Residual tonnes x synthetic disposal cost / t.
+C00043,B007,2025-03-05,Transport,42.9,t,25.0,1072.5,Inbound transport (reported separately from Total Recovery Cost).
+C00044,B008,2025-03-14,Sorting Labour,27.1,h,48.0,1300.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00045,B008,2025-03-20,Inspection,3.8,h,55.0,209.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00046,B008,2025-03-24,Processing,31.2,h,80.0,2496.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00047,B008,2025-03-26,Disposal,0.82,t,45.0,36.85,Residual tonnes x synthetic disposal cost / t.
+C00048,B008,2025-03-14,Transport,27.1,t,25.0,677.5,Inbound transport (reported separately from Total Recovery Cost).
+C00049,B008,2025-03-24,Other,494.21,aud,1.0,494.21,Small miscellaneous equipment / consumable cost (reported separately).
+C00050,B009,2025-03-25,Sorting Labour,28.4,h,48.0,1363.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00051,B009,2025-03-31,Inspection,15.4,h,55.0,847.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00052,B009,2025-04-02,Inspection,180.49,aud,1.0,180.49,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00053,B009,2025-04-02,Processing,23.3,h,80.0,1864.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00054,B009,2025-04-06,Special Handling,5.35,t,80.0,427.92,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00055,B009,2025-03-25,Transport,20.3,t,25.0,507.5,Inbound transport (reported separately from Total Recovery Cost).
+C00056,B010,2025-04-04,Sorting Labour,65.3,h,48.0,3134.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00057,B010,2025-04-10,Inspection,32.5,h,55.0,1787.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00058,B010,2025-04-20,Processing,44.2,h,80.0,3536.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00059,B010,2025-04-16,Special Handling,0.55,t,80.0,44.16,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00060,B010,2025-04-04,Transport,38.4,t,25.0,960.0,Inbound transport (reported separately from Total Recovery Cost).
+C00061,B011,2025-04-16,Sorting Labour,15.8,h,48.0,758.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00062,B011,2025-04-22,Inspection,4.4,h,55.0,242.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00063,B011,2025-04-24,Processing,40.2,h,80.0,3216.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00064,B011,2025-04-28,Special Handling,2.81,t,80.0,225.12,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00065,B011,2025-04-16,Transport,35.0,t,25.0,875.0,Inbound transport (reported separately from Total Recovery Cost).
+C00066,B012,2025-04-25,Sorting Labour,29.4,h,48.0,1411.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00067,B012,2025-05-01,Inspection,5.5,h,55.0,302.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00068,B012,2025-05-05,Processing,33.8,h,80.0,2704.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00069,B012,2025-05-07,Special Handling,4.31,t,80.0,344.48,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00070,B012,2025-05-07,Disposal,0.43,t,45.0,19.39,Residual tonnes x synthetic disposal cost / t.
+C00071,B012,2025-04-25,Transport,29.4,t,25.0,735.0,Inbound transport (reported separately from Total Recovery Cost).
+C00072,B013,2025-05-05,Sorting Labour,41.5,h,48.0,1992.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00073,B013,2025-05-11,Inspection,6.3,h,55.0,346.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00074,B013,2025-05-15,Processing,59.7,h,80.0,4776.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00075,B013,2025-05-17,Special Handling,2.16,t,80.0,172.96,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00076,B013,2025-05-05,Transport,51.9,t,25.0,1297.5,Inbound transport (reported separately from Total Recovery Cost).
+C00077,B013,2025-05-15,Other,595.09,aud,1.0,595.09,Small miscellaneous equipment / consumable cost (reported separately).
+C00078,B014,2025-05-18,Sorting Labour,22.6,h,48.0,1084.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00079,B014,2025-05-24,Inspection,6.3,h,55.0,346.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00080,B014,2025-05-25,Processing,26.0,h,80.0,2080.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00081,B014,2025-05-30,Special Handling,0.28,t,80.0,22.64,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00082,B014,2025-05-18,Transport,22.6,t,25.0,565.0,Inbound transport (reported separately from Total Recovery Cost).
+C00083,B014,2025-05-28,Other,336.17,aud,1.0,336.17,Small miscellaneous equipment / consumable cost (reported separately).
+C00084,B015,2025-05-26,Sorting Labour,31.7,h,48.0,1521.6,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00085,B015,2025-06-01,Inspection,8.2,h,55.0,451.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00086,B015,2025-06-04,Processing,42.9,h,80.0,3432.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00087,B015,2025-06-07,Special Handling,5.48,t,80.0,438.08,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00088,B015,2025-05-26,Transport,37.3,t,25.0,932.5,Inbound transport (reported separately from Total Recovery Cost).
+C00089,B015,2025-06-05,Other,672.61,aud,1.0,672.61,Small miscellaneous equipment / consumable cost (reported separately).
+C00090,B016,2025-06-04,Sorting Labour,67.1,h,48.0,3220.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00091,B016,2025-06-10,Inspection,44.1,h,55.0,2425.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00092,B016,2025-06-12,Inspection,563.9,aud,1.0,563.9,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00093,B016,2025-06-19,Processing,45.4,h,80.0,3632.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00094,B016,2025-06-16,Special Handling,1.33,t,80.0,106.72,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00095,B016,2025-06-04,Transport,39.5,t,25.0,987.5,Inbound transport (reported separately from Total Recovery Cost).
+C00096,B017,2025-06-15,Sorting Labour,142.2,h,48.0,6825.6,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00097,B017,2025-06-21,Inspection,73.7,h,55.0,4053.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00098,B017,2025-07-15,Processing,54.5,h,80.0,4360.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00099,B017,2025-06-27,Special Handling,3.18,t,80.0,254.24,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00100,B017,2025-06-27,Disposal,3.75,t,45.0,168.57,Residual tonnes x synthetic disposal cost / t.
+C00101,B017,2025-06-15,Transport,47.4,t,25.0,1185.0,Inbound transport (reported separately from Total Recovery Cost).
+C00102,B018,2025-06-26,Sorting Labour,27.1,h,48.0,1300.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00103,B018,2025-07-02,Inspection,2.6,h,55.0,143.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00104,B018,2025-07-04,Processing,31.2,h,80.0,2496.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00105,B018,2025-07-08,Special Handling,1.29,t,80.0,103.2,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00106,B018,2025-07-08,Disposal,0.34,t,45.0,15.35,Residual tonnes x synthetic disposal cost / t.
+C00107,B018,2025-06-26,Transport,27.1,t,25.0,677.5,Inbound transport (reported separately from Total Recovery Cost).
+C00108,B018,2025-07-06,Other,622.88,aud,1.0,622.88,Small miscellaneous equipment / consumable cost (reported separately).
+C00109,B019,2025-07-05,Sorting Labour,15.3,h,48.0,734.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00110,B019,2025-07-11,Inspection,7.2,h,55.0,396.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00111,B019,2025-07-12,Processing,39.0,h,80.0,3120.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00112,B019,2025-07-17,Special Handling,2.6,t,80.0,207.68,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00113,B019,2025-07-17,Disposal,4.12,t,45.0,185.49,Residual tonnes x synthetic disposal cost / t.
+C00114,B019,2025-07-05,Transport,33.9,t,25.0,847.5,Inbound transport (reported separately from Total Recovery Cost).
+C00115,B020,2025-07-13,Sorting Labour,30.5,h,48.0,1464.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00116,B020,2025-07-19,Inspection,7.7,h,55.0,423.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00117,B020,2025-07-22,Processing,35.1,h,80.0,2808.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00118,B020,2025-07-25,Special Handling,0.57,t,80.0,45.68,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00119,B020,2025-07-13,Transport,30.5,t,25.0,762.5,Inbound transport (reported separately from Total Recovery Cost).
+C00120,B021,2025-07-26,Sorting Labour,41.3,h,48.0,1982.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00121,B021,2025-08-01,Inspection,18.1,h,55.0,995.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00122,B021,2025-08-07,Processing,55.9,h,80.0,4472.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00123,B021,2025-08-07,Special Handling,5.06,t,80.0,404.48,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00124,B021,2025-08-07,Disposal,0.39,t,45.0,17.59,Residual tonnes x synthetic disposal cost / t.
+C00125,B021,2025-07-26,Transport,48.6,t,25.0,1215.0,Inbound transport (reported separately from Total Recovery Cost).
+C00126,B022,2025-08-04,Sorting Labour,33.4,h,48.0,1603.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00127,B022,2025-08-10,Inspection,12.3,h,55.0,676.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00128,B022,2025-08-14,Processing,48.1,h,80.0,3848.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00129,B022,2025-08-04,Transport,41.8,t,25.0,1045.0,Inbound transport (reported separately from Total Recovery Cost).
+C00130,B023,2025-08-15,Sorting Labour,70.5,h,48.0,3384.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00131,B023,2025-08-21,Inspection,41.0,h,55.0,2255.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00132,B023,2025-09-02,Processing,32.4,h,80.0,2592.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00133,B023,2025-08-27,Special Handling,6.67,t,80.0,533.36,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00134,B023,2025-08-27,Disposal,4.73,t,45.0,212.76,Residual tonnes x synthetic disposal cost / t.
+C00135,B023,2025-08-15,Transport,28.2,t,25.0,705.0,Inbound transport (reported separately from Total Recovery Cost).
+C00136,B023,2025-08-25,Other,566.23,aud,1.0,566.23,Small miscellaneous equipment / consumable cost (reported separately).
+C00137,B024,2025-08-28,Sorting Labour,35.0,h,48.0,1680.0,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00138,B024,2025-09-03,Inspection,11.0,h,55.0,605.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00139,B024,2025-09-08,Processing,40.2,h,80.0,3216.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00140,B024,2025-09-09,Special Handling,1.22,t,80.0,97.36,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00141,B024,2025-09-09,Disposal,0.34,t,45.0,15.21,Residual tonnes x synthetic disposal cost / t.
+C00142,B024,2025-08-28,Transport,35.0,t,25.0,875.0,Inbound transport (reported separately from Total Recovery Cost).
+C00143,B025,2025-09-06,Sorting Labour,63.4,h,48.0,3043.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00144,B025,2025-09-12,Inspection,40.7,h,55.0,2238.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00145,B025,2025-09-14,Inspection,1240.49,aud,1.0,1240.49,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00146,B025,2025-09-19,Processing,42.9,h,80.0,3432.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00147,B025,2025-09-18,Special Handling,0.32,t,80.0,25.36,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00148,B025,2025-09-06,Transport,37.3,t,25.0,932.5,Inbound transport (reported separately from Total Recovery Cost).
+C00149,B025,2025-09-16,Other,538.09,aud,1.0,538.09,Small miscellaneous equipment / consumable cost (reported separately).
+C00150,B026,2025-09-14,Sorting Labour,36.4,h,48.0,1747.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00151,B026,2025-09-20,Inspection,17.0,h,55.0,935.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00152,B026,2025-09-26,Processing,29.9,h,80.0,2392.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00153,B026,2025-09-26,Special Handling,13.11,t,80.0,1048.4,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00154,B026,2025-09-14,Transport,26.0,t,25.0,650.0,Inbound transport (reported separately from Total Recovery Cost).
+C00155,B027,2025-09-28,Sorting Labour,43.3,h,48.0,2078.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00156,B027,2025-10-04,Inspection,71.6,h,55.0,3938.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00157,B027,2025-10-06,Inspection,497.08,aud,1.0,497.08,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00158,B027,2025-09-28,Transport,36.1,t,25.0,902.5,Inbound transport (reported separately from Total Recovery Cost).
+C00159,B027,2025-10-08,Other,256.04,aud,1.0,256.04,Small miscellaneous equipment / consumable cost (reported separately).
+C00160,B028,2025-10-04,Sorting Labour,19.8,h,48.0,950.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00161,B028,2025-10-10,Inspection,15.9,h,55.0,874.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00162,B028,2025-10-13,Processing,50.6,h,80.0,4048.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00163,B028,2025-10-16,Disposal,1.22,t,45.0,54.9,Residual tonnes x synthetic disposal cost / t.
+C00164,B028,2025-10-04,Transport,44.0,t,25.0,1100.0,Inbound transport (reported separately from Total Recovery Cost).
+C00165,B029,2025-10-14,Sorting Labour,21.1,h,48.0,1012.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00166,B029,2025-10-20,Inspection,5.9,h,55.0,324.5,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00167,B029,2025-10-20,Processing,28.5,h,80.0,2280.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00168,B029,2025-10-26,Special Handling,4.09,t,80.0,326.96,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00169,B029,2025-10-14,Transport,24.8,t,25.0,620.0,Inbound transport (reported separately from Total Recovery Cost).
+C00170,B030,2025-10-23,Sorting Labour,44.8,h,48.0,2150.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00171,B030,2025-10-29,Inspection,76.2,h,55.0,4191.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00172,B030,2025-10-31,Inspection,1693.4,aud,1.0,1693.4,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00173,B030,2025-10-23,Transport,37.3,t,25.0,932.5,Inbound transport (reported separately from Total Recovery Cost).
+C00174,B031,2025-11-06,Sorting Labour,37.3,h,48.0,1790.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00175,B031,2025-11-12,Inspection,6.6,h,55.0,363.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00176,B031,2025-11-22,Processing,42.9,h,80.0,3432.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00177,B031,2025-11-06,Transport,37.3,t,25.0,932.5,Inbound transport (reported separately from Total Recovery Cost).
+C00178,B032,2025-11-16,Sorting Labour,25.3,h,48.0,1214.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00179,B032,2025-11-22,Inspection,7.6,h,55.0,418.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00180,B032,2025-11-30,Processing,36.3,h,80.0,2904.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00181,B032,2025-11-28,Special Handling,2.6,t,80.0,208.08,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00182,B032,2025-11-16,Transport,31.6,t,25.0,790.0,Inbound transport (reported separately from Total Recovery Cost).
+C00183,B033,2025-11-24,Sorting Labour,39.4,h,48.0,1891.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00184,B033,2025-11-30,Inspection,67.2,h,55.0,3696.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00185,B033,2025-12-02,Inspection,1948.95,aud,1.0,1948.95,External inspection cost from InspectionEvents (e.g. treatment verification).
+C00186,B033,2025-11-24,Transport,32.8,t,25.0,820.0,Inbound transport (reported separately from Total Recovery Cost).
+C00187,B033,2025-12-04,Other,572.93,aud,1.0,572.93,Small miscellaneous equipment / consumable cost (reported separately).
+C00188,B034,2025-12-06,Sorting Labour,37.9,h,48.0,1819.2,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00189,B034,2025-12-12,Inspection,19.8,h,55.0,1089.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00190,B034,2025-12-21,Processing,30.3,h,80.0,2424.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00191,B034,2025-12-18,Special Handling,1.49,t,80.0,119.04,Special handling tonnes (from RecoveryOutputs route=Special Handling) x synthetic special handling cost / t.
+C00192,B034,2025-12-18,Disposal,0.31,t,45.0,13.99,Residual tonnes x synthetic disposal cost / t.
+C00193,B034,2025-12-06,Transport,27.1,t,25.0,677.5,Inbound transport (reported separately from Total Recovery Cost).
+C00194,B034,2025-12-16,Other,272.67,aud,1.0,272.67,Small miscellaneous equipment / consumable cost (reported separately).
+C00195,B035,2025-12-15,Sorting Labour,15.3,h,48.0,734.4,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00196,B035,2025-12-21,Inspection,7.4,h,55.0,407.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00197,B035,2025-12-25,Processing,38.2,h,80.0,3056.0,Processing machine hours from ProcessingEvents x synthetic machine rate.
+C00198,B035,2025-12-15,Transport,33.9,t,25.0,847.5,Inbound transport (reported separately from Total Recovery Cost).
+C00199,B036,2025-12-22,Sorting Labour,22.6,h,48.0,1084.8,Sorting labour hours from ProcessingEvents stage=Sorting x synthetic sorting rate.
+C00200,B036,2025-12-28,Inspection,9.8,h,55.0,539.0,Inspection labour hours summed from InspectionEvents x synthetic inspection rate.
+C00201,B036,2025-12-22,Transport,22.6,t,25.0,565.0,Inbound transport (reported separately from Total Recovery Cost).

@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "dataset_type": "synthetic_prototype",
+    "currency": "AUD",
+    "weight_unit": "t",
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-31",
+    "as_of": "2025-12-31T18:00:00",
+    "seed": 20260818,
+    "prototype": true
+  },
+  "sections": {
+    "executive_metrics": {
+      "net_recovery_value_per_t": 85.08,
+      "incoming_timber_t": 1240.0,
+      "processed_timber_t": 1013.365,
+      "higher_value_recovery_rate": 39.1,
+      "processing_cost_per_processed_t": 100.74,
+      "processing_cost_per_incoming_t": 82.33,
+      "total_recovery_cost_per_incoming_t": 181.24,
+      "recovered_value_per_t": 325.88,
+      "unresolved_inspection_rate": 10.71,
+      "gross_recovered_value_aud": 330235.59,
+      "total_recovery_cost_aud": 224734.19,
+      "net_recovery_value_aud": 105501.4,
+      "closed_batch_net_recovery_value_per_t": 143.38
+    },
+    "recovery_performance": {
+      "route_distribution": [
+        {
+          "recovery_route": "Higher-value Recovery",
+          "weight_t": 396.25,
+          "percentage": 39.1
+        },
+        {
+          "recovery_route": "Board Feedstock",
+          "weight_t": 513.73,
+          "percentage": 50.7
+        },
+        {
+          "recovery_route": "Special Handling",
+          "weight_t": 79.12,
+          "percentage": 7.81
+        },
+        {
+          "recovery_route": "Residual / Disposal",
+          "weight_t": 24.26,
+          "percentage": 2.39
+        }
+      ],
+      "board_feedstock_rate": 50.7,
+      "residual_rate": 2.39,
+      "special_handling_rate": 7.81,
+      "downgrade_rate": 7.7
+    },
+    "sorting_economics": {
+      "negative_net_sorting_benefit_batch_count": 12,
+      "negative_net_sorting_benefit_batches": [
+        "B006",
+        "B017",
+        "B023",
+        "B026",
+        "B027",
+        "B030",
+        "B031",
+        "B032",
+        "B033",
+        "B034",
+        "B035",
+        "B036"
+      ],
+      "negative_net_sorting_benefit_realised_count": 4,
+      "negative_net_sorting_benefit_realised_batches": [
+        "B006",
+        "B017",
+        "B023",
+        "B026"
+      ],
+      "total_net_sorting_benefit_aud": 37301.4,
+      "net_sorting_benefit_per_t": 30.08,
+      "sorting_cost_per_t": 53.98,
+      "inspection_cost_per_t": 38.95,
+      "top_by_net_sorting_benefit_realised": [
+        {
+          "batch_id": "B013",
+          "net_sorting_benefit_aud": 13500.0
+        },
+        {
+          "batch_id": "B022",
+          "net_sorting_benefit_aud": 10974.32
+        },
+        {
+          "batch_id": "B025",
+          "net_sorting_benefit_aud": 8146.5
+        },
+        {
+          "batch_id": "B021",
+          "net_sorting_benefit_aud": 7971.78
+        },
+        {
+          "batch_id": "B007",
+          "net_sorting_benefit_aud": 6237.61
+        }
+      ],
+      "bottom_by_net_sorting_benefit_realised": [
+        {
+          "batch_id": "B017",
+          "net_sorting_benefit_aud": -6172.24
+        },
+        {
+          "batch_id": "B006",
+          "net_sorting_benefit_aud": -4144.08
+        },
+        {
+          "batch_id": "B023",
+          "net_sorting_benefit_aud": -4077.55
+        },
+        {
+          "batch_id": "B026",
+          "net_sorting_benefit_aud": -2365.64
+        },
+        {
+          "batch_id": "B009",
+          "net_sorting_benefit_aud": 122.82
+        }
+      ]
+    },
+    "operations": {
+      "throughput_t_per_day": 2.78,
+      "average_batch_turnaround_hours": 589.1,
+      "median_batch_turnaround_hours": 447.0,
+      "open_batch_count": 8,
+      "backlog": [
+        {
+          "backlog_stage": "Sorting",
+          "weight_t": 14.48,
+          "percentage_of_open_weight": 6.39,
+          "as_of_date": "2025-12-31"
+        },
+        {
+          "backlog_stage": "Inspection",
+          "weight_t": 104.09,
+          "percentage_of_open_weight": 45.93,
+          "as_of_date": "2025-12-31"
+        },
+        {
+          "backlog_stage": "Processing",
+          "weight_t": 79.37,
+          "percentage_of_open_weight": 35.02,
+          "as_of_date": "2025-12-31"
+        },
+        {
+          "backlog_stage": "Unresolved",
+          "weight_t": 28.7,
+          "percentage_of_open_weight": 12.66,
+          "as_of_date": "2025-12-31"
+        }
+      ]
+    },
+    "risk_uncertainty": {
+      "unresolved_inspection_rate": 10.71,
+      "open_inspection_weight_t": 132.79,
+      "unresolved_weight_t": 28.7,
+      "complete_record_rate": 52.9,
+      "partial_record_rate": 30.36,
+      "critical_missing_rate": 16.74,
+      "unknown_treatment_rate": 25.63
+    },
+    "source_performance": {
+      "realised_source_performance": [
+        {
+          "source_type": "Commercial Demolition",
+          "completed_batch_count": 5,
+          "completed_incoming_weight_t": 177.3,
+          "realised_higher_value_recovery_rate": 55.75,
+          "realised_processing_cost_per_processed_t": 92.0,
+          "realised_total_recovery_cost_per_incoming_t": 214.9,
+          "realised_recovered_value_per_t": 410.77,
+          "realised_net_recovery_value_per_t": 195.87,
+          "realised_net_sorting_benefit_aud": 24976.78
+        },
+        {
+          "source_type": "Direct Salvage Purchase",
+          "completed_batch_count": 2,
+          "completed_incoming_weight_t": 52.0,
+          "realised_higher_value_recovery_rate": 29.98,
+          "realised_processing_cost_per_processed_t": 92.0,
+          "realised_total_recovery_cost_per_incoming_t": 159.91,
+          "realised_recovered_value_per_t": 268.56,
+          "realised_net_recovery_value_per_t": 108.64,
+          "realised_net_sorting_benefit_aud": 2789.36
+        },
+        {
+          "source_type": "Industrial Renewal",
+          "completed_batch_count": 6,
+          "completed_incoming_weight_t": 238.3,
+          "realised_higher_value_recovery_rate": 43.03,
+          "realised_processing_cost_per_processed_t": 91.98,
+          "realised_total_recovery_cost_per_incoming_t": 160.61,
+          "realised_recovered_value_per_t": 346.84,
+          "realised_net_recovery_value_per_t": 186.23,
+          "realised_net_sorting_benefit_aud": 31271.36
+        },
+        {
+          "source_type": "Infrastructure Salvage",
+          "completed_batch_count": 3,
+          "completed_incoming_weight_t": 128.7,
+          "realised_higher_value_recovery_rate": 61.95,
+          "realised_processing_cost_per_processed_t": 92.0,
+          "realised_total_recovery_cost_per_incoming_t": 144.16,
+          "realised_recovered_value_per_t": 418.44,
+          "realised_net_recovery_value_per_t": 274.28,
+          "realised_net_sorting_benefit_aud": 28221.22
+        },
+        {
+          "source_type": "Residential Demolition",
+          "completed_batch_count": 7,
+          "completed_incoming_weight_t": 240.4,
+          "realised_higher_value_recovery_rate": 22.49,
+          "realised_processing_cost_per_processed_t": 91.98,
+          "realised_total_recovery_cost_per_incoming_t": 215.74,
+          "realised_recovered_value_per_t": 236.68,
+          "realised_net_recovery_value_per_t": 20.94,
+          "realised_net_sorting_benefit_aud": -8188.06
+        },
+        {
+          "source_type": "Warehouse Deconstruction",
+          "completed_batch_count": 5,
+          "completed_incoming_weight_t": 144.6,
+          "realised_higher_value_recovery_rate": 26.97,
+          "realised_processing_cost_per_processed_t": 92.0,
+          "realised_total_recovery_cost_per_incoming_t": 179.29,
+          "realised_recovered_value_per_t": 287.25,
+          "realised_net_recovery_value_per_t": 107.97,
+          "realised_net_sorting_benefit_aud": 7659.41
+        }
+      ],
+      "current_operational_exposure": [
+        {
+          "source_type": "Commercial Demolition",
+          "open_batch_count": 2,
+          "open_incoming_weight_t": 59.9,
+          "open_processed_weight_t": 12.43,
+          "open_unresolved_weight_t": 0.35,
+          "open_inspection_weight_t": 11.94,
+          "cost_incurred_to_date_aud": 7209.2,
+          "value_realised_to_date_aud": 3557.15
+        },
+        {
+          "source_type": "Direct Salvage Purchase",
+          "open_batch_count": 3,
+          "open_incoming_weight_t": 106.2,
+          "open_processed_weight_t": 0,
+          "open_unresolved_weight_t": 27.62,
+          "open_inspection_weight_t": 106.2,
+          "cost_incurred_to_date_aud": 22084.43,
+          "value_realised_to_date_aud": 0
+        },
+        {
+          "source_type": "Infrastructure Salvage",
+          "open_batch_count": 1,
+          "open_incoming_weight_t": 31.6,
+          "open_processed_weight_t": 9.28,
+          "open_unresolved_weight_t": 0.0,
+          "open_inspection_weight_t": 3.14,
+          "cost_incurred_to_date_aud": 4744.48,
+          "value_realised_to_date_aud": 2680.44
+        },
+        {
+          "source_type": "Residential Demolition",
+          "open_batch_count": 1,
+          "open_incoming_weight_t": 33.9,
+          "open_processed_weight_t": 6.44,
+          "open_unresolved_weight_t": 0.45,
+          "open_inspection_weight_t": 3.75,
+          "cost_incurred_to_date_aud": 4197.4,
+          "value_realised_to_date_aud": 1508.14
+        },
+        {
+          "source_type": "Warehouse Deconstruction",
+          "open_batch_count": 1,
+          "open_incoming_weight_t": 27.1,
+          "open_processed_weight_t": 3.91,
+          "open_unresolved_weight_t": 0.28,
+          "open_inspection_weight_t": 7.75,
+          "cost_incurred_to_date_aud": 5465.23,
+          "value_realised_to_date_aud": 754.84
+        }
+      ]
+    },
+    "outlier_batches": {
+      "best_by_net_recovery_value_per_t_realised": [
+        {
+          "batch_id": "B022",
+          "net_recovery_value_per_t": 317.54
+        },
+        {
+          "batch_id": "B013",
+          "net_recovery_value_per_t": 315.12
+        },
+        {
+          "batch_id": "B025",
+          "net_recovery_value_per_t": 273.4
+        }
+      ],
+      "worst_by_net_sorting_benefit_realised": [
+        {
+          "batch_id": "B017",
+          "net_sorting_benefit_aud": -6172.24
+        },
+        {
+          "batch_id": "B006",
+          "net_sorting_benefit_aud": -4144.08
+        },
+        {
+          "batch_id": "B023",
+          "net_sorting_benefit_aud": -4077.55
+        }
+      ],
+      "highest_unresolved_weight_t": [
+        {
+          "batch_id": "B030",
+          "unresolved_weight_t": 9.758
+        },
+        {
+          "batch_id": "B033",
+          "unresolved_weight_t": 9.044
+        },
+        {
+          "batch_id": "B027",
+          "unresolved_weight_t": 8.817
+        }
+      ],
+      "batch_17_sorting_plus_inspection_cost_per_t": 229.52,
+      "batch_30_provisional_exposure": {
+        "economic_evaluation_status": "Provisional",
+        "cost_incurred_to_date_aud": 8034.8,
+        "unresolved_weight_t": 9.758,
+        "note": "In-progress recovery case: high provisional cost exposure and high unresolved workload; NOT a realised poor performer."
+      }
+    },
+    "data_limitations": [
+      "All values are synthetic prototype assumptions; no real company, benchmark or market standard implied.",
+      "No field claims structural safety, chemical safety or certification.",
+      "North Star includes the economic effect of open/backlogged material; not accounting profit; short-period values can be volatile.",
+      "Open / Partially Completed batches are labelled Provisional; their current negative values are cost-incurred-to-date vs value-realised-to-date, not final performance.",
+      "Realised economic comparisons (ranking, quadrant medians) use Completed batches only.",
+      "Month-end backlog snapshots are generator-computed states from raw event/inspection timelines.",
+      "Comparison periods limited to what 2025 data supports (e.g. December vs November); no 2024 records fabricated."
+    ]
+  }
+}

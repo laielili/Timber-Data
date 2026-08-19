@@ -1,0 +1,165 @@
+output_id,batch_id,output_date,recovery_route,recovery_grade,weight_t,unit_value_aud_per_t,gross_value_aud
+OUT00001,B001,2025-01-25,Board Feedstock,Feedstock,6.408,151.75,972.41
+OUT00002,B001,2025-01-25,Board Feedstock,Rustic,13.078,261.29,3417.15
+OUT00003,B001,2025-01-25,Higher-value Recovery,Character,5.652,470.84,2661.19
+OUT00004,B001,2025-01-25,Higher-value Recovery,Premium,5.753,633.15,3642.51
+OUT00005,B001,2025-01-25,Residual / Disposal,Feedstock,2.116,15.17,32.1
+OUT00006,B001,2025-01-25,Special Handling,Feedstock,1.994,111.28,221.89
+OUT00007,B002,2025-02-08,Board Feedstock,Feedstock,15.98,151.28,2417.45
+OUT00008,B002,2025-02-08,Board Feedstock,Rustic,11.038,300.11,3312.61
+OUT00009,B002,2025-02-08,Higher-value Recovery,Character,13.467,467.89,6301.07
+OUT00010,B002,2025-02-08,Higher-value Recovery,Premium,5.443,677.63,3688.34
+OUT00011,B002,2025-02-08,Residual / Disposal,Feedstock,0.255,15.13,3.86
+OUT00012,B002,2025-02-08,Special Handling,Feedstock,3.517,110.94,390.18
+OUT00013,B003,2025-02-05,Board Feedstock,Feedstock,14.604,136.03,1986.58
+OUT00014,B003,2025-02-05,Board Feedstock,Rustic,1.027,270.14,277.43
+OUT00015,B003,2025-02-05,Higher-value Recovery,Character,5.608,419.13,2350.48
+OUT00016,B003,2025-02-05,Higher-value Recovery,Premium,1.179,692.14,816.03
+OUT00017,B003,2025-02-05,Residual / Disposal,Feedstock,1.281,13.6,17.42
+OUT00018,B004,2025-02-26,Board Feedstock,Feedstock,16.142,151.44,2444.54
+OUT00019,B004,2025-02-26,Board Feedstock,Rustic,18.037,296.21,5342.74
+OUT00020,B004,2025-02-26,Higher-value Recovery,Character,2.284,434.84,993.17
+OUT00021,B004,2025-02-26,Higher-value Recovery,Premium,3.957,593.56,2348.72
+OUT00022,B004,2025-02-26,Special Handling,Feedstock,0.281,111.05,31.21
+OUT00023,B005,2025-03-01,Board Feedstock,Feedstock,9.101,153.84,1400.1
+OUT00024,B005,2025-03-01,Board Feedstock,Rustic,10.414,255.88,2664.73
+OUT00025,B005,2025-03-01,Higher-value Recovery,Character,11.812,462.34,5461.16
+OUT00026,B005,2025-03-01,Higher-value Recovery,Premium,1.465,706.47,1034.98
+OUT00027,B005,2025-03-01,Special Handling,Feedstock,2.207,112.82,248.99
+OUT00028,B006,2025-03-20,Board Feedstock,Feedstock,7.426,142.2,1055.98
+OUT00029,B006,2025-03-20,Board Feedstock,Rustic,5.76,276.8,1594.37
+OUT00030,B006,2025-03-20,Higher-value Recovery,Character,7.465,442.49,3303.19
+OUT00031,B006,2025-03-20,Higher-value Recovery,Premium,0.144,640.06,92.17
+OUT00032,B006,2025-03-20,Residual / Disposal,Feedstock,2.374,14.22,33.76
+OUT00033,B006,2025-03-20,Special Handling,Feedstock,5.031,104.28,524.63
+OUT00034,B007,2025-03-25,Board Feedstock,Feedstock,9.652,136.74,1319.81
+OUT00035,B007,2025-03-25,Board Feedstock,Rustic,9.012,252.0,2271.02
+OUT00036,B007,2025-03-25,Higher-value Recovery,Character,12.916,489.3,6319.8
+OUT00037,B007,2025-03-25,Higher-value Recovery,Premium,7.883,668.36,5268.68
+OUT00038,B007,2025-03-25,Residual / Disposal,Feedstock,1.79,13.67,24.47
+OUT00039,B007,2025-03-25,Special Handling,Feedstock,1.646,100.28,165.06
+OUT00040,B008,2025-03-30,Board Feedstock,Feedstock,7.459,142.75,1064.77
+OUT00041,B008,2025-03-30,Board Feedstock,Rustic,12.976,292.31,3793.01
+OUT00042,B008,2025-03-30,Higher-value Recovery,Character,2.756,458.19,1262.77
+OUT00043,B008,2025-03-30,Higher-value Recovery,Premium,3.09,665.18,2055.41
+OUT00044,B008,2025-03-30,Residual / Disposal,Feedstock,0.819,14.28,11.7
+OUT00045,B009,2025-04-07,Board Feedstock,Feedstock,7.083,140.39,994.38
+OUT00046,B009,2025-04-07,Board Feedstock,Rustic,0.211,265.67,56.06
+OUT00047,B009,2025-04-07,Higher-value Recovery,Character,2.149,439.46,944.4
+OUT00048,B009,2025-04-07,Higher-value Recovery,Premium,5.509,612.89,3376.41
+OUT00049,B009,2025-04-07,Special Handling,Feedstock,5.349,102.95,550.68
+OUT00050,B010,2025-04-28,Board Feedstock,Feedstock,6.158,157.29,968.59
+OUT00051,B010,2025-04-28,Board Feedstock,Rustic,4.427,278.45,1232.7
+OUT00052,B010,2025-04-28,Higher-value Recovery,Character,12.671,456.6,5785.58
+OUT00053,B010,2025-04-28,Higher-value Recovery,Premium,14.592,593.16,8655.39
+OUT00054,B010,2025-04-28,Special Handling,Feedstock,0.552,115.34,63.67
+OUT00055,B011,2025-05-02,Board Feedstock,Feedstock,14.739,148.68,2191.39
+OUT00056,B011,2025-05-02,Board Feedstock,Rustic,12.367,268.01,3314.48
+OUT00057,B011,2025-05-02,Higher-value Recovery,Character,1.408,451.28,635.4
+OUT00058,B011,2025-05-02,Higher-value Recovery,Premium,3.672,699.43,2568.31
+OUT00059,B011,2025-05-02,Special Handling,Feedstock,2.814,109.03,306.81
+OUT00060,B012,2025-05-12,Board Feedstock,Feedstock,12.084,141.3,1707.47
+OUT00061,B012,2025-05-12,Board Feedstock,Rustic,5.779,266.98,1542.88
+OUT00062,B012,2025-05-12,Higher-value Recovery,Character,3.845,449.53,1728.44
+OUT00063,B012,2025-05-12,Higher-value Recovery,Premium,2.955,622.38,1839.13
+OUT00064,B012,2025-05-12,Residual / Disposal,Feedstock,0.431,14.13,6.09
+OUT00065,B012,2025-05-12,Special Handling,Feedstock,4.306,103.62,446.19
+OUT00066,B013,2025-05-25,Board Feedstock,Feedstock,4.888,147.5,720.98
+OUT00067,B013,2025-05-25,Board Feedstock,Rustic,10.378,291.85,3028.82
+OUT00068,B013,2025-05-25,Higher-value Recovery,Character,16.026,468.53,7508.66
+OUT00069,B013,2025-05-25,Higher-value Recovery,Premium,18.446,658.66,12149.64
+OUT00070,B013,2025-05-25,Special Handling,Feedstock,2.162,108.17,233.86
+OUT00071,B014,2025-05-30,Board Feedstock,Feedstock,12.329,154.96,1910.5
+OUT00072,B014,2025-05-30,Board Feedstock,Rustic,1.198,265.01,317.48
+OUT00073,B014,2025-05-30,Higher-value Recovery,Character,7.117,483.74,3442.78
+OUT00074,B014,2025-05-30,Higher-value Recovery,Premium,1.673,592.8,991.75
+OUT00075,B014,2025-05-30,Special Handling,Feedstock,0.283,113.64,32.16
+OUT00076,B015,2025-06-12,Board Feedstock,Feedstock,2.985,136.88,408.59
+OUT00077,B015,2025-06-12,Board Feedstock,Rustic,16.437,285.33,4689.97
+OUT00078,B015,2025-06-12,Higher-value Recovery,Character,6.171,445.58,2749.67
+OUT00079,B015,2025-06-12,Higher-value Recovery,Premium,6.231,609.84,3799.91
+OUT00080,B015,2025-06-12,Special Handling,Feedstock,5.476,100.38,549.68
+OUT00081,B016,2025-06-26,Board Feedstock,Feedstock,2.298,139.16,319.79
+OUT00082,B016,2025-06-26,Board Feedstock,Rustic,12.151,260.5,3165.34
+OUT00083,B016,2025-06-26,Higher-value Recovery,Character,8.044,451.6,3632.67
+OUT00084,B016,2025-06-26,Higher-value Recovery,Premium,15.674,614.77,9635.9
+OUT00085,B016,2025-06-26,Special Handling,Feedstock,1.334,102.05,136.13
+OUT00086,B017,2025-07-24,Board Feedstock,Feedstock,14.577,139.59,2034.8
+OUT00087,B017,2025-07-24,Board Feedstock,Rustic,11.231,289.93,3256.2
+OUT00088,B017,2025-07-24,Higher-value Recovery,Character,13.586,419.15,5694.57
+OUT00089,B017,2025-07-24,Higher-value Recovery,Premium,1.082,677.89,733.48
+OUT00090,B017,2025-07-24,Residual / Disposal,Feedstock,3.746,13.96,52.29
+OUT00091,B017,2025-07-24,Special Handling,Feedstock,3.178,102.37,325.33
+OUT00092,B018,2025-07-10,Board Feedstock,Feedstock,9.039,148.57,1342.92
+OUT00093,B018,2025-07-10,Board Feedstock,Rustic,6.966,260.12,1812.0
+OUT00094,B018,2025-07-10,Higher-value Recovery,Character,4.714,471.23,2221.38
+OUT00095,B018,2025-07-10,Higher-value Recovery,Premium,4.75,601.42,2856.74
+OUT00096,B018,2025-07-10,Residual / Disposal,Feedstock,0.341,14.86,5.07
+OUT00097,B018,2025-07-10,Special Handling,Feedstock,1.29,108.95,140.55
+OUT00098,B019,2025-07-19,Board Feedstock,Feedstock,16.159,138.09,2231.4
+OUT00099,B019,2025-07-19,Board Feedstock,Rustic,4.885,273.45,1335.8
+OUT00100,B019,2025-07-19,Higher-value Recovery,Character,2.68,426.64,1143.4
+OUT00101,B019,2025-07-19,Higher-value Recovery,Premium,3.457,644.67,2228.62
+OUT00102,B019,2025-07-19,Residual / Disposal,Feedstock,4.122,13.81,56.92
+OUT00103,B019,2025-07-19,Special Handling,Feedstock,2.596,101.27,262.9
+OUT00104,B020,2025-07-29,Board Feedstock,Feedstock,8.441,155.28,1310.72
+OUT00105,B020,2025-07-29,Board Feedstock,Rustic,6.884,269.22,1853.31
+OUT00106,B020,2025-07-29,Higher-value Recovery,Character,11.377,488.39,5556.41
+OUT00107,B020,2025-07-29,Higher-value Recovery,Premium,3.227,711.23,2295.14
+OUT00108,B020,2025-07-29,Special Handling,Feedstock,0.571,113.87,65.02
+OUT00109,B021,2025-08-16,Board Feedstock,Feedstock,7.849,147.82,1160.24
+OUT00110,B021,2025-08-16,Board Feedstock,Rustic,9.972,257.75,2570.28
+OUT00111,B021,2025-08-16,Higher-value Recovery,Character,11.515,430.64,4958.82
+OUT00112,B021,2025-08-16,Higher-value Recovery,Premium,13.817,671.17,9273.56
+OUT00113,B021,2025-08-16,Residual / Disposal,Feedstock,0.391,14.78,5.78
+OUT00114,B021,2025-08-16,Special Handling,Feedstock,5.056,108.4,548.07
+OUT00115,B022,2025-08-22,Board Feedstock,Feedstock,4.732,160.1,757.59
+OUT00116,B022,2025-08-22,Board Feedstock,Rustic,5.089,278.13,1415.4
+OUT00117,B022,2025-08-22,Higher-value Recovery,Character,14.906,440.02,6558.94
+OUT00118,B022,2025-08-22,Higher-value Recovery,Premium,17.073,624.91,10669.09
+OUT00119,B023,2025-09-09,Board Feedstock,Feedstock,4.792,160.8,770.55
+OUT00120,B023,2025-09-09,Board Feedstock,Rustic,5.457,284.3,1551.43
+OUT00121,B023,2025-09-09,Higher-value Recovery,Character,5.128,442.75,2270.42
+OUT00122,B023,2025-09-09,Higher-value Recovery,Premium,1.429,696.97,995.97
+OUT00123,B023,2025-09-09,Residual / Disposal,Feedstock,4.728,16.08,76.03
+OUT00124,B023,2025-09-09,Special Handling,Feedstock,6.667,117.92,786.17
+OUT00125,B024,2025-09-16,Board Feedstock,Feedstock,14.292,142.41,2035.32
+OUT00126,B024,2025-09-16,Board Feedstock,Rustic,9.011,303.56,2735.38
+OUT00127,B024,2025-09-16,Higher-value Recovery,Character,4.209,476.72,2006.51
+OUT00128,B024,2025-09-16,Higher-value Recovery,Premium,5.933,635.37,3769.65
+OUT00129,B024,2025-09-16,Residual / Disposal,Feedstock,0.338,14.24,4.81
+OUT00130,B024,2025-09-16,Special Handling,Feedstock,1.217,104.43,127.09
+OUT00131,B025,2025-09-27,Board Feedstock,Feedstock,6.412,145.41,932.37
+OUT00132,B025,2025-09-27,Board Feedstock,Rustic,2.321,261.94,607.96
+OUT00133,B025,2025-09-27,Higher-value Recovery,Character,6.446,471.06,3036.45
+OUT00134,B025,2025-09-27,Higher-value Recovery,Premium,21.804,713.95,15566.97
+OUT00135,B025,2025-09-27,Special Handling,Feedstock,0.317,106.63,33.8
+OUT00136,B026,2025-10-02,Board Feedstock,Feedstock,4.237,149.42,633.09
+OUT00137,B026,2025-10-02,Board Feedstock,Rustic,4.006,278.77,1116.75
+OUT00138,B026,2025-10-02,Higher-value Recovery,Character,4.42,420.95,1860.6
+OUT00139,B026,2025-10-02,Higher-value Recovery,Premium,0.232,605.48,140.47
+OUT00140,B026,2025-10-02,Special Handling,Feedstock,13.105,109.58,1436.05
+OUT00141,B028,2025-10-22,Board Feedstock,Feedstock,23.971,139.87,3352.82
+OUT00142,B028,2025-10-22,Board Feedstock,Rustic,11.586,304.63,3529.44
+OUT00143,B028,2025-10-22,Higher-value Recovery,Character,6.957,425.03,2956.93
+OUT00144,B028,2025-10-22,Higher-value Recovery,Premium,0.266,623.35,165.81
+OUT00145,B028,2025-10-22,Residual / Disposal,Feedstock,1.22,13.99,17.07
+OUT00146,B029,2025-10-26,Board Feedstock,Feedstock,3.347,161.68,541.14
+OUT00147,B029,2025-10-26,Board Feedstock,Rustic,3.665,295.96,1084.69
+OUT00148,B029,2025-10-26,Higher-value Recovery,Character,9.857,483.16,4762.51
+OUT00149,B029,2025-10-26,Higher-value Recovery,Premium,3.844,685.5,2635.06
+OUT00150,B029,2025-10-26,Special Handling,Feedstock,4.087,118.57,484.6
+OUT00151,B031,2025-11-21,Board Feedstock,Feedstock,6.133,139.3,854.33
+OUT00152,B031,2025-11-21,Board Feedstock,Rustic,3.31,291.54,965.0
+OUT00153,B031,2025-11-21,Higher-value Recovery,Character,0.963,410.0,394.83
+OUT00154,B031,2025-11-21,Higher-value Recovery,Premium,2.022,664.19,1342.99
+OUT00155,B032,2025-11-29,Board Feedstock,Feedstock,0.758,146.84,111.3
+OUT00156,B032,2025-11-29,Board Feedstock,Rustic,2.428,257.2,624.48
+OUT00157,B032,2025-11-29,Higher-value Recovery,Character,3.494,476.41,1664.58
+OUT00158,B032,2025-11-29,Special Handling,Feedstock,2.601,107.68,280.08
+OUT00159,B034,2025-12-20,Board Feedstock,Feedstock,0.065,143.45,9.32
+OUT00160,B034,2025-12-20,Board Feedstock,Rustic,2.049,285.28,584.54
+OUT00161,B034,2025-12-20,Residual / Disposal,Feedstock,0.311,14.34,4.46
+OUT00162,B034,2025-12-20,Special Handling,Feedstock,1.488,105.19,156.52
+OUT00163,B035,2025-12-24,Board Feedstock,Feedstock,2.719,160.5,436.4
+OUT00164,B035,2025-12-24,Board Feedstock,Rustic,3.723,287.87,1071.74

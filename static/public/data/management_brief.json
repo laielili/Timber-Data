@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "dataset_type": "synthetic_prototype",
+    "currency": "AUD",
+    "weight_unit": "t",
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-31",
+    "as_of": "2025-12-31T18:00:00",
+    "seed": 20260818,
+    "prototype": true
+  },
+  "briefs": [
+    {
+      "id": "brief_batch_17",
+      "title": "Batch 17 is generating unusually high sorting costs.",
+      "detail": "Sorting + inspection: $229.52/t · realised net sorting benefit: -$6.2k",
+      "severity": "attention",
+      "related_batch_id": "B017",
+      "question_id": "q1",
+      "basis": "selected_period",
+      "values": {
+        "sorting_inspection_cost_per_t": 229.52,
+        "net_sorting_benefit_aud": -6172.24
+      }
+    },
+    {
+      "id": "brief_inspection_backlog",
+      "title": "Inspection backlog rose at the latest snapshot.",
+      "detail": "104.09 t open · +21.7% vs November · as of 31 Dec 2025",
+      "severity": "attention",
+      "related_batch_id": null,
+      "question_id": "q3",
+      "basis": "snapshot",
+      "values": {
+        "inspection_backlog_t": 104.09,
+        "inspection_backlog_growth_vs_nov_pct": 21.7,
+        "as_of_date": "2025-12-31"
+      }
+    },
+    {
+      "id": "brief_higher_value",
+      "title": "Higher-value recovery remains above the prototype target.",
+      "detail": "39.1% of processed output vs 30% prototype target",
+      "severity": "positive",
+      "related_batch_id": null,
+      "question_id": "q4",
+      "basis": "selected_period",
+      "values": {
+        "higher_value_recovery_rate": 39.1,
+        "higher_value_target_pct": 30.0
+      }
+    }
+  ]
+}

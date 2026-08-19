@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Secrets
+.secrets/
+.env
+.env.local
+
+# tmps
+_trash/
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Tests / tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Workbuddy / editor
+.workbuddy/
+.idea/
+.vscode/
+
+# OS noise
+.DS_Store
+Thumbs.db

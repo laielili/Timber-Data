@@ -1,0 +1,1024 @@
+{
+  "meta": {
+    "dataset_type": "synthetic_prototype",
+    "currency": "AUD",
+    "weight_unit": "t",
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-31",
+    "as_of": "2025-12-31T18:00:00",
+    "seed": 20260818,
+    "prototype": true
+  },
+  "north_star": {
+    "id": "net_recovery_value_per_t",
+    "label": "Net Recovery Value / t",
+    "value": 85.08,
+    "unit": "AUD/t",
+    "basis": "selected_period",
+    "status": "positive",
+    "description": "Net commercial recovery value generated to date, after core recovery costs, per tonne of timber entering the operation within the selected prototype period.",
+    "prototype": true,
+    "comparison_value": null,
+    "change_absolute": null,
+    "change_percent": null,
+    "trend": null,
+    "closed_batch_net_recovery_value_per_t": 143.38,
+    "closed_batch_basis": "completed batches only (analytical companion)"
+  },
+  "kpis": {
+    "incoming_timber": {
+      "id": "incoming_timber",
+      "label": "Incoming Timber",
+      "value": 1240.0,
+      "unit": "t",
+      "basis": "selected_period",
+      "status": "neutral",
+      "description": "Total batch incoming weight within the selected period.",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    },
+    "processed_timber": {
+      "id": "processed_timber",
+      "label": "Processed Timber",
+      "value": 1013.365,
+      "unit": "t",
+      "basis": "selected_period",
+      "status": "neutral",
+      "description": "Total recovered output weight within the selected period.",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    },
+    "higher_value_recovery_rate": {
+      "id": "higher_value_recovery_rate",
+      "label": "Higher-value Recovery Rate",
+      "value": 39.1,
+      "unit": "%",
+      "basis": "selected_period",
+      "status": "positive",
+      "description": "Higher-value recovered output weight / total processed output weight.",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    },
+    "processing_cost_per_processed_t": {
+      "id": "processing_cost_per_processed_t",
+      "label": "Processing Cost / t",
+      "value": 100.74,
+      "unit": "AUD/t",
+      "basis": "selected_period",
+      "status": "neutral",
+      "description": "Direct processing cost per tonne of timber processed (denominator = processed output weight, not incoming).",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    },
+    "recovered_value_per_t": {
+      "id": "recovered_value_per_t",
+      "label": "Recovered Value / t",
+      "value": 325.88,
+      "unit": "AUD/t",
+      "basis": "selected_period",
+      "status": "neutral",
+      "description": "Gross recovered output value / processed output weight.",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    },
+    "unresolved_inspection_rate": {
+      "id": "unresolved_inspection_rate",
+      "label": "Unresolved / Inspection Rate",
+      "value": 10.71,
+      "unit": "%",
+      "basis": "snapshot",
+      "status": "neutral",
+      "description": "Weight of materials unresolved OR under open inspection at as_of, / incoming t (union, no double counting).",
+      "prototype": true,
+      "comparison_value": null,
+      "change_absolute": null,
+      "change_percent": null,
+      "trend": null
+    }
+  },
+  "charts": {
+    "recovery_route_distribution": [
+      {
+        "recovery_route": "Higher-value Recovery",
+        "weight_t": 396.25,
+        "percentage": 39.1
+      },
+      {
+        "recovery_route": "Board Feedstock",
+        "weight_t": 513.73,
+        "percentage": 50.7
+      },
+      {
+        "recovery_route": "Special Handling",
+        "weight_t": 79.12,
+        "percentage": 7.81
+      },
+      {
+        "recovery_route": "Residual / Disposal",
+        "weight_t": 24.26,
+        "percentage": 2.39
+      }
+    ],
+    "incoming_vs_processed": [
+      {
+        "month": "2025-01",
+        "incoming_timber_t": 108.4,
+        "processed_timber_t": 35.001
+      },
+      {
+        "month": "2025-02",
+        "incoming_timber_t": 103.9,
+        "processed_timber_t": 114.1
+      },
+      {
+        "month": "2025-03",
+        "incoming_timber_t": 90.3,
+        "processed_timber_t": 133.198
+      },
+      {
+        "month": "2025-04",
+        "incoming_timber_t": 102.8,
+        "processed_timber_t": 58.701
+      },
+      {
+        "month": "2025-05",
+        "incoming_timber_t": 111.8,
+        "processed_timber_t": 138.9
+      },
+      {
+        "month": "2025-06",
+        "incoming_timber_t": 114.0,
+        "processed_timber_t": 76.801
+      },
+      {
+        "month": "2025-07",
+        "incoming_timber_t": 113.0,
+        "processed_timber_t": 138.899
+      },
+      {
+        "month": "2025-08",
+        "incoming_timber_t": 105.0,
+        "processed_timber_t": 90.4
+      },
+      {
+        "month": "2025-09",
+        "incoming_timber_t": 99.4,
+        "processed_timber_t": 100.501
+      },
+      {
+        "month": "2025-10",
+        "incoming_timber_t": 106.1,
+        "processed_timber_t": 94.8
+      },
+      {
+        "month": "2025-11",
+        "incoming_timber_t": 101.7,
+        "processed_timber_t": 21.709
+      },
+      {
+        "month": "2025-12",
+        "incoming_timber_t": 83.6,
+        "processed_timber_t": 10.355
+      }
+    ],
+    "operational_backlog": [
+      {
+        "backlog_stage": "Sorting",
+        "weight_t": 14.48,
+        "percentage_of_open_weight": 6.39,
+        "as_of_date": "2025-12-31"
+      },
+      {
+        "backlog_stage": "Inspection",
+        "weight_t": 104.09,
+        "percentage_of_open_weight": 45.93,
+        "as_of_date": "2025-12-31"
+      },
+      {
+        "backlog_stage": "Processing",
+        "weight_t": 79.37,
+        "percentage_of_open_weight": 35.02,
+        "as_of_date": "2025-12-31"
+      },
+      {
+        "backlog_stage": "Unresolved",
+        "weight_t": 28.7,
+        "percentage_of_open_weight": 12.66,
+        "as_of_date": "2025-12-31"
+      }
+    ],
+    "net_sorting_benefit": [
+      {
+        "batch_id": "B013",
+        "source_type": "Infrastructure Salvage",
+        "incoming_weight_t": 51.9,
+        "net_sorting_benefit_aud": 13500.0,
+        "net_sorting_benefit_per_t": 260.12,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B022",
+        "source_type": "Infrastructure Salvage",
+        "incoming_weight_t": 41.8,
+        "net_sorting_benefit_aud": 10974.32,
+        "net_sorting_benefit_per_t": 262.54,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B025",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 37.3,
+        "net_sorting_benefit_aud": 8146.5,
+        "net_sorting_benefit_per_t": 218.4,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B021",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 48.6,
+        "net_sorting_benefit_aud": 7971.78,
+        "net_sorting_benefit_per_t": 164.03,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B007",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 42.9,
+        "net_sorting_benefit_aud": 6237.61,
+        "net_sorting_benefit_per_t": 145.4,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B010",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 38.4,
+        "net_sorting_benefit_aud": 6091.87,
+        "net_sorting_benefit_per_t": 158.64,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B002",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 49.7,
+        "net_sorting_benefit_aud": 5754.08,
+        "net_sorting_benefit_per_t": 115.78,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B016",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 39.5,
+        "net_sorting_benefit_aud": 4768.41,
+        "net_sorting_benefit_per_t": 120.72,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B020",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 30.5,
+        "net_sorting_benefit_aud": 4661.92,
+        "net_sorting_benefit_per_t": 152.85,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B015",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 37.3,
+        "net_sorting_benefit_aud": 4303.64,
+        "net_sorting_benefit_per_t": 115.38,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B029",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 24.8,
+        "net_sorting_benefit_aud": 4199.74,
+        "net_sorting_benefit_per_t": 169.34,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B005",
+        "source_type": "Infrastructure Salvage",
+        "incoming_weight_t": 35.0,
+        "net_sorting_benefit_aud": 3746.9,
+        "net_sorting_benefit_per_t": 107.05,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B024",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 35.0,
+        "net_sorting_benefit_aud": 3140.19,
+        "net_sorting_benefit_per_t": 89.72,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B018",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 27.1,
+        "net_sorting_benefit_aud": 2829.81,
+        "net_sorting_benefit_per_t": 104.42,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B001",
+        "source_type": "Industrial Renewal",
+        "incoming_weight_t": 35.0,
+        "net_sorting_benefit_aud": 2804.51,
+        "net_sorting_benefit_per_t": 80.13,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B008",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 27.1,
+        "net_sorting_benefit_aud": 2654.51,
+        "net_sorting_benefit_per_t": 97.95,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B011",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 35.0,
+        "net_sorting_benefit_aud": 2649.87,
+        "net_sorting_benefit_per_t": 75.71,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B004",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 40.7,
+        "net_sorting_benefit_aud": 2585.8,
+        "net_sorting_benefit_per_t": 63.53,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B014",
+        "source_type": "Direct Salvage Purchase",
+        "incoming_weight_t": 22.6,
+        "net_sorting_benefit_aud": 1917.73,
+        "net_sorting_benefit_per_t": 84.86,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B028",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 44.0,
+        "net_sorting_benefit_aud": 1674.27,
+        "net_sorting_benefit_per_t": 38.05,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B003",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 23.7,
+        "net_sorting_benefit_aud": 1130.7,
+        "net_sorting_benefit_per_t": 47.71,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B012",
+        "source_type": "Direct Salvage Purchase",
+        "incoming_weight_t": 29.4,
+        "net_sorting_benefit_aud": 871.63,
+        "net_sorting_benefit_per_t": 29.65,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B019",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 33.9,
+        "net_sorting_benefit_aud": 750.97,
+        "net_sorting_benefit_per_t": 22.15,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B009",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 20.3,
+        "net_sorting_benefit_aud": 122.82,
+        "net_sorting_benefit_per_t": 6.05,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B026",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 26.0,
+        "net_sorting_benefit_aud": -2365.64,
+        "net_sorting_benefit_per_t": -90.99,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B036",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 22.6,
+        "net_sorting_benefit_aud": -2866.8,
+        "net_sorting_benefit_per_t": -126.85,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B032",
+        "source_type": "Infrastructure Salvage",
+        "incoming_weight_t": 31.6,
+        "net_sorting_benefit_aud": -3802.04,
+        "net_sorting_benefit_per_t": -120.32,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B023",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 28.2,
+        "net_sorting_benefit_aud": -4077.55,
+        "net_sorting_benefit_per_t": -144.59,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B031",
+        "source_type": "Commercial Demolition",
+        "incoming_weight_t": 37.3,
+        "net_sorting_benefit_aud": -4079.75,
+        "net_sorting_benefit_per_t": -109.38,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B006",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 28.2,
+        "net_sorting_benefit_aud": -4144.08,
+        "net_sorting_benefit_per_t": -146.95,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B035",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 33.9,
+        "net_sorting_benefit_aud": -4553.76,
+        "net_sorting_benefit_per_t": -134.33,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B017",
+        "source_type": "Residential Demolition",
+        "incoming_weight_t": 47.4,
+        "net_sorting_benefit_aud": -6172.24,
+        "net_sorting_benefit_per_t": -130.22,
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B034",
+        "source_type": "Warehouse Deconstruction",
+        "incoming_weight_t": 27.1,
+        "net_sorting_benefit_aud": -6200.89,
+        "net_sorting_benefit_per_t": -228.82,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B027",
+        "source_type": "Direct Salvage Purchase",
+        "incoming_weight_t": 36.1,
+        "net_sorting_benefit_aud": -8498.98,
+        "net_sorting_benefit_per_t": -235.43,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B033",
+        "source_type": "Direct Salvage Purchase",
+        "incoming_weight_t": 32.8,
+        "net_sorting_benefit_aud": -9340.15,
+        "net_sorting_benefit_per_t": -284.76,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B030",
+        "source_type": "Direct Salvage Purchase",
+        "incoming_weight_t": 37.3,
+        "net_sorting_benefit_aud": -10086.3,
+        "net_sorting_benefit_per_t": -270.41,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      }
+    ],
+    "cost_vs_recovered_value": [
+      {
+        "month": "2025-01",
+        "total_recovery_cost_aud": 16799.77,
+        "gross_recovered_value_aud": 10947.25,
+        "net_recovery_value_aud": -5852.52
+      },
+      {
+        "month": "2025-02",
+        "total_recovery_cost_aud": 14915.78,
+        "gross_recovered_value_aud": 32721.83,
+        "net_recovery_value_aud": 17806.05
+      },
+      {
+        "month": "2025-03",
+        "total_recovery_cost_aud": 18837.76,
+        "gross_recovered_value_aud": 40970.56,
+        "net_recovery_value_aud": 22132.8
+      },
+      {
+        "month": "2025-04",
+        "total_recovery_cost_aud": 16827.19,
+        "gross_recovered_value_aud": 22627.86,
+        "net_recovery_value_aud": 5800.67
+      },
+      {
+        "month": "2025-05",
+        "total_recovery_cost_aud": 15713.37,
+        "gross_recovered_value_aud": 46623.22,
+        "net_recovery_value_aud": 30909.85
+      },
+      {
+        "month": "2025-06",
+        "total_recovery_cost_aud": 26872.71,
+        "gross_recovered_value_aud": 29087.65,
+        "net_recovery_value_aud": 2214.94
+      },
+      {
+        "month": "2025-07",
+        "total_recovery_cost_aud": 18484.7,
+        "gross_recovered_value_aud": 38814.97,
+        "net_recovery_value_aud": 20330.27
+      },
+      {
+        "month": "2025-08",
+        "total_recovery_cost_aud": 20082.39,
+        "gross_recovered_value_aud": 37917.77,
+        "net_recovery_value_aud": 17835.38
+      },
+      {
+        "month": "2025-09",
+        "total_recovery_cost_aud": 24706.12,
+        "gross_recovered_value_aud": 37306.88,
+        "net_recovery_value_aud": 12600.76
+      },
+      {
+        "month": "2025-10",
+        "total_recovery_cost_aud": 22341.94,
+        "gross_recovered_value_aud": 24717.03,
+        "net_recovery_value_aud": 2375.09
+      },
+      {
+        "month": "2025-11",
+        "total_recovery_cost_aud": 15917.08,
+        "gross_recovered_value_aud": 6237.59,
+        "net_recovery_value_aud": -9679.49
+      },
+      {
+        "month": "2025-12",
+        "total_recovery_cost_aud": 13235.38,
+        "gross_recovered_value_aud": 2262.98,
+        "net_recovery_value_aud": -10972.4
+      }
+    ],
+    "batch_economics": [
+      {
+        "batch_id": "B001",
+        "source_type": "Industrial Renewal",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 78.49,
+        "recovered_value_per_t": 312.77,
+        "incoming_weight_t": 35.0,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B002",
+        "source_type": "Industrial Renewal",
+        "scenario": "A",
+        "sorting_plus_inspection_cost_per_t": 55.47,
+        "recovered_value_per_t": 324.22,
+        "incoming_weight_t": 49.7,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B003",
+        "source_type": "Residential Demolition",
+        "scenario": "F",
+        "sorting_plus_inspection_cost_per_t": 32.58,
+        "recovered_value_per_t": 229.88,
+        "incoming_weight_t": 23.7,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B004",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 63.14,
+        "recovered_value_per_t": 274.2,
+        "incoming_weight_t": 40.7,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B005",
+        "source_type": "Infrastructure Salvage",
+        "scenario": "E",
+        "sorting_plus_inspection_cost_per_t": 49.87,
+        "recovered_value_per_t": 308.86,
+        "incoming_weight_t": 35.0,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B006",
+        "source_type": "Residential Demolition",
+        "scenario": "C",
+        "sorting_plus_inspection_cost_per_t": 216.17,
+        "recovered_value_per_t": 234.19,
+        "incoming_weight_t": 28.2,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B007",
+        "source_type": "Industrial Renewal",
+        "scenario": "A",
+        "sorting_plus_inspection_cost_per_t": 60.97,
+        "recovered_value_per_t": 358.26,
+        "incoming_weight_t": 42.9,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B008",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 55.71,
+        "recovered_value_per_t": 302.13,
+        "incoming_weight_t": 27.1,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B009",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "G",
+        "sorting_plus_inspection_cost_per_t": 117.77,
+        "recovered_value_per_t": 291.71,
+        "incoming_weight_t": 20.3,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B010",
+        "source_type": "Commercial Demolition",
+        "scenario": "B",
+        "sorting_plus_inspection_cost_per_t": 128.17,
+        "recovered_value_per_t": 435.05,
+        "incoming_weight_t": 38.4,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B011",
+        "source_type": "Residential Demolition",
+        "scenario": "F",
+        "sorting_plus_inspection_cost_per_t": 28.58,
+        "recovered_value_per_t": 257.61,
+        "incoming_weight_t": 35.0,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B012",
+        "source_type": "Direct Salvage Purchase",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 58.29,
+        "recovered_value_per_t": 247.29,
+        "incoming_weight_t": 29.4,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B013",
+        "source_type": "Infrastructure Salvage",
+        "scenario": "E",
+        "sorting_plus_inspection_cost_per_t": 45.06,
+        "recovered_value_per_t": 455.53,
+        "incoming_weight_t": 51.9,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B014",
+        "source_type": "Direct Salvage Purchase",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 63.33,
+        "recovered_value_per_t": 296.22,
+        "incoming_weight_t": 22.6,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B015",
+        "source_type": "Industrial Renewal",
+        "scenario": "A",
+        "sorting_plus_inspection_cost_per_t": 52.88,
+        "recovered_value_per_t": 327.02,
+        "incoming_weight_t": 37.3,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B016",
+        "source_type": "Commercial Demolition",
+        "scenario": "B",
+        "sorting_plus_inspection_cost_per_t": 157.22,
+        "recovered_value_per_t": 427.58,
+        "incoming_weight_t": 39.5,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B017",
+        "source_type": "Residential Demolition",
+        "scenario": "C",
+        "sorting_plus_inspection_cost_per_t": 229.52,
+        "recovered_value_per_t": 255.2,
+        "incoming_weight_t": 47.4,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B018",
+        "source_type": "Commercial Demolition",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 53.28,
+        "recovered_value_per_t": 309.18,
+        "incoming_weight_t": 27.1,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B019",
+        "source_type": "Residential Demolition",
+        "scenario": "F",
+        "sorting_plus_inspection_cost_per_t": 33.35,
+        "recovered_value_per_t": 214.14,
+        "incoming_weight_t": 33.9,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B020",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 61.89,
+        "recovered_value_per_t": 363.3,
+        "incoming_weight_t": 30.5,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B021",
+        "source_type": "Industrial Renewal",
+        "scenario": "A",
+        "sorting_plus_inspection_cost_per_t": 61.27,
+        "recovered_value_per_t": 381.0,
+        "incoming_weight_t": 48.6,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B022",
+        "source_type": "Infrastructure Salvage",
+        "scenario": "E",
+        "sorting_plus_inspection_cost_per_t": 54.54,
+        "recovered_value_per_t": 464.14,
+        "incoming_weight_t": 41.8,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B023",
+        "source_type": "Residential Demolition",
+        "scenario": "C",
+        "sorting_plus_inspection_cost_per_t": 199.96,
+        "recovered_value_per_t": 228.74,
+        "incoming_weight_t": 28.2,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B024",
+        "source_type": "Commercial Demolition",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 65.29,
+        "recovered_value_per_t": 305.11,
+        "incoming_weight_t": 35.0,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B025",
+        "source_type": "Commercial Demolition",
+        "scenario": "B",
+        "sorting_plus_inspection_cost_per_t": 174.86,
+        "recovered_value_per_t": 540.95,
+        "incoming_weight_t": 37.3,
+        "economic_quadrant": "High-value / High-cost",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B026",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "G",
+        "sorting_plus_inspection_cost_per_t": 103.16,
+        "recovered_value_per_t": 199.5,
+        "incoming_weight_t": 26.0,
+        "economic_quadrant": "Review Required",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B027",
+        "source_type": "Direct Salvage Purchase",
+        "scenario": "D",
+        "sorting_plus_inspection_cost_per_t": 180.43,
+        "recovered_value_per_t": 0.0,
+        "incoming_weight_t": 36.1,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B028",
+        "source_type": "Residential Demolition",
+        "scenario": "F",
+        "sorting_plus_inspection_cost_per_t": 41.48,
+        "recovered_value_per_t": 227.77,
+        "incoming_weight_t": 44.0,
+        "economic_quadrant": "Commodity",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B029",
+        "source_type": "Industrial Renewal",
+        "scenario": "A",
+        "sorting_plus_inspection_cost_per_t": 53.92,
+        "recovered_value_per_t": 383.39,
+        "incoming_weight_t": 24.8,
+        "economic_quadrant": "Efficient",
+        "economic_evaluation_status": "Realised",
+        "eligible_for_realised_comparison": true
+      },
+      {
+        "batch_id": "B030",
+        "source_type": "Direct Salvage Purchase",
+        "scenario": "D",
+        "sorting_plus_inspection_cost_per_t": 215.41,
+        "recovered_value_per_t": 0.0,
+        "incoming_weight_t": 37.3,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B031",
+        "source_type": "Commercial Demolition",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 57.73,
+        "recovered_value_per_t": 286.22,
+        "incoming_weight_t": 37.3,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B032",
+        "source_type": "Infrastructure Salvage",
+        "scenario": "E",
+        "sorting_plus_inspection_cost_per_t": 51.66,
+        "recovered_value_per_t": 288.81,
+        "incoming_weight_t": 31.6,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B033",
+        "source_type": "Direct Salvage Purchase",
+        "scenario": "D",
+        "sorting_plus_inspection_cost_per_t": 229.76,
+        "recovered_value_per_t": 0.0,
+        "incoming_weight_t": 32.8,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B034",
+        "source_type": "Warehouse Deconstruction",
+        "scenario": "G",
+        "sorting_plus_inspection_cost_per_t": 107.31,
+        "recovered_value_per_t": 192.91,
+        "incoming_weight_t": 27.1,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B035",
+        "source_type": "Residential Demolition",
+        "scenario": "F",
+        "sorting_plus_inspection_cost_per_t": 33.67,
+        "recovered_value_per_t": 234.11,
+        "incoming_weight_t": 33.9,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      },
+      {
+        "batch_id": "B036",
+        "source_type": "Commercial Demolition",
+        "scenario": "N",
+        "sorting_plus_inspection_cost_per_t": 71.85,
+        "recovered_value_per_t": 0.0,
+        "incoming_weight_t": 22.6,
+        "economic_quadrant": null,
+        "economic_evaluation_status": "Provisional",
+        "eligible_for_realised_comparison": false
+      }
+    ]
+  }
+}

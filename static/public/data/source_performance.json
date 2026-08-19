@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "dataset_type": "synthetic_prototype",
+    "currency": "AUD",
+    "weight_unit": "t",
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-31",
+    "as_of": "2025-12-31T18:00:00",
+    "seed": 20260818,
+    "prototype": true
+  },
+  "realised_source_performance": [
+    {
+      "source_type": "Commercial Demolition",
+      "completed_batch_count": 5,
+      "completed_incoming_weight_t": 177.3,
+      "realised_higher_value_recovery_rate": 55.75,
+      "realised_processing_cost_per_processed_t": 92.0,
+      "realised_total_recovery_cost_per_incoming_t": 214.9,
+      "realised_recovered_value_per_t": 410.77,
+      "realised_net_recovery_value_per_t": 195.87,
+      "realised_net_sorting_benefit_aud": 24976.78
+    },
+    {
+      "source_type": "Direct Salvage Purchase",
+      "completed_batch_count": 2,
+      "completed_incoming_weight_t": 52.0,
+      "realised_higher_value_recovery_rate": 29.98,
+      "realised_processing_cost_per_processed_t": 92.0,
+      "realised_total_recovery_cost_per_incoming_t": 159.91,
+      "realised_recovered_value_per_t": 268.56,
+      "realised_net_recovery_value_per_t": 108.64,
+      "realised_net_sorting_benefit_aud": 2789.36
+    },
+    {
+      "source_type": "Industrial Renewal",
+      "completed_batch_count": 6,
+      "completed_incoming_weight_t": 238.3,
+      "realised_higher_value_recovery_rate": 43.03,
+      "realised_processing_cost_per_processed_t": 91.98,
+      "realised_total_recovery_cost_per_incoming_t": 160.61,
+      "realised_recovered_value_per_t": 346.84,
+      "realised_net_recovery_value_per_t": 186.23,
+      "realised_net_sorting_benefit_aud": 31271.36
+    },
+    {
+      "source_type": "Infrastructure Salvage",
+      "completed_batch_count": 3,
+      "completed_incoming_weight_t": 128.7,
+      "realised_higher_value_recovery_rate": 61.95,
+      "realised_processing_cost_per_processed_t": 92.0,
+      "realised_total_recovery_cost_per_incoming_t": 144.16,
+      "realised_recovered_value_per_t": 418.44,
+      "realised_net_recovery_value_per_t": 274.28,
+      "realised_net_sorting_benefit_aud": 28221.22
+    },
+    {
+      "source_type": "Residential Demolition",
+      "completed_batch_count": 7,
+      "completed_incoming_weight_t": 240.4,
+      "realised_higher_value_recovery_rate": 22.49,
+      "realised_processing_cost_per_processed_t": 91.98,
+      "realised_total_recovery_cost_per_incoming_t": 215.74,
+      "realised_recovered_value_per_t": 236.68,
+      "realised_net_recovery_value_per_t": 20.94,
+      "realised_net_sorting_benefit_aud": -8188.06
+    },
+    {
+      "source_type": "Warehouse Deconstruction",
+      "completed_batch_count": 5,
+      "completed_incoming_weight_t": 144.6,
+      "realised_higher_value_recovery_rate": 26.97,
+      "realised_processing_cost_per_processed_t": 92.0,
+      "realised_total_recovery_cost_per_incoming_t": 179.29,
+      "realised_recovered_value_per_t": 287.25,
+      "realised_net_recovery_value_per_t": 107.97,
+      "realised_net_sorting_benefit_aud": 7659.41
+    }
+  ],
+  "current_operational_exposure": [
+    {
+      "source_type": "Commercial Demolition",
+      "open_batch_count": 2,
+      "open_incoming_weight_t": 59.9,
+      "open_processed_weight_t": 12.43,
+      "open_unresolved_weight_t": 0.35,
+      "open_inspection_weight_t": 11.94,
+      "cost_incurred_to_date_aud": 7209.2,
+      "value_realised_to_date_aud": 3557.15
+    },
+    {
+      "source_type": "Direct Salvage Purchase",
+      "open_batch_count": 3,
+      "open_incoming_weight_t": 106.2,
+      "open_processed_weight_t": 0,
+      "open_unresolved_weight_t": 27.62,
+      "open_inspection_weight_t": 106.2,
+      "cost_incurred_to_date_aud": 22084.43,
+      "value_realised_to_date_aud": 0
+    },
+    {
+      "source_type": "Infrastructure Salvage",
+      "open_batch_count": 1,
+      "open_incoming_weight_t": 31.6,
+      "open_processed_weight_t": 9.28,
+      "open_unresolved_weight_t": 0.0,
+      "open_inspection_weight_t": 3.14,
+      "cost_incurred_to_date_aud": 4744.48,
+      "value_realised_to_date_aud": 2680.44
+    },
+    {
+      "source_type": "Residential Demolition",
+      "open_batch_count": 1,
+      "open_incoming_weight_t": 33.9,
+      "open_processed_weight_t": 6.44,
+      "open_unresolved_weight_t": 0.45,
+      "open_inspection_weight_t": 3.75,
+      "cost_incurred_to_date_aud": 4197.4,
+      "value_realised_to_date_aud": 1508.14
+    },
+    {
+      "source_type": "Warehouse Deconstruction",
+      "open_batch_count": 1,
+      "open_incoming_weight_t": 27.1,
+      "open_processed_weight_t": 3.91,
+      "open_unresolved_weight_t": 0.28,
+      "open_inspection_weight_t": 7.75,
+      "cost_incurred_to_date_aud": 5465.23,
+      "value_realised_to_date_aud": 754.84
+    }
+  ]
+}

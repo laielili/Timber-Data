@@ -1,0 +1,413 @@
+inspection_id,batch_id,material_id,inspection_type,reason,opened_datetime,closed_datetime,status,labour_hours,external_cost_aud,outcome
+INSP00001,B001,M00002,Routing Verification,Routine routing verification.,2025-01-13T19:35:00,2025-01-13T22:35:00,Completed,1.5,0.0,No Change
+INSP00002,B001,M00003,Record Review,Critical fields missing from source documentation.,2025-01-13T22:35:00,2025-01-14T02:35:00,Completed,2.1,0.0,No Change
+INSP00003,B001,M00011,Record Review,Partial records; confirm management fields.,2025-01-10T22:35:00,2025-01-11T02:35:00,Completed,2.0,0.0,Still Unresolved
+INSP00004,B001,M00012,Quality Verification,poor condition; verify recoverable portion.,2025-01-10T18:35:00,2025-01-10T21:35:00,Completed,1.6,0.0,Still Unresolved
+INSP00005,B001,M00019,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-10T19:35:00,2025-01-11T00:35:00,Completed,2.7,0.0,Still Unresolved
+INSP00006,B001,M00023,Record Review,Critical fields missing from source documentation.,2025-01-09T19:35:00,2025-01-09T23:35:00,Completed,2.1,0.0,No Change
+INSP00007,B001,M00027,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-13T00:35:00,Completed,2.8,0.0,No Change
+INSP00008,B001,M00032,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-12T23:35:00,Completed,2.1,0.0,Still Unresolved
+INSP00009,B001,M00035,Quality Verification,poor condition; verify recoverable portion.,2025-01-12T19:35:00,2025-01-12T23:35:00,Completed,2.1,0.0,Still Unresolved
+INSP00010,B001,M00036,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-12T21:35:00,Completed,0.4,0.0,Special Handling
+INSP00011,B002,M00050,Quality Verification,poor condition; verify recoverable portion.,2025-01-22T18:39:00,2025-01-22T20:39:00,Completed,0.7,0.0,Route Changed
+INSP00012,B002,M00063,Routing Verification,Routine routing verification.,2025-01-22T21:39:00,2025-01-23T00:39:00,Completed,1.6,0.0,Still Unresolved
+INSP00013,B002,M00066,Record Review,Partial records; confirm management fields.,2025-01-22T17:39:00,2025-01-22T19:39:00,Completed,1.4,0.0,Route Changed
+INSP00014,B002,M00070,Routing Verification,Routine routing verification.,2025-01-19T18:39:00,2025-01-19T23:39:00,Completed,2.9,0.0,No Change
+INSP00015,B002,M00072,Routing Verification,Routine routing verification.,2025-01-21T18:39:00,2025-01-21T20:39:00,Completed,1.3,0.0,Cleared
+INSP00016,B002,M00075,Quality Verification,severely degraded condition; verify recoverable portion.,2025-01-21T20:39:00,2025-01-21T22:39:00,Completed,1.0,0.0,Special Handling
+INSP00017,B002,M00076,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-19T17:39:00,2025-01-19T21:39:00,Completed,2.3,0.0,No Change
+INSP00018,B002,M00084,Quality Verification,poor condition; verify recoverable portion.,2025-01-19T19:39:00,2025-01-19T23:39:00,Completed,2.1,0.0,Route Changed
+INSP00019,B003,M00089,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-29T17:44:00,2025-01-29T19:44:00,Completed,1.4,0.0,Cleared
+INSP00020,B003,M00090,Record Review,Partial records; confirm management fields.,2025-01-27T17:44:00,2025-01-27T19:44:00,Completed,0.6,0.0,Cleared
+INSP00021,B003,M00101,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-27T21:44:00,2025-01-27T23:44:00,Completed,1.3,0.0,Still Unresolved
+INSP00022,B003,M00106,Quality Verification,poor condition; verify recoverable portion.,2025-01-29T21:44:00,2025-01-29T23:44:00,Completed,1.4,0.0,No Change
+INSP00023,B004,M00116,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T23:07:00,2025-02-12T03:07:00,Completed,2.0,0.0,No Change
+INSP00024,B004,M00117,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-12T21:07:00,2025-02-12T23:07:00,Completed,1.1,0.0,Route Changed
+INSP00025,B004,M00118,Routing Verification,Routine routing verification.,2025-02-10T19:07:00,2025-02-10T23:07:00,Completed,2.2,0.0,No Change
+INSP00026,B004,M00119,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-12T21:07:00,2025-02-12T23:07:00,Completed,1.4,0.0,No Change
+INSP00027,B004,M00121,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T22:07:00,2025-02-12T00:07:00,Completed,0.6,0.0,Still Unresolved
+INSP00028,B004,M00129,Routing Verification,Routine routing verification.,2025-02-10T22:07:00,2025-02-11T00:07:00,Completed,0.7,0.0,No Change
+INSP00029,B004,M00133,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T18:07:00,2025-02-11T20:07:00,Completed,0.9,0.0,No Change
+INSP00030,B004,M00144,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-09T18:07:00,2025-02-09T22:07:00,Completed,2.3,0.0,Special Handling
+INSP00031,B005,M00160,Routing Verification,Routine routing verification.,2025-02-14T18:27:00,2025-02-14T20:27:00,Completed,0.9,0.0,Route Changed
+INSP00032,B005,M00169,Record Review,Critical fields missing from source documentation.,2025-02-16T21:27:00,2025-02-16T23:27:00,Completed,0.5,0.0,Still Unresolved
+INSP00033,B005,M00177,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-14T20:27:00,2025-02-15T01:27:00,Completed,2.6,0.0,No Change
+INSP00034,B005,M00178,Quality Verification,poor condition; verify recoverable portion.,2025-02-14T17:27:00,2025-02-14T20:27:00,Completed,1.9,0.0,Route Changed
+INSP00035,B005,M00185,Record Review,Partial records; confirm management fields.,2025-02-16T22:27:00,2025-02-17T00:27:00,Completed,1.4,0.0,No Change
+INSP00036,B006,M00186,Manual Material Review,Special-handling candidate; manual review required.,2025-02-27T00:41:00,2025-02-27T02:41:00,Completed,0.4,0.0,Special Handling
+INSP00037,B006,M00187,Record Review,Partial records; confirm management fields.,2025-02-25T22:41:00,2025-02-26T01:41:00,Completed,1.9,0.0,No Change
+INSP00038,B006,M00189,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-25T19:41:00,2025-02-25T21:41:00,Completed,1.4,0.0,Still Unresolved
+INSP00039,B006,M00191,Record Review,Critical fields missing from source documentation.,2025-03-01T00:41:00,2025-03-01T06:41:00,Completed,3.0,0.0,Special Handling
+INSP00040,B006,M00194,Record Review,Critical fields missing from source documentation.,2025-02-28T00:41:00,2025-02-28T04:41:00,Completed,2.0,0.0,No Change
+INSP00041,B006,M00198,Quality Verification,severely degraded condition; verify recoverable portion.,2025-02-25T19:41:00,2025-02-25T21:41:00,Completed,1.0,0.0,Route Changed
+INSP00042,B006,M00199,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-25T21:41:00,2025-02-25T23:41:00,Completed,1.2,561.37,Still Unresolved
+INSP00043,B006,M00200,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-27T21:41:00,2025-02-27T23:41:00,Completed,0.6,0.0,Special Handling
+INSP00044,B006,M00201,Record Review,Partial records; confirm management fields.,2025-02-28T20:41:00,2025-02-28T22:41:00,Completed,0.9,0.0,Route Changed
+INSP00045,B006,M00203,Quality Verification,poor condition; verify recoverable portion.,2025-02-26T20:41:00,2025-02-26T22:41:00,Completed,1.0,0.0,Cleared
+INSP00046,B006,M00206,Record Review,Critical fields missing from source documentation.,2025-02-28T22:41:00,2025-03-01T02:41:00,Completed,2.4,0.0,Special Handling
+INSP00047,B006,M00207,Record Review,Partial records; confirm management fields.,2025-02-26T22:41:00,2025-02-27T01:41:00,Completed,1.6,0.0,No Change
+INSP00048,B006,M00210,Manual Material Review,Special-handling candidate; manual review required.,2025-02-28T21:41:00,2025-03-01T01:41:00,Completed,2.3,0.0,Special Handling
+INSP00049,B006,M00211,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-28T19:41:00,2025-02-28T21:41:00,Completed,0.5,0.0,Still Unresolved
+INSP00050,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-28T19:41:00,2025-03-04T03:41:00,Completed,4.7,0.0,No Change
+INSP00051,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-27T19:41:00,2025-03-05T03:41:00,Completed,6.9,0.0,Cleared
+INSP00052,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-27T19:41:00,2025-03-01T03:41:00,Completed,7.3,0.0,No Change
+INSP00053,B007,M00221,Record Review,Partial records; confirm management fields.,2025-03-08T00:30:00,2025-03-08T03:30:00,Completed,1.5,0.0,Still Unresolved
+INSP00054,B007,M00223,Routing Verification,Routine routing verification.,2025-03-10T18:30:00,2025-03-10T20:30:00,Completed,0.7,0.0,Route Changed
+INSP00055,B007,M00235,Routing Verification,Routine routing verification.,2025-03-07T18:30:00,2025-03-07T23:30:00,Completed,2.9,0.0,No Change
+INSP00056,B007,M00242,Record Review,Partial records; confirm management fields.,2025-03-06T23:30:00,2025-03-07T02:30:00,Completed,1.7,0.0,Special Handling
+INSP00057,B007,M00246,Record Review,Partial records; confirm management fields.,2025-03-08T19:30:00,2025-03-08T23:30:00,Completed,2.3,0.0,No Change
+INSP00058,B007,M00248,Quality Verification,severely degraded condition; verify recoverable portion.,2025-03-07T19:30:00,2025-03-07T21:30:00,Completed,0.4,0.0,No Change
+INSP00059,B007,M00249,Record Review,Partial records; confirm management fields.,2025-03-06T20:30:00,2025-03-07T01:30:00,Completed,2.5,0.0,Route Changed
+INSP00060,B007,M00255,Record Review,Critical fields missing from source documentation.,2025-03-08T22:30:00,2025-03-09T03:30:00,Completed,2.5,0.0,Still Unresolved
+INSP00061,B007,M00260,Quality Verification,severely degraded condition; verify recoverable portion.,2025-03-06T18:30:00,2025-03-06T20:30:00,Completed,1.2,0.0,Route Changed
+INSP00062,B008,M00266,Quality Verification,poor condition; verify recoverable portion.,2025-03-17T16:42:00,2025-03-17T18:42:00,Completed,0.4,0.0,Still Unresolved
+INSP00063,B008,M00278,Quality Verification,poor condition; verify recoverable portion.,2025-03-16T19:42:00,2025-03-16T21:42:00,Completed,1.0,0.0,Cleared
+INSP00064,B008,M00285,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-03-16T17:42:00,2025-03-16T21:42:00,Completed,2.4,0.0,Cleared
+INSP00065,B009,M00294,Manual Material Review,Special-handling candidate; manual review required.,2025-03-26T16:14:00,2025-03-26T20:14:00,Completed,2.1,0.0,Special Handling
+INSP00066,B009,M00295,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-03-29T19:14:00,2025-03-29T23:14:00,Completed,2.4,180.49,Special Handling
+INSP00067,B009,M00297,Manual Material Review,Special-handling candidate; manual review required.,2025-03-28T21:14:00,2025-03-29T01:14:00,Completed,2.4,0.0,Special Handling
+INSP00068,B009,M00305,Quality Verification,poor condition; verify recoverable portion.,2025-03-30T18:14:00,2025-03-30T22:14:00,Completed,2.0,0.0,Still Unresolved
+INSP00069,B009,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-03-31T16:14:00,2025-04-02T00:14:00,Completed,6.5,0.0,Route Changed
+INSP00070,B010,M00308,Record Review,Critical fields missing from source documentation.,2025-04-08T23:01:00,2025-04-09T03:01:00,Completed,2.1,0.0,Cleared
+INSP00071,B010,M00311,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-06T19:01:00,2025-04-06T21:01:00,Completed,1.0,0.0,Cleared
+INSP00072,B010,M00314,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-09T18:01:00,2025-04-09T20:01:00,Completed,1.2,0.0,No Change
+INSP00073,B010,M00316,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-06T20:01:00,2025-04-07T00:01:00,Completed,2.2,0.0,Route Changed
+INSP00074,B010,M00317,Record Review,Critical fields missing from source documentation.,2025-04-08T00:01:00,2025-04-08T03:01:00,Completed,1.7,0.0,No Change
+INSP00075,B010,M00319,Record Review,Critical fields missing from source documentation.,2025-04-09T00:01:00,2025-04-09T04:01:00,Completed,2.2,0.0,No Change
+INSP00076,B010,M00320,Routing Verification,Routine routing verification.,2025-04-08T21:01:00,2025-04-09T02:01:00,Completed,2.5,0.0,Special Handling
+INSP00077,B010,M00321,Manual Material Review,Special-handling candidate; manual review required.,2025-04-05T18:01:00,2025-04-05T20:01:00,Completed,0.5,0.0,Special Handling
+INSP00078,B010,M00324,Manual Material Review,Special-handling candidate; manual review required.,2025-04-08T23:01:00,2025-04-09T01:01:00,Completed,0.6,0.0,Special Handling
+INSP00079,B010,M00332,Routing Verification,Routine routing verification.,2025-04-10T00:01:00,2025-04-10T04:01:00,Completed,2.4,0.0,Route Changed
+INSP00080,B010,M00333,Record Review,Critical fields missing from source documentation.,2025-04-07T00:01:00,2025-04-07T02:01:00,Completed,1.4,0.0,No Change
+INSP00081,B010,M00337,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-08T21:01:00,2025-04-09T00:01:00,Completed,1.8,0.0,No Change
+INSP00082,B010,M00338,Record Review,Partial records; confirm management fields.,2025-04-07T00:01:00,2025-04-07T02:01:00,Completed,0.7,0.0,No Change
+INSP00083,B010,M00345,Quality Verification,poor condition; verify recoverable portion.,2025-04-05T19:01:00,2025-04-06T01:01:00,Completed,3.0,0.0,Cleared
+INSP00084,B010,M00346,Record Review,Partial records; confirm management fields.,2025-04-08T21:01:00,2025-04-08T23:01:00,Completed,0.5,0.0,No Change
+INSP00085,B010,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-04-06T19:01:00,2025-04-10T03:01:00,Completed,4.1,0.0,No Change
+INSP00086,B010,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-04-08T19:01:00,2025-04-12T03:01:00,Completed,4.6,0.0,Cleared
+INSP00087,B011,M00362,Routing Verification,Routine routing verification.,2025-04-19T21:29:00,2025-04-19T23:29:00,Completed,1.3,0.0,No Change
+INSP00088,B011,M00365,Record Review,Partial records; confirm management fields.,2025-04-21T18:29:00,2025-04-21T22:29:00,Completed,2.0,0.0,Still Unresolved
+INSP00089,B011,M00372,Quality Verification,poor condition; verify recoverable portion.,2025-04-17T18:29:00,2025-04-17T20:29:00,Completed,1.1,0.0,No Change
+INSP00090,B012,M00385,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-29T15:37:00,2025-04-29T17:37:00,Completed,1.2,0.0,No Change
+INSP00091,B012,M00390,Record Review,Critical fields missing from source documentation.,2025-04-27T19:37:00,2025-04-27T21:37:00,Completed,1.2,0.0,Route Changed
+INSP00092,B012,M00401,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-26T16:37:00,2025-04-26T20:37:00,Completed,2.1,0.0,Still Unresolved
+INSP00093,B012,M00413,Record Review,Critical fields missing from source documentation.,2025-04-26T18:37:00,2025-04-26T20:37:00,Completed,1.0,0.0,No Change
+INSP00094,B013,M00430,Routing Verification,Routine routing verification.,2025-05-09T22:07:00,2025-05-10T00:07:00,Completed,1.2,0.0,No Change
+INSP00095,B013,M00431,Record Review,Partial records; confirm management fields.,2025-05-09T22:07:00,2025-05-10T00:07:00,Completed,1.3,0.0,Still Unresolved
+INSP00096,B013,M00432,Quality Verification,poor condition; verify recoverable portion.,2025-05-06T18:07:00,2025-05-06T20:07:00,Completed,1.0,0.0,No Change
+INSP00097,B013,M00465,Record Review,Partial records; confirm management fields.,2025-05-06T19:07:00,2025-05-07T00:07:00,Completed,2.8,0.0,Cleared
+INSP00098,B014,M00469,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-22T22:14:00,2025-05-23T00:14:00,Completed,0.8,0.0,Cleared
+INSP00099,B014,M00470,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-20T19:14:00,2025-05-20T23:14:00,Completed,2.0,0.0,Special Handling
+INSP00100,B014,M00474,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-23T23:14:00,2025-05-24T01:14:00,Completed,1.0,0.0,No Change
+INSP00101,B014,M00476,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-19T21:14:00,2025-05-20T01:14:00,Completed,2.0,0.0,No Change
+INSP00102,B014,M00483,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-22T22:14:00,2025-05-23T00:14:00,Completed,0.5,0.0,No Change
+INSP00103,B015,M00498,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-30T19:38:00,2025-05-30T21:38:00,Completed,1.2,0.0,Still Unresolved
+INSP00104,B015,M00499,Record Review,Critical fields missing from source documentation.,2025-05-27T18:38:00,2025-05-27T20:38:00,Completed,0.8,0.0,Route Changed
+INSP00105,B015,M00502,Routing Verification,Routine routing verification.,2025-06-01T00:38:00,2025-06-01T02:38:00,Completed,0.8,0.0,Still Unresolved
+INSP00106,B015,M00505,Record Review,Partial records; confirm management fields.,2025-05-31T19:38:00,2025-05-31T21:38:00,Completed,1.2,0.0,No Change
+INSP00107,B015,M00507,Routing Verification,Routine routing verification.,2025-05-30T19:38:00,2025-05-30T21:38:00,Completed,0.7,0.0,Route Changed
+INSP00108,B015,M00508,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-28T21:38:00,2025-05-29T01:38:00,Completed,2.1,0.0,Route Changed
+INSP00109,B015,M00516,Record Review,Critical fields missing from source documentation.,2025-05-29T23:38:00,2025-05-30T01:38:00,Completed,1.4,0.0,Special Handling
+INSP00110,B016,M00531,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-08T16:23:00,2025-06-08T21:23:00,Completed,2.6,0.0,No Change
+INSP00111,B016,M00533,Record Review,Critical fields missing from source documentation.,2025-06-05T16:23:00,2025-06-05T18:23:00,Completed,0.6,0.0,No Change
+INSP00112,B016,M00534,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T17:23:00,2025-06-09T21:23:00,Completed,2.4,0.0,Still Unresolved
+INSP00113,B016,M00535,Quality Verification,poor condition; verify recoverable portion.,2025-06-09T20:23:00,2025-06-09T22:23:00,Completed,1.1,0.0,Cleared
+INSP00114,B016,M00538,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T19:23:00,2025-06-09T23:23:00,Completed,2.3,0.0,Still Unresolved
+INSP00115,B016,M00539,Routing Verification,Routine routing verification.,2025-06-08T21:23:00,2025-06-08T23:23:00,Completed,0.6,0.0,Still Unresolved
+INSP00116,B016,M00540,Routing Verification,Routine routing verification.,2025-06-05T18:23:00,2025-06-05T20:23:00,Completed,0.8,0.0,Route Changed
+INSP00117,B016,M00541,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-07T18:23:00,2025-06-07T23:23:00,Completed,2.9,0.0,No Change
+INSP00118,B016,M00544,Record Review,Critical fields missing from source documentation.,2025-06-05T18:23:00,2025-06-05T22:23:00,Completed,2.4,0.0,Cleared
+INSP00119,B016,M00545,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-05T15:23:00,2025-06-05T17:23:00,Completed,0.9,0.0,Route Changed
+INSP00120,B016,M00546,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-08T19:23:00,2025-06-08T21:23:00,Completed,1.3,0.0,Cleared
+INSP00121,B016,M00547,Routing Verification,Routine routing verification.,2025-06-06T19:23:00,2025-06-07T00:23:00,Completed,2.5,0.0,Still Unresolved
+INSP00122,B016,M00550,Quality Verification,poor condition; verify recoverable portion.,2025-06-06T16:23:00,2025-06-06T18:23:00,Completed,1.4,0.0,Still Unresolved
+INSP00123,B016,M00552,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-07T21:23:00,2025-06-08T02:23:00,Completed,2.9,563.9,Route Changed
+INSP00124,B016,M00555,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-05T21:23:00,2025-06-06T01:23:00,Completed,2.1,0.0,Cleared
+INSP00125,B016,M00558,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T21:23:00,2025-06-10T01:23:00,Completed,2.0,0.0,Route Changed
+INSP00126,B016,M00561,Routing Verification,Routine routing verification.,2025-06-08T17:23:00,2025-06-08T20:23:00,Completed,1.6,0.0,No Change
+INSP00127,B016,M00562,Routing Verification,Routine routing verification.,2025-06-09T21:23:00,2025-06-09T23:23:00,Completed,1.2,0.0,No Change
+INSP00128,B016,M00563,Routing Verification,Routine routing verification.,2025-06-08T18:23:00,2025-06-08T20:23:00,Completed,1.0,0.0,No Change
+INSP00129,B016,M00564,Quality Verification,poor condition; verify recoverable portion.,2025-06-09T21:23:00,2025-06-10T00:23:00,Completed,1.9,0.0,No Change
+INSP00130,B016,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-10T16:23:00,2025-06-16T00:23:00,Completed,6.4,0.0,No Change
+INSP00131,B016,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-12T16:23:00,2025-06-15T00:23:00,Completed,3.2,0.0,Still Unresolved
+INSP00132,B017,M00567,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T17:16:00,2025-06-20T20:16:00,Completed,1.6,0.0,Still Unresolved
+INSP00133,B017,M00569,Record Review,Critical fields missing from source documentation.,2025-06-16T16:16:00,2025-06-16T20:16:00,Completed,2.4,0.0,No Change
+INSP00134,B017,M00570,Record Review,Critical fields missing from source documentation.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,0.8,0.0,Route Changed
+INSP00135,B017,M00571,Quality Verification,severely degraded condition; verify recoverable portion.,2025-06-17T17:16:00,2025-06-17T19:16:00,Completed,0.9,0.0,Route Changed
+INSP00136,B017,M00572,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T15:16:00,2025-06-20T20:16:00,Completed,2.7,0.0,Cleared
+INSP00137,B017,M00573,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T15:16:00,2025-06-16T18:16:00,Completed,1.7,0.0,No Change
+INSP00138,B017,M00574,Quality Verification,poor condition; verify recoverable portion.,2025-06-18T20:16:00,2025-06-19T02:16:00,Completed,3.0,0.0,No Change
+INSP00139,B017,M00575,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-16T21:16:00,2025-06-17T02:16:00,Completed,2.9,0.0,Cleared
+INSP00140,B017,M00577,Record Review,Critical fields missing from source documentation.,2025-06-18T20:16:00,2025-06-18T22:16:00,Completed,0.8,0.0,Cleared
+INSP00141,B017,M00579,Quality Verification,severely degraded condition; verify recoverable portion.,2025-06-18T20:16:00,2025-06-19T01:16:00,Completed,2.8,0.0,Route Changed
+INSP00142,B017,M00582,Record Review,Critical fields missing from source documentation.,2025-06-17T21:16:00,2025-06-18T00:16:00,Completed,1.9,0.0,Special Handling
+INSP00143,B017,M00583,Record Review,Critical fields missing from source documentation.,2025-06-20T15:16:00,2025-06-20T17:16:00,Completed,0.8,0.0,Cleared
+INSP00144,B017,M00584,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-19T20:16:00,2025-06-19T22:16:00,Completed,0.6,0.0,No Change
+INSP00145,B017,M00585,Routing Verification,Routine routing verification.,2025-06-17T17:16:00,2025-06-17T20:16:00,Completed,1.9,0.0,No Change
+INSP00146,B017,M00586,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T18:16:00,2025-06-20T22:16:00,Completed,2.0,0.0,Cleared
+INSP00147,B017,M00587,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T20:16:00,2025-06-20T22:16:00,Completed,0.5,0.0,No Change
+INSP00148,B017,M00589,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,1.2,0.0,No Change
+INSP00149,B017,M00590,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T20:16:00,2025-06-16T22:16:00,Completed,0.9,0.0,No Change
+INSP00150,B017,M00592,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T18:16:00,2025-06-21T00:16:00,Completed,3.0,0.0,No Change
+INSP00151,B017,M00594,Record Review,Critical fields missing from source documentation.,2025-06-16T18:16:00,2025-06-16T23:16:00,Completed,2.5,0.0,No Change
+INSP00152,B017,M00596,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-17T21:16:00,2025-06-17T23:16:00,Completed,1.0,0.0,No Change
+INSP00153,B017,M00597,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T16:16:00,2025-06-20T18:16:00,Completed,1.2,0.0,No Change
+INSP00154,B017,M00598,Routing Verification,Routine routing verification.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,1.1,0.0,Cleared
+INSP00155,B017,M00601,Quality Verification,poor condition; verify recoverable portion.,2025-06-17T16:16:00,2025-06-17T18:16:00,Completed,1.0,0.0,No Change
+INSP00156,B017,M00602,Record Review,Partial records; confirm management fields.,2025-06-17T19:16:00,2025-06-17T23:16:00,Completed,2.1,0.0,Cleared
+INSP00157,B017,M00606,Record Review,Critical fields missing from source documentation.,2025-06-19T18:16:00,2025-06-19T23:16:00,Completed,2.9,0.0,Still Unresolved
+INSP00158,B017,M00608,Record Review,Critical fields missing from source documentation.,2025-06-19T15:16:00,2025-06-19T20:16:00,Completed,2.9,0.0,No Change
+INSP00159,B017,M00609,Quality Verification,poor condition; verify recoverable portion.,2025-06-17T17:16:00,2025-06-17T21:16:00,Completed,2.4,0.0,No Change
+INSP00160,B017,M00610,Routing Verification,Routine routing verification.,2025-06-17T18:16:00,2025-06-18T00:16:00,Completed,3.0,0.0,No Change
+INSP00161,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-23T16:16:00,2025-06-27T00:16:00,Completed,5.5,0.0,No Change
+INSP00162,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-22T16:16:00,2025-06-24T00:16:00,Completed,3.8,0.0,Route Changed
+INSP00163,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-17T16:16:00,2025-06-21T00:16:00,Completed,5.5,0.0,Still Unresolved
+INSP00164,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-21T16:16:00,2025-06-23T00:16:00,Completed,6.4,0.0,No Change
+INSP00165,B018,M00629,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-01T18:33:00,2025-07-01T23:33:00,Completed,2.6,0.0,Route Changed
+INSP00166,B019,M00640,Manual Material Review,Special-handling candidate; manual review required.,2025-07-06T20:50:00,2025-07-07T01:50:00,Completed,2.5,0.0,Special Handling
+INSP00167,B019,M00657,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-06T19:50:00,2025-07-06T21:50:00,Completed,0.6,0.0,No Change
+INSP00168,B019,M00663,Manual Material Review,Adhesive / composite construction; manual review.,2025-07-10T20:50:00,2025-07-11T00:50:00,Completed,2.0,0.0,Route Changed
+INSP00169,B019,M00671,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-09T19:50:00,2025-07-09T23:50:00,Completed,2.1,0.0,Cleared
+INSP00170,B020,M00675,Routing Verification,Routine routing verification.,2025-07-14T21:22:00,2025-07-15T00:22:00,Completed,1.8,0.0,Cleared
+INSP00171,B020,M00676,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-17T18:22:00,2025-07-17T20:22:00,Completed,0.8,0.0,No Change
+INSP00172,B020,M00687,Record Review,Critical fields missing from source documentation.,2025-07-14T16:22:00,2025-07-14T21:22:00,Completed,2.5,0.0,Still Unresolved
+INSP00173,B020,M00690,Record Review,Critical fields missing from source documentation.,2025-07-18T16:22:00,2025-07-18T18:22:00,Completed,1.3,0.0,No Change
+INSP00174,B020,M00700,Quality Verification,poor condition; verify recoverable portion.,2025-07-17T19:22:00,2025-07-17T21:22:00,Completed,1.3,0.0,No Change
+INSP00175,B021,M00706,Record Review,Partial records; confirm management fields.,2025-07-27T16:01:00,2025-07-27T19:01:00,Completed,1.5,0.0,Special Handling
+INSP00176,B021,M00708,Routing Verification,Routine routing verification.,2025-07-27T19:01:00,2025-07-27T23:01:00,Completed,2.4,0.0,No Change
+INSP00177,B021,M00709,Record Review,Critical fields missing from source documentation.,2025-07-29T18:01:00,2025-07-29T21:01:00,Completed,1.7,0.0,No Change
+INSP00178,B021,M00711,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-30T17:01:00,2025-07-30T19:01:00,Completed,0.5,0.0,Still Unresolved
+INSP00179,B021,M00713,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-29T17:01:00,2025-07-29T21:01:00,Completed,2.2,0.0,Cleared
+INSP00180,B021,M00720,Record Review,Partial records; confirm management fields.,2025-07-27T20:01:00,2025-07-27T22:01:00,Completed,1.1,0.0,No Change
+INSP00181,B021,M00727,Record Review,Critical fields missing from source documentation.,2025-07-29T17:01:00,2025-07-29T21:01:00,Completed,2.2,0.0,Cleared
+INSP00182,B021,M00728,Routing Verification,Routine routing verification.,2025-07-31T21:01:00,2025-07-31T23:01:00,Completed,0.9,0.0,Still Unresolved
+INSP00183,B021,M00734,Record Review,Partial records; confirm management fields.,2025-07-29T22:01:00,2025-07-30T00:01:00,Completed,0.5,0.0,No Change
+INSP00184,B021,M00735,Routing Verification,Routine routing verification.,2025-07-31T16:01:00,2025-07-31T18:01:00,Completed,0.7,0.0,Special Handling
+INSP00185,B021,M00737,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-28T21:01:00,2025-07-29T02:01:00,Completed,2.9,0.0,No Change
+INSP00186,B021,M00744,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-29T17:01:00,2025-07-29T20:01:00,Completed,1.5,0.0,Still Unresolved
+INSP00187,B022,M00752,Routing Verification,Routine routing verification.,2025-08-06T23:41:00,2025-08-07T03:41:00,Completed,2.2,0.0,No Change
+INSP00188,B022,M00754,Routing Verification,Routine routing verification.,2025-08-07T20:41:00,2025-08-07T22:41:00,Completed,1.4,0.0,Still Unresolved
+INSP00189,B022,M00765,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-07T18:41:00,2025-08-07T21:41:00,Completed,1.5,0.0,Still Unresolved
+INSP00190,B022,M00767,Record Review,Partial records; confirm management fields.,2025-08-06T20:41:00,2025-08-07T01:41:00,Completed,2.9,0.0,Still Unresolved
+INSP00191,B022,M00779,Record Review,Partial records; confirm management fields.,2025-08-07T18:41:00,2025-08-07T21:41:00,Completed,1.5,0.0,Cleared
+INSP00192,B022,M00783,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-06T21:41:00,2025-08-06T23:41:00,Completed,0.7,0.0,Cleared
+INSP00193,B022,M00789,Record Review,Partial records; confirm management fields.,2025-08-09T20:41:00,2025-08-10T00:41:00,Completed,2.1,0.0,Route Changed
+INSP00194,B023,M00799,Quality Verification,poor condition; verify recoverable portion.,2025-08-16T19:14:00,2025-08-16T23:14:00,Completed,2.4,0.0,Still Unresolved
+INSP00195,B023,M00801,Record Review,Critical fields missing from source documentation.,2025-08-20T20:14:00,2025-08-20T22:14:00,Completed,1.2,0.0,Still Unresolved
+INSP00196,B023,M00804,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-16T19:14:00,2025-08-16T21:14:00,Completed,1.1,0.0,Still Unresolved
+INSP00197,B023,M00805,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-17T22:14:00,2025-08-18T03:14:00,Completed,2.6,0.0,No Change
+INSP00198,B023,M00807,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-19T20:14:00,2025-08-19T23:14:00,Completed,1.9,0.0,No Change
+INSP00199,B023,M00809,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-16T21:14:00,2025-08-16T23:14:00,Completed,1.1,0.0,Special Handling
+INSP00200,B023,M00811,Manual Material Review,Special-handling candidate; manual review required.,2025-08-20T23:14:00,2025-08-21T01:14:00,Completed,0.4,0.0,Special Handling
+INSP00201,B023,M00812,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-20T17:14:00,2025-08-20T21:14:00,Completed,2.1,0.0,Route Changed
+INSP00202,B023,M00813,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-20T22:14:00,2025-08-21T01:14:00,Completed,1.5,0.0,Cleared
+INSP00203,B023,M00815,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-18T22:14:00,2025-08-19T02:14:00,Completed,2.0,0.0,Special Handling
+INSP00204,B023,M00818,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-17T20:14:00,2025-08-17T22:14:00,Completed,1.1,0.0,No Change
+INSP00205,B023,M00819,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-18T18:14:00,2025-08-18T21:14:00,Completed,1.9,0.0,Cleared
+INSP00206,B023,M00820,Quality Verification,poor condition; verify recoverable portion.,2025-08-16T23:14:00,2025-08-17T03:14:00,Completed,2.1,0.0,No Change
+INSP00207,B023,M00821,Record Review,Critical fields missing from source documentation.,2025-08-17T17:14:00,2025-08-17T22:14:00,Completed,2.5,0.0,No Change
+INSP00208,B023,M00826,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-17T20:14:00,2025-08-18T01:14:00,Completed,2.5,0.0,Route Changed
+INSP00209,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-23T18:14:00,2025-08-25T02:14:00,Completed,4.0,0.0,Still Unresolved
+INSP00210,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-19T18:14:00,2025-08-24T02:14:00,Completed,5.5,0.0,Still Unresolved
+INSP00211,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-19T18:14:00,2025-08-22T02:14:00,Completed,5.1,0.0,No Change
+INSP00212,B024,M00830,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-02T21:19:00,2025-09-02T23:19:00,Completed,0.5,0.0,No Change
+INSP00213,B024,M00838,Quality Verification,poor condition; verify recoverable portion.,2025-08-30T21:19:00,2025-08-30T23:19:00,Completed,0.7,0.0,Route Changed
+INSP00214,B024,M00843,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-31T19:19:00,2025-08-31T23:19:00,Completed,2.1,0.0,No Change
+INSP00215,B024,M00844,Manual Material Review,Adhesive / composite construction; manual review.,2025-09-02T15:19:00,2025-09-02T17:19:00,Completed,1.2,0.0,No Change
+INSP00216,B024,M00847,Record Review,Critical fields missing from source documentation.,2025-09-02T20:19:00,2025-09-02T22:19:00,Completed,1.3,0.0,Cleared
+INSP00217,B024,M00851,Record Review,Critical fields missing from source documentation.,2025-08-30T15:19:00,2025-08-30T17:19:00,Completed,0.9,0.0,No Change
+INSP00218,B024,M00853,Manual Material Review,Special-handling candidate; manual review required.,2025-09-01T16:19:00,2025-09-01T18:19:00,Completed,1.3,0.0,Special Handling
+INSP00219,B024,M00860,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-29T18:19:00,2025-08-29T20:19:00,Completed,1.3,0.0,Cleared
+INSP00220,B024,M00861,Manual Material Review,Special-handling candidate; manual review required.,2025-09-02T15:19:00,2025-09-02T18:19:00,Completed,1.7,0.0,Special Handling
+INSP00221,B025,M00867,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-11T22:38:00,2025-09-12T01:38:00,Completed,1.9,0.0,No Change
+INSP00222,B025,M00868,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-09T22:38:00,2025-09-10T03:38:00,Completed,2.7,644.72,No Change
+INSP00223,B025,M00869,Routing Verification,Routine routing verification.,2025-09-09T18:38:00,2025-09-09T23:38:00,Completed,2.6,0.0,No Change
+INSP00224,B025,M00870,Routing Verification,Routine routing verification.,2025-09-07T20:38:00,2025-09-07T22:38:00,Completed,1.1,0.0,No Change
+INSP00225,B025,M00872,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-09T00:38:00,Completed,2.2,0.0,Special Handling
+INSP00226,B025,M00873,Routing Verification,Routine routing verification.,2025-09-08T21:38:00,2025-09-08T23:38:00,Completed,0.9,0.0,No Change
+INSP00227,B025,M00877,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-07T23:38:00,2025-09-08T01:38:00,Completed,0.8,0.0,Cleared
+INSP00228,B025,M00881,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-09T01:38:00,Completed,2.7,0.0,Cleared
+INSP00229,B025,M00882,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-10T19:38:00,2025-09-10T21:38:00,Completed,1.1,300.17,Cleared
+INSP00230,B025,M00883,Quality Verification,poor condition; verify recoverable portion.,2025-09-08T19:38:00,2025-09-08T21:38:00,Completed,1.0,0.0,No Change
+INSP00231,B025,M00886,Manual Material Review,Special-handling candidate; manual review required.,2025-09-10T18:38:00,2025-09-10T20:38:00,Completed,0.8,0.0,Special Handling
+INSP00232,B025,M00887,Record Review,Partial records; confirm management fields.,2025-09-07T22:38:00,2025-09-08T02:38:00,Completed,2.0,0.0,Route Changed
+INSP00233,B025,M00888,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-11T17:38:00,2025-09-11T19:38:00,Completed,1.4,295.6,Still Unresolved
+INSP00234,B025,M00889,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-07T22:38:00,2025-09-08T00:38:00,Completed,0.9,0.0,No Change
+INSP00235,B025,M00890,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-08T22:38:00,Completed,1.3,0.0,Special Handling
+INSP00236,B025,M00894,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-10T22:38:00,2025-09-11T01:38:00,Completed,1.5,0.0,No Change
+INSP00237,B025,M00895,Record Review,Critical fields missing from source documentation.,2025-09-09T22:38:00,2025-09-10T00:38:00,Completed,0.7,0.0,No Change
+INSP00238,B025,M00898,Record Review,Critical fields missing from source documentation.,2025-09-08T18:38:00,2025-09-08T20:38:00,Completed,0.9,0.0,No Change
+INSP00239,B025,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-08T18:38:00,2025-09-10T02:38:00,Completed,7.6,0.0,No Change
+INSP00240,B025,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-12T18:38:00,2025-09-18T02:38:00,Completed,6.6,0.0,Still Unresolved
+INSP00241,B026,M00900,Manual Material Review,Special-handling candidate; manual review required.,2025-09-17T21:31:00,2025-09-18T00:31:00,Completed,1.5,0.0,Special Handling
+INSP00242,B026,M00908,Record Review,Critical fields missing from source documentation.,2025-09-19T00:31:00,2025-09-19T03:31:00,Completed,1.6,0.0,Special Handling
+INSP00243,B026,M00913,Record Review,Critical fields missing from source documentation.,2025-09-19T22:31:00,2025-09-20T00:31:00,Completed,0.5,0.0,Special Handling
+INSP00244,B026,M00915,Record Review,Critical fields missing from source documentation.,2025-09-16T21:31:00,2025-09-17T01:31:00,Completed,2.1,0.0,Cleared
+INSP00245,B026,M00917,Quality Verification,poor condition; verify recoverable portion.,2025-09-17T23:31:00,2025-09-18T04:31:00,Completed,2.6,0.0,No Change
+INSP00246,B026,M00918,Record Review,Critical fields missing from source documentation.,2025-09-20T00:31:00,2025-09-20T02:31:00,Completed,0.6,0.0,Special Handling
+INSP00247,B026,M00924,Manual Material Review,Special-handling candidate; manual review required.,2025-09-16T00:31:00,2025-09-16T02:31:00,Completed,0.7,0.0,Special Handling
+INSP00248,B026,M00925,Record Review,Critical fields missing from source documentation.,2025-09-15T21:31:00,2025-09-16T02:31:00,Completed,2.7,0.0,Special Handling
+INSP00249,B026,M00926,Record Review,Critical fields missing from source documentation.,2025-09-18T23:31:00,2025-09-19T01:31:00,Completed,1.4,0.0,Special Handling
+INSP00250,B026,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-16T19:31:00,2025-09-21T03:31:00,Completed,3.3,0.0,Still Unresolved
+INSP00251,B027,M00928,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T22:20:00,N/A,Open,1.7,0.0,N/A
+INSP00252,B027,M00929,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T18:20:00,N/A,Open,1.1,0.0,N/A
+INSP00253,B027,M00930,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T21:20:00,N/A,Open,2.1,0.0,N/A
+INSP00254,B027,M00931,Record Review,Critical fields missing from source documentation.,2025-10-03T20:20:00,N/A,Open,1.6,0.0,N/A
+INSP00255,B027,M00932,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-04T00:20:00,N/A,Open,1.9,0.0,N/A
+INSP00256,B027,M00933,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T18:20:00,N/A,Open,1.3,0.0,N/A
+INSP00257,B027,M00934,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T20:20:00,N/A,Open,1.4,0.0,N/A
+INSP00258,B027,M00935,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T20:20:00,N/A,Open,1.1,291.36,N/A
+INSP00259,B027,M00936,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-01T22:20:00,N/A,Open,2.1,0.0,N/A
+INSP00260,B027,M00937,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-03T23:20:00,N/A,Open,2.2,0.0,N/A
+INSP00261,B027,M00938,Manual Material Review,Special-handling candidate; manual review required.,2025-10-02T20:20:00,N/A,Open,1.9,0.0,N/A
+INSP00262,B027,M00939,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T23:20:00,N/A,Open,0.8,0.0,N/A
+INSP00263,B027,M00940,Routing Verification,Routine routing verification.,2025-09-30T00:20:00,N/A,Open,1.2,0.0,N/A
+INSP00264,B027,M00941,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T18:20:00,N/A,Open,2.6,0.0,N/A
+INSP00265,B027,M00942,Routing Verification,Routine routing verification.,2025-10-02T00:20:00,N/A,Open,2.8,0.0,N/A
+INSP00266,B027,M00943,Record Review,Critical fields missing from source documentation.,2025-10-03T18:20:00,N/A,Open,1.5,0.0,N/A
+INSP00267,B027,M00944,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T18:20:00,N/A,Open,0.9,0.0,N/A
+INSP00268,B027,M00945,Record Review,Critical fields missing from source documentation.,2025-10-01T21:20:00,N/A,Open,1.7,0.0,N/A
+INSP00269,B027,M00946,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-04T00:20:00,N/A,Open,1.2,0.0,N/A
+INSP00270,B027,M00947,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-03T21:20:00,N/A,Open,0.5,0.0,N/A
+INSP00271,B027,M00948,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T23:20:00,N/A,Open,0.4,0.0,N/A
+INSP00272,B027,M00949,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-02T20:20:00,N/A,Open,1.3,0.0,N/A
+INSP00273,B027,M00950,Record Review,Critical fields missing from source documentation.,2025-09-29T18:20:00,N/A,Open,1.9,0.0,N/A
+INSP00274,B027,M00951,Record Review,Critical fields missing from source documentation.,2025-09-29T21:20:00,N/A,Open,1.1,0.0,N/A
+INSP00275,B027,M00952,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T19:20:00,N/A,Open,0.9,0.0,N/A
+INSP00276,B027,M00953,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T23:20:00,N/A,Open,1.9,0.0,N/A
+INSP00277,B027,M00954,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T19:20:00,N/A,Open,2.9,0.0,N/A
+INSP00278,B027,M00955,Record Review,Critical fields missing from source documentation.,2025-09-30T00:20:00,N/A,Open,0.5,0.0,N/A
+INSP00279,B027,M00956,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-02T22:20:00,N/A,Open,1.8,0.0,N/A
+INSP00280,B027,M00957,Record Review,Critical fields missing from source documentation.,2025-10-02T19:20:00,N/A,Open,0.8,0.0,N/A
+INSP00281,B027,M00958,Record Review,Critical fields missing from source documentation.,2025-09-29T21:20:00,N/A,Open,0.5,0.0,N/A
+INSP00282,B027,M00959,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T22:20:00,N/A,Open,1.0,0.0,N/A
+INSP00283,B027,M00960,Quality Verification,poor condition; verify recoverable portion.,2025-10-03T00:20:00,N/A,Open,1.0,0.0,N/A
+INSP00284,B027,M00961,Record Review,Partial records; confirm management fields.,2025-10-02T20:20:00,N/A,Open,1.7,0.0,N/A
+INSP00285,B027,M00962,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T00:20:00,N/A,Open,2.4,205.72,N/A
+INSP00286,B027,M00963,Manual Material Review,Special-handling candidate; manual review required.,2025-09-30T22:20:00,N/A,Open,1.4,0.0,N/A
+INSP00287,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-06T19:20:00,N/A,Open,8.0,0.0,N/A
+INSP00288,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-03T19:20:00,N/A,Open,3.3,0.0,N/A
+INSP00289,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-06T19:20:00,N/A,Open,3.6,0.0,N/A
+INSP00290,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-30T19:20:00,N/A,Open,3.6,0.0,N/A
+INSP00291,B028,M00972,Record Review,Partial records; confirm management fields.,2025-10-08T20:39:00,2025-10-08T23:39:00,Completed,1.8,0.0,Cleared
+INSP00292,B028,M00978,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-05T21:39:00,2025-10-06T01:39:00,Completed,2.1,0.0,Still Unresolved
+INSP00293,B028,M00979,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-05T19:39:00,2025-10-05T22:39:00,Completed,1.8,0.0,Cleared
+INSP00294,B028,M00984,Record Review,Critical fields missing from source documentation.,2025-10-09T18:39:00,2025-10-09T23:39:00,Completed,2.5,0.0,No Change
+INSP00295,B028,M00986,Record Review,Critical fields missing from source documentation.,2025-10-09T17:39:00,2025-10-09T20:39:00,Completed,1.8,0.0,Special Handling
+INSP00296,B028,M00990,Record Review,Critical fields missing from source documentation.,2025-10-06T18:39:00,2025-10-06T21:39:00,Completed,1.6,0.0,Cleared
+INSP00297,B028,M00994,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-09T17:39:00,2025-10-09T19:39:00,Completed,1.2,0.0,No Change
+INSP00298,B028,M00995,Quality Verification,poor condition; verify recoverable portion.,2025-10-08T22:39:00,2025-10-09T00:39:00,Completed,1.3,0.0,Still Unresolved
+INSP00299,B028,M01002,Quality Verification,poor condition; verify recoverable portion.,2025-10-07T21:39:00,2025-10-08T00:39:00,Completed,1.8,0.0,Cleared
+INSP00300,B029,M01013,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-19T23:46:00,2025-10-20T01:46:00,Completed,1.4,0.0,No Change
+INSP00301,B029,M01021,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-15T17:46:00,2025-10-15T21:46:00,Completed,2.1,0.0,No Change
+INSP00302,B029,M01029,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-17T23:46:00,2025-10-18T01:46:00,Completed,1.4,0.0,Still Unresolved
+INSP00303,B029,M01031,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-17T18:46:00,2025-10-17T20:46:00,Completed,1.0,0.0,Still Unresolved
+INSP00304,B030,M01035,Record Review,Partial records; confirm management fields.,2025-10-29T00:46:00,N/A,Open,2.1,0.0,N/A
+INSP00305,B030,M01036,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-25T22:46:00,N/A,Open,2.5,0.0,N/A
+INSP00306,B030,M01037,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-26T21:46:00,N/A,Open,1.0,0.0,N/A
+INSP00307,B030,M01038,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-29T00:46:00,N/A,Open,1.8,0.0,N/A
+INSP00308,B030,M01039,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T19:46:00,N/A,Open,2.3,191.61,N/A
+INSP00309,B030,M01040,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T19:46:00,N/A,Open,0.5,0.0,N/A
+INSP00310,B030,M01041,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T20:46:00,N/A,Open,2.1,551.25,N/A
+INSP00311,B030,M01042,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T20:46:00,N/A,Open,1.9,0.0,N/A
+INSP00312,B030,M01043,Manual Material Review,Special-handling candidate; manual review required.,2025-10-25T00:46:00,N/A,Open,0.8,0.0,N/A
+INSP00313,B030,M01044,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T22:46:00,N/A,Open,0.6,0.0,N/A
+INSP00314,B030,M01045,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T18:46:00,N/A,Open,1.7,0.0,N/A
+INSP00315,B030,M01046,Manual Material Review,Special-handling candidate; manual review required.,2025-10-25T18:46:00,N/A,Open,2.2,0.0,N/A
+INSP00316,B030,M01047,Record Review,Partial records; confirm management fields.,2025-10-25T21:46:00,N/A,Open,3.0,0.0,N/A
+INSP00317,B030,M01048,Record Review,Critical fields missing from source documentation.,2025-10-26T19:46:00,N/A,Open,2.3,0.0,N/A
+INSP00318,B030,M01049,Record Review,Partial records; confirm management fields.,2025-10-26T19:46:00,N/A,Open,1.7,0.0,N/A
+INSP00319,B030,M01050,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T18:46:00,N/A,Open,2.1,0.0,N/A
+INSP00320,B030,M01051,Record Review,Critical fields missing from source documentation.,2025-10-24T20:46:00,N/A,Open,2.1,0.0,N/A
+INSP00321,B030,M01052,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T21:46:00,N/A,Open,1.8,0.0,N/A
+INSP00322,B030,M01053,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T23:46:00,N/A,Open,2.0,0.0,N/A
+INSP00323,B030,M01054,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T19:46:00,N/A,Open,1.9,0.0,N/A
+INSP00324,B030,M01055,Quality Verification,poor condition; verify recoverable portion.,2025-10-25T20:46:00,N/A,Open,2.6,0.0,N/A
+INSP00325,B030,M01056,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T23:46:00,N/A,Open,2.5,0.0,N/A
+INSP00326,B030,M01057,Record Review,Critical fields missing from source documentation.,2025-10-27T20:46:00,N/A,Open,0.4,0.0,N/A
+INSP00327,B030,M01058,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T18:46:00,N/A,Open,1.5,680.83,N/A
+INSP00328,B030,M01059,Record Review,Critical fields missing from source documentation.,2025-10-25T19:46:00,N/A,Open,2.1,0.0,N/A
+INSP00329,B030,M01060,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T23:46:00,N/A,Open,2.2,0.0,N/A
+INSP00330,B030,M01061,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T20:46:00,N/A,Open,1.7,0.0,N/A
+INSP00331,B030,M01062,Quality Verification,poor condition; verify recoverable portion.,2025-10-28T20:46:00,N/A,Open,0.8,0.0,N/A
+INSP00332,B030,M01063,Routing Verification,Routine routing verification.,2025-10-26T23:46:00,N/A,Open,1.2,0.0,N/A
+INSP00333,B030,M01064,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T19:46:00,N/A,Open,1.0,269.71,N/A
+INSP00334,B030,M01065,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T00:46:00,N/A,Open,0.8,0.0,N/A
+INSP00335,B030,M01066,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T23:46:00,N/A,Open,1.4,0.0,N/A
+INSP00336,B030,M01067,Record Review,Partial records; confirm management fields.,2025-10-28T21:46:00,N/A,Open,2.7,0.0,N/A
+INSP00337,B030,M01068,Record Review,Critical fields missing from source documentation.,2025-10-26T23:46:00,N/A,Open,1.9,0.0,N/A
+INSP00338,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-25T19:46:00,N/A,Open,3.6,0.0,N/A
+INSP00339,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-30T19:46:00,N/A,Open,4.8,0.0,N/A
+INSP00340,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-30T19:46:00,N/A,Open,5.2,0.0,N/A
+INSP00341,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-29T19:46:00,N/A,Open,3.4,0.0,N/A
+INSP00342,B031,M01071,Record Review,Partial records; confirm management fields.,2025-11-08T22:25:00,2025-11-09T00:25:00,Completed,1.3,0.0,No Change
+INSP00343,B031,M01073,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-07T16:25:00,2025-11-07T18:25:00,Completed,1.2,0.0,Still Unresolved
+INSP00344,B031,M01075,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-10T20:25:00,N/A,Open,0.6,0.0,N/A
+INSP00345,B031,M01082,Quality Verification,poor condition; verify recoverable portion.,2025-11-09T19:25:00,N/A,Open,0.9,0.0,N/A
+INSP00346,B031,M01083,Record Review,Critical fields missing from source documentation.,2025-11-10T16:25:00,N/A,Open,0.5,0.0,N/A
+INSP00347,B031,M01093,Routing Verification,Routine routing verification.,2025-11-07T21:25:00,N/A,Open,2.1,0.0,N/A
+INSP00348,B032,M01109,Routing Verification,Routine routing verification.,2025-11-17T20:20:00,N/A,Open,1.2,0.0,N/A
+INSP00349,B032,M01110,Record Review,Critical fields missing from source documentation.,2025-11-19T20:20:00,N/A,Open,0.6,0.0,N/A
+INSP00350,B032,M01112,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-17T20:20:00,N/A,Open,1.5,0.0,N/A
+INSP00351,B032,M01117,Record Review,Critical fields missing from source documentation.,2025-11-17T21:20:00,2025-11-17T23:20:00,Completed,1.4,0.0,Special Handling
+INSP00352,B032,M01120,Routing Verification,Routine routing verification.,2025-11-20T16:20:00,N/A,Open,1.5,0.0,N/A
+INSP00353,B032,M01127,Routing Verification,Routine routing verification.,2025-11-19T20:20:00,N/A,Open,1.4,0.0,N/A
+INSP00354,B033,M01137,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-27T21:45:00,N/A,Open,0.6,0.0,N/A
+INSP00355,B033,M01138,Record Review,Partial records; confirm management fields.,2025-11-26T19:45:00,N/A,Open,1.9,0.0,N/A
+INSP00356,B033,M01139,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T18:45:00,N/A,Open,1.5,0.0,N/A
+INSP00357,B033,M01140,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T19:45:00,N/A,Open,2.0,0.0,N/A
+INSP00358,B033,M01141,Record Review,Partial records; confirm management fields.,2025-11-29T19:45:00,N/A,Open,1.9,0.0,N/A
+INSP00359,B033,M01142,Record Review,Critical fields missing from source documentation.,2025-11-27T23:45:00,N/A,Open,2.0,0.0,N/A
+INSP00360,B033,M01143,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T21:45:00,N/A,Open,0.8,239.92,N/A
+INSP00361,B033,M01144,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T18:45:00,N/A,Open,1.8,0.0,N/A
+INSP00362,B033,M01145,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T21:45:00,N/A,Open,1.5,0.0,N/A
+INSP00363,B033,M01146,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T23:45:00,N/A,Open,1.1,0.0,N/A
+INSP00364,B033,M01147,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T23:45:00,N/A,Open,3.0,0.0,N/A
+INSP00365,B033,M01148,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T21:45:00,N/A,Open,2.8,0.0,N/A
+INSP00366,B033,M01149,Record Review,Partial records; confirm management fields.,2025-11-26T20:45:00,N/A,Open,0.5,0.0,N/A
+INSP00367,B033,M01150,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-28T20:45:00,N/A,Open,0.4,0.0,N/A
+INSP00368,B033,M01151,Record Review,Partial records; confirm management fields.,2025-11-30T00:45:00,N/A,Open,1.6,0.0,N/A
+INSP00369,B033,M01152,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T19:45:00,N/A,Open,1.1,0.0,N/A
+INSP00370,B033,M01153,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T20:45:00,N/A,Open,2.1,654.1,N/A
+INSP00371,B033,M01154,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-28T19:45:00,N/A,Open,0.5,0.0,N/A
+INSP00372,B033,M01155,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T19:45:00,N/A,Open,1.6,0.0,N/A
+INSP00373,B033,M01156,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-30T00:45:00,N/A,Open,2.2,0.0,N/A
+INSP00374,B033,M01157,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-27T22:45:00,N/A,Open,0.5,648.42,N/A
+INSP00375,B033,M01158,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T21:45:00,N/A,Open,0.5,0.0,N/A
+INSP00376,B033,M01159,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T19:45:00,N/A,Open,1.7,0.0,N/A
+INSP00377,B033,M01160,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T20:45:00,N/A,Open,1.1,0.0,N/A
+INSP00378,B033,M01161,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T23:45:00,N/A,Open,2.1,0.0,N/A
+INSP00379,B033,M01162,Quality Verification,poor condition; verify recoverable portion.,2025-11-26T00:45:00,N/A,Open,2.2,0.0,N/A
+INSP00380,B033,M01163,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T23:45:00,N/A,Open,1.7,406.51,N/A
+INSP00381,B033,M01164,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T19:45:00,N/A,Open,1.1,0.0,N/A
+INSP00382,B033,M01165,Routing Verification,Routine routing verification.,2025-11-27T00:45:00,N/A,Open,0.7,0.0,N/A
+INSP00383,B033,M01166,Manual Material Review,Special-handling candidate; manual review required.,2025-11-27T00:45:00,N/A,Open,2.4,0.0,N/A
+INSP00384,B033,M01167,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T23:45:00,N/A,Open,2.8,0.0,N/A
+INSP00385,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-27T19:45:00,N/A,Open,3.1,0.0,N/A
+INSP00386,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-26T19:45:00,N/A,Open,5.3,0.0,N/A
+INSP00387,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-27T19:45:00,N/A,Open,7.0,0.0,N/A
+INSP00388,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-30T19:45:00,N/A,Open,4.1,0.0,N/A
+INSP00389,B034,M01168,Manual Material Review,Special-handling candidate; manual review required.,2025-12-09T18:27:00,N/A,Open,0.8,0.0,N/A
+INSP00390,B034,M01170,Manual Material Review,Special-handling candidate; manual review required.,2025-12-11T21:27:00,N/A,Open,2.0,0.0,N/A
+INSP00391,B034,M01171,Quality Verification,poor condition; verify recoverable portion.,2025-12-11T18:27:00,N/A,Open,1.0,0.0,N/A
+INSP00392,B034,M01176,Record Review,Critical fields missing from source documentation.,2025-12-07T20:27:00,N/A,Open,2.1,0.0,N/A
+INSP00393,B034,M01177,Record Review,Critical fields missing from source documentation.,2025-12-11T19:27:00,N/A,Open,2.7,0.0,N/A
+INSP00394,B034,M01184,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-10T00:27:00,N/A,Open,0.4,0.0,N/A
+INSP00395,B034,M01187,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-10T23:27:00,N/A,Open,0.7,0.0,N/A
+INSP00396,B034,M01188,Manual Material Review,Special-handling candidate; manual review required.,2025-12-08T23:27:00,N/A,Open,1.1,0.0,N/A
+INSP00397,B034,M01190,Record Review,Critical fields missing from source documentation.,2025-12-07T20:27:00,N/A,Open,3.0,0.0,N/A
+INSP00398,B034,M01191,Record Review,Partial records; confirm management fields.,2025-12-08T20:27:00,N/A,Open,1.9,0.0,N/A
+INSP00399,B034,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-12-12T19:27:00,N/A,Open,4.1,0.0,N/A
+INSP00400,B035,M01197,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-20T17:18:00,N/A,Open,1.1,0.0,N/A
+INSP00401,B035,M01200,Record Review,Critical fields missing from source documentation.,2025-12-16T18:18:00,N/A,Open,0.4,0.0,N/A
+INSP00402,B035,M01210,Record Review,Critical fields missing from source documentation.,2025-12-18T20:18:00,N/A,Open,2.0,0.0,N/A
+INSP00403,B035,M01215,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-19T16:18:00,2025-12-19T18:18:00,Completed,1.1,0.0,No Change
+INSP00404,B035,M01220,Record Review,Critical fields missing from source documentation.,2025-12-16T15:18:00,N/A,Open,1.2,0.0,N/A
+INSP00405,B035,M01225,Record Review,Critical fields missing from source documentation.,2025-12-17T16:18:00,N/A,Open,1.6,0.0,N/A
+INSP00406,B036,M01229,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-25T20:45:00,N/A,Open,0.4,0.0,N/A
+INSP00407,B036,M01230,Quality Verification,poor condition; verify recoverable portion.,2025-12-23T16:45:00,N/A,Open,1.1,0.0,N/A
+INSP00408,B036,M01243,Quality Verification,poor condition; verify recoverable portion.,2025-12-23T17:45:00,N/A,Open,1.8,0.0,N/A
+INSP00409,B036,M01244,Record Review,Partial records; confirm management fields.,2025-12-26T20:45:00,N/A,Open,2.3,0.0,N/A
+INSP00410,B036,M01245,Routing Verification,Routine routing verification.,2025-12-27T18:45:00,N/A,Open,2.1,0.0,N/A
+INSP00411,B036,M01250,Record Review,Partial records; confirm management fields.,2025-12-25T20:45:00,N/A,Open,1.2,0.0,N/A
+INSP00412,B036,M01252,Routing Verification,Routine routing verification.,2025-12-26T18:45:00,N/A,Open,0.9,0.0,N/A

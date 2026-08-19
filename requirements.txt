@@ -1,0 +1,17 @@
+# Circular Timber Intelligence — Python backend dependencies
+# Install with:  pip install -r requirements.txt
+# Frontend uses Node (see frontend/package.json); the data generator
+# (generate_synthetic_database.py) is pure standard library and needs nothing here.
+
+# Web framework + ASGI server
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+
+# Data validation / serialization (v2 API)
+pydantic>=2.7,<3
+
+# HTTP client (used at runtime by the AI analyst provider to call the LLM)
+httpx>=0.27,<1
+
+# Test runner (dev only)
+pytest>=8,<9
