@@ -1,17 +1,17 @@
-source_id,source_type,region,former_use_category,submission_date,estimated_material_quality,expected_complexity,notes
-S01,Infrastructure Salvage,Victoria,Bridge decking / handrail renewal,2025-01-16,High,Medium,Infrastructure Salvage source; synthetic prototype supply record.
-S02,Infrastructure Salvage,New South Wales,Railway station platform renewal,2025-06-26,High,Medium,Infrastructure Salvage source; synthetic prototype supply record.
-S03,Industrial Renewal,Victoria,Industrial facility refit,2024-12-14,High,Low,Industrial Renewal source; synthetic prototype supply record.
-S04,Industrial Renewal,Queensland,Industrial facility refit,2024-12-25,Medium,Low,Industrial Renewal source; synthetic prototype supply record.
-S05,Commercial Demolition,New South Wales,Retail / office fit-out demolition,2025-03-09,Medium,Medium,Commercial Demolition source; synthetic prototype supply record.
-S06,Commercial Demolition,Queensland,Commercial building demolition,2025-08-07,Medium,Medium,Commercial Demolition source; synthetic prototype supply record.
-S07,Commercial Demolition,Victoria,Retail / office fit-out demolition,2025-06-06,Medium,Medium,Commercial Demolition source; synthetic prototype supply record.
-S08,Residential Demolition,South Australia,House demolition,2024-12-17,Low,Low,Residential Demolition source; synthetic prototype supply record.
-S09,Residential Demolition,Western Australia,House demolition,2025-09-13,Low,Low,Residential Demolition source; synthetic prototype supply record.
-S10,Residential Demolition,Victoria,Renovation strip-out,2025-01-21,Low,Medium,Residential Demolition source; synthetic prototype supply record.
-S11,Residential Demolition,Tasmania,House demolition,2025-07-06,Low,Medium,Residential Demolition source; synthetic prototype supply record.
-S12,Warehouse Deconstruction,New South Wales,Warehouse / shed deconstruction,2025-01-14,Medium,Medium,Warehouse Deconstruction source; synthetic prototype supply record.
-S13,Warehouse Deconstruction,Queensland,Warehouse / shed deconstruction,2025-06-10,Medium,Medium,Warehouse Deconstruction source; synthetic prototype supply record.
-S14,Warehouse Deconstruction,Victoria,Pallet racking / mezzanine removal,2025-02-17,Medium,High,Warehouse Deconstruction source; synthetic prototype supply record.
-S15,Direct Salvage Purchase,South Australia,Dealer / salvage yard transfer,2025-09-05,Unknown,High,Direct Salvage Purchase source; synthetic prototype supply record.
-S16,Direct Salvage Purchase,New South Wales,Private sale / mixed lot,2025-04-02,Unknown,High,Direct Salvage Purchase source; synthetic prototype supply record.
+﻿source_id,source_type,region,former_use_category,submission_date,estimated_material_quality,expected_complexity,notes
+S01,Infrastructure Salvage,Victoria,Bridge decking / handrail renewal,2025-02-02,High,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S02,Infrastructure Salvage,New South Wales,Railway station platform renewal,2025-07-16,High,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S03,Industrial Renewal,Victoria,Industrial facility refit,2025-01-02,High,Low,Synthetic source project; 2 batch(es) in the sample dataset.
+S04,Industrial Renewal,Queensland,Industrial facility refit,2024-12-18,Medium,Low,Synthetic source project; 4 batch(es) in the sample dataset.
+S05,Commercial Demolition,New South Wales,Retail / office fit-out demolition,2025-03-30,Medium,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S06,Commercial Demolition,Queensland,Commercial building demolition,2025-08-09,Medium,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S07,Commercial Demolition,Victoria,Retail / office fit-out demolition,2025-06-06,Medium,Medium,Synthetic source project; 3 batch(es) in the sample dataset.
+S08,Residential Demolition,South Australia,House demolition,2025-01-21,Low,Low,Synthetic source project; 3 batch(es) in the sample dataset.
+S09,Residential Demolition,Western Australia,House demolition,2025-09-21,Low,Low,Synthetic source project; 2 batch(es) in the sample dataset.
+S10,Residential Demolition,Victoria,Renovation strip-out,2025-02-18,Low,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S11,Residential Demolition,Tasmania,House demolition,2025-07-30,Low,Medium,Synthetic source project; 1 batch(es) in the sample dataset.
+S12,Warehouse Deconstruction,New South Wales,Warehouse / shed deconstruction,2025-01-22,Medium,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S13,Warehouse Deconstruction,Queensland,Warehouse / shed deconstruction,2025-07-08,Medium,Medium,Synthetic source project; 2 batch(es) in the sample dataset.
+S14,Warehouse Deconstruction,Victoria,Pallet racking / mezzanine removal,2025-03-16,Medium,High,Synthetic source project; 2 batch(es) in the sample dataset.
+S15,Direct Salvage Purchase,South Australia,Dealer / salvage yard transfer,2025-09-14,Unknown,High,Synthetic source project; 2 batch(es) in the sample dataset.
+S16,Direct Salvage Purchase,New South Wales,Private sale / mixed lot,2025-04-17,Unknown,High,Synthetic source project; 3 batch(es) in the sample dataset.

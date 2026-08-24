@@ -1,413 +1,491 @@
-inspection_id,batch_id,material_id,inspection_type,reason,opened_datetime,closed_datetime,status,labour_hours,external_cost_aud,outcome
-INSP00001,B001,M00002,Routing Verification,Routine routing verification.,2025-01-13T19:35:00,2025-01-13T22:35:00,Completed,1.5,0.0,No Change
-INSP00002,B001,M00003,Record Review,Critical fields missing from source documentation.,2025-01-13T22:35:00,2025-01-14T02:35:00,Completed,2.1,0.0,No Change
-INSP00003,B001,M00011,Record Review,Partial records; confirm management fields.,2025-01-10T22:35:00,2025-01-11T02:35:00,Completed,2.0,0.0,Still Unresolved
-INSP00004,B001,M00012,Quality Verification,poor condition; verify recoverable portion.,2025-01-10T18:35:00,2025-01-10T21:35:00,Completed,1.6,0.0,Still Unresolved
-INSP00005,B001,M00019,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-10T19:35:00,2025-01-11T00:35:00,Completed,2.7,0.0,Still Unresolved
-INSP00006,B001,M00023,Record Review,Critical fields missing from source documentation.,2025-01-09T19:35:00,2025-01-09T23:35:00,Completed,2.1,0.0,No Change
-INSP00007,B001,M00027,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-13T00:35:00,Completed,2.8,0.0,No Change
-INSP00008,B001,M00032,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-12T23:35:00,Completed,2.1,0.0,Still Unresolved
-INSP00009,B001,M00035,Quality Verification,poor condition; verify recoverable portion.,2025-01-12T19:35:00,2025-01-12T23:35:00,Completed,2.1,0.0,Still Unresolved
-INSP00010,B001,M00036,Record Review,Partial records; confirm management fields.,2025-01-12T19:35:00,2025-01-12T21:35:00,Completed,0.4,0.0,Special Handling
-INSP00011,B002,M00050,Quality Verification,poor condition; verify recoverable portion.,2025-01-22T18:39:00,2025-01-22T20:39:00,Completed,0.7,0.0,Route Changed
-INSP00012,B002,M00063,Routing Verification,Routine routing verification.,2025-01-22T21:39:00,2025-01-23T00:39:00,Completed,1.6,0.0,Still Unresolved
-INSP00013,B002,M00066,Record Review,Partial records; confirm management fields.,2025-01-22T17:39:00,2025-01-22T19:39:00,Completed,1.4,0.0,Route Changed
-INSP00014,B002,M00070,Routing Verification,Routine routing verification.,2025-01-19T18:39:00,2025-01-19T23:39:00,Completed,2.9,0.0,No Change
-INSP00015,B002,M00072,Routing Verification,Routine routing verification.,2025-01-21T18:39:00,2025-01-21T20:39:00,Completed,1.3,0.0,Cleared
-INSP00016,B002,M00075,Quality Verification,severely degraded condition; verify recoverable portion.,2025-01-21T20:39:00,2025-01-21T22:39:00,Completed,1.0,0.0,Special Handling
-INSP00017,B002,M00076,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-19T17:39:00,2025-01-19T21:39:00,Completed,2.3,0.0,No Change
-INSP00018,B002,M00084,Quality Verification,poor condition; verify recoverable portion.,2025-01-19T19:39:00,2025-01-19T23:39:00,Completed,2.1,0.0,Route Changed
-INSP00019,B003,M00089,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-29T17:44:00,2025-01-29T19:44:00,Completed,1.4,0.0,Cleared
-INSP00020,B003,M00090,Record Review,Partial records; confirm management fields.,2025-01-27T17:44:00,2025-01-27T19:44:00,Completed,0.6,0.0,Cleared
-INSP00021,B003,M00101,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-01-27T21:44:00,2025-01-27T23:44:00,Completed,1.3,0.0,Still Unresolved
-INSP00022,B003,M00106,Quality Verification,poor condition; verify recoverable portion.,2025-01-29T21:44:00,2025-01-29T23:44:00,Completed,1.4,0.0,No Change
-INSP00023,B004,M00116,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T23:07:00,2025-02-12T03:07:00,Completed,2.0,0.0,No Change
-INSP00024,B004,M00117,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-12T21:07:00,2025-02-12T23:07:00,Completed,1.1,0.0,Route Changed
-INSP00025,B004,M00118,Routing Verification,Routine routing verification.,2025-02-10T19:07:00,2025-02-10T23:07:00,Completed,2.2,0.0,No Change
-INSP00026,B004,M00119,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-12T21:07:00,2025-02-12T23:07:00,Completed,1.4,0.0,No Change
-INSP00027,B004,M00121,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T22:07:00,2025-02-12T00:07:00,Completed,0.6,0.0,Still Unresolved
-INSP00028,B004,M00129,Routing Verification,Routine routing verification.,2025-02-10T22:07:00,2025-02-11T00:07:00,Completed,0.7,0.0,No Change
-INSP00029,B004,M00133,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-11T18:07:00,2025-02-11T20:07:00,Completed,0.9,0.0,No Change
-INSP00030,B004,M00144,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-09T18:07:00,2025-02-09T22:07:00,Completed,2.3,0.0,Special Handling
-INSP00031,B005,M00160,Routing Verification,Routine routing verification.,2025-02-14T18:27:00,2025-02-14T20:27:00,Completed,0.9,0.0,Route Changed
-INSP00032,B005,M00169,Record Review,Critical fields missing from source documentation.,2025-02-16T21:27:00,2025-02-16T23:27:00,Completed,0.5,0.0,Still Unresolved
-INSP00033,B005,M00177,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-14T20:27:00,2025-02-15T01:27:00,Completed,2.6,0.0,No Change
-INSP00034,B005,M00178,Quality Verification,poor condition; verify recoverable portion.,2025-02-14T17:27:00,2025-02-14T20:27:00,Completed,1.9,0.0,Route Changed
-INSP00035,B005,M00185,Record Review,Partial records; confirm management fields.,2025-02-16T22:27:00,2025-02-17T00:27:00,Completed,1.4,0.0,No Change
-INSP00036,B006,M00186,Manual Material Review,Special-handling candidate; manual review required.,2025-02-27T00:41:00,2025-02-27T02:41:00,Completed,0.4,0.0,Special Handling
-INSP00037,B006,M00187,Record Review,Partial records; confirm management fields.,2025-02-25T22:41:00,2025-02-26T01:41:00,Completed,1.9,0.0,No Change
-INSP00038,B006,M00189,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-25T19:41:00,2025-02-25T21:41:00,Completed,1.4,0.0,Still Unresolved
-INSP00039,B006,M00191,Record Review,Critical fields missing from source documentation.,2025-03-01T00:41:00,2025-03-01T06:41:00,Completed,3.0,0.0,Special Handling
-INSP00040,B006,M00194,Record Review,Critical fields missing from source documentation.,2025-02-28T00:41:00,2025-02-28T04:41:00,Completed,2.0,0.0,No Change
-INSP00041,B006,M00198,Quality Verification,severely degraded condition; verify recoverable portion.,2025-02-25T19:41:00,2025-02-25T21:41:00,Completed,1.0,0.0,Route Changed
-INSP00042,B006,M00199,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-25T21:41:00,2025-02-25T23:41:00,Completed,1.2,561.37,Still Unresolved
-INSP00043,B006,M00200,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-27T21:41:00,2025-02-27T23:41:00,Completed,0.6,0.0,Special Handling
-INSP00044,B006,M00201,Record Review,Partial records; confirm management fields.,2025-02-28T20:41:00,2025-02-28T22:41:00,Completed,0.9,0.0,Route Changed
-INSP00045,B006,M00203,Quality Verification,poor condition; verify recoverable portion.,2025-02-26T20:41:00,2025-02-26T22:41:00,Completed,1.0,0.0,Cleared
-INSP00046,B006,M00206,Record Review,Critical fields missing from source documentation.,2025-02-28T22:41:00,2025-03-01T02:41:00,Completed,2.4,0.0,Special Handling
-INSP00047,B006,M00207,Record Review,Partial records; confirm management fields.,2025-02-26T22:41:00,2025-02-27T01:41:00,Completed,1.6,0.0,No Change
-INSP00048,B006,M00210,Manual Material Review,Special-handling candidate; manual review required.,2025-02-28T21:41:00,2025-03-01T01:41:00,Completed,2.3,0.0,Special Handling
-INSP00049,B006,M00211,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-02-28T19:41:00,2025-02-28T21:41:00,Completed,0.5,0.0,Still Unresolved
-INSP00050,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-28T19:41:00,2025-03-04T03:41:00,Completed,4.7,0.0,No Change
-INSP00051,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-27T19:41:00,2025-03-05T03:41:00,Completed,6.9,0.0,Cleared
-INSP00052,B006,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-02-27T19:41:00,2025-03-01T03:41:00,Completed,7.3,0.0,No Change
-INSP00053,B007,M00221,Record Review,Partial records; confirm management fields.,2025-03-08T00:30:00,2025-03-08T03:30:00,Completed,1.5,0.0,Still Unresolved
-INSP00054,B007,M00223,Routing Verification,Routine routing verification.,2025-03-10T18:30:00,2025-03-10T20:30:00,Completed,0.7,0.0,Route Changed
-INSP00055,B007,M00235,Routing Verification,Routine routing verification.,2025-03-07T18:30:00,2025-03-07T23:30:00,Completed,2.9,0.0,No Change
-INSP00056,B007,M00242,Record Review,Partial records; confirm management fields.,2025-03-06T23:30:00,2025-03-07T02:30:00,Completed,1.7,0.0,Special Handling
-INSP00057,B007,M00246,Record Review,Partial records; confirm management fields.,2025-03-08T19:30:00,2025-03-08T23:30:00,Completed,2.3,0.0,No Change
-INSP00058,B007,M00248,Quality Verification,severely degraded condition; verify recoverable portion.,2025-03-07T19:30:00,2025-03-07T21:30:00,Completed,0.4,0.0,No Change
-INSP00059,B007,M00249,Record Review,Partial records; confirm management fields.,2025-03-06T20:30:00,2025-03-07T01:30:00,Completed,2.5,0.0,Route Changed
-INSP00060,B007,M00255,Record Review,Critical fields missing from source documentation.,2025-03-08T22:30:00,2025-03-09T03:30:00,Completed,2.5,0.0,Still Unresolved
-INSP00061,B007,M00260,Quality Verification,severely degraded condition; verify recoverable portion.,2025-03-06T18:30:00,2025-03-06T20:30:00,Completed,1.2,0.0,Route Changed
-INSP00062,B008,M00266,Quality Verification,poor condition; verify recoverable portion.,2025-03-17T16:42:00,2025-03-17T18:42:00,Completed,0.4,0.0,Still Unresolved
-INSP00063,B008,M00278,Quality Verification,poor condition; verify recoverable portion.,2025-03-16T19:42:00,2025-03-16T21:42:00,Completed,1.0,0.0,Cleared
-INSP00064,B008,M00285,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-03-16T17:42:00,2025-03-16T21:42:00,Completed,2.4,0.0,Cleared
-INSP00065,B009,M00294,Manual Material Review,Special-handling candidate; manual review required.,2025-03-26T16:14:00,2025-03-26T20:14:00,Completed,2.1,0.0,Special Handling
-INSP00066,B009,M00295,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-03-29T19:14:00,2025-03-29T23:14:00,Completed,2.4,180.49,Special Handling
-INSP00067,B009,M00297,Manual Material Review,Special-handling candidate; manual review required.,2025-03-28T21:14:00,2025-03-29T01:14:00,Completed,2.4,0.0,Special Handling
-INSP00068,B009,M00305,Quality Verification,poor condition; verify recoverable portion.,2025-03-30T18:14:00,2025-03-30T22:14:00,Completed,2.0,0.0,Still Unresolved
-INSP00069,B009,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-03-31T16:14:00,2025-04-02T00:14:00,Completed,6.5,0.0,Route Changed
-INSP00070,B010,M00308,Record Review,Critical fields missing from source documentation.,2025-04-08T23:01:00,2025-04-09T03:01:00,Completed,2.1,0.0,Cleared
-INSP00071,B010,M00311,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-06T19:01:00,2025-04-06T21:01:00,Completed,1.0,0.0,Cleared
-INSP00072,B010,M00314,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-09T18:01:00,2025-04-09T20:01:00,Completed,1.2,0.0,No Change
-INSP00073,B010,M00316,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-06T20:01:00,2025-04-07T00:01:00,Completed,2.2,0.0,Route Changed
-INSP00074,B010,M00317,Record Review,Critical fields missing from source documentation.,2025-04-08T00:01:00,2025-04-08T03:01:00,Completed,1.7,0.0,No Change
-INSP00075,B010,M00319,Record Review,Critical fields missing from source documentation.,2025-04-09T00:01:00,2025-04-09T04:01:00,Completed,2.2,0.0,No Change
-INSP00076,B010,M00320,Routing Verification,Routine routing verification.,2025-04-08T21:01:00,2025-04-09T02:01:00,Completed,2.5,0.0,Special Handling
-INSP00077,B010,M00321,Manual Material Review,Special-handling candidate; manual review required.,2025-04-05T18:01:00,2025-04-05T20:01:00,Completed,0.5,0.0,Special Handling
-INSP00078,B010,M00324,Manual Material Review,Special-handling candidate; manual review required.,2025-04-08T23:01:00,2025-04-09T01:01:00,Completed,0.6,0.0,Special Handling
-INSP00079,B010,M00332,Routing Verification,Routine routing verification.,2025-04-10T00:01:00,2025-04-10T04:01:00,Completed,2.4,0.0,Route Changed
-INSP00080,B010,M00333,Record Review,Critical fields missing from source documentation.,2025-04-07T00:01:00,2025-04-07T02:01:00,Completed,1.4,0.0,No Change
-INSP00081,B010,M00337,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-08T21:01:00,2025-04-09T00:01:00,Completed,1.8,0.0,No Change
-INSP00082,B010,M00338,Record Review,Partial records; confirm management fields.,2025-04-07T00:01:00,2025-04-07T02:01:00,Completed,0.7,0.0,No Change
-INSP00083,B010,M00345,Quality Verification,poor condition; verify recoverable portion.,2025-04-05T19:01:00,2025-04-06T01:01:00,Completed,3.0,0.0,Cleared
-INSP00084,B010,M00346,Record Review,Partial records; confirm management fields.,2025-04-08T21:01:00,2025-04-08T23:01:00,Completed,0.5,0.0,No Change
-INSP00085,B010,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-04-06T19:01:00,2025-04-10T03:01:00,Completed,4.1,0.0,No Change
-INSP00086,B010,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-04-08T19:01:00,2025-04-12T03:01:00,Completed,4.6,0.0,Cleared
-INSP00087,B011,M00362,Routing Verification,Routine routing verification.,2025-04-19T21:29:00,2025-04-19T23:29:00,Completed,1.3,0.0,No Change
-INSP00088,B011,M00365,Record Review,Partial records; confirm management fields.,2025-04-21T18:29:00,2025-04-21T22:29:00,Completed,2.0,0.0,Still Unresolved
-INSP00089,B011,M00372,Quality Verification,poor condition; verify recoverable portion.,2025-04-17T18:29:00,2025-04-17T20:29:00,Completed,1.1,0.0,No Change
-INSP00090,B012,M00385,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-29T15:37:00,2025-04-29T17:37:00,Completed,1.2,0.0,No Change
-INSP00091,B012,M00390,Record Review,Critical fields missing from source documentation.,2025-04-27T19:37:00,2025-04-27T21:37:00,Completed,1.2,0.0,Route Changed
-INSP00092,B012,M00401,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-04-26T16:37:00,2025-04-26T20:37:00,Completed,2.1,0.0,Still Unresolved
-INSP00093,B012,M00413,Record Review,Critical fields missing from source documentation.,2025-04-26T18:37:00,2025-04-26T20:37:00,Completed,1.0,0.0,No Change
-INSP00094,B013,M00430,Routing Verification,Routine routing verification.,2025-05-09T22:07:00,2025-05-10T00:07:00,Completed,1.2,0.0,No Change
-INSP00095,B013,M00431,Record Review,Partial records; confirm management fields.,2025-05-09T22:07:00,2025-05-10T00:07:00,Completed,1.3,0.0,Still Unresolved
-INSP00096,B013,M00432,Quality Verification,poor condition; verify recoverable portion.,2025-05-06T18:07:00,2025-05-06T20:07:00,Completed,1.0,0.0,No Change
-INSP00097,B013,M00465,Record Review,Partial records; confirm management fields.,2025-05-06T19:07:00,2025-05-07T00:07:00,Completed,2.8,0.0,Cleared
-INSP00098,B014,M00469,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-22T22:14:00,2025-05-23T00:14:00,Completed,0.8,0.0,Cleared
-INSP00099,B014,M00470,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-20T19:14:00,2025-05-20T23:14:00,Completed,2.0,0.0,Special Handling
-INSP00100,B014,M00474,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-23T23:14:00,2025-05-24T01:14:00,Completed,1.0,0.0,No Change
-INSP00101,B014,M00476,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-19T21:14:00,2025-05-20T01:14:00,Completed,2.0,0.0,No Change
-INSP00102,B014,M00483,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-22T22:14:00,2025-05-23T00:14:00,Completed,0.5,0.0,No Change
-INSP00103,B015,M00498,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-30T19:38:00,2025-05-30T21:38:00,Completed,1.2,0.0,Still Unresolved
-INSP00104,B015,M00499,Record Review,Critical fields missing from source documentation.,2025-05-27T18:38:00,2025-05-27T20:38:00,Completed,0.8,0.0,Route Changed
-INSP00105,B015,M00502,Routing Verification,Routine routing verification.,2025-06-01T00:38:00,2025-06-01T02:38:00,Completed,0.8,0.0,Still Unresolved
-INSP00106,B015,M00505,Record Review,Partial records; confirm management fields.,2025-05-31T19:38:00,2025-05-31T21:38:00,Completed,1.2,0.0,No Change
-INSP00107,B015,M00507,Routing Verification,Routine routing verification.,2025-05-30T19:38:00,2025-05-30T21:38:00,Completed,0.7,0.0,Route Changed
-INSP00108,B015,M00508,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-05-28T21:38:00,2025-05-29T01:38:00,Completed,2.1,0.0,Route Changed
-INSP00109,B015,M00516,Record Review,Critical fields missing from source documentation.,2025-05-29T23:38:00,2025-05-30T01:38:00,Completed,1.4,0.0,Special Handling
-INSP00110,B016,M00531,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-08T16:23:00,2025-06-08T21:23:00,Completed,2.6,0.0,No Change
-INSP00111,B016,M00533,Record Review,Critical fields missing from source documentation.,2025-06-05T16:23:00,2025-06-05T18:23:00,Completed,0.6,0.0,No Change
-INSP00112,B016,M00534,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T17:23:00,2025-06-09T21:23:00,Completed,2.4,0.0,Still Unresolved
-INSP00113,B016,M00535,Quality Verification,poor condition; verify recoverable portion.,2025-06-09T20:23:00,2025-06-09T22:23:00,Completed,1.1,0.0,Cleared
-INSP00114,B016,M00538,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T19:23:00,2025-06-09T23:23:00,Completed,2.3,0.0,Still Unresolved
-INSP00115,B016,M00539,Routing Verification,Routine routing verification.,2025-06-08T21:23:00,2025-06-08T23:23:00,Completed,0.6,0.0,Still Unresolved
-INSP00116,B016,M00540,Routing Verification,Routine routing verification.,2025-06-05T18:23:00,2025-06-05T20:23:00,Completed,0.8,0.0,Route Changed
-INSP00117,B016,M00541,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-07T18:23:00,2025-06-07T23:23:00,Completed,2.9,0.0,No Change
-INSP00118,B016,M00544,Record Review,Critical fields missing from source documentation.,2025-06-05T18:23:00,2025-06-05T22:23:00,Completed,2.4,0.0,Cleared
-INSP00119,B016,M00545,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-05T15:23:00,2025-06-05T17:23:00,Completed,0.9,0.0,Route Changed
-INSP00120,B016,M00546,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-08T19:23:00,2025-06-08T21:23:00,Completed,1.3,0.0,Cleared
-INSP00121,B016,M00547,Routing Verification,Routine routing verification.,2025-06-06T19:23:00,2025-06-07T00:23:00,Completed,2.5,0.0,Still Unresolved
-INSP00122,B016,M00550,Quality Verification,poor condition; verify recoverable portion.,2025-06-06T16:23:00,2025-06-06T18:23:00,Completed,1.4,0.0,Still Unresolved
-INSP00123,B016,M00552,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-07T21:23:00,2025-06-08T02:23:00,Completed,2.9,563.9,Route Changed
-INSP00124,B016,M00555,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-05T21:23:00,2025-06-06T01:23:00,Completed,2.1,0.0,Cleared
-INSP00125,B016,M00558,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-09T21:23:00,2025-06-10T01:23:00,Completed,2.0,0.0,Route Changed
-INSP00126,B016,M00561,Routing Verification,Routine routing verification.,2025-06-08T17:23:00,2025-06-08T20:23:00,Completed,1.6,0.0,No Change
-INSP00127,B016,M00562,Routing Verification,Routine routing verification.,2025-06-09T21:23:00,2025-06-09T23:23:00,Completed,1.2,0.0,No Change
-INSP00128,B016,M00563,Routing Verification,Routine routing verification.,2025-06-08T18:23:00,2025-06-08T20:23:00,Completed,1.0,0.0,No Change
-INSP00129,B016,M00564,Quality Verification,poor condition; verify recoverable portion.,2025-06-09T21:23:00,2025-06-10T00:23:00,Completed,1.9,0.0,No Change
-INSP00130,B016,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-10T16:23:00,2025-06-16T00:23:00,Completed,6.4,0.0,No Change
-INSP00131,B016,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-12T16:23:00,2025-06-15T00:23:00,Completed,3.2,0.0,Still Unresolved
-INSP00132,B017,M00567,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T17:16:00,2025-06-20T20:16:00,Completed,1.6,0.0,Still Unresolved
-INSP00133,B017,M00569,Record Review,Critical fields missing from source documentation.,2025-06-16T16:16:00,2025-06-16T20:16:00,Completed,2.4,0.0,No Change
-INSP00134,B017,M00570,Record Review,Critical fields missing from source documentation.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,0.8,0.0,Route Changed
-INSP00135,B017,M00571,Quality Verification,severely degraded condition; verify recoverable portion.,2025-06-17T17:16:00,2025-06-17T19:16:00,Completed,0.9,0.0,Route Changed
-INSP00136,B017,M00572,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T15:16:00,2025-06-20T20:16:00,Completed,2.7,0.0,Cleared
-INSP00137,B017,M00573,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T15:16:00,2025-06-16T18:16:00,Completed,1.7,0.0,No Change
-INSP00138,B017,M00574,Quality Verification,poor condition; verify recoverable portion.,2025-06-18T20:16:00,2025-06-19T02:16:00,Completed,3.0,0.0,No Change
-INSP00139,B017,M00575,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-16T21:16:00,2025-06-17T02:16:00,Completed,2.9,0.0,Cleared
-INSP00140,B017,M00577,Record Review,Critical fields missing from source documentation.,2025-06-18T20:16:00,2025-06-18T22:16:00,Completed,0.8,0.0,Cleared
-INSP00141,B017,M00579,Quality Verification,severely degraded condition; verify recoverable portion.,2025-06-18T20:16:00,2025-06-19T01:16:00,Completed,2.8,0.0,Route Changed
-INSP00142,B017,M00582,Record Review,Critical fields missing from source documentation.,2025-06-17T21:16:00,2025-06-18T00:16:00,Completed,1.9,0.0,Special Handling
-INSP00143,B017,M00583,Record Review,Critical fields missing from source documentation.,2025-06-20T15:16:00,2025-06-20T17:16:00,Completed,0.8,0.0,Cleared
-INSP00144,B017,M00584,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-19T20:16:00,2025-06-19T22:16:00,Completed,0.6,0.0,No Change
-INSP00145,B017,M00585,Routing Verification,Routine routing verification.,2025-06-17T17:16:00,2025-06-17T20:16:00,Completed,1.9,0.0,No Change
-INSP00146,B017,M00586,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T18:16:00,2025-06-20T22:16:00,Completed,2.0,0.0,Cleared
-INSP00147,B017,M00587,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T20:16:00,2025-06-20T22:16:00,Completed,0.5,0.0,No Change
-INSP00148,B017,M00589,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,1.2,0.0,No Change
-INSP00149,B017,M00590,Quality Verification,poor condition; verify recoverable portion.,2025-06-16T20:16:00,2025-06-16T22:16:00,Completed,0.9,0.0,No Change
-INSP00150,B017,M00592,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T18:16:00,2025-06-21T00:16:00,Completed,3.0,0.0,No Change
-INSP00151,B017,M00594,Record Review,Critical fields missing from source documentation.,2025-06-16T18:16:00,2025-06-16T23:16:00,Completed,2.5,0.0,No Change
-INSP00152,B017,M00596,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-17T21:16:00,2025-06-17T23:16:00,Completed,1.0,0.0,No Change
-INSP00153,B017,M00597,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-06-20T16:16:00,2025-06-20T18:16:00,Completed,1.2,0.0,No Change
-INSP00154,B017,M00598,Routing Verification,Routine routing verification.,2025-06-16T17:16:00,2025-06-16T19:16:00,Completed,1.1,0.0,Cleared
-INSP00155,B017,M00601,Quality Verification,poor condition; verify recoverable portion.,2025-06-17T16:16:00,2025-06-17T18:16:00,Completed,1.0,0.0,No Change
-INSP00156,B017,M00602,Record Review,Partial records; confirm management fields.,2025-06-17T19:16:00,2025-06-17T23:16:00,Completed,2.1,0.0,Cleared
-INSP00157,B017,M00606,Record Review,Critical fields missing from source documentation.,2025-06-19T18:16:00,2025-06-19T23:16:00,Completed,2.9,0.0,Still Unresolved
-INSP00158,B017,M00608,Record Review,Critical fields missing from source documentation.,2025-06-19T15:16:00,2025-06-19T20:16:00,Completed,2.9,0.0,No Change
-INSP00159,B017,M00609,Quality Verification,poor condition; verify recoverable portion.,2025-06-17T17:16:00,2025-06-17T21:16:00,Completed,2.4,0.0,No Change
-INSP00160,B017,M00610,Routing Verification,Routine routing verification.,2025-06-17T18:16:00,2025-06-18T00:16:00,Completed,3.0,0.0,No Change
-INSP00161,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-23T16:16:00,2025-06-27T00:16:00,Completed,5.5,0.0,No Change
-INSP00162,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-22T16:16:00,2025-06-24T00:16:00,Completed,3.8,0.0,Route Changed
-INSP00163,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-17T16:16:00,2025-06-21T00:16:00,Completed,5.5,0.0,Still Unresolved
-INSP00164,B017,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-06-21T16:16:00,2025-06-23T00:16:00,Completed,6.4,0.0,No Change
-INSP00165,B018,M00629,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-01T18:33:00,2025-07-01T23:33:00,Completed,2.6,0.0,Route Changed
-INSP00166,B019,M00640,Manual Material Review,Special-handling candidate; manual review required.,2025-07-06T20:50:00,2025-07-07T01:50:00,Completed,2.5,0.0,Special Handling
-INSP00167,B019,M00657,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-06T19:50:00,2025-07-06T21:50:00,Completed,0.6,0.0,No Change
-INSP00168,B019,M00663,Manual Material Review,Adhesive / composite construction; manual review.,2025-07-10T20:50:00,2025-07-11T00:50:00,Completed,2.0,0.0,Route Changed
-INSP00169,B019,M00671,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-09T19:50:00,2025-07-09T23:50:00,Completed,2.1,0.0,Cleared
-INSP00170,B020,M00675,Routing Verification,Routine routing verification.,2025-07-14T21:22:00,2025-07-15T00:22:00,Completed,1.8,0.0,Cleared
-INSP00171,B020,M00676,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-17T18:22:00,2025-07-17T20:22:00,Completed,0.8,0.0,No Change
-INSP00172,B020,M00687,Record Review,Critical fields missing from source documentation.,2025-07-14T16:22:00,2025-07-14T21:22:00,Completed,2.5,0.0,Still Unresolved
-INSP00173,B020,M00690,Record Review,Critical fields missing from source documentation.,2025-07-18T16:22:00,2025-07-18T18:22:00,Completed,1.3,0.0,No Change
-INSP00174,B020,M00700,Quality Verification,poor condition; verify recoverable portion.,2025-07-17T19:22:00,2025-07-17T21:22:00,Completed,1.3,0.0,No Change
-INSP00175,B021,M00706,Record Review,Partial records; confirm management fields.,2025-07-27T16:01:00,2025-07-27T19:01:00,Completed,1.5,0.0,Special Handling
-INSP00176,B021,M00708,Routing Verification,Routine routing verification.,2025-07-27T19:01:00,2025-07-27T23:01:00,Completed,2.4,0.0,No Change
-INSP00177,B021,M00709,Record Review,Critical fields missing from source documentation.,2025-07-29T18:01:00,2025-07-29T21:01:00,Completed,1.7,0.0,No Change
-INSP00178,B021,M00711,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-30T17:01:00,2025-07-30T19:01:00,Completed,0.5,0.0,Still Unresolved
-INSP00179,B021,M00713,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-29T17:01:00,2025-07-29T21:01:00,Completed,2.2,0.0,Cleared
-INSP00180,B021,M00720,Record Review,Partial records; confirm management fields.,2025-07-27T20:01:00,2025-07-27T22:01:00,Completed,1.1,0.0,No Change
-INSP00181,B021,M00727,Record Review,Critical fields missing from source documentation.,2025-07-29T17:01:00,2025-07-29T21:01:00,Completed,2.2,0.0,Cleared
-INSP00182,B021,M00728,Routing Verification,Routine routing verification.,2025-07-31T21:01:00,2025-07-31T23:01:00,Completed,0.9,0.0,Still Unresolved
-INSP00183,B021,M00734,Record Review,Partial records; confirm management fields.,2025-07-29T22:01:00,2025-07-30T00:01:00,Completed,0.5,0.0,No Change
-INSP00184,B021,M00735,Routing Verification,Routine routing verification.,2025-07-31T16:01:00,2025-07-31T18:01:00,Completed,0.7,0.0,Special Handling
-INSP00185,B021,M00737,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-28T21:01:00,2025-07-29T02:01:00,Completed,2.9,0.0,No Change
-INSP00186,B021,M00744,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-07-29T17:01:00,2025-07-29T20:01:00,Completed,1.5,0.0,Still Unresolved
-INSP00187,B022,M00752,Routing Verification,Routine routing verification.,2025-08-06T23:41:00,2025-08-07T03:41:00,Completed,2.2,0.0,No Change
-INSP00188,B022,M00754,Routing Verification,Routine routing verification.,2025-08-07T20:41:00,2025-08-07T22:41:00,Completed,1.4,0.0,Still Unresolved
-INSP00189,B022,M00765,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-07T18:41:00,2025-08-07T21:41:00,Completed,1.5,0.0,Still Unresolved
-INSP00190,B022,M00767,Record Review,Partial records; confirm management fields.,2025-08-06T20:41:00,2025-08-07T01:41:00,Completed,2.9,0.0,Still Unresolved
-INSP00191,B022,M00779,Record Review,Partial records; confirm management fields.,2025-08-07T18:41:00,2025-08-07T21:41:00,Completed,1.5,0.0,Cleared
-INSP00192,B022,M00783,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-06T21:41:00,2025-08-06T23:41:00,Completed,0.7,0.0,Cleared
-INSP00193,B022,M00789,Record Review,Partial records; confirm management fields.,2025-08-09T20:41:00,2025-08-10T00:41:00,Completed,2.1,0.0,Route Changed
-INSP00194,B023,M00799,Quality Verification,poor condition; verify recoverable portion.,2025-08-16T19:14:00,2025-08-16T23:14:00,Completed,2.4,0.0,Still Unresolved
-INSP00195,B023,M00801,Record Review,Critical fields missing from source documentation.,2025-08-20T20:14:00,2025-08-20T22:14:00,Completed,1.2,0.0,Still Unresolved
-INSP00196,B023,M00804,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-16T19:14:00,2025-08-16T21:14:00,Completed,1.1,0.0,Still Unresolved
-INSP00197,B023,M00805,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-17T22:14:00,2025-08-18T03:14:00,Completed,2.6,0.0,No Change
-INSP00198,B023,M00807,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-19T20:14:00,2025-08-19T23:14:00,Completed,1.9,0.0,No Change
-INSP00199,B023,M00809,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-16T21:14:00,2025-08-16T23:14:00,Completed,1.1,0.0,Special Handling
-INSP00200,B023,M00811,Manual Material Review,Special-handling candidate; manual review required.,2025-08-20T23:14:00,2025-08-21T01:14:00,Completed,0.4,0.0,Special Handling
-INSP00201,B023,M00812,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-20T17:14:00,2025-08-20T21:14:00,Completed,2.1,0.0,Route Changed
-INSP00202,B023,M00813,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-20T22:14:00,2025-08-21T01:14:00,Completed,1.5,0.0,Cleared
-INSP00203,B023,M00815,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-18T22:14:00,2025-08-19T02:14:00,Completed,2.0,0.0,Special Handling
-INSP00204,B023,M00818,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-17T20:14:00,2025-08-17T22:14:00,Completed,1.1,0.0,No Change
-INSP00205,B023,M00819,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-18T18:14:00,2025-08-18T21:14:00,Completed,1.9,0.0,Cleared
-INSP00206,B023,M00820,Quality Verification,poor condition; verify recoverable portion.,2025-08-16T23:14:00,2025-08-17T03:14:00,Completed,2.1,0.0,No Change
-INSP00207,B023,M00821,Record Review,Critical fields missing from source documentation.,2025-08-17T17:14:00,2025-08-17T22:14:00,Completed,2.5,0.0,No Change
-INSP00208,B023,M00826,Quality Verification,severely degraded condition; verify recoverable portion.,2025-08-17T20:14:00,2025-08-18T01:14:00,Completed,2.5,0.0,Route Changed
-INSP00209,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-23T18:14:00,2025-08-25T02:14:00,Completed,4.0,0.0,Still Unresolved
-INSP00210,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-19T18:14:00,2025-08-24T02:14:00,Completed,5.5,0.0,Still Unresolved
-INSP00211,B023,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-08-19T18:14:00,2025-08-22T02:14:00,Completed,5.1,0.0,No Change
-INSP00212,B024,M00830,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-02T21:19:00,2025-09-02T23:19:00,Completed,0.5,0.0,No Change
-INSP00213,B024,M00838,Quality Verification,poor condition; verify recoverable portion.,2025-08-30T21:19:00,2025-08-30T23:19:00,Completed,0.7,0.0,Route Changed
-INSP00214,B024,M00843,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-31T19:19:00,2025-08-31T23:19:00,Completed,2.1,0.0,No Change
-INSP00215,B024,M00844,Manual Material Review,Adhesive / composite construction; manual review.,2025-09-02T15:19:00,2025-09-02T17:19:00,Completed,1.2,0.0,No Change
-INSP00216,B024,M00847,Record Review,Critical fields missing from source documentation.,2025-09-02T20:19:00,2025-09-02T22:19:00,Completed,1.3,0.0,Cleared
-INSP00217,B024,M00851,Record Review,Critical fields missing from source documentation.,2025-08-30T15:19:00,2025-08-30T17:19:00,Completed,0.9,0.0,No Change
-INSP00218,B024,M00853,Manual Material Review,Special-handling candidate; manual review required.,2025-09-01T16:19:00,2025-09-01T18:19:00,Completed,1.3,0.0,Special Handling
-INSP00219,B024,M00860,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-08-29T18:19:00,2025-08-29T20:19:00,Completed,1.3,0.0,Cleared
-INSP00220,B024,M00861,Manual Material Review,Special-handling candidate; manual review required.,2025-09-02T15:19:00,2025-09-02T18:19:00,Completed,1.7,0.0,Special Handling
-INSP00221,B025,M00867,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-11T22:38:00,2025-09-12T01:38:00,Completed,1.9,0.0,No Change
-INSP00222,B025,M00868,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-09T22:38:00,2025-09-10T03:38:00,Completed,2.7,644.72,No Change
-INSP00223,B025,M00869,Routing Verification,Routine routing verification.,2025-09-09T18:38:00,2025-09-09T23:38:00,Completed,2.6,0.0,No Change
-INSP00224,B025,M00870,Routing Verification,Routine routing verification.,2025-09-07T20:38:00,2025-09-07T22:38:00,Completed,1.1,0.0,No Change
-INSP00225,B025,M00872,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-09T00:38:00,Completed,2.2,0.0,Special Handling
-INSP00226,B025,M00873,Routing Verification,Routine routing verification.,2025-09-08T21:38:00,2025-09-08T23:38:00,Completed,0.9,0.0,No Change
-INSP00227,B025,M00877,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-07T23:38:00,2025-09-08T01:38:00,Completed,0.8,0.0,Cleared
-INSP00228,B025,M00881,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-09T01:38:00,Completed,2.7,0.0,Cleared
-INSP00229,B025,M00882,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-10T19:38:00,2025-09-10T21:38:00,Completed,1.1,300.17,Cleared
-INSP00230,B025,M00883,Quality Verification,poor condition; verify recoverable portion.,2025-09-08T19:38:00,2025-09-08T21:38:00,Completed,1.0,0.0,No Change
-INSP00231,B025,M00886,Manual Material Review,Special-handling candidate; manual review required.,2025-09-10T18:38:00,2025-09-10T20:38:00,Completed,0.8,0.0,Special Handling
-INSP00232,B025,M00887,Record Review,Partial records; confirm management fields.,2025-09-07T22:38:00,2025-09-08T02:38:00,Completed,2.0,0.0,Route Changed
-INSP00233,B025,M00888,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-11T17:38:00,2025-09-11T19:38:00,Completed,1.4,295.6,Still Unresolved
-INSP00234,B025,M00889,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-07T22:38:00,2025-09-08T00:38:00,Completed,0.9,0.0,No Change
-INSP00235,B025,M00890,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-08T20:38:00,2025-09-08T22:38:00,Completed,1.3,0.0,Special Handling
-INSP00236,B025,M00894,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-10T22:38:00,2025-09-11T01:38:00,Completed,1.5,0.0,No Change
-INSP00237,B025,M00895,Record Review,Critical fields missing from source documentation.,2025-09-09T22:38:00,2025-09-10T00:38:00,Completed,0.7,0.0,No Change
-INSP00238,B025,M00898,Record Review,Critical fields missing from source documentation.,2025-09-08T18:38:00,2025-09-08T20:38:00,Completed,0.9,0.0,No Change
-INSP00239,B025,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-08T18:38:00,2025-09-10T02:38:00,Completed,7.6,0.0,No Change
-INSP00240,B025,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-12T18:38:00,2025-09-18T02:38:00,Completed,6.6,0.0,Still Unresolved
-INSP00241,B026,M00900,Manual Material Review,Special-handling candidate; manual review required.,2025-09-17T21:31:00,2025-09-18T00:31:00,Completed,1.5,0.0,Special Handling
-INSP00242,B026,M00908,Record Review,Critical fields missing from source documentation.,2025-09-19T00:31:00,2025-09-19T03:31:00,Completed,1.6,0.0,Special Handling
-INSP00243,B026,M00913,Record Review,Critical fields missing from source documentation.,2025-09-19T22:31:00,2025-09-20T00:31:00,Completed,0.5,0.0,Special Handling
-INSP00244,B026,M00915,Record Review,Critical fields missing from source documentation.,2025-09-16T21:31:00,2025-09-17T01:31:00,Completed,2.1,0.0,Cleared
-INSP00245,B026,M00917,Quality Verification,poor condition; verify recoverable portion.,2025-09-17T23:31:00,2025-09-18T04:31:00,Completed,2.6,0.0,No Change
-INSP00246,B026,M00918,Record Review,Critical fields missing from source documentation.,2025-09-20T00:31:00,2025-09-20T02:31:00,Completed,0.6,0.0,Special Handling
-INSP00247,B026,M00924,Manual Material Review,Special-handling candidate; manual review required.,2025-09-16T00:31:00,2025-09-16T02:31:00,Completed,0.7,0.0,Special Handling
-INSP00248,B026,M00925,Record Review,Critical fields missing from source documentation.,2025-09-15T21:31:00,2025-09-16T02:31:00,Completed,2.7,0.0,Special Handling
-INSP00249,B026,M00926,Record Review,Critical fields missing from source documentation.,2025-09-18T23:31:00,2025-09-19T01:31:00,Completed,1.4,0.0,Special Handling
-INSP00250,B026,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-16T19:31:00,2025-09-21T03:31:00,Completed,3.3,0.0,Still Unresolved
-INSP00251,B027,M00928,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T22:20:00,N/A,Open,1.7,0.0,N/A
-INSP00252,B027,M00929,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T18:20:00,N/A,Open,1.1,0.0,N/A
-INSP00253,B027,M00930,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T21:20:00,N/A,Open,2.1,0.0,N/A
-INSP00254,B027,M00931,Record Review,Critical fields missing from source documentation.,2025-10-03T20:20:00,N/A,Open,1.6,0.0,N/A
-INSP00255,B027,M00932,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-04T00:20:00,N/A,Open,1.9,0.0,N/A
-INSP00256,B027,M00933,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T18:20:00,N/A,Open,1.3,0.0,N/A
-INSP00257,B027,M00934,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T20:20:00,N/A,Open,1.4,0.0,N/A
-INSP00258,B027,M00935,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T20:20:00,N/A,Open,1.1,291.36,N/A
-INSP00259,B027,M00936,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-01T22:20:00,N/A,Open,2.1,0.0,N/A
-INSP00260,B027,M00937,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-03T23:20:00,N/A,Open,2.2,0.0,N/A
-INSP00261,B027,M00938,Manual Material Review,Special-handling candidate; manual review required.,2025-10-02T20:20:00,N/A,Open,1.9,0.0,N/A
-INSP00262,B027,M00939,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T23:20:00,N/A,Open,0.8,0.0,N/A
-INSP00263,B027,M00940,Routing Verification,Routine routing verification.,2025-09-30T00:20:00,N/A,Open,1.2,0.0,N/A
-INSP00264,B027,M00941,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T18:20:00,N/A,Open,2.6,0.0,N/A
-INSP00265,B027,M00942,Routing Verification,Routine routing verification.,2025-10-02T00:20:00,N/A,Open,2.8,0.0,N/A
-INSP00266,B027,M00943,Record Review,Critical fields missing from source documentation.,2025-10-03T18:20:00,N/A,Open,1.5,0.0,N/A
-INSP00267,B027,M00944,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T18:20:00,N/A,Open,0.9,0.0,N/A
-INSP00268,B027,M00945,Record Review,Critical fields missing from source documentation.,2025-10-01T21:20:00,N/A,Open,1.7,0.0,N/A
-INSP00269,B027,M00946,Manual Material Review,Adhesive / composite construction; manual review.,2025-10-04T00:20:00,N/A,Open,1.2,0.0,N/A
-INSP00270,B027,M00947,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-03T21:20:00,N/A,Open,0.5,0.0,N/A
-INSP00271,B027,M00948,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T23:20:00,N/A,Open,0.4,0.0,N/A
-INSP00272,B027,M00949,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-02T20:20:00,N/A,Open,1.3,0.0,N/A
-INSP00273,B027,M00950,Record Review,Critical fields missing from source documentation.,2025-09-29T18:20:00,N/A,Open,1.9,0.0,N/A
-INSP00274,B027,M00951,Record Review,Critical fields missing from source documentation.,2025-09-29T21:20:00,N/A,Open,1.1,0.0,N/A
-INSP00275,B027,M00952,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T19:20:00,N/A,Open,0.9,0.0,N/A
-INSP00276,B027,M00953,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-01T23:20:00,N/A,Open,1.9,0.0,N/A
-INSP00277,B027,M00954,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-30T19:20:00,N/A,Open,2.9,0.0,N/A
-INSP00278,B027,M00955,Record Review,Critical fields missing from source documentation.,2025-09-30T00:20:00,N/A,Open,0.5,0.0,N/A
-INSP00279,B027,M00956,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-02T22:20:00,N/A,Open,1.8,0.0,N/A
-INSP00280,B027,M00957,Record Review,Critical fields missing from source documentation.,2025-10-02T19:20:00,N/A,Open,0.8,0.0,N/A
-INSP00281,B027,M00958,Record Review,Critical fields missing from source documentation.,2025-09-29T21:20:00,N/A,Open,0.5,0.0,N/A
-INSP00282,B027,M00959,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-09-29T22:20:00,N/A,Open,1.0,0.0,N/A
-INSP00283,B027,M00960,Quality Verification,poor condition; verify recoverable portion.,2025-10-03T00:20:00,N/A,Open,1.0,0.0,N/A
-INSP00284,B027,M00961,Record Review,Partial records; confirm management fields.,2025-10-02T20:20:00,N/A,Open,1.7,0.0,N/A
-INSP00285,B027,M00962,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-03T00:20:00,N/A,Open,2.4,205.72,N/A
-INSP00286,B027,M00963,Manual Material Review,Special-handling candidate; manual review required.,2025-09-30T22:20:00,N/A,Open,1.4,0.0,N/A
-INSP00287,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-06T19:20:00,N/A,Open,8.0,0.0,N/A
-INSP00288,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-03T19:20:00,N/A,Open,3.3,0.0,N/A
-INSP00289,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-06T19:20:00,N/A,Open,3.6,0.0,N/A
-INSP00290,B027,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-09-30T19:20:00,N/A,Open,3.6,0.0,N/A
-INSP00291,B028,M00972,Record Review,Partial records; confirm management fields.,2025-10-08T20:39:00,2025-10-08T23:39:00,Completed,1.8,0.0,Cleared
-INSP00292,B028,M00978,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-05T21:39:00,2025-10-06T01:39:00,Completed,2.1,0.0,Still Unresolved
-INSP00293,B028,M00979,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-05T19:39:00,2025-10-05T22:39:00,Completed,1.8,0.0,Cleared
-INSP00294,B028,M00984,Record Review,Critical fields missing from source documentation.,2025-10-09T18:39:00,2025-10-09T23:39:00,Completed,2.5,0.0,No Change
-INSP00295,B028,M00986,Record Review,Critical fields missing from source documentation.,2025-10-09T17:39:00,2025-10-09T20:39:00,Completed,1.8,0.0,Special Handling
-INSP00296,B028,M00990,Record Review,Critical fields missing from source documentation.,2025-10-06T18:39:00,2025-10-06T21:39:00,Completed,1.6,0.0,Cleared
-INSP00297,B028,M00994,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-09T17:39:00,2025-10-09T19:39:00,Completed,1.2,0.0,No Change
-INSP00298,B028,M00995,Quality Verification,poor condition; verify recoverable portion.,2025-10-08T22:39:00,2025-10-09T00:39:00,Completed,1.3,0.0,Still Unresolved
-INSP00299,B028,M01002,Quality Verification,poor condition; verify recoverable portion.,2025-10-07T21:39:00,2025-10-08T00:39:00,Completed,1.8,0.0,Cleared
-INSP00300,B029,M01013,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-19T23:46:00,2025-10-20T01:46:00,Completed,1.4,0.0,No Change
-INSP00301,B029,M01021,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-15T17:46:00,2025-10-15T21:46:00,Completed,2.1,0.0,No Change
-INSP00302,B029,M01029,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-17T23:46:00,2025-10-18T01:46:00,Completed,1.4,0.0,Still Unresolved
-INSP00303,B029,M01031,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-17T18:46:00,2025-10-17T20:46:00,Completed,1.0,0.0,Still Unresolved
-INSP00304,B030,M01035,Record Review,Partial records; confirm management fields.,2025-10-29T00:46:00,N/A,Open,2.1,0.0,N/A
-INSP00305,B030,M01036,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-25T22:46:00,N/A,Open,2.5,0.0,N/A
-INSP00306,B030,M01037,Quality Verification,severely degraded condition; verify recoverable portion.,2025-10-26T21:46:00,N/A,Open,1.0,0.0,N/A
-INSP00307,B030,M01038,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-29T00:46:00,N/A,Open,1.8,0.0,N/A
-INSP00308,B030,M01039,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T19:46:00,N/A,Open,2.3,191.61,N/A
-INSP00309,B030,M01040,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T19:46:00,N/A,Open,0.5,0.0,N/A
-INSP00310,B030,M01041,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T20:46:00,N/A,Open,2.1,551.25,N/A
-INSP00311,B030,M01042,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T20:46:00,N/A,Open,1.9,0.0,N/A
-INSP00312,B030,M01043,Manual Material Review,Special-handling candidate; manual review required.,2025-10-25T00:46:00,N/A,Open,0.8,0.0,N/A
-INSP00313,B030,M01044,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T22:46:00,N/A,Open,0.6,0.0,N/A
-INSP00314,B030,M01045,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T18:46:00,N/A,Open,1.7,0.0,N/A
-INSP00315,B030,M01046,Manual Material Review,Special-handling candidate; manual review required.,2025-10-25T18:46:00,N/A,Open,2.2,0.0,N/A
-INSP00316,B030,M01047,Record Review,Partial records; confirm management fields.,2025-10-25T21:46:00,N/A,Open,3.0,0.0,N/A
-INSP00317,B030,M01048,Record Review,Critical fields missing from source documentation.,2025-10-26T19:46:00,N/A,Open,2.3,0.0,N/A
-INSP00318,B030,M01049,Record Review,Partial records; confirm management fields.,2025-10-26T19:46:00,N/A,Open,1.7,0.0,N/A
-INSP00319,B030,M01050,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T18:46:00,N/A,Open,2.1,0.0,N/A
-INSP00320,B030,M01051,Record Review,Critical fields missing from source documentation.,2025-10-24T20:46:00,N/A,Open,2.1,0.0,N/A
-INSP00321,B030,M01052,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T21:46:00,N/A,Open,1.8,0.0,N/A
-INSP00322,B030,M01053,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T23:46:00,N/A,Open,2.0,0.0,N/A
-INSP00323,B030,M01054,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T19:46:00,N/A,Open,1.9,0.0,N/A
-INSP00324,B030,M01055,Quality Verification,poor condition; verify recoverable portion.,2025-10-25T20:46:00,N/A,Open,2.6,0.0,N/A
-INSP00325,B030,M01056,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T23:46:00,N/A,Open,2.5,0.0,N/A
-INSP00326,B030,M01057,Record Review,Critical fields missing from source documentation.,2025-10-27T20:46:00,N/A,Open,0.4,0.0,N/A
-INSP00327,B030,M01058,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T18:46:00,N/A,Open,1.5,680.83,N/A
-INSP00328,B030,M01059,Record Review,Critical fields missing from source documentation.,2025-10-25T19:46:00,N/A,Open,2.1,0.0,N/A
-INSP00329,B030,M01060,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T23:46:00,N/A,Open,2.2,0.0,N/A
-INSP00330,B030,M01061,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-28T20:46:00,N/A,Open,1.7,0.0,N/A
-INSP00331,B030,M01062,Quality Verification,poor condition; verify recoverable portion.,2025-10-28T20:46:00,N/A,Open,0.8,0.0,N/A
-INSP00332,B030,M01063,Routing Verification,Routine routing verification.,2025-10-26T23:46:00,N/A,Open,1.2,0.0,N/A
-INSP00333,B030,M01064,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-25T19:46:00,N/A,Open,1.0,269.71,N/A
-INSP00334,B030,M01065,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-26T00:46:00,N/A,Open,0.8,0.0,N/A
-INSP00335,B030,M01066,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-10-27T23:46:00,N/A,Open,1.4,0.0,N/A
-INSP00336,B030,M01067,Record Review,Partial records; confirm management fields.,2025-10-28T21:46:00,N/A,Open,2.7,0.0,N/A
-INSP00337,B030,M01068,Record Review,Critical fields missing from source documentation.,2025-10-26T23:46:00,N/A,Open,1.9,0.0,N/A
-INSP00338,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-25T19:46:00,N/A,Open,3.6,0.0,N/A
-INSP00339,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-30T19:46:00,N/A,Open,4.8,0.0,N/A
-INSP00340,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-30T19:46:00,N/A,Open,5.2,0.0,N/A
-INSP00341,B030,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-10-29T19:46:00,N/A,Open,3.4,0.0,N/A
-INSP00342,B031,M01071,Record Review,Partial records; confirm management fields.,2025-11-08T22:25:00,2025-11-09T00:25:00,Completed,1.3,0.0,No Change
-INSP00343,B031,M01073,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-07T16:25:00,2025-11-07T18:25:00,Completed,1.2,0.0,Still Unresolved
-INSP00344,B031,M01075,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-10T20:25:00,N/A,Open,0.6,0.0,N/A
-INSP00345,B031,M01082,Quality Verification,poor condition; verify recoverable portion.,2025-11-09T19:25:00,N/A,Open,0.9,0.0,N/A
-INSP00346,B031,M01083,Record Review,Critical fields missing from source documentation.,2025-11-10T16:25:00,N/A,Open,0.5,0.0,N/A
-INSP00347,B031,M01093,Routing Verification,Routine routing verification.,2025-11-07T21:25:00,N/A,Open,2.1,0.0,N/A
-INSP00348,B032,M01109,Routing Verification,Routine routing verification.,2025-11-17T20:20:00,N/A,Open,1.2,0.0,N/A
-INSP00349,B032,M01110,Record Review,Critical fields missing from source documentation.,2025-11-19T20:20:00,N/A,Open,0.6,0.0,N/A
-INSP00350,B032,M01112,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-17T20:20:00,N/A,Open,1.5,0.0,N/A
-INSP00351,B032,M01117,Record Review,Critical fields missing from source documentation.,2025-11-17T21:20:00,2025-11-17T23:20:00,Completed,1.4,0.0,Special Handling
-INSP00352,B032,M01120,Routing Verification,Routine routing verification.,2025-11-20T16:20:00,N/A,Open,1.5,0.0,N/A
-INSP00353,B032,M01127,Routing Verification,Routine routing verification.,2025-11-19T20:20:00,N/A,Open,1.4,0.0,N/A
-INSP00354,B033,M01137,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-27T21:45:00,N/A,Open,0.6,0.0,N/A
-INSP00355,B033,M01138,Record Review,Partial records; confirm management fields.,2025-11-26T19:45:00,N/A,Open,1.9,0.0,N/A
-INSP00356,B033,M01139,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T18:45:00,N/A,Open,1.5,0.0,N/A
-INSP00357,B033,M01140,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T19:45:00,N/A,Open,2.0,0.0,N/A
-INSP00358,B033,M01141,Record Review,Partial records; confirm management fields.,2025-11-29T19:45:00,N/A,Open,1.9,0.0,N/A
-INSP00359,B033,M01142,Record Review,Critical fields missing from source documentation.,2025-11-27T23:45:00,N/A,Open,2.0,0.0,N/A
-INSP00360,B033,M01143,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T21:45:00,N/A,Open,0.8,239.92,N/A
-INSP00361,B033,M01144,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T18:45:00,N/A,Open,1.8,0.0,N/A
-INSP00362,B033,M01145,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T21:45:00,N/A,Open,1.5,0.0,N/A
-INSP00363,B033,M01146,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T23:45:00,N/A,Open,1.1,0.0,N/A
-INSP00364,B033,M01147,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T23:45:00,N/A,Open,3.0,0.0,N/A
-INSP00365,B033,M01148,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T21:45:00,N/A,Open,2.8,0.0,N/A
-INSP00366,B033,M01149,Record Review,Partial records; confirm management fields.,2025-11-26T20:45:00,N/A,Open,0.5,0.0,N/A
-INSP00367,B033,M01150,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-28T20:45:00,N/A,Open,0.4,0.0,N/A
-INSP00368,B033,M01151,Record Review,Partial records; confirm management fields.,2025-11-30T00:45:00,N/A,Open,1.6,0.0,N/A
-INSP00369,B033,M01152,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T19:45:00,N/A,Open,1.1,0.0,N/A
-INSP00370,B033,M01153,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T20:45:00,N/A,Open,2.1,654.1,N/A
-INSP00371,B033,M01154,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-28T19:45:00,N/A,Open,0.5,0.0,N/A
-INSP00372,B033,M01155,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-29T19:45:00,N/A,Open,1.6,0.0,N/A
-INSP00373,B033,M01156,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-30T00:45:00,N/A,Open,2.2,0.0,N/A
-INSP00374,B033,M01157,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-27T22:45:00,N/A,Open,0.5,648.42,N/A
-INSP00375,B033,M01158,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T21:45:00,N/A,Open,0.5,0.0,N/A
-INSP00376,B033,M01159,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T19:45:00,N/A,Open,1.7,0.0,N/A
-INSP00377,B033,M01160,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T20:45:00,N/A,Open,1.1,0.0,N/A
-INSP00378,B033,M01161,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T23:45:00,N/A,Open,2.1,0.0,N/A
-INSP00379,B033,M01162,Quality Verification,poor condition; verify recoverable portion.,2025-11-26T00:45:00,N/A,Open,2.2,0.0,N/A
-INSP00380,B033,M01163,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-26T23:45:00,N/A,Open,1.7,406.51,N/A
-INSP00381,B033,M01164,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-11-25T19:45:00,N/A,Open,1.1,0.0,N/A
-INSP00382,B033,M01165,Routing Verification,Routine routing verification.,2025-11-27T00:45:00,N/A,Open,0.7,0.0,N/A
-INSP00383,B033,M01166,Manual Material Review,Special-handling candidate; manual review required.,2025-11-27T00:45:00,N/A,Open,2.4,0.0,N/A
-INSP00384,B033,M01167,Quality Verification,poor condition; verify recoverable portion.,2025-11-25T23:45:00,N/A,Open,2.8,0.0,N/A
-INSP00385,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-27T19:45:00,N/A,Open,3.1,0.0,N/A
-INSP00386,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-26T19:45:00,N/A,Open,5.3,0.0,N/A
-INSP00387,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-27T19:45:00,N/A,Open,7.0,0.0,N/A
-INSP00388,B033,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-11-30T19:45:00,N/A,Open,4.1,0.0,N/A
-INSP00389,B034,M01168,Manual Material Review,Special-handling candidate; manual review required.,2025-12-09T18:27:00,N/A,Open,0.8,0.0,N/A
-INSP00390,B034,M01170,Manual Material Review,Special-handling candidate; manual review required.,2025-12-11T21:27:00,N/A,Open,2.0,0.0,N/A
-INSP00391,B034,M01171,Quality Verification,poor condition; verify recoverable portion.,2025-12-11T18:27:00,N/A,Open,1.0,0.0,N/A
-INSP00392,B034,M01176,Record Review,Critical fields missing from source documentation.,2025-12-07T20:27:00,N/A,Open,2.1,0.0,N/A
-INSP00393,B034,M01177,Record Review,Critical fields missing from source documentation.,2025-12-11T19:27:00,N/A,Open,2.7,0.0,N/A
-INSP00394,B034,M01184,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-10T00:27:00,N/A,Open,0.4,0.0,N/A
-INSP00395,B034,M01187,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-10T23:27:00,N/A,Open,0.7,0.0,N/A
-INSP00396,B034,M01188,Manual Material Review,Special-handling candidate; manual review required.,2025-12-08T23:27:00,N/A,Open,1.1,0.0,N/A
-INSP00397,B034,M01190,Record Review,Critical fields missing from source documentation.,2025-12-07T20:27:00,N/A,Open,3.0,0.0,N/A
-INSP00398,B034,M01191,Record Review,Partial records; confirm management fields.,2025-12-08T20:27:00,N/A,Open,1.9,0.0,N/A
-INSP00399,B034,N/A,Record Review,Batch-level record review for complex / uncertain source documentation.,2025-12-12T19:27:00,N/A,Open,4.1,0.0,N/A
-INSP00400,B035,M01197,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-20T17:18:00,N/A,Open,1.1,0.0,N/A
-INSP00401,B035,M01200,Record Review,Critical fields missing from source documentation.,2025-12-16T18:18:00,N/A,Open,0.4,0.0,N/A
-INSP00402,B035,M01210,Record Review,Critical fields missing from source documentation.,2025-12-18T20:18:00,N/A,Open,2.0,0.0,N/A
-INSP00403,B035,M01215,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-19T16:18:00,2025-12-19T18:18:00,Completed,1.1,0.0,No Change
-INSP00404,B035,M01220,Record Review,Critical fields missing from source documentation.,2025-12-16T15:18:00,N/A,Open,1.2,0.0,N/A
-INSP00405,B035,M01225,Record Review,Critical fields missing from source documentation.,2025-12-17T16:18:00,N/A,Open,1.6,0.0,N/A
-INSP00406,B036,M01229,Treatment Information Verification,Treatment history unknown or conflicting in source records.,2025-12-25T20:45:00,N/A,Open,0.4,0.0,N/A
-INSP00407,B036,M01230,Quality Verification,poor condition; verify recoverable portion.,2025-12-23T16:45:00,N/A,Open,1.1,0.0,N/A
-INSP00408,B036,M01243,Quality Verification,poor condition; verify recoverable portion.,2025-12-23T17:45:00,N/A,Open,1.8,0.0,N/A
-INSP00409,B036,M01244,Record Review,Partial records; confirm management fields.,2025-12-26T20:45:00,N/A,Open,2.3,0.0,N/A
-INSP00410,B036,M01245,Routing Verification,Routine routing verification.,2025-12-27T18:45:00,N/A,Open,2.1,0.0,N/A
-INSP00411,B036,M01250,Record Review,Partial records; confirm management fields.,2025-12-25T20:45:00,N/A,Open,1.2,0.0,N/A
-INSP00412,B036,M01252,Routing Verification,Routine routing verification.,2025-12-26T18:45:00,N/A,Open,0.9,0.0,N/A
+﻿inspection_id,batch_id,material_id,inspection_type,reason,opened_datetime,closed_datetime,status,labour_hours,external_cost_aud,outcome
+INSP00001,B001,M00001,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-13T00:45:00,2025-01-18T07:45:00,Completed,3.5,295.50,Cleared
+INSP00002,B001,M00002,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-09T23:45:00,2025-01-15T02:45:00,Completed,0.7,194.59,Cleared
+INSP00003,B001,M00004,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-12T22:45:00,2025-01-18T04:45:00,Completed,1.0,242.22,Cleared
+INSP00004,B001,M00009,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-09T18:45:00,2025-01-11T21:45:00,Completed,1.8,340.77,Cleared
+INSP00005,B001,M00010,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-12T16:45:00,2025-01-16T19:45:00,Completed,1.8,332.96,Cleared
+INSP00006,B001,M00011,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-11T00:45:00,2025-01-15T03:45:00,Completed,0.7,65.48,Special Handling
+INSP00007,B001,M00017,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-12T19:45:00,2025-01-17T20:45:00,Completed,2.6,213.14,Cleared
+INSP00008,B001,M00023,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-11T20:45:00,2025-01-14T02:45:00,Completed,3.7,125.63,Cleared
+INSP00009,B001,M00025,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-12T18:45:00,2025-01-15T23:45:00,Completed,2.9,45.76,Cleared
+INSP00010,B001,M00033,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-09T18:45:00,2025-01-14T22:45:00,Completed,1.8,29.63,Special Handling
+INSP00011,B001,M00034,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-08T23:45:00,2025-01-13T02:45:00,Completed,0.8,112.61,Cleared
+INSP00012,B002,M00040,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-17T21:29:00,2025-01-19T00:29:00,Completed,0.6,239.48,Cleared
+INSP00013,B002,M00043,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-20T20:29:00,2025-01-26T04:29:00,Completed,3.6,272.91,Cleared
+INSP00014,B002,M00046,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-22T02:29:00,2025-01-24T05:29:00,Completed,1.4,71.91,Cleared
+INSP00015,B002,M00049,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-20T23:29:00,2025-01-24T07:29:00,Completed,1.2,0.22,Cleared
+INSP00016,B002,M00054,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-21T19:29:00,2025-01-25T23:29:00,Completed,1.3,110.35,Cleared
+INSP00017,B002,M00056,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-18T20:29:00,2025-01-20T00:29:00,Completed,1.9,56.23,Special Handling
+INSP00018,B002,M00057,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-20T22:29:00,2025-01-23T04:29:00,Completed,3.5,115.96,Route Changed
+INSP00019,B002,M00061,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-19T02:29:00,2025-01-24T08:29:00,Completed,3.4,229.54,Cleared
+INSP00020,B002,M00066,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-21T02:29:00,2025-01-22T04:29:00,Completed,1.1,67.84,Cleared
+INSP00021,B002,M00069,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-21T02:29:00,2025-01-22T03:29:00,Completed,1.2,71.01,Route Changed
+INSP00022,B002,M00078,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-21T21:29:00,2025-01-24T05:29:00,Completed,1.0,309.53,Special Handling
+INSP00023,B002,M00079,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-18T01:29:00,2025-01-20T03:29:00,Completed,3.6,148.57,Cleared
+INSP00024,B002,M00080,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-21T01:29:00,2025-01-26T07:29:00,Completed,2.4,115.02,Cleared
+INSP00025,B003,M00082,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-28T00:36:00,2025-01-30T04:36:00,Completed,3.5,391.27,Cleared
+INSP00026,B003,M00084,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-30T18:36:00,2025-02-04T22:36:00,Completed,2.8,170.59,Special Handling
+INSP00027,B003,M00088,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-27T20:36:00,2025-02-01T23:36:00,Completed,0.8,46.65,Cleared
+INSP00028,B003,M00089,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-30T02:36:00,2025-02-03T09:36:00,Completed,2.7,182.48,Cleared
+INSP00029,B003,M00091,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-28T19:36:00,2025-02-01T01:36:00,Completed,2.1,35.14,Cleared
+INSP00030,B003,M00098,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-01T00:36:00,2025-02-03T05:36:00,Completed,1.9,293.38,Cleared
+INSP00031,B003,M00105,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-01-31T18:36:00,2025-02-03T01:36:00,Completed,3.3,166.76,Special Handling
+INSP00032,B003,M00106,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-01-30T02:36:00,2025-02-01T10:36:00,Completed,3.5,437.71,Cleared
+INSP00033,B004,M00109,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-09T23:26:00,2025-02-11T05:26:00,Completed,1.0,31.22,Cleared
+INSP00034,B004,M00110,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T20:26:00,2025-02-16T00:26:00,Completed,2.2,154.89,Cleared
+INSP00035,B004,M00112,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T19:26:00,2025-02-17T20:26:00,Completed,1.1,318.38,Cleared
+INSP00036,B004,M00113,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-11T18:26:00,2025-02-16T01:26:00,Completed,3.3,268.85,Cleared
+INSP00037,B004,M00118,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-08T15:26:00,2025-02-11T21:26:00,Completed,2.1,314.40,Special Handling
+INSP00038,B004,M00124,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-08T20:26:00,2025-02-09T21:26:00,Completed,3.2,358.64,Cleared
+INSP00039,B004,M00126,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-11T16:26:00,2025-02-12T22:26:00,Completed,2.9,449.07,Cleared
+INSP00040,B004,M00127,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-11T21:26:00,2025-02-13T00:26:00,Completed,1.6,158.47,Cleared
+INSP00041,B004,M00130,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T18:26:00,2025-02-15T19:26:00,Completed,2.6,31.51,Route Changed
+INSP00042,B004,M00131,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T21:26:00,2025-02-15T00:26:00,Completed,0.7,335.00,Cleared
+INSP00043,B004,M00137,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T19:26:00,2025-02-17T21:26:00,Completed,1.3,229.88,Cleared
+INSP00044,B004,M00140,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-09T22:26:00,2025-02-15T02:26:00,Completed,1.4,249.69,Cleared
+INSP00045,B004,M00142,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-08T18:26:00,2025-02-12T02:26:00,Completed,0.8,199.99,Cleared
+INSP00046,B004,M00144,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-11T23:26:00,2025-02-17T07:26:00,Completed,0.7,365.48,Special Handling
+INSP00047,B004,M00145,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-12T16:26:00,2025-02-16T23:26:00,Completed,3.2,437.89,Cleared
+INSP00048,B005,M00148,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-19T22:24:00,2025-02-25T01:24:00,Completed,3.8,361.88,Cleared
+INSP00049,B005,M00149,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-17T17:24:00,2025-02-21T19:24:00,Completed,1.3,69.32,Cleared
+INSP00050,B005,M00153,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-18T19:24:00,2025-02-20T01:24:00,Completed,2.6,58.29,Cleared
+INSP00051,B005,M00165,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-19T17:24:00,2025-02-21T23:24:00,Completed,3.9,307.48,Special Handling
+INSP00052,B005,M00167,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-18T16:24:00,2025-02-19T19:24:00,Completed,1.6,79.04,Cleared
+INSP00053,B005,M00171,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-18T23:24:00,2025-02-22T07:24:00,Completed,2.0,441.65,Cleared
+INSP00054,B005,M00179,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-18T22:24:00,2025-02-19T23:24:00,Completed,1.6,254.08,Special Handling
+INSP00055,B005,M00180,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-16T17:24:00,2025-02-18T19:24:00,Completed,0.6,237.92,Cleared
+INSP00056,B006,M00181,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-28T20:30:00,2025-03-06T00:30:00,Completed,0.6,85.64,Cleared
+INSP00057,B006,M00183,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T23:30:00,2025-03-01T05:30:00,Completed,1.5,35.47,Cleared
+INSP00058,B006,M00184,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T21:30:00,2025-02-28T00:30:00,Completed,3.5,319.47,Cleared
+INSP00059,B006,M00185,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-02T17:30:00,2025-03-04T23:30:00,Completed,3.2,434.76,Cleared
+INSP00060,B006,M00186,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T21:30:00,2025-03-07T05:30:00,Completed,0.8,10.80,Special Handling
+INSP00061,B006,M00187,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T17:30:00,2025-03-06T21:30:00,Completed,0.7,51.27,Route Changed
+INSP00062,B006,M00188,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T19:30:00,2025-03-02T22:30:00,Completed,2.2,414.85,Cleared
+INSP00063,B006,M00190,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T01:30:00,2025-03-05T02:30:00,Completed,2.4,422.77,Cleared
+INSP00064,B006,M00191,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-02T23:30:00,2025-03-05T01:30:00,Completed,3.0,411.28,Cleared
+INSP00065,B006,M00192,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T17:30:00,2025-02-28T20:30:00,Completed,2.1,372.09,Cleared
+INSP00066,B006,M00196,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-02T21:30:00,2025-03-08T02:30:00,Completed,1.7,259.73,Cleared
+INSP00067,B006,M00198,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T19:30:00,2025-03-03T01:30:00,Completed,3.6,264.40,Cleared
+INSP00068,B006,M00199,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-01T23:30:00,2025-03-04T00:30:00,Completed,1.2,295.34,Cleared
+INSP00069,B006,M00200,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-02T19:30:00,2025-03-07T23:30:00,Completed,3.5,343.11,Cleared
+INSP00070,B006,M00202,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T23:30:00,2025-03-03T06:30:00,Completed,2.2,5.66,Cleared
+INSP00071,B006,M00204,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T20:30:00,2025-03-04T01:30:00,Completed,1.3,78.47,Special Handling
+INSP00072,B006,M00205,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T22:30:00,2025-02-28T03:30:00,Completed,2.7,52.71,Cleared
+INSP00073,B006,M00206,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-02-26T20:30:00,2025-03-02T03:30:00,Completed,1.9,210.05,Cleared
+INSP00074,B007,M00210,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-10T20:38:00,2025-03-12T23:38:00,Completed,1.5,426.61,Cleared
+INSP00075,B007,M00211,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-10T16:38:00,2025-03-11T18:38:00,Completed,2.8,130.57,Cleared
+INSP00076,B007,M00215,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-06T19:38:00,2025-03-11T00:38:00,Completed,3.0,185.16,Cleared
+INSP00077,B007,M00222,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-09T16:38:00,2025-03-13T20:38:00,Completed,3.8,30.27,Cleared
+INSP00078,B007,M00226,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-06T21:38:00,2025-03-10T01:38:00,Completed,1.7,95.72,Special Handling
+INSP00079,B007,M00229,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-06T18:38:00,2025-03-10T02:38:00,Completed,3.0,137.84,Cleared
+INSP00080,B007,M00240,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-08T19:38:00,2025-03-10T20:38:00,Completed,1.1,255.34,Cleared
+INSP00081,B007,M00241,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-10T21:38:00,2025-03-13T05:38:00,Completed,1.1,434.30,Cleared
+INSP00082,B007,M00245,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-07T16:38:00,2025-03-10T18:38:00,Completed,3.1,391.63,Special Handling
+INSP00083,B007,M00246,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-08T20:38:00,2025-03-14T00:38:00,Completed,1.8,213.48,Cleared
+INSP00084,B008,M00254,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-21T20:50:00,2025-03-26T22:50:00,Completed,3.7,29.36,Cleared
+INSP00085,B008,M00255,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-19T20:50:00,2025-03-22T02:50:00,Completed,2.6,122.48,Special Handling
+INSP00086,B008,M00262,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-20T23:50:00,2025-03-26T04:50:00,Completed,0.7,221.19,Cleared
+INSP00087,B008,M00264,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-18T18:50:00,2025-03-20T23:50:00,Completed,3.9,176.67,Cleared
+INSP00088,B008,M00268,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-21T01:50:00,2025-03-26T05:50:00,Completed,1.9,158.75,Cleared
+INSP00089,B008,M00273,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-20T18:50:00,2025-03-22T19:50:00,Completed,3.7,140.90,Special Handling
+INSP00090,B008,M00274,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-21T19:50:00,2025-03-24T23:50:00,Completed,3.4,212.02,Cleared
+INSP00091,B009,M00280,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-30T19:34:00,2025-04-02T21:34:00,Completed,2.0,232.42,Special Handling
+INSP00092,B009,M00282,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-01T00:34:00,2025-04-04T06:34:00,Completed,1.9,253.87,Route Changed
+INSP00093,B009,M00286,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-31T00:34:00,2025-04-02T05:34:00,Completed,1.9,255.42,Route Changed
+INSP00094,B009,M00288,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-30T00:34:00,2025-03-31T07:34:00,Completed,3.9,397.58,Cleared
+INSP00095,B009,M00291,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-31T18:34:00,2025-04-03T00:34:00,Completed,3.0,178.11,Cleared
+INSP00096,B009,M00292,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-31T20:34:00,2025-04-01T21:34:00,Completed,3.5,104.44,Special Handling
+INSP00097,B009,M00293,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-03-31T21:34:00,2025-04-05T05:34:00,Completed,3.1,124.02,Cleared
+INSP00098,B009,M00294,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-03-30T20:34:00,2025-04-05T01:34:00,Completed,1.2,58.16,Cleared
+INSP00099,B010,M00298,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-09T22:02:00,2025-04-13T05:02:00,Completed,0.6,155.73,Cleared
+INSP00100,B010,M00301,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-07T20:02:00,2025-04-13T01:02:00,Completed,3.3,88.38,Cleared
+INSP00101,B010,M00305,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-09T18:02:00,2025-04-12T23:02:00,Completed,1.0,275.41,Cleared
+INSP00102,B010,M00308,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-06T22:02:00,2025-04-12T04:02:00,Completed,1.8,149.46,Cleared
+INSP00103,B010,M00313,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-09T01:02:00,2025-04-11T04:02:00,Completed,1.8,437.84,Cleared
+INSP00104,B010,M00314,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-06T21:02:00,2025-04-09T22:02:00,Completed,3.3,230.08,Cleared
+INSP00105,B010,M00316,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-06T02:02:00,2025-04-09T03:02:00,Completed,2.2,444.85,Special Handling
+INSP00106,B010,M00319,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-08T00:02:00,2025-04-10T05:02:00,Completed,2.9,36.18,Cleared
+INSP00107,B010,M00325,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-08T19:02:00,2025-04-10T20:02:00,Completed,1.5,269.31,Route Changed
+INSP00108,B010,M00326,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-09T19:02:00,2025-04-13T21:02:00,Completed,3.2,211.75,Cleared
+INSP00109,B010,M00327,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-07T23:02:00,2025-04-09T03:02:00,Completed,2.2,259.85,Cleared
+INSP00110,B010,M00329,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-07T21:02:00,2025-04-12T01:02:00,Completed,3.3,258.19,Special Handling
+INSP00111,B010,M00330,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-06T20:02:00,2025-04-09T23:02:00,Completed,1.5,449.90,Cleared
+INSP00112,B011,M00334,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-18T20:43:00,2025-04-21T02:43:00,Completed,1.2,63.32,Special Handling
+INSP00113,B011,M00335,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-18T01:43:00,2025-04-19T02:43:00,Completed,1.6,370.15,Route Changed
+INSP00114,B011,M00341,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-19T18:43:00,2025-04-23T20:43:00,Completed,0.6,223.50,Cleared
+INSP00115,B011,M00343,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-22T01:43:00,2025-04-23T04:43:00,Completed,1.2,282.33,Cleared
+INSP00116,B011,M00344,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-17T17:43:00,2025-04-22T19:43:00,Completed,3.8,185.34,Cleared
+INSP00117,B011,M00345,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-22T00:43:00,2025-04-26T07:43:00,Completed,1.9,105.41,Cleared
+INSP00118,B011,M00348,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-17T17:43:00,2025-04-23T01:43:00,Completed,2.8,201.55,Cleared
+INSP00119,B011,M00352,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-19T23:43:00,2025-04-24T01:43:00,Completed,1.9,342.08,Cleared
+INSP00120,B011,M00353,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-17T19:43:00,2025-04-22T01:43:00,Completed,3.2,186.83,Cleared
+INSP00121,B011,M00360,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-19T00:43:00,2025-04-20T04:43:00,Completed,2.8,24.07,Cleared
+INSP00122,B011,M00362,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-22T01:43:00,2025-04-26T08:43:00,Completed,3.5,162.57,Cleared
+INSP00123,B011,M00363,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-18T01:43:00,2025-04-23T05:43:00,Completed,3.1,251.41,Special Handling
+INSP00124,B011,M00364,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-20T18:43:00,2025-04-25T01:43:00,Completed,3.1,307.60,Cleared
+INSP00125,B012,M00367,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-27T20:19:00,2025-04-30T03:19:00,Completed,3.9,146.85,Cleared
+INSP00126,B012,M00371,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-01T01:19:00,2025-05-04T08:19:00,Completed,3.2,263.82,Cleared
+INSP00127,B012,M00372,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-30T00:19:00,2025-05-03T05:19:00,Completed,1.1,351.44,Cleared
+INSP00128,B012,M00373,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-29T21:19:00,2025-05-04T04:19:00,Completed,1.6,366.53,Special Handling
+INSP00129,B012,M00374,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-30T19:19:00,2025-05-05T22:19:00,Completed,1.2,414.43,Route Changed
+INSP00130,B012,M00382,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-29T22:19:00,2025-04-30T23:19:00,Completed,1.5,119.58,Route Changed
+INSP00131,B012,M00384,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-28T01:19:00,2025-04-29T06:19:00,Completed,0.5,286.71,Cleared
+INSP00132,B012,M00386,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-26T19:19:00,2025-04-27T22:19:00,Completed,1.4,141.79,Cleared
+INSP00133,B012,M00389,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-29T02:19:00,2025-04-30T09:19:00,Completed,0.8,446.31,Cleared
+INSP00134,B012,M00392,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-04-30T22:19:00,2025-05-05T23:19:00,Completed,3.5,363.94,Special Handling
+INSP00135,B012,M00393,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-04-28T02:19:00,2025-05-01T07:19:00,Completed,1.4,288.83,Cleared
+INSP00136,B013,M00417,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-10T16:04:00,2025-05-15T21:04:00,Completed,0.6,439.47,Cleared
+INSP00137,B013,M00422,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-11T19:04:00,2025-05-12T20:04:00,Completed,3.0,289.00,Special Handling
+INSP00138,B013,M00437,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-10T15:04:00,2025-05-15T20:04:00,Completed,2.9,15.50,Cleared
+INSP00139,B013,M00438,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-11T17:04:00,2025-05-13T20:04:00,Completed,0.9,59.14,Cleared
+INSP00140,B013,M00440,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-09T18:04:00,2025-05-13T01:04:00,Completed,2.1,443.63,Special Handling
+INSP00141,B013,M00441,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-09T18:04:00,2025-05-14T22:04:00,Completed,1.8,69.17,Cleared
+INSP00142,B013,M00442,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-10T19:04:00,2025-05-13T03:04:00,Completed,3.9,340.81,Cleared
+INSP00143,B014,M00445,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-20T21:20:00,2025-05-23T02:20:00,Completed,3.2,202.14,Cleared
+INSP00144,B014,M00446,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-18T18:20:00,2025-05-23T00:20:00,Completed,3.8,282.86,Cleared
+INSP00145,B014,M00448,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-21T22:20:00,2025-05-24T00:20:00,Completed,3.6,154.67,Cleared
+INSP00146,B014,M00449,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-17T15:20:00,2025-05-19T22:20:00,Completed,3.9,31.11,Special Handling
+INSP00147,B014,M00450,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-21T17:20:00,2025-05-25T22:20:00,Completed,2.8,277.17,Route Changed
+INSP00148,B014,M00452,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-21T15:20:00,2025-05-23T17:20:00,Completed,3.5,443.03,Cleared
+INSP00149,B014,M00461,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-21T15:20:00,2025-05-24T21:20:00,Completed,3.7,270.09,Cleared
+INSP00150,B014,M00463,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-20T15:20:00,2025-05-21T23:20:00,Completed,3.7,312.41,Cleared
+INSP00151,B014,M00464,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-18T23:20:00,2025-05-23T03:20:00,Completed,3.7,88.28,Special Handling
+INSP00152,B014,M00465,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-17T21:20:00,2025-05-22T22:20:00,Completed,1.0,5.30,Cleared
+INSP00153,B015,M00477,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-28T21:11:00,2025-06-01T00:11:00,Completed,2.5,383.16,Cleared
+INSP00154,B015,M00481,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-28T02:11:00,2025-05-30T06:11:00,Completed,2.2,103.02,Cleared
+INSP00155,B015,M00483,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-31T20:11:00,2025-06-02T23:11:00,Completed,1.5,123.76,Special Handling
+INSP00156,B015,M00484,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-29T00:11:00,2025-06-02T08:11:00,Completed,1.9,176.63,Route Changed
+INSP00157,B015,M00490,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-29T01:11:00,2025-05-30T08:11:00,Completed,4.0,382.34,Cleared
+INSP00158,B015,M00494,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-29T02:11:00,2025-05-30T05:11:00,Completed,3.8,165.53,Cleared
+INSP00159,B015,M00496,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-31T21:11:00,2025-06-02T02:11:00,Completed,3.7,171.57,Cleared
+INSP00160,B015,M00499,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-05-28T01:11:00,2025-06-01T08:11:00,Completed,2.0,281.55,Special Handling
+INSP00161,B015,M00500,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-05-28T19:11:00,2025-05-30T21:11:00,Completed,2.6,318.18,Cleared
+INSP00162,B016,M00502,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-07T17:18:00,2025-06-13T01:18:00,Completed,2.7,118.32,Cleared
+INSP00163,B016,M00503,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-05T17:18:00,2025-06-11T00:18:00,Completed,3.4,280.18,Cleared
+INSP00164,B016,M00504,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-08T20:18:00,2025-06-11T03:18:00,Completed,2.1,22.63,Cleared
+INSP00165,B016,M00510,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-09T16:18:00,2025-06-13T21:18:00,Completed,3.7,154.75,Cleared
+INSP00166,B016,M00519,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-07T17:18:00,2025-06-09T00:18:00,Completed,3.1,118.18,Cleared
+INSP00167,B016,M00520,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-06T17:18:00,2025-06-07T18:18:00,Completed,0.5,443.96,Cleared
+INSP00168,B016,M00523,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-05T23:18:00,2025-06-07T00:18:00,Completed,2.5,402.29,Special Handling
+INSP00169,B016,M00524,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-09T16:18:00,2025-06-11T20:18:00,Completed,0.6,32.61,Route Changed
+INSP00170,B016,M00527,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-08T17:18:00,2025-06-14T00:18:00,Completed,1.1,321.68,Cleared
+INSP00171,B016,M00530,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-05T17:18:00,2025-06-07T23:18:00,Completed,3.9,355.97,Cleared
+INSP00172,B016,M00532,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-05T17:18:00,2025-06-07T01:18:00,Completed,3.6,47.01,Route Changed
+INSP00173,B016,M00533,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-07T21:18:00,2025-06-12T04:18:00,Completed,1.3,447.45,Cleared
+INSP00174,B016,M00536,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-07T21:18:00,2025-06-10T02:18:00,Completed,3.5,177.11,Special Handling
+INSP00175,B016,M00537,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-06T20:18:00,2025-06-09T03:18:00,Completed,1.2,153.14,Cleared
+INSP00176,B017,M00539,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T20:18:00,2025-06-23T03:18:00,Completed,4.0,24.43,Cleared
+INSP00177,B017,M00540,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T23:18:00,2025-06-20T06:18:00,Completed,2.3,221.84,Cleared
+INSP00178,B017,M00541,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T15:18:00,2025-06-18T16:18:00,Completed,3.3,406.36,Cleared
+INSP00179,B017,M00542,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T20:18:00,2025-06-23T04:18:00,Completed,2.8,6.18,Cleared
+INSP00180,B017,M00543,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T18:18:00,2025-06-24T19:18:00,Completed,1.3,413.36,Cleared
+INSP00181,B017,M00544,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T17:18:00,2025-06-19T00:18:00,Completed,3.8,244.73,Cleared
+INSP00182,B017,M00546,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T17:18:00,2025-06-20T21:18:00,Completed,1.6,110.29,Special Handling
+INSP00183,B017,M00547,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T15:18:00,2025-06-20T20:18:00,Completed,1.8,1.37,Route Changed
+INSP00184,B017,M00548,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T19:18:00,2025-06-21T20:18:00,Completed,3.2,300.11,Route Changed
+INSP00185,B017,M00549,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T21:18:00,2025-06-20T00:18:00,Completed,3.9,187.84,Cleared
+INSP00186,B017,M00550,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T23:18:00,2025-06-23T05:18:00,Completed,1.9,410.10,Cleared
+INSP00187,B017,M00552,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T18:18:00,2025-06-24T21:18:00,Completed,2.6,122.49,Cleared
+INSP00188,B017,M00553,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T20:18:00,2025-06-23T04:18:00,Completed,1.9,202.83,Cleared
+INSP00189,B017,M00554,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-20T20:18:00,2025-06-25T21:18:00,Completed,3.5,433.00,Cleared
+INSP00190,B017,M00556,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T16:18:00,2025-06-21T19:18:00,Completed,1.1,388.95,Cleared
+INSP00191,B017,M00557,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T15:18:00,2025-06-18T23:18:00,Completed,2.5,415.53,Cleared
+INSP00192,B017,M00558,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T20:18:00,2025-06-24T22:18:00,Completed,2.4,349.03,Route Changed
+INSP00193,B017,M00560,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T16:18:00,2025-06-21T21:18:00,Completed,0.6,365.28,Route Changed
+INSP00194,B017,M00561,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T19:18:00,2025-06-19T21:18:00,Completed,0.5,270.12,Cleared
+INSP00195,B017,M00562,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T19:18:00,2025-06-22T23:18:00,Completed,2.0,362.09,Cleared
+INSP00196,B017,M00564,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-20T21:18:00,2025-06-23T04:18:00,Completed,1.1,211.99,Cleared
+INSP00197,B017,M00565,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T20:18:00,2025-06-24T01:18:00,Completed,2.7,166.99,Cleared
+INSP00198,B017,M00567,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-18T18:18:00,2025-06-21T02:18:00,Completed,3.0,114.70,Cleared
+INSP00199,B017,M00571,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-20T15:18:00,2025-06-23T21:18:00,Completed,3.8,246.03,Cleared
+INSP00200,B017,M00572,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T20:18:00,2025-06-23T03:18:00,Completed,2.1,350.33,Cleared
+INSP00201,B017,M00573,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T16:18:00,2025-06-19T21:18:00,Completed,1.3,198.15,Cleared
+INSP00202,B017,M00574,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T19:18:00,2025-06-19T03:18:00,Completed,3.1,49.36,Special Handling
+INSP00203,B017,M00575,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T19:18:00,2025-06-20T23:18:00,Completed,3.1,293.74,Special Handling
+INSP00204,B017,M00576,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T23:18:00,2025-06-22T04:18:00,Completed,2.3,167.16,Special Handling
+INSP00205,B017,M00577,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-20T19:18:00,2025-06-25T01:18:00,Completed,1.0,202.43,Special Handling
+INSP00206,B017,M00578,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-19T18:18:00,2025-06-21T01:18:00,Completed,3.7,201.36,Cleared
+INSP00207,B017,M00579,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-16T22:18:00,2025-06-21T02:18:00,Completed,3.9,76.26,Cleared
+INSP00208,B017,M00580,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-20T22:18:00,2025-06-24T05:18:00,Completed,2.6,106.82,Cleared
+INSP00209,B017,M00581,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-17T16:18:00,2025-06-21T19:18:00,Completed,0.6,183.90,Cleared
+INSP00210,B018,M00584,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-30T21:26:00,2025-07-02T04:26:00,Completed,0.7,27.21,Cleared
+INSP00211,B018,M00587,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-27T21:26:00,2025-07-03T04:26:00,Completed,0.8,167.47,Cleared
+INSP00212,B018,M00589,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-27T18:26:00,2025-07-02T21:26:00,Completed,1.5,134.68,Cleared
+INSP00213,B018,M00590,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-27T20:26:00,2025-07-01T22:26:00,Completed,1.1,178.49,Special Handling
+INSP00214,B018,M00591,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-06-30T17:26:00,2025-07-04T20:26:00,Completed,2.9,195.81,Route Changed
+INSP00215,B018,M00599,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-01T00:26:00,2025-07-06T03:26:00,Completed,1.8,210.94,Cleared
+INSP00216,B018,M00601,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-28T17:26:00,2025-07-02T19:26:00,Completed,0.9,179.31,Cleared
+INSP00217,B018,M00608,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-26T23:26:00,2025-07-02T02:26:00,Completed,1.9,364.66,Special Handling
+INSP00218,B018,M00609,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-06-28T20:26:00,2025-06-30T00:26:00,Completed,1.6,133.94,Cleared
+INSP00219,B019,M00611,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-06T02:20:00,2025-07-07T08:20:00,Completed,0.6,391.41,Cleared
+INSP00220,B019,M00613,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-08T00:20:00,2025-07-12T05:20:00,Completed,1.8,355.66,Special Handling
+INSP00221,B019,M00615,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-07T22:20:00,2025-07-12T02:20:00,Completed,1.2,333.25,Cleared
+INSP00222,B019,M00617,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-07T20:20:00,2025-07-12T02:20:00,Completed,1.0,449.33,Cleared
+INSP00223,B019,M00619,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-08T02:20:00,2025-07-09T03:20:00,Completed,1.0,186.67,Cleared
+INSP00224,B019,M00629,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-06T21:20:00,2025-07-09T02:20:00,Completed,3.2,37.51,Cleared
+INSP00225,B019,M00630,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-03T21:20:00,2025-07-05T22:20:00,Completed,1.9,396.15,Cleared
+INSP00226,B019,M00641,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-06T19:20:00,2025-07-09T01:20:00,Completed,2.1,208.37,Special Handling
+INSP00227,B019,M00642,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-03T21:20:00,2025-07-07T00:20:00,Completed,3.0,286.06,Cleared
+INSP00228,B020,M00646,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T23:44:00,2025-07-20T01:44:00,Completed,1.0,296.05,Cleared
+INSP00229,B020,M00651,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T15:44:00,2025-07-20T16:44:00,Completed,1.7,183.74,Special Handling
+INSP00230,B020,M00653,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-14T21:44:00,2025-07-16T22:44:00,Completed,2.1,378.13,Cleared
+INSP00231,B020,M00660,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-17T17:44:00,2025-07-18T22:44:00,Completed,3.4,6.58,Route Changed
+INSP00232,B020,M00661,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-16T22:44:00,2025-07-19T03:44:00,Completed,3.1,430.73,Cleared
+INSP00233,B020,M00663,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T21:44:00,2025-07-20T01:44:00,Completed,2.2,304.71,Cleared
+INSP00234,B020,M00664,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T23:44:00,2025-07-20T04:44:00,Completed,1.1,408.94,Cleared
+INSP00235,B020,M00667,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T21:44:00,2025-07-21T02:44:00,Completed,3.2,2.54,Cleared
+INSP00236,B020,M00668,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-17T18:44:00,2025-07-18T23:44:00,Completed,3.7,74.52,Cleared
+INSP00237,B020,M00669,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-16T17:44:00,2025-07-18T21:44:00,Completed,2.7,281.64,Cleared
+INSP00238,B020,M00670,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T20:44:00,2025-07-19T04:44:00,Completed,1.3,369.08,Cleared
+INSP00239,B020,M00671,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-14T18:44:00,2025-07-15T19:44:00,Completed,3.1,143.38,Special Handling
+INSP00240,B020,M00672,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-15T19:44:00,2025-07-19T00:44:00,Completed,3.6,397.96,Cleared
+INSP00241,B021,M00674,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-25T00:43:00,2025-07-27T08:43:00,Completed,1.8,417.80,Cleared
+INSP00242,B021,M00682,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-26T20:43:00,2025-07-28T23:43:00,Completed,1.1,438.93,Cleared
+INSP00243,B021,M00683,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-25T21:43:00,2025-07-27T23:43:00,Completed,2.4,88.50,Cleared
+INSP00244,B021,M00689,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-27T00:43:00,2025-07-30T03:43:00,Completed,3.6,234.31,Cleared
+INSP00245,B021,M00693,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-24T19:43:00,2025-07-27T23:43:00,Completed,3.5,20.95,Cleared
+INSP00246,B021,M00694,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-26T19:43:00,2025-08-01T03:43:00,Completed,4.0,129.30,Special Handling
+INSP00247,B021,M00700,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-25T18:43:00,2025-07-27T20:43:00,Completed,2.9,215.53,Cleared
+INSP00248,B021,M00714,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-25T22:43:00,2025-07-28T04:43:00,Completed,1.5,163.68,Cleared
+INSP00249,B021,M00715,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-07-26T20:43:00,2025-07-27T21:43:00,Completed,2.2,69.44,Special Handling
+INSP00250,B021,M00716,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-29T01:43:00,2025-08-02T09:43:00,Completed,0.8,431.36,Cleared
+INSP00251,B021,M00717,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-07-28T22:43:00,2025-08-03T02:43:00,Completed,0.6,194.91,Cleared
+INSP00252,B022,M00718,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-08T23:46:00,2025-08-13T00:46:00,Completed,2.2,166.76,Cleared
+INSP00253,B022,M00719,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-05T19:46:00,2025-08-11T01:46:00,Completed,0.9,99.34,Cleared
+INSP00254,B022,M00723,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-06T01:46:00,2025-08-09T07:46:00,Completed,1.5,310.55,Cleared
+INSP00255,B022,M00729,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-05T21:46:00,2025-08-10T04:46:00,Completed,2.2,0.66,Cleared
+INSP00256,B022,M00732,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-06T19:46:00,2025-08-08T20:46:00,Completed,0.5,40.31,Cleared
+INSP00257,B022,M00740,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-07T20:46:00,2025-08-12T23:46:00,Completed,2.2,357.25,Special Handling
+INSP00258,B022,M00744,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-05T21:46:00,2025-08-08T01:46:00,Completed,3.6,449.31,Cleared
+INSP00259,B022,M00755,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-07T22:46:00,2025-08-10T03:46:00,Completed,4.0,320.73,Special Handling
+INSP00260,B022,M00756,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-07T18:46:00,2025-08-11T19:46:00,Completed,1.3,443.53,Cleared
+INSP00261,B023,M00757,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T22:50:00,2025-08-18T04:50:00,Completed,3.0,207.57,Cleared
+INSP00262,B023,M00758,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T19:50:00,2025-08-19T21:50:00,Completed,3.3,165.36,Cleared
+INSP00263,B023,M00759,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T19:50:00,2025-08-23T02:50:00,Completed,3.6,385.23,Cleared
+INSP00264,B023,M00760,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-16T18:50:00,2025-08-21T20:50:00,Completed,3.0,402.96,Cleared
+INSP00265,B023,M00762,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-18T19:50:00,2025-08-20T23:50:00,Completed,1.3,360.22,Special Handling
+INSP00266,B023,M00765,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T22:50:00,2025-08-21T01:50:00,Completed,0.8,257.03,Cleared
+INSP00267,B023,M00767,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-18T23:50:00,2025-08-23T05:50:00,Completed,3.4,85.36,Cleared
+INSP00268,B023,M00768,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T23:50:00,2025-08-25T03:50:00,Completed,2.6,118.94,Cleared
+INSP00269,B023,M00769,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-17T18:50:00,2025-08-19T01:50:00,Completed,3.1,195.23,Route Changed
+INSP00270,B023,M00770,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-16T22:50:00,2025-08-22T02:50:00,Completed,2.6,52.86,Route Changed
+INSP00271,B023,M00772,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-17T18:50:00,2025-08-22T02:50:00,Completed,1.0,210.85,Cleared
+INSP00272,B023,M00773,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T22:50:00,2025-08-21T06:50:00,Completed,1.2,419.00,Cleared
+INSP00273,B023,M00775,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T23:50:00,2025-08-17T06:50:00,Completed,1.7,383.47,Cleared
+INSP00274,B023,M00776,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T23:50:00,2025-08-17T01:50:00,Completed,1.5,169.40,Cleared
+INSP00275,B023,M00778,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T15:50:00,2025-08-19T18:50:00,Completed,1.1,181.53,Cleared
+INSP00276,B023,M00779,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T22:50:00,2025-08-22T04:50:00,Completed,1.4,47.93,Cleared
+INSP00277,B023,M00780,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-15T18:50:00,2025-08-16T19:50:00,Completed,3.3,21.13,Special Handling
+INSP00278,B023,M00781,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-19T17:50:00,2025-08-22T21:50:00,Completed,0.7,333.47,Cleared
+INSP00279,B023,M00782,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-17T16:50:00,2025-08-20T22:50:00,Completed,3.0,76.09,Cleared
+INSP00280,B024,M00783,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-31T23:12:00,2025-09-05T06:12:00,Completed,2.3,2.83,Cleared
+INSP00281,B024,M00785,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-27T18:12:00,2025-08-30T20:12:00,Completed,1.6,385.77,Cleared
+INSP00282,B024,M00793,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-31T23:12:00,2025-09-02T01:12:00,Completed,3.0,62.14,Special Handling
+INSP00283,B024,M00794,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-28T23:12:00,2025-09-02T02:12:00,Completed,2.4,248.42,Route Changed
+INSP00284,B024,M00796,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-31T00:12:00,2025-09-04T07:12:00,Completed,1.9,150.54,Cleared
+INSP00285,B024,M00814,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-30T22:12:00,2025-09-01T03:12:00,Completed,3.0,375.75,Cleared
+INSP00286,B024,M00815,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-08-28T00:12:00,2025-08-31T08:12:00,Completed,1.3,356.54,Special Handling
+INSP00287,B024,M00816,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-08-31T00:12:00,2025-09-05T08:12:00,Completed,1.6,301.01,Cleared
+INSP00288,B025,M00820,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-06T19:33:00,2025-09-10T22:33:00,Completed,2.9,365.74,Cleared
+INSP00289,B025,M00821,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-06T21:33:00,2025-09-08T22:33:00,Completed,3.1,306.80,Cleared
+INSP00290,B025,M00822,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-06T16:33:00,2025-09-07T22:33:00,Completed,2.8,36.69,Cleared
+INSP00291,B025,M00825,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-08T17:33:00,2025-09-12T23:33:00,Completed,1.9,148.79,Cleared
+INSP00292,B025,M00828,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-07T17:33:00,2025-09-12T01:33:00,Completed,2.2,150.20,Cleared
+INSP00293,B025,M00829,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-08T19:33:00,2025-09-13T20:33:00,Completed,2.1,235.75,Cleared
+INSP00294,B025,M00834,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-07T21:33:00,2025-09-13T02:33:00,Completed,3.6,23.33,Cleared
+INSP00295,B025,M00836,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-06T21:33:00,2025-09-11T02:33:00,Completed,3.1,395.59,Cleared
+INSP00296,B025,M00838,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-10T21:33:00,2025-09-16T01:33:00,Completed,2.0,398.08,Special Handling
+INSP00297,B025,M00841,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-10T15:33:00,2025-09-12T16:33:00,Completed,1.8,218.40,Cleared
+INSP00298,B025,M00845,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-08T22:33:00,2025-09-13T23:33:00,Completed,3.9,415.28,Cleared
+INSP00299,B025,M00846,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-09T18:33:00,2025-09-14T00:33:00,Completed,1.4,242.22,Route Changed
+INSP00300,B025,M00848,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-06T18:33:00,2025-09-09T20:33:00,Completed,1.4,310.30,Cleared
+INSP00301,B025,M00849,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-07T15:33:00,2025-09-09T17:33:00,Completed,1.1,346.77,Cleared
+INSP00302,B025,M00851,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-07T22:33:00,2025-09-12T00:33:00,Completed,0.9,382.54,Special Handling
+INSP00303,B025,M00852,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-08T23:33:00,2025-09-14T01:33:00,Completed,2.3,438.53,Cleared
+INSP00304,B026,M00853,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-15T18:23:00,2025-09-17T20:23:00,Completed,1.4,107.21,Cleared
+INSP00305,B026,M00855,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-18T18:23:00,2025-09-23T19:23:00,Completed,3.2,44.59,Cleared
+INSP00306,B026,M00860,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-16T20:23:00,2025-09-19T01:23:00,Completed,2.6,446.35,Special Handling
+INSP00307,B026,M00869,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-18T15:23:00,2025-09-20T20:23:00,Completed,2.0,353.57,Route Changed
+INSP00308,B026,M00871,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-19T21:23:00,2025-09-22T04:23:00,Completed,0.5,61.79,Cleared
+INSP00309,B026,M00875,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-15T15:23:00,2025-09-19T16:23:00,Completed,2.0,342.70,Special Handling
+INSP00310,B026,M00876,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-15T19:23:00,2025-09-19T23:23:00,Completed,2.3,250.90,Special Handling
+INSP00311,B026,M00877,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-16T15:23:00,2025-09-19T20:23:00,Completed,2.1,215.56,Cleared
+INSP00312,B026,M00878,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-17T21:23:00,2025-09-23T02:23:00,Completed,3.3,117.74,Cleared
+INSP00313,B027,M00881,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-02T20:49:00,2025-10-04T21:49:00,Completed,1.4,412.65,Cleared
+INSP00314,B027,M00882,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-29T20:49:00,2025-10-02T21:49:00,Completed,1.2,354.32,Cleared
+INSP00315,B027,M00883,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T22:49:00,2025-10-03T01:49:00,Completed,3.9,407.57,Cleared
+INSP00316,B027,M00884,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-02T18:49:00,2025-10-06T21:49:00,Completed,2.3,384.59,Cleared
+INSP00317,B027,M00885,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T22:49:00,2025-10-02T04:49:00,Completed,2.5,241.46,Cleared
+INSP00318,B027,M00886,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-29T21:49:00,2025-10-03T03:49:00,Completed,2.7,109.77,Cleared
+INSP00319,B027,M00887,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T17:49:00,2025-10-03T19:49:00,Completed,1.1,303.27,Cleared
+INSP00320,B027,M00888,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T22:49:00,2025-10-03T06:49:00,Completed,2.8,177.59,Cleared
+INSP00321,B027,M00889,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T21:49:00,2025-10-05T23:49:00,Completed,0.7,104.75,Special Handling
+INSP00322,B027,M00890,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T17:49:00,2025-10-02T22:49:00,Completed,3.3,417.56,Route Changed
+INSP00323,B027,M00892,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-03T17:49:00,2025-10-06T01:49:00,Completed,2.3,377.22,Cleared
+INSP00324,B027,M00893,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-02T19:49:00,2025-10-06T02:49:00,Completed,0.6,187.32,Cleared
+INSP00325,B027,M00895,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-03T22:49:00,2025-10-05T06:49:00,Completed,2.4,86.85,Cleared
+INSP00326,B027,M00896,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T18:49:00,2025-10-04T00:49:00,Completed,3.6,214.77,Cleared
+INSP00327,B027,M00899,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T22:49:00,2025-10-03T06:49:00,Completed,2.7,268.56,Route Changed
+INSP00328,B027,M00901,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T20:49:00,2025-10-03T01:49:00,Completed,3.9,328.30,Cleared
+INSP00329,B027,M00902,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-03T21:49:00,2025-10-07T01:49:00,Completed,1.6,148.95,Cleared
+INSP00330,B027,M00904,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T22:49:00,2025-10-04T01:49:00,Completed,3.4,352.38,Cleared
+INSP00331,B027,M00905,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-29T23:49:00,2025-10-03T02:49:00,Completed,1.0,318.30,Cleared
+INSP00332,B027,M00906,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T00:49:00,2025-10-04T01:49:00,Completed,3.8,87.86,Cleared
+INSP00333,B027,M00908,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T21:49:00,2025-10-07T05:49:00,Completed,1.7,135.55,Cleared
+INSP00334,B027,M00909,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-09-29T23:49:00,2025-10-04T00:49:00,Completed,2.3,381.86,Special Handling
+INSP00335,B027,M00910,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-29T21:49:00,2025-10-03T03:49:00,Completed,2.0,261.25,Special Handling
+INSP00336,B027,M00911,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T21:49:00,2025-10-04T03:49:00,Completed,1.5,401.56,Cleared
+INSP00337,B027,M00912,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-01T21:49:00,2025-10-04T00:49:00,Completed,4.0,106.00,Cleared
+INSP00338,B027,M00913,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-09-30T17:49:00,2025-10-05T20:49:00,Completed,3.6,93.85,Cleared
+INSP00339,B028,M00914,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-09T02:30:00,2025-10-11T06:30:00,Completed,2.9,285.48,Cleared
+INSP00340,B028,M00915,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T02:30:00,2025-10-12T04:30:00,Completed,1.7,249.63,Cleared
+INSP00341,B028,M00917,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-06T20:30:00,2025-10-07T23:30:00,Completed,1.1,356.70,Cleared
+INSP00342,B028,M00918,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T22:30:00,2025-10-13T01:30:00,Completed,1.4,286.02,Special Handling
+INSP00343,B028,M00920,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-06T22:30:00,2025-10-11T04:30:00,Completed,1.9,406.90,Cleared
+INSP00344,B028,M00922,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-09T19:30:00,2025-10-12T03:30:00,Completed,2.4,333.32,Cleared
+INSP00345,B028,M00925,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T21:30:00,2025-10-11T22:30:00,Completed,2.1,189.80,Cleared
+INSP00346,B028,M00929,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T23:30:00,2025-10-09T02:30:00,Completed,3.3,430.21,Cleared
+INSP00347,B028,M00934,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T00:30:00,2025-10-12T02:30:00,Completed,0.9,69.19,Cleared
+INSP00348,B028,M00938,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-06T23:30:00,2025-10-08T07:30:00,Completed,3.9,21.67,Cleared
+INSP00349,B028,M00953,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-06T21:30:00,2025-10-08T01:30:00,Completed,2.9,24.19,Cleared
+INSP00350,B028,M00954,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-10T18:30:00,2025-10-15T23:30:00,Completed,1.6,278.26,Special Handling
+INSP00351,B028,M00955,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-06T19:30:00,2025-10-10T20:30:00,Completed,2.9,319.70,Cleared
+INSP00352,B028,M00956,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-07T20:30:00,2025-10-09T04:30:00,Completed,1.5,221.14,Cleared
+INSP00353,B029,M00957,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-19T21:33:00,2025-10-22T22:33:00,Completed,3.2,280.65,Cleared
+INSP00354,B029,M00959,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-16T21:33:00,2025-10-20T00:33:00,Completed,3.6,10.02,Cleared
+INSP00355,B029,M00963,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-20T02:33:00,2025-10-24T08:33:00,Completed,0.8,274.35,Cleared
+INSP00356,B029,M00966,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-18T19:33:00,2025-10-19T23:33:00,Completed,1.3,441.35,Cleared
+INSP00357,B029,M00968,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-20T01:33:00,2025-10-23T04:33:00,Completed,2.6,95.36,Special Handling
+INSP00358,B029,M00976,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-18T23:33:00,2025-10-21T06:33:00,Completed,3.4,24.18,Route Changed
+INSP00359,B029,M00981,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-19T23:33:00,2025-10-24T07:33:00,Completed,3.0,48.30,Special Handling
+INSP00360,B029,M00982,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-16T22:33:00,2025-10-22T06:33:00,Completed,1.0,401.05,Cleared
+INSP00361,B031,M00984,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-11T17:44:00,2025-11-15T19:44:00,Completed,3.3,381.23,Cleared
+INSP00362,B031,M00991,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-09T21:44:00,2025-11-11T22:44:00,Completed,1.1,228.96,Cleared
+INSP00363,B031,M00992,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-08T01:44:00,2025-11-12T04:44:00,Completed,2.8,28.35,Cleared
+INSP00364,B031,M00993,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-10T21:44:00,2025-11-15T22:44:00,Completed,3.6,166.01,Special Handling
+INSP00365,B031,M01005,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-09T22:44:00,2025-11-15T06:44:00,Completed,0.6,259.60,Cleared
+INSP00366,B031,M01009,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-07T19:44:00,2025-11-08T21:44:00,Completed,3.8,222.84,Cleared
+INSP00367,B031,M01013,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-10T18:44:00,2025-11-15T22:44:00,Completed,2.2,101.93,Cleared
+INSP00368,B031,M01014,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-11T22:44:00,2025-11-17T03:44:00,Completed,1.3,361.75,Cleared
+INSP00369,B031,M01017,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-10T01:44:00,2025-11-12T08:44:00,Completed,3.1,299.98,Special Handling
+INSP00370,B031,M01018,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-07T17:44:00,2025-11-11T18:44:00,Completed,1.8,424.65,Cleared
+INSP00371,B030,M01019,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T19:02:00,,Open,1.9,74.94,
+INSP00372,B030,M01020,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T00:02:00,,Open,1.7,241.11,
+INSP00373,B030,M01021,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T19:02:00,,Open,2.7,35.12,
+INSP00374,B030,M01022,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T20:02:00,,Open,0.8,90.83,
+INSP00375,B030,M01023,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,3.0,260.90,
+INSP00376,B030,M01024,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T01:02:00,,Open,0.6,153.68,
+INSP00377,B030,M01025,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T00:02:00,,Open,2.5,127.36,
+INSP00378,B030,M01026,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,3.9,360.65,
+INSP00379,B030,M01027,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T19:02:00,,Open,1.1,152.55,
+INSP00380,B030,M01028,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T01:02:00,,Open,4.0,212.28,
+INSP00381,B030,M01029,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T22:02:00,,Open,2.9,96.10,
+INSP00382,B030,M01030,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T01:02:00,,Open,0.7,334.52,
+INSP00383,B030,M01031,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T20:02:00,,Open,3.2,175.12,
+INSP00384,B030,M01032,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T19:02:00,,Open,0.5,178.41,
+INSP00385,B030,M01033,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T00:02:00,,Open,3.6,335.17,
+INSP00386,B030,M01034,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T23:02:00,,Open,1.2,310.71,
+INSP00387,B030,M01035,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T21:02:00,,Open,2.3,222.00,
+INSP00388,B030,M01036,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T18:02:00,,Open,3.2,444.90,
+INSP00389,B030,M01037,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,3.6,260.09,
+INSP00390,B030,M01038,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T18:02:00,,Open,2.8,291.64,
+INSP00391,B030,M01039,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T21:02:00,,Open,0.8,32.49,
+INSP00392,B030,M01040,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T19:02:00,,Open,3.2,341.03,
+INSP00393,B030,M01041,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T21:02:00,,Open,2.0,333.13,
+INSP00394,B030,M01042,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T22:02:00,,Open,3.5,16.69,
+INSP00395,B030,M01043,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T02:02:00,,Open,1.5,289.38,
+INSP00396,B030,M01044,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T20:02:00,,Open,2.9,38.06,
+INSP00397,B030,M01045,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T23:02:00,,Open,2.6,185.33,
+INSP00398,B030,M01046,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T21:02:00,,Open,3.0,0.10,
+INSP00399,B030,M01047,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T20:02:00,,Open,1.5,259.74,
+INSP00400,B030,M01048,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,1.6,183.68,
+INSP00401,B030,M01049,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T01:02:00,,Open,2.7,259.96,
+INSP00402,B030,M01050,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T00:02:00,,Open,3.9,166.60,
+INSP00403,B030,M01051,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T21:02:00,,Open,3.5,101.64,
+INSP00404,B030,M01052,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T18:02:00,,Open,1.5,380.42,
+INSP00405,B030,M01053,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T22:02:00,,Open,3.0,164.19,
+INSP00406,B030,M01054,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T21:02:00,,Open,1.7,38.68,
+INSP00407,B030,M01055,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T20:02:00,,Open,0.5,313.18,
+INSP00408,B030,M01056,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,1.7,90.66,
+INSP00409,B030,M01057,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T00:02:00,,Open,3.5,240.98,
+INSP00410,B030,M01058,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T20:02:00,,Open,1.4,396.22,
+INSP00411,B030,M01059,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T01:02:00,,Open,3.8,404.91,
+INSP00412,B030,M01060,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T20:02:00,,Open,2.8,197.87,
+INSP00413,B030,M01061,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,1.0,87.86,
+INSP00414,B030,M01062,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T22:02:00,,Open,2.1,229.98,
+INSP00415,B030,M01063,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,1.8,165.06,
+INSP00416,B030,M01064,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T18:02:00,,Open,2.7,146.66,
+INSP00417,B030,M01065,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T18:02:00,,Open,3.4,332.50,
+INSP00418,B030,M01066,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T00:02:00,,Open,3.7,436.27,
+INSP00419,B030,M01067,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T19:02:00,,Open,2.5,32.79,
+INSP00420,B030,M01068,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,0.9,100.07,
+INSP00421,B030,M01069,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T01:02:00,,Open,2.6,142.69,
+INSP00422,B030,M01070,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T22:02:00,,Open,0.7,183.73,
+INSP00423,B030,M01071,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T18:02:00,,Open,2.4,203.63,
+INSP00424,B030,M01072,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,1.4,417.03,
+INSP00425,B030,M01073,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,2.5,410.61,
+INSP00426,B030,M01074,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T21:02:00,,Open,3.7,58.94,
+INSP00427,B030,M01075,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T01:02:00,,Open,1.3,278.46,
+INSP00428,B030,M01076,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T21:02:00,,Open,3.2,18.30,
+INSP00429,B030,M01077,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,1.2,303.98,
+INSP00430,B030,M01078,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T23:02:00,,Open,1.3,280.27,
+INSP00431,B030,M01079,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T21:02:00,,Open,2.3,287.26,
+INSP00432,B030,M01080,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T22:02:00,,Open,0.9,74.28,
+INSP00433,B030,M01081,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T19:02:00,,Open,1.1,24.66,
+INSP00434,B030,M01082,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T20:02:00,,Open,3.8,130.78,
+INSP00435,B030,M01083,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T19:02:00,,Open,1.2,253.84,
+INSP00436,B030,M01084,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-29T00:02:00,,Open,3.0,111.88,
+INSP00437,B030,M01085,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T21:02:00,,Open,2.2,89.61,
+INSP00438,B030,M01086,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T18:02:00,,Open,3.1,422.68,
+INSP00439,B030,M01087,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T20:02:00,,Open,0.9,17.01,
+INSP00440,B030,M01088,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T21:02:00,,Open,2.5,284.04,
+INSP00441,B030,M01089,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T02:02:00,,Open,2.1,103.43,
+INSP00442,B030,M01090,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T01:02:00,,Open,0.6,433.85,
+INSP00443,B030,M01091,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T02:02:00,,Open,1.8,424.22,
+INSP00444,B030,M01092,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-27T21:02:00,,Open,3.3,181.80,
+INSP00445,B030,M01093,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T18:02:00,,Open,3.1,126.48,
+INSP00446,B030,M01094,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-28T23:02:00,,Open,2.0,233.56,
+INSP00447,B030,M01095,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-24T19:02:00,,Open,2.1,100.79,
+INSP00448,B030,M01096,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-26T23:02:00,,Open,1.0,151.35,
+INSP00449,B030,M01097,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T23:02:00,,Open,3.4,443.76,
+INSP00450,B030,M01098,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-10-25T22:02:00,,Open,2.8,337.06,
+INSP00451,B033,M01133,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T01:16:00,2025-12-02T01:16:00,Completed,1.3,231.54,Still Unresolved
+INSP00452,B033,M01134,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T20:16:00,2025-12-04T20:16:00,Completed,1.5,342.18,Still Unresolved
+INSP00453,B033,M01135,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-27T20:16:00,2025-11-29T20:16:00,Completed,0.6,440.10,Still Unresolved
+INSP00454,B033,M01136,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-28T00:16:00,2025-12-01T00:16:00,Completed,2.4,377.70,Still Unresolved
+INSP00455,B033,M01137,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T19:16:00,2025-12-06T19:16:00,Completed,2.4,266.67,Still Unresolved
+INSP00456,B033,M01138,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T01:16:00,2025-12-05T01:16:00,Completed,0.8,102.34,Still Unresolved
+INSP00457,B033,M01139,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T18:16:00,2025-12-02T18:16:00,Completed,1.7,414.63,Still Unresolved
+INSP00458,B033,M01140,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-27T02:16:00,2025-12-02T02:16:00,Completed,2.5,383.09,Still Unresolved
+INSP00459,B033,M01141,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-28T21:16:00,2025-12-04T21:16:00,Completed,2.7,344.77,Still Unresolved
+INSP00460,B033,M01142,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T00:16:00,2025-12-02T00:16:00,Completed,1.7,380.50,Still Unresolved
+INSP00461,B033,M01143,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-01T01:16:00,2025-12-04T01:16:00,Completed,0.8,239.65,Still Unresolved
+INSP00462,B033,M01144,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-11-30T23:16:00,2025-12-04T23:16:00,Completed,2.2,196.44,Still Unresolved
+INSP00463,B034,M01145,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-06T18:38:00,,Open,3.8,444.47,
+INSP00464,B034,M01146,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-05T02:38:00,,Open,2.5,418.25,
+INSP00465,B034,M01147,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-09T02:38:00,,Open,2.2,412.62,
+INSP00466,B034,M01148,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-06T18:38:00,,Open,0.8,15.96,
+INSP00467,B034,M01149,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-07T00:38:00,,Open,1.4,382.39,
+INSP00468,B034,M01150,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-05T01:38:00,,Open,1.4,442.17,
+INSP00469,B034,M01151,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-05T20:38:00,,Open,2.1,15.08,
+INSP00470,B034,M01152,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-08T00:38:00,,Open,3.8,361.14,
+INSP00471,B034,M01153,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-07T02:38:00,,Open,2.5,378.27,
+INSP00472,B034,M01154,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-08T19:38:00,,Open,1.2,184.84,
+INSP00473,B034,M01155,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-07T00:38:00,,Open,3.5,444.69,
+INSP00474,B034,M01156,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-07T02:38:00,,Open,3.5,61.09,
+INSP00475,B034,M01157,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-07T22:38:00,,Open,1.1,446.60,
+INSP00476,B034,M01158,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-06T02:38:00,,Open,2.7,238.16,
+INSP00477,B034,M01159,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-05T20:38:00,,Open,2.3,340.08,
+INSP00478,B034,M01160,Record Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-09T01:38:00,,Open,3.5,58.52,
+INSP00479,B036,M01254,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-26T19:47:00,2025-12-30T19:47:00,Completed,1.0,436.81,Still Unresolved
+INSP00480,B036,M01255,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-25T15:47:00,2025-12-27T15:47:00,Completed,0.6,61.93,Still Unresolved
+INSP00481,B036,M01256,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-24T20:47:00,2025-12-30T20:47:00,Completed,3.5,287.43,Still Unresolved
+INSP00482,B036,M01257,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-25T19:47:00,2025-12-31T19:47:00,Completed,4.0,112.10,Still Unresolved
+INSP00483,B036,M01258,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-24T16:47:00,2025-12-29T16:47:00,Completed,3.1,154.74,Still Unresolved
+INSP00484,B036,M01259,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-26T17:47:00,2025-12-28T17:47:00,Completed,3.3,283.70,Still Unresolved
+INSP00485,B036,M01260,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-22T19:47:00,2025-12-25T19:47:00,Completed,2.4,196.95,Still Unresolved
+INSP00486,B036,M01261,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-23T16:47:00,2025-12-25T16:47:00,Completed,1.4,360.57,Still Unresolved
+INSP00487,B036,M01262,Quality Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-26T18:47:00,2025-12-30T18:47:00,Completed,2.5,314.32,Still Unresolved
+INSP00488,B036,M01263,Treatment Information Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-24T18:47:00,2025-12-27T18:47:00,Completed,1.6,19.75,Still Unresolved
+INSP00489,B036,M01264,Routing Verification,Synthetic inspection triggered by risk flags on the material record.,2025-12-24T17:47:00,2025-12-29T17:47:00,Completed,3.2,175.88,Still Unresolved
+INSP00490,B036,M01265,Manual Material Review,Synthetic inspection triggered by risk flags on the material record.,2025-12-26T16:47:00,2025-12-29T16:47:00,Completed,2.0,376.01,Still Unresolved

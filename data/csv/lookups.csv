@@ -1,0 +1,104 @@
+﻿domain,value,description,sort_order
+source_type,Commercial Demolition,Demolition of commercial / retail buildings.,1
+source_type,Residential Demolition,House / renovation demolition waste streams.,2
+source_type,Warehouse Deconstruction,"Warehouse, shed and industrial shell deconstruction.",3
+source_type,Industrial Renewal,Industrial facility renewal / refit recovery.,4
+source_type,Infrastructure Salvage,"Bridge, wharf, rail and public infrastructure salvage.",5
+source_type,Direct Salvage Purchase,Purchased salvage lots / dealer transfers with variable provenance.,6
+region,Victoria,"VIC, Australia (synthetic region label)",1
+region,New South Wales,"NSW, Australia (synthetic region label)",2
+region,Queensland,"QLD, Australia (synthetic region label)",3
+region,South Australia,"SA, Australia (synthetic region label)",4
+region,Western Australia,"WA, Australia (synthetic region label)",5
+region,Tasmania,"TAS, Australia (synthetic region label)",6
+material_quality,High,Estimated incoming quality high (synthetic assessment).,1
+material_quality,Medium,Estimated incoming quality medium.,2
+material_quality,Low,Estimated incoming quality low.,3
+material_quality,Unknown,Estimated incoming quality not assessable.,4
+expected_complexity,Low,"Straightforward material mix, limited sorting effort expected.",1
+expected_complexity,Medium,Mixed material; moderate sorting effort expected.,2
+expected_complexity,High,"Complex mix, heavy contamination / record uncertainty expected.",3
+planned_sorting_intensity,Low,Minimal sorting effort planned.,1
+planned_sorting_intensity,Medium,Standard sorting effort planned.,2
+planned_sorting_intensity,High,Detailed sorting and extra inspections planned.,3
+batch_status,Received,"Batch received, work not yet started.",1
+batch_status,Sorting,Batch in sorting stage.,2
+batch_status,Inspection,Batch in inspection stage.,3
+batch_status,Processing,Batch in processing stage.,4
+batch_status,Completed,Batch fully processed; all materials recovered.,5
+batch_status,Partially Completed,Batch partially processed; remaining weight open at snapshot.,6
+priority,High,High operational priority.,1
+priority,Medium,Normal priority.,2
+priority,Low,Low priority.,3
+species,Spotted Gum,Australian hardwood (synthetic modelling label).,1
+species,Blackbutt,Australian hardwood (synthetic modelling label).,2
+species,Ironbark,Australian hardwood (synthetic modelling label).,3
+species,Sydney Blue Gum,Australian hardwood (synthetic modelling label).,4
+species,Mountain Ash,Victorian Ash group (synthetic modelling label).,5
+species,Messmate,Victorian Ash group (synthetic modelling label).,6
+species,Radiata Pine,Softwood (synthetic modelling label).,7
+species,Oregon,Douglas-fir import (synthetic modelling label).,8
+species,Cypress Pine,Australian softwood (synthetic modelling label).,9
+species,Mixed Hardwood,Mixed hardwood lot (synthetic modelling label).,10
+species,Unknown / Mixed,Species not identified / mixed lot.,11
+material_form,Beam,Large section beam.,1
+material_form,Post,Vertical post / column.,2
+material_form,Board,Sawn board.,3
+material_form,Flooring,Flooring strip / panel.,4
+material_form,Cladding,External cladding / weatherboard.,5
+material_form,Structural Member,Structural framing member.,6
+material_form,Mixed Salvage,Mixed lot not separable at intake.,7
+material_form,Other,Other form.,8
+known_treatment_status,No Treatment Recorded,No treatment recorded in source documents.,1
+known_treatment_status,Known Treatment Recorded,A treatment record exists (management-level note only).,2
+known_treatment_status,Surface Coating Recorded,Paint / coating / varnish recorded.,3
+known_treatment_status,Adhesive / Composite Concern,"Adhesive, glue or composite construction recorded.",4
+known_treatment_status,Unknown,Treatment history unknown.,5
+known_treatment_status,Conflicting Record,Records conflict; cannot confirm treatment status.,6
+surface_condition,Good,Operational assessment: sound condition.,1
+surface_condition,Fair,Operational assessment: serviceable condition.,2
+surface_condition,Poor,Operational assessment: significant defects.,3
+surface_condition,Severely Degraded,Operational assessment: severely degraded.,4
+record_completeness,Complete,All management fields populated.,1
+record_completeness,Partial,Some fields missing.,2
+record_completeness,Critical Information Missing,Key fields (e.g. treatment history) missing.,3
+recovery_grade,Premium,Prototype management segment.,1
+recovery_grade,Character,Prototype management segment.,2
+recovery_grade,Rustic,Prototype management segment.,3
+recovery_grade,Feedstock,Prototype management segment.,4
+recovery_grade,Unresolved,Prototype management segment.,5
+recovery_route,Higher-value Recovery,Premium / Character grade output recovered for re-sale.,1
+recovery_route,Board Feedstock,Feedstock grade output.,2
+recovery_route,Special Handling,Material requiring special handling before recovery.,3
+recovery_route,Residual / Disposal,Residual material routed to disposal.,4
+recovery_route,Unresolved,Material not yet routed; information incomplete.,5
+processing_stage,Intake,Batch intake / weighing.,1
+processing_stage,Sorting,Sorting operation.,2
+processing_stage,Inspection Hold,Material held pending inspection.,3
+processing_stage,Processing,Processing operation.,4
+processing_stage,Grading,Grading / final assessment.,5
+processing_stage,Output,Recovery output dispatched.,6
+inspection_type,Record Review,Desk review of source records.,1
+inspection_type,Quality Verification,On-site quality verification.,2
+inspection_type,Treatment Information Verification,Verification of treatment information.,3
+inspection_type,Manual Material Review,Manual material-level review.,4
+inspection_type,Routing Verification,Verification of proposed recovery routing.,5
+inspection_status,Open,Inspection open at snapshot.,1
+inspection_status,Completed,Inspection completed.,2
+inspection_status,Cancelled,Inspection cancelled.,3
+inspection_outcome,Cleared,Material cleared; no change.,1
+inspection_outcome,Route Changed,Recovery route changed after inspection.,2
+inspection_outcome,Special Handling,Material routed to special handling.,3
+inspection_outcome,Still Unresolved,Inspection closed but material still unresolved.,4
+inspection_outcome,No Change,Inspection confirmed no change.,5
+cost_category,Sorting Labour,Sorting labour cost.,1
+cost_category,Inspection,Inspection labour / external cost.,2
+cost_category,Processing,Processing machine / labour cost.,3
+cost_category,Special Handling,Special handling incremental cost.,4
+cost_category,Disposal,Disposal cost.,5
+cost_category,Transport,Inbound transport cost (reported separately).,6
+cost_category,Other,Other operational cost (reported separately).,7
+resolution_status,Output,Material recovered; output recorded.,1
+resolution_status,Unresolved,Material unresolved at snapshot.,2
+resolution_status,Pending Processing,Material awaiting processing.,3
+resolution_status,In Progress,Material in progress at snapshot.,4

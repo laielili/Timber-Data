@@ -1,0 +1,18 @@
+﻿assumption_id,assumption_key,category,metric,value,unit,description,source
+AS001,premium_value_per_t,Value,Premium recovery value / t,650.00,AUD/t,Synthetic unit value for Premium grade recovered output (all routes priced at grade).,Prototype assumption
+AS002,character_value_per_t,Value,Character recovery value / t,450.00,AUD/t,Synthetic unit value for Character grade recovered output (all routes priced at grade).,Prototype assumption
+AS003,rustic_value_per_t,Value,Rustic recovery value / t,280.00,AUD/t,Synthetic unit value for Rustic grade recovered output (all routes priced at grade).,Prototype assumption
+AS004,board_feedstock_value_per_t,Value,Board feedstock value / t,125.00,AUD/t,Synthetic unit value for Feedstock grade recovered output (all routes priced at grade).,Prototype assumption
+AS005,sorting_cost_per_t,Cost,Sorting cost / incoming t,54.00,AUD/t,"Sunk sorting cost per incoming tonne (spread across all 1,240 t).",Prototype assumption
+AS006,inspection_cost_per_t,Cost,Inspection cost / incoming t,42.00,AUD/t,"Sunk inspection cost per incoming tonne (spread across all 1,240 t).",Prototype assumption
+AS007,processing_cost_per_t,Cost,Processing cost / processed t,104.43,AUD/t,"Nominal rate; exact total 103,596 AUD allocated across 992 t processed.",Prototype assumption
+AS008,special_handling_cost_per_t,Cost,Special handling cost / t,120.00,AUD/t,Incremental cost per tonne routed to Special Handling.,Prototype assumption
+AS009,disposal_cost_per_t,Cost,Disposal cost / t,51.00,AUD/t,Disposal cost per tonne of Residual route output.,Prototype assumption
+AS010,transport_cost_per_t,Cost,Transport cost / t,25.00,AUD/t,"Inbound transport cost per tonne (reported separately, excluded from total recovery cost).",Prototype assumption
+AS011,baseline_processing_cost_per_t,Cost,Counterfactual processing cost / t,95.00,AUD/t,Counterfactual all-feedstock processing cost used by the Baseline Scenario.,Prototype assumption
+AS012,higher_value_recovery_target_pct,Target,Higher-value recovery prototype target,30.00,%,Prototype management target; overall dataset yield is expected to exceed it.,Prototype assumption
+AS013,sorting_labour_rate_per_hour,Modelling,Sorting labour rate / h,48.00,AUD/h,Synthetic hourly rate for sorting labour (event realism only; cost booked at per-t rate).,Prototype assumption
+AS014,inspection_labour_rate_per_hour,Modelling,Inspection labour rate / h,55.00,AUD/h,Synthetic hourly rate for inspection labour (event realism only; cost booked at per-t rate).,Prototype assumption
+AS015,machine_processing_rate_per_h,Modelling,Machine processing rate / h,80.00,AUD/h,Synthetic machine-hour rate for processing equipment (event realism only).,Prototype assumption
+AS016,machine_hours_per_t,Modelling,Machine processing hours / t,1.15,h/t,Synthetic machine-hours consumed per processed tonne (event realism only).,Prototype assumption
+AS017,sorting_labour_hours_per_8h_day,Modelling,Assumed labour hours per work day,8.00,h,Used to convert sorting hours into calendar durations.,Prototype assumption

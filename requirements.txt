@@ -13,5 +13,8 @@ pydantic>=2.7,<3
 # HTTP client (used at runtime by the AI analyst provider to call the LLM)
 httpx>=0.27,<1
 
+# Multipart form parsing (upload endpoints of the workbench app, src/new)
+python-multipart>=0.0.9
+
 # Test runner (dev only)
 pytest>=8,<9

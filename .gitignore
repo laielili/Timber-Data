@@ -13,6 +13,10 @@ venv/
 # tmps
 _trash/
 
+# Workbench (new application) user data
+data/workbench.db*
+src/new/.secrets/
+
 # Node
 node_modules/
 dist/
