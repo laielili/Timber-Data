@@ -14,14 +14,14 @@ from urllib.parse import urlsplit
 
 import httpx
 
-from app.ai.errors import (
+from .ai_errors import (
     AIProviderAuth,
     AIProviderMalformedResponse,
     AIProviderRateLimit,
     AIProviderTimeout,
     AIProviderUnavailable,
 )
-from app.ai.provider import OpenAICompatibleProvider
+from .ai_provider import OpenAICompatibleProvider
 from . import config
 
 logger = logging.getLogger("workbench.ai.settings")

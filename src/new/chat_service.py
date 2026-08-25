@@ -16,8 +16,8 @@ import logging
 import uuid
 from typing import Any, Optional
 
-from app.ai.errors import AIAnalystError, AIProviderError
-from app.ai.provider import ModelProvider, ToolCall
+from .ai_errors import AIAnalystError, AIProviderError
+from .ai_provider import ModelProvider, ToolCall
 from . import ai_settings, ai_tools
 from . import db as workbench_db
 
