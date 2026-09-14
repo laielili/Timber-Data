@@ -2,14 +2,19 @@
 <!--
   AI Assistant - static interaction demo (docs/ only, hand-maintained, fully offline).
   Rebuilding the prototype from static/new/src overwrites docs/ - regenerate this page afterwards.
+
+  Bilingual: English + Chinese. The language key is `wb-lang` - the same one the SPA uses
+  (static/new/src/i18n.tsx), so toggling on either page moves the other one too.
+  Resolution order: ?lang=  ->  localStorage['wb-lang']  ->  'en'.
+
   Wording mirrors static/new/src/i18n.tsx; behaviour is grounded in src/new/intent_recognizer.py,
   config/intent_schema.json, src/new/ai_tools.py, src/new/chat_service.py.
   Every number comes from the sample dataset in static/new/src/mock.ts - nothing here is invented.
 -->
-<html lang="en" data-page-node-id="NzYkXHiiDJHbllzrXF4KI0">
-  <head data-page-node-id="4CxvZaKOCtFz1sqYRoE2z4">
-    <meta charset="UTF-8" data-page-node-id="gpzcPDUdAKPLuYPJzRH0p3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="xYQmpTBjcHBD7t2nIe2Bmv" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Assistant · Workbench</title>
     <style>
       /* ---------- design tokens (mirrors static/new/src/styles.css) ---------- */
@@ -110,6 +115,31 @@
         border-radius: 999px; padding: 3px 9px;
       }
       .nav__note { margin: 8px 0 0; font-size: 10.5px; color: rgba(237, 230, 214, 0.45); }
+
+      /* ---------- language switch (ported from styles.css) ----------
+         NB: styles.css uses `flex: 0 0 100%` here because the app's .content is a
+         wrapping ROW. This page's .content is a column, where a percentage basis
+         resolves against the HEIGHT and would balloon the bar to full page height.
+         Hence `flex: none`. */
+      .topbar {
+        flex: none;
+        display: flex; justify-content: flex-end; align-items: center;
+        margin-bottom: 8px;
+      }
+      .lang-switch {
+        appearance: none; border: 1px solid var(--line);
+        background: #fff; color: var(--ink);
+        font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+        padding: 7px 16px; border-radius: 999px; cursor: pointer;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .lang-switch:hover { background: #f4efe4; border-color: #c9a04a; }
+      .lang-switch__label { font-weight: 600; }
+      .lang-switch__code {
+        margin-left: 8px; font-size: 11px; font-weight: 700;
+        letter-spacing: 0.06em; padding: 2px 7px;
+        border-radius: 999px; background: var(--charcoal); color: #f4efe4;
+      }
 
       /* ---------- page head ---------- */
       .page-head { margin-bottom: 16px; }
@@ -287,155 +317,320 @@
       }
     </style>
   </head>
-  <body data-page-node-id="CCnR8OM0x9a7AcvAiS43X0">
-    <div class="app" data-page-node-id="e8ODN0i8jF4suEivFCM3uK">
-      <nav class="nav" data-page-node-id="eVueHfFQPmn9Ys1PPGt03R">
-        <div class="nav__brand" data-page-node-id="POuPGshMNSjoQxs0ID8ClE">
-          <span class="nav__brand-mark" data-page-node-id="OWfzAwHcOvuQKVgtoGDtEq">WB</span>
-          <div class="nav__brand-text" data-page-node-id="FwWvWCOlEx2AEEm8FT2DR1">
-            <span class="nav__brand-name" data-page-node-id="DTWmtP4WNDNUEDH5DtFkhG">Workbench</span>
-            <span class="nav__brand-sub" data-page-node-id="EMOV0ttuEozykmwq3641V5">Data Workbench</span>
+  <body>
+    <div class="app">
+      <nav class="nav">
+        <div class="nav__brand">
+          <span class="nav__brand-mark">WB</span>
+          <div class="nav__brand-text">
+            <span class="nav__brand-name">Workbench</span>
+            <span class="nav__brand-sub" data-i18n="brand.sub">Data Workbench</span>
           </div>
         </div>
-        <ul class="nav__list" data-page-node-id="e2rbSF1311ysvJmsD6cHDZ">
-          <li data-page-node-id="9MKDVQeFpL0fsIbFVNH2yw">
-            <a class="nav__item" href="./index.html" data-page-node-id="sZej4B2WRQe5cMmDGkuoV1">
-              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="EiOMmggaLwXGBFEG6P7182"><rect x="3" y="3" width="7" height="7" rx="1.5" data-page-node-id="yHFopQe9YUrvrKDKcExfRW"/><rect x="14" y="3" width="7" height="7" rx="1.5" data-page-node-id="9efqfvlOJlPZWdL8zdbskE"/><rect x="3" y="14" width="7" height="7" rx="1.5" data-page-node-id="NlKCDfoSZ91PTxdFkxtLob"/><rect x="14" y="14" width="7" height="7" rx="1.5" data-page-node-id="QJiAJisZKLsnWfD4xYr7wz"/></svg>
-              <span class="nav__item-text" data-page-node-id="HKRPJYAApadMMdFQgfLqjv">
-                <span data-page-node-id="Bq8XvWaoMiycueXipWx6AO">Data Dashboard</span>
-                <small data-page-node-id="cJuFMHNT9JFNx87fAeewzN">Metrics &amp; charts, filter on the right</small>
+        <ul class="nav__list">
+          <li>
+            <a class="nav__item" href="./index.html">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              <span class="nav__item-text">
+                <span data-i18n="nav.dashboard">Data Dashboard</span>
+                <small data-i18n="nav.dashboard.hint">Metrics &amp; charts, filter on the right</small>
               </span>
             </a>
           </li>
-          <li data-page-node-id="YAOwcVdjJIjlAC8XXexNbB">
-            <a class="nav__item" href="./index.html" data-page-node-id="0FHr9bSlFAvGa7rZInUv0A">
-              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="m6RRpq3HRZQV6UojB0lh0l"><path d="M12 16V4" data-page-node-id="rurx0FiIfRRPBP0SytTnbs"/><path d="m7 9 5-5 5 5" data-page-node-id="MCgGewoahK88ALrBjEhUDY"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" data-page-node-id="6D5RHbX3M2OWJ0fLcKmVQL"/></svg>
-              <span class="nav__item-text" data-page-node-id="oKJe4FYMAickU9mjkye11I">
-                <span data-page-node-id="XTaPLFFCvSJ4eTiy4Z9sBX">Data Connection</span>
-                <small data-page-node-id="A5oGMQHO4NHP4qBzRif0fK">Data Connection &amp; API endpoints</small>
+          <li>
+            <a class="nav__item" href="./index.html">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+              <span class="nav__item-text">
+                <span data-i18n="nav.connection">Data Connection</span>
+                <small data-i18n="nav.connection.hint">Data Connection &amp; API endpoints</small>
               </span>
             </a>
           </li>
-          <li data-page-node-id="Krg6GqzuoENboskyNtZThR">
-            <button type="button" class="nav__item nav__item--active" aria-current="page" data-page-node-id="D62EbXoKCCJ4Bsqn6MD3C8">
-              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="vuSyvATH7EYi1N5rafSPUA"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3Z" data-page-node-id="c9seRLWYG8jKAFUrLKMwzD"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z" data-page-node-id="7DWFdcjob6MqywBQXYA9pV"/></svg>
-              <span class="nav__item-text" data-page-node-id="fblU6q5QgFJD6F8NNMlX69">
-                <span data-page-node-id="6lCaze4buPiFY6fS9eCi0w">AI Assistant</span>
-                <small data-page-node-id="GOJikfXDqtLycBoCI80ytg">Chat grounded on your uploaded data</small>
+          <li>
+            <button type="button" class="nav__item nav__item--active" aria-current="page">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3Z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg>
+              <span class="nav__item-text">
+                <span data-i18n="nav.ai">AI Assistant</span>
+                <small data-i18n="nav.ai.hint">Chat grounded on your uploaded data</small>
               </span>
             </button>
           </li>
         </ul>
-        <div class="nav__foot" data-page-node-id="i44JzmVu6NDdBM7w1wvK3E">
-          <span class="nav__chip" data-page-node-id="wy5nY0nAfrGQqylcbtxTEr">Static demo</span>
-          <p class="nav__note" data-page-node-id="s897PxnCPBkBqSenJAZVPZ">Preset dialogue · no backend calls</p>
+        <div class="nav__foot">
+          <span class="nav__chip" data-i18n="nav.chip">Static demo</span>
+          <p class="nav__note" data-i18n="nav.note">Preset dialogue · no backend calls</p>
         </div>
       </nav>
 
-      <main class="content" data-page-node-id="A7GT3FQCdR5NsEN8LGjcUj">
-        <header class="page-head" data-page-node-id="ZrDWNrfmG65PiQlAcooyDO">
-          <h1 data-page-node-id="VkTtaEf3Cto8lVmhKZHkri">AI Assistant</h1>
-          <p class="page-head__sub" data-page-node-id="JmqKf5cSJ95cupDxt0BMAU">
+      <main class="content">
+        <div class="topbar">
+          <button type="button" class="lang-switch" id="btnLang" aria-label="Language">
+            <span class="lang-switch__label">Language</span>
+            <span class="lang-switch__code" id="langCode">EN</span>
+          </button>
+        </div>
+
+        <header class="page-head">
+          <h1 data-i18n="head.h1">AI Assistant</h1>
+          <p class="page-head__sub" data-i18n="head.sub">
             Answers from the timber data you have connected — incoming volume, processed volume, recovery
             routes, batch economics. It can also break down monthly trends, compare sources, or chase down an anomaly.
           </p>
         </header>
 
-        <section class="chat" aria-label="Conversation demo" data-page-node-id="Nd3PKPXUimCrXXoIYO0DtB">
-          <div class="chat__messages" id="messages" aria-live="polite" data-page-node-id="sjh5GwE7ghyC5B7UwCN3Kr"></div>
-          <div class="composer" id="composer" data-page-node-id="mzXUVTxiZu8HEqDT5rV5ue">
-            <p class="composer__label" data-page-node-id="pa6JGHuVxBOFHg6cI3c6vN">Try asking</p>
-            <div class="composer__chips" id="suggestions" data-page-node-id="toKE3i87PpdZ5YfiPLYC9b"></div>
-            <div class="composer__row" data-page-node-id="QyqirDjFYl6k4PEH3t54ar">
-              <textarea rows="1" disabled placeholder="Static demo — pick a question above to watch it answer"></textarea>
-              <button type="button" class="btn btn--primary" disabled data-page-node-id="GxjltJLxaeSttUe2Spimok">Send</button>
+        <section class="chat" data-i18n-aria="chat.aria" aria-label="Conversation demo">
+          <div class="chat__messages" id="messages" aria-live="polite"></div>
+          <div class="composer" id="composer">
+            <p class="composer__label" data-i18n="composer.label">Try asking</p>
+            <div class="composer__chips" id="suggestions"></div>
+            <div class="composer__row">
+              <textarea rows="1" disabled data-i18n-placeholder="composer.placeholder" placeholder="Static demo — pick a question above to watch it answer"></textarea>
+              <button type="button" class="btn btn--primary" disabled data-i18n="composer.send">Send</button>
             </div>
           </div>
         </section>
       </main>
 
-      <button type="button" class="fab" id="btnReplay" data-page-node-id="D6GqNlB4AX6F7C80jo0X6B">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="A9ls4drRlPkRKGKuSA8A8g"><path d="M3 12a9 9 0 1 0 3-6.7" data-page-node-id="RU52jlau8MaeSCxhyXbGPF"/><path d="M3 4v5h5" data-page-node-id="ewOPHS6A1hxMQ4OEDcdQgO"/></svg>
-        Replay
+      <button type="button" class="fab" id="btnReplay">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        <span data-i18n="fab.replay">Replay</span>
       </button>
     </div>
 
     <script>
       /* =========================================================
+         Language.
+
+         The key is `wb-lang` - the exact key the SPA persists in
+         static/new/src/i18n.tsx. Shared on purpose: switching here
+         moves the app as well, and vice versa, so the two pages
+         never disagree about what language they are in.
+
+         Resolution order: ?lang=  ->  localStorage  ->  'en'.
+         `t()` returns the key when a lookup misses, so a typo shows
+         up on the page instead of silently rendering an empty string.
+         ========================================================= */
+
+      var LANG_KEY = 'wb-lang';
+
+      var I18N = {
+        en: {
+          'doc.title': 'AI Assistant · Workbench',
+          'brand.sub': 'Data Workbench',
+          'nav.dashboard': 'Data Dashboard',
+          'nav.dashboard.hint': 'Metrics & charts, filter on the right',
+          'nav.connection': 'Data Connection',
+          'nav.connection.hint': 'Data Connection & API endpoints',
+          'nav.ai': 'AI Assistant',
+          'nav.ai.hint': 'Chat grounded on your uploaded data',
+          'nav.chip': 'Static demo',
+          'nav.note': 'Preset dialogue · no backend calls',
+          'head.h1': 'AI Assistant',
+          'head.sub': 'Answers from the timber data you have connected — incoming volume, processed volume, recovery routes, batch economics. It can also break down monthly trends, compare sources, or chase down an anomaly.',
+          'chat.aria': 'Conversation demo',
+          'composer.label': 'Try asking',
+          'composer.placeholder': 'Static demo — pick a question above to watch it answer',
+          'composer.send': 'Send',
+          'fab.replay': 'Replay',
+          'trace.done': 'How I got here',
+
+          's1.chip': 'Total incoming volume?',
+          's1.q': 'What is the total incoming volume? And the higher-value recovery rate?',
+          's1.st0': 'Understanding your question…',
+          's1.st1': 'Reading the dashboard summary…',
+          's1.st2': 'Checking the numbers…',
+          's1.t0s': 'I read this as a quick lookup',
+          's1.t0e': '<b>confidence 0.41</b> · matched locally in one pass, so no extra model call went into classifying it',
+          's1.t1s': 'I only pulled the dashboard summary',
+          's1.t1e': '<b>1 fetch</b> · you asked for totals with no dimension filter, so one call covers all 6 core metrics',
+          's1.t2s': 'I pass the numbers through untouched',
+          's1.t2e': '1,240 t · 992 t · 35.69% — no unit conversion, no “projected” fill-ins, no rounding the decimals away',
+          's1.text': 'Total incoming volume for the period is 1,240 t, processed volume 992 t, at a 35.69% higher-value recovery rate.\nRecovered value 320 $/t, cost 232.5 $/t, 24.8 t unresolved.',
+
+          's2.chip': 'Processing volume by month',
+          's2.q': 'Show monthly processing volume and recovered value.',
+          's2.st0': 'Understanding your question…',
+          's2.st1': 'Reading the monthly series…',
+          's2.st2': 'Checking the numbers…',
+          's2.t0s': 'I read this as a trend',
+          's2.t0e': '<b>confidence 0.52</b> · “by month” and “changes” pin the question to the time dimension',
+          's2.t1s': 'I go straight to the monthly series',
+          's2.t1e': '<b>1 fetch</b> · 8 rows back (2025-04 to 2025-11) — you do not have to assemble a date range yourself',
+          's2.t2s': 'I only compute change from months I actually read',
+          's2.t2e': '<b>45.8%</b> = 35.1 t in Nov ÷ 64.8 t in Oct · for periods the data does not cover, I stay quiet',
+          's2.text': 'Processed volume and recovered value, 2025-04 → 2025-11 (t / $):\nApr  113.6 / 34,945.84\nMay   97.7 / 34,299.87\nJun   72.2 / 29,098.79\nJul  130.7 / 33,071.27   ← processed peak\nAug   85.0 / 33,203.67\nSep  118.9 / 38,220.29\nOct   64.8 / 16,891.17\nNov   35.1 / 10,184.52   ← low\n\nProcessed volume peaked in July; the latest two months have fallen away sharply. November is 45.8% below October, and recovered value moved the same way.',
+
+          's3.chip': 'Which source recovers more?',
+          's3.q': 'Which recovers more — Residential Demolition or Commercial Demolition?',
+          's3.st0': 'Understanding your question…',
+          's3.st1': 'Reading the source composition…',
+          's3.st2': 'Aligning the two figures…',
+          's3.t0s': 'I read this as a comparison',
+          's3.t0e': '<b>confidence 0.47</b> · “which … more” is a comparison, and both objects are proper nouns, so I do not have to guess at the referents',
+          's3.t1s': 'Both objects sit in one dataset, so I fetch once',
+          's3.t1e': '<b>1 fetch</b> · the two rows come out on the same basis — you will not hit “your window differs from mine”',
+          's3.t2s': 'I give absolutes first, then the gap, the swing and the share',
+          's3.t2e': '260.4 t vs 214.2 t · gap <b>46.2 t (+21.6%)</b> · shares 21.0% / 17.27%',
+          's3.text': 'Residential Demolition took in 260.4 t; Commercial Demolition 214.2 t.\nThe former leads by 46.2 t (+21.6%). Across the six sources they account for 21.0% and 17.27% respectively.',
+
+          's4.chip': 'Why did November drop?',
+          's4.q': 'Why did processed volume drop so sharply in November?',
+          's4.st0': 'Understanding your question…',
+          's4.st1': 'Locating which month moved…',
+          's4.st2': 'Separating fact from inference…',
+          's4.t0s': 'I read this as “why” — attribution, not a lookup',
+          's4.t0e': '<b>confidence 0.58</b> · “why” and “sharply” mark it as attribution, which carries one extra hard constraint',
+          's4.t1s': 'I read two places: how big the drop was, then the batches in that window',
+          's4.t1e': '<b>2 fetches</b> · monthly series, 8 rows + status breakdown across 36 batches',
+          's4.t2s': 'I keep what the data says apart from what I think',
+          's4.t2e': '45.8% / 43.6% / 24.8 t come from the fetches | “thinner intake caused the shortfall” is <b>my inference</b>, flagged with ★ below',
+          's4.text': 'November processed 35.1 t, down 45.8% on October’s 64.8 t. Intake that month was 81.6 t, down 43.6% on 144.8 t. The unresolved material balance is 24.8 t.\n\n★ Inference | Intake fell in step, so thinner feedstock arrivals are the main driver of the drop. The unresolved balance is too small to account for 45.8% on its own.\n\nWant me to drill into the individual batches?',
+
+          's5.chip': 'Hi there',
+          's5.q': 'Hi there',
+          's5.st0': 'Understanding your question…',
+          's5.st1': 'Deciding whether this needs the data…',
+          's5.t0s': 'I read this as a greeting',
+          's5.t0e': '<b>confidence 0.72</b> · matched locally in one pass',
+          's5.t1s': 'I do not touch the data this turn',
+          's5.t1e': '<b>0 fetches</b> · I am handed no data channel here, so I cannot “just take a peek” — and I will not clutter the thread with an irrelevant query',
+          's5.t2s': 'So I answer on scope, not numbers',
+          's5.t2e': 'nothing was fetched this turn, so no numbers belong in the reply',
+          's5.text': 'Hi! I am the assistant for this data workbench. I can see the timber recovery data you have connected — ask me about incoming volume, processed volume, recovery routes or batch economics, or have me break down monthly trends, compare sources, or chase down an anomaly.',
+
+          's6.chip': 'Take a look at that thing',
+          's6.q': 'Take a look at that thing',
+          's6.st0': 'Understanding your question…',
+          's6.st1': 'I’m not sure what that refers to…',
+          's6.st2': 'Working out what to ask you…',
+          's6.t0s': 'I could not work out what you are asking for',
+          's6.t0e': 'local <b>0.11</b>, model <b>0.40</b> — neither gate cleared',
+          's6.t1s': 'Here the cheapest move is one question back',
+          's6.t1e': '<b>0 fetches</b> · gambling on an intent and querying would cost you more — a wrong guess means you re-explain from scratch',
+          's6.t2s': 'So I turn “I do not follow” into something actionable',
+          's6.t2e': 'the reply offers concrete phrasings instead of an apology',
+          's6.text': 'I am not sure what you are after. Try rephrasing, or start from one of these: lookups (total incoming volume, higher-value recovery rate), trends (processing volume by month), comparisons (which source recovers more), anomalies (why November dropped).'
+        },
+
+        zh: {
+          'doc.title': 'AI 助手 · Workbench',
+          'brand.sub': '数据工作台',
+          'nav.dashboard': '数据看板',
+          'nav.dashboard.hint': '指标与图表，右侧筛选维度',
+          'nav.connection': '数据链接',
+          'nav.connection.hint': '数据链接与 API 接口',
+          'nav.ai': 'AI 助手',
+          'nav.ai.hint': '基于已上传数据的对话',
+          'nav.chip': '静态演示',
+          'nav.note': '预设对话 · 无后端请求',
+          'head.h1': 'AI 助手',
+          'head.sub': '基于你已上传的数据作答——入库量、处理量、回收去向、批次经济性，也可以让它分月看走势、做来源对比、排查异常。',
+          'chat.aria': '对话演示',
+          'composer.label': '试试这样问',
+          'composer.placeholder': '静态演示：点上方问题看看它怎么答',
+          'composer.send': '发送',
+          'fab.replay': '重播',
+          'trace.done': '我的思路',
+
+          's1.chip': '总入库量是多少？',
+          's1.q': '总入库量是多少？高值回收率呢？',
+          's1.st0': '正在理解你的问题…',
+          's1.st1': '正在读取看板汇总…',
+          's1.st2': '正在核对数字…',
+          's1.t0s': '我判断你在问「即时分析」',
+          's1.t0e': '<b>把握 0.41</b> · 本地匹配直接命中，没有再花一次模型调用去分类',
+          's1.t1s': '我只读了看板汇总这一处',
+          's1.t1e': '<b>1 次取数</b> · 问的是总量口径、没限定维度，一次就覆盖全部 6 个核心指标',
+          's1.t2s': '数字照搬取数结果，不做换算',
+          's1.t2e': '1,240 t · 992 t · 35.69% —— 不补「预计」值，也不抹掉小数凑成整数',
+          's1.text': '期间内总入库量 1,240 吨，处理量 992 吨，高值回收率 35.69%。\n回收价值 320 $/t，成本 232.5 $/t，未解决物料 24.8 吨。',
+
+          's2.chip': '分月看处理量与回收价值',
+          's2.q': '分月展示处理量与回收价值的变化',
+          's2.st0': '正在理解你的问题…',
+          's2.st1': '正在读取月度数据…',
+          's2.st2': '正在核对数字…',
+          's2.t0s': '我判断你在问「趋势」',
+          's2.t0e': '<b>把握 0.52</b> ·「分月」「变化」把问题钉在时间维度上',
+          's2.t1s': '我固定走月度趋势这一条路',
+          's2.t1e': '<b>1 次取数</b> · 返回 8 行（2025-04 ~ 2025-11），不用你自己拼时间范围',
+          's2.t2s': '环比只用读到的两个月算',
+          's2.t2e': '<b>45.8%</b> = 11 月 35.1 t ÷ 10 月 64.8 t · 数据没覆盖的时间段我就不发言',
+          's2.text': '2025-04 ~ 2025-11 处理量与回收价值（t / $）：\n04 月 113.6 t / 34,945.84\n05 月　97.7 t / 34,299.87\n06 月　72.2 t / 29,098.79\n07 月 130.7 t / 33,071.27　← 处理量峰值\n08 月　85.0 t / 33,203.67\n09 月 118.9 t / 38,220.29\n10 月　64.8 t / 16,891.17\n11 月　35.1 t / 10,184.52　← 区间低点\n\n处理量 07 月见顶，最近两个月快速回落；11 月环比 10 月下降 45.8%，回收价值同步走低。',
+
+          's3.chip': '哪种来源回收量更高？',
+          's3.q': 'Residential Demolition 和 Commercial Demolition 哪个回收量更高？',
+          's3.st0': '正在理解你的问题…',
+          's3.st1': '正在读取来源结构…',
+          's3.st2': '正在对齐两个口径…',
+          's3.t0s': '我判断你在问「对比」',
+          's3.t0e': '<b>把握 0.47</b> ·「哪个更高」是比较型句式，两个对象都是专有名词，不必靠常识补全指代',
+          's3.t1s': '两个对象同处一份数据，我只读一次',
+          's3.t1e': '<b>1 次取数</b> · 出来的两行天然同口径，不会出现「你用的时间段和我用的不一样」',
+          's3.t2s': '我先给绝对值，再给差值、幅度和占比',
+          's3.t2e': '260.4 t / 214.2 t · 差 <b>46.2 t（+21.6%）</b> · 占比 21.0% / 17.27%',
+          's3.text': 'Residential Demolition 入库 260.4 吨，Commercial Demolition 214.2 吨。\n前者高 46.2 吨（+21.6%）。六个来源里，两者分别占 21.0% 和 17.27%。',
+
+          's4.chip': '为什么 11 月处理量下降？',
+          's4.q': '为什么 11 月处理量突然下降？',
+          's4.st0': '正在理解你的问题…',
+          's4.st1': '正在定位是哪个月掉的…',
+          's4.st2': '正在把事实和推断分开…',
+          's4.t0s': '我判断你在问「为什么」——这是归因，不是查询',
+          's4.t0e': '<b>把握 0.58</b> ·「为什么」「突然」标记了归因类，它比一般分析多一条硬约束',
+          's4.t1s': '我读了两处：先定位跌了多少，再看同期批次',
+          's4.t1e': '<b>2 次取数</b> · 月度时序 8 行 ＋ 36 个批次的状态分布',
+          's4.t2s': '数据说的和我猜的分开写',
+          's4.t2e': '45.8% / 43.6% / 24.8 t 是取数结果｜「入库下滑导致缺口」是<b>我的推断</b>，下面用 ★ 标出来了',
+          's4.text': '11 月处理量 35.1 吨，环比 10 月 64.8 吨下降 45.8%；同期入库量 81.6 吨，环比 144.8 吨下降 43.6%。物料状态中未解决 24.8 吨。\n\n★ 推断｜入库同步下滑，说明 11 月原料到货减少是处理量下降的主要来源；未解决物料占比不高，单看它解释不了这 45.8% 的缺口。\n\n要我下钻到具体批次吗？',
+
+          's5.chip': '你好呀',
+          's5.q': '你好呀',
+          's5.st0': '正在理解你的问题…',
+          's5.st1': '正在判断这一轮要不要读数据…',
+          's5.t0s': '我判断你在打招呼',
+          's5.t0e': '<b>把握 0.72</b> · 本地匹配直接命中',
+          's5.t1s': '这一轮我不读任何数据',
+          's5.t1e': '<b>0 次取数</b> · 我没有拿到任何数据入口，也就没法「顺手」查一遍库，更不会用无关查询污染后面的对话',
+          's5.t2s': '所以我只讲能力边界，不给数字',
+          's5.t2e': '这一轮压根没取数，就不该出现数字',
+          's5.text': '你好！我是这个数据工作台的助手。你上传的木材回收数据我看得到，可以直接问我入库量、处理量、回收去向、批次经济性这类问题；也可以让我分月看趋势、做来源对比或排查异常。',
+
+          's6.chip': '帮我看一下那个东西',
+          's6.q': '帮我看一下那个东西',
+          's6.st0': '正在理解你的问题…',
+          's6.st1': '这一句我拿不准…',
+          's6.st2': '正在确认该问清什么…',
+          's6.t0s': '我没能判断出你在问什么',
+          's6.t0e': '本地 <b>0.11</b>、模型 <b>0.40</b> —— 两个门槛都没过',
+          's6.t1s': '此时代价最低的动作是反问一次',
+          's6.t1e': '<b>0 次取数</b> · 不赌一个意图去查库；查错了你得从头解释一遍，成本比反问高',
+          's6.t2s': '所以我把「看不懂」变成一次可操作的引导',
+          's6.t2e': '回复里附了具体问法示例，而不是一句抱歉',
+          's6.text': '我没太理解你的需求。你可以换个说法，或参考这些问法：查数（总入库量多少、高值回收率多少）、看趋势（分月处理量走势）、做对比（哪种来源回收量更高）、查异常（11 月处理量为什么下降）。'
+        }
+      };
+
+      /* =========================================================
          Preset exchanges. Every number, threshold and boundary below
          mirrors the real modules named in the file header comment,
          and reads against the sample dataset in mock.ts.
+
+         Only keys live here - the copy sits in I18N above, so both
+         languages share one scenario list and cannot drift apart.
+         `st` = how many status labels that scenario streams through.
+         `tr` = how many steps its folded panel lists. They are counted
+         separately on purpose: the greeting streams 2 labels but still
+         reasons through 3 steps.
          ========================================================= */
 
-      var CARET = '<svg class="trace__caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
-
       var SCENARIOS = [
-        {
-          chip: 'Total incoming volume?',
-          q: 'What is the total incoming volume? And the higher-value recovery rate?',
-          statuses: ['Understanding your question…', 'Reading the dashboard summary…', 'Checking the numbers…'],
-          trace: [
-            ['I read this as a quick lookup', '<b>confidence 0.41</b> · matched locally in one pass, so no extra model call went into classifying it'],
-            ['I only pulled the dashboard summary', '<b>1 fetch</b> · you asked for totals with no dimension filter, so one call covers all 6 core metrics'],
-            ['I pass the numbers through untouched', '1,286.4 t · 1,042.7 t · 63.2% — no unit conversion, no “projected” fill-ins, no rounding the decimals away']
-          ],
-          text: 'Total incoming volume for the period is 1,286.4 t, processed volume 1,042.7 t, at a 63.2% higher-value recovery rate.\nRecovered value 184.5 ¥/t, cost 92.3 ¥/t, 38.6 t unresolved.'
-        },
-        {
-          chip: 'Processing volume by month',
-          q: 'Show monthly processing volume and recovered value.',
-          statuses: ['Understanding your question…', 'Reading the monthly series…', 'Checking the numbers…'],
-          trace: [
-            ['I read this as a trend', '<b>confidence 0.52</b> · “by month” and “changes” pin the question to the time dimension'],
-            ['I go straight to the monthly series', '<b>1 fetch</b> · 8 rows back (2026-01 to 2026-08) — you do not have to assemble a date range yourself'],
-            ['I only compute change from months I actually read', '<b>25.0%</b> = 99 t in Aug ÷ 132 t in Jul · for periods the data does not cover, I stay quiet']
-          ],
-          text: 'Processed volume and recovered value, 2026-01 → 2026-08 (t / ¥’000):\nJan 118 / 21.6\nFeb 129 / 23.8\nMar 140 / 26.1\nApr 134 / 24.7\nMay 149 / 27.9   ← peak\nJun 141 / 25.9\nJul 132 / 24.3\nAug  99 / 18.2   ← low\n\nProcessed volume has slid since May. August is 25.0% below July, and recovered value moved the same way.'
-        },
-        {
-          chip: 'Which source recovers more?',
-          q: 'Which recovers more — Residential Demolition or Commercial Strip-out?',
-          statuses: ['Understanding your question…', 'Reading the source composition…', 'Aligning the two figures…'],
-          trace: [
-            ['I read this as a comparison', '<b>confidence 0.47</b> · “which … more” is a comparison, and both objects are proper nouns, so I do not have to guess at the referents'],
-            ['Both objects sit in one dataset, so I fetch once', '<b>1 fetch</b> · the two rows come out on the same basis — you will not hit “your window differs from mine”'],
-            ['I give absolutes first, then the gap, the swing and the share', '486.2 t vs 312.4 t · gap <b>173.8 t (+55.6%)</b> · shares 42.4% / 27.3%']
-          ],
-          text: 'Residential Demolition took in 486.2 t; Commercial Strip-out 312.4 t.\nThe former leads by 173.8 t (+55.6%). Across the five sources they account for 42.4% and 27.3% respectively.'
-        },
-        {
-          chip: 'Why did August drop?',
-          q: 'Why did processed volume drop so sharply in August?',
-          statuses: ['Understanding your question…', 'Locating which month moved…', 'Separating fact from inference…'],
-          trace: [
-            ['I read this as “why” — attribution, not a lookup', '<b>confidence 0.58</b> · “why” and “sharply” mark it as attribution, which carries one extra hard constraint'],
-            ['I read two places: how big the drop was, then the batches in that window', '<b>2 fetches</b> · monthly series, 8 rows + status breakdown across 36 batches'],
-            ['I keep what the data says apart from what I think', '25.0% / 16.8% / 38.6 t come from the fetches | “thinner intake caused the shortfall” is <b>my inference</b>, flagged with ★ below']
-          ],
-          text: 'August processed 99 t, down 25.0% on July’s 132 t. Intake that month was 134 t, down 16.8% on 161 t. The unresolved material balance is 38.6 t.\n\n★ Inference | Intake fell in step, so thinner feedstock arrivals are the main driver of the drop. The unresolved balance is too small to account for 25% on its own.\n\nWant me to drill into the individual batches?'
-        },
-        {
-          chip: 'Hi there',
-          q: 'Hi there',
-          statuses: ['Understanding your question…', 'Deciding whether this needs the data…'],
-          trace: [
-            ['I read this as a greeting', '<b>confidence 0.72</b> · matched locally in one pass'],
-            ['I do not touch the data this turn', '<b>0 fetches</b> · I am handed no data channel here, so I cannot “just take a peek” — and I will not clutter the thread with an irrelevant query'],
-            ['So I answer on scope, not numbers', 'nothing was fetched this turn, so no numbers belong in the reply']
-          ],
-          text: 'Hi! I am the assistant for this data workbench. I can see the timber recovery data you have connected — ask me about incoming volume, processed volume, recovery routes or batch economics, or have me break down monthly trends, compare sources, or chase down an anomaly.'
-        },
-        {
-          chip: 'Take a look at that thing',
-          q: 'Take a look at that thing',
-          statuses: ['Understanding your question…', 'I’m not sure what that refers to…', 'Working out what to ask you…'],
-          trace: [
-            ['I could not work out what you are asking for', 'local <b>0.11</b>, model <b>0.40</b> — neither gate cleared'],
-            ['Here the cheapest move is one question back', '<b>0 fetches</b> · gambling on an intent and querying would cost you more — a wrong guess means you re-explain from scratch'],
-            ['So I turn “I do not follow” into something actionable', 'the reply offers concrete phrasings instead of an apology']
-          ],
-          text: 'I am not sure what you are after. Try rephrasing, or start from one of these: lookups (total incoming volume, higher-value recovery rate), trends (processing volume by month), comparisons (which source recovers more), anomalies (why August dropped).'
-        }
+        { id: 's1', st: 3, tr: 3 },
+        { id: 's2', st: 3, tr: 3 },
+        { id: 's3', st: 3, tr: 3 },
+        { id: 's4', st: 3, tr: 3 },
+        { id: 's5', st: 2, tr: 3 },
+        { id: 's6', st: 3, tr: 3 }
       ];
 
       /* =========================================================
@@ -443,6 +638,8 @@
          ========================================================= */
 
       var el = function (id) { return document.getElementById(id); };
+      var each = function (sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); };
+      var CARET = '<svg class="trace__caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
       var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
       function esc(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; });
@@ -452,17 +649,63 @@
       var TYPE_MS = 14;       /* ms per typed chunk */
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      var state = { si: 0, timers: [], typing: null, busy: false };
+      var state = { si: 0, lang: 'en', timers: [], typing: null, busy: false };
+
+      /* ---------- language ---------- */
+
+      function t(key) {
+        var pack = I18N[state.lang] || I18N.en;
+        return Object.prototype.hasOwnProperty.call(pack, key) ? pack[key] : key;
+      }
+
+      function readLang() {
+        var q = /[?&]lang=(en|zh)(?:&|$)/.exec(window.location.search);
+        if (q) return q[1];
+        var saved = null;
+        try { saved = window.localStorage.getItem(LANG_KEY); } catch (e) { saved = null; }
+        return saved === 'en' || saved === 'zh' ? saved : 'en';
+      }
+
+      function applyLang(lang) {
+        state.lang = lang;
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+        document.title = t('doc.title');
+
+        each('[data-i18n]', function (n) { n.textContent = t(n.getAttribute('data-i18n')); });
+        each('[data-i18n-placeholder]', function (n) { n.setAttribute('placeholder', t(n.getAttribute('data-i18n-placeholder'))); });
+        each('[data-i18n-aria]', function (n) { n.setAttribute('aria-label', t(n.getAttribute('data-i18n-aria'))); });
+
+        el('langCode').textContent = lang === 'en' ? 'EN' : 'ZH';
+        renderChips();
+      }
+
+      function setLang(lang) {
+        try { window.localStorage.setItem(LANG_KEY, lang); } catch (e) { /* file:// or blocked storage */ }
+        applyLang(lang);
+        markChip(state.si);
+        paintScenario(state.si);   /* repaint the thread so no stale language survives */
+      }
+
+      /* ---------- scenarios ---------- */
+
+      function scenario(i) {
+        var d = SCENARIOS[i], id = d.id, statuses = [], trace = [], k;
+        for (k = 0; k < d.st; k++) statuses.push(t(id + '.st' + k));
+        for (k = 0; k < d.tr; k++) trace.push([t(id + '.t' + k + 's'), t(id + '.t' + k + 'e')]);
+        return { chip: t(id + '.chip'), q: t(id + '.q'), statuses: statuses, trace: trace, text: t(id + '.text') };
+      }
+
+      /* ---------- timing ---------- */
 
       function clearTimers() {
-        state.timers.forEach(function (t) { window.clearTimeout(t); });
+        state.timers.forEach(function (x) { window.clearTimeout(x); });
         state.timers = [];
         if (state.typing) { window.clearInterval(state.typing); state.typing = null; }
       }
       function later(fn, ms) {
-        var t = window.setTimeout(fn, ms);
-        state.timers.push(t);
-        return t;
+        var x = window.setTimeout(fn, ms);
+        state.timers.push(x);
+        return x;
       }
       function scrollBottom() {
         var box = el('messages');
@@ -534,7 +777,7 @@
 
         icon.className = 'trace__icon trace__icon--ok';
         icon.textContent = '✓';
-        label.textContent = 'How I got here';
+        label.textContent = t('trace.done');
         toggle.disabled = false;
         trace.classList.add('trace--done');
 
@@ -573,10 +816,8 @@
       function runScenario(index) {
         clearTimers();
         state.si = index;
-        var sc = SCENARIOS[index];
-        Array.prototype.forEach.call(document.querySelectorAll('.sugg'), function (b, i) {
-          b.setAttribute('aria-current', i === index ? 'true' : 'false');
-        });
+        var sc = scenario(index);
+        markChip(index);
         pushUser(sc.q);
         setBusy(true);
         var wrap = pushAssistant();
@@ -590,6 +831,26 @@
         });
       }
 
+      /* Instant, no animation. Use this wherever a re-run would be wrong:
+         the language switch repaints a settled thread, because making the
+         reader sit through the whole exchange again in the new language is
+         noise - they only wanted the words to change. */
+      function paintScenario(index) {
+        clearTimers();
+        setBusy(false);
+        state.si = index;
+        el('messages').innerHTML = '';
+        var sc = scenario(index);
+        markChip(index);
+        pushUser(sc.q);
+        var wrap = pushAssistant();
+        settleTrace(wrap, sc);
+        var bubble = wrap.querySelector('.chat__bubble');
+        bubble.className = 'chat__bubble';
+        bubble.textContent = sc.text;
+        scrollBottom();
+      }
+
       function resetAndRun(index) {
         clearTimers();
         setBusy(false);
@@ -597,17 +858,25 @@
         runScenario(index);
       }
 
+      function renderChips() {
+        el('suggestions').innerHTML = SCENARIOS.map(function (s, i) {
+          var sc = scenario(i);
+          return '<button type="button" class="sugg" data-i="' + i + '" aria-current="false" title="' +
+            esc(sc.q) + '">' + esc(sc.chip) + '</button>';
+        }).join('');
+      }
+
+      function markChip(index) {
+        each('.sugg', function (b, i) { b.setAttribute('aria-current', i === index ? 'true' : 'false'); });
+      }
+
       /* ---------- boot ---------- */
 
       function boot() {
-        el('suggestions').innerHTML = SCENARIOS.map(function (s, i) {
-          return '<button type="button" class="sugg" data-i="' + i + '" aria-current="false" title="' + esc(s.q) + '">' + esc(s.chip) + '</button>';
-        }).join('');
-
         el('suggestions').addEventListener('click', function (e) {
-          var t = e.target.closest ? e.target.closest('.sugg') : null;
-          if (!t || state.busy) return;
-          runScenario(Number(t.getAttribute('data-i')));
+          var b = e.target.closest ? e.target.closest('.sugg') : null;
+          if (!b || state.busy) return;
+          runScenario(Number(b.getAttribute('data-i')));
         });
 
         el('btnReplay').addEventListener('click', function () {
@@ -615,6 +884,11 @@
           resetAndRun(state.si);
         });
 
+        el('btnLang').addEventListener('click', function () {
+          setLang(state.lang === 'en' ? 'zh' : 'en');
+        });
+
+        applyLang(readLang());
         runScenario(0);
       }
 
