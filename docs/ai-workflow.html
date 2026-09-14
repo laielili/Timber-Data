@@ -1,0 +1,1347 @@
+<!doctype html>
+<!--
+  AI Assistant - static workflow demo.
+  Lives only inside docs/ (hand-written, self-contained, zero network calls).
+  Rebuilding the prototype from static/new/src overwrites docs/ - regenerate afterwards.
+  Content is grounded in: src/new/intent_recognizer.py, config/intent_schema.json,
+  src/new/ai_tools.py, src/new/chat_service.py
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 助手 · 工作流演示 · Workbench</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ---------- design tokens (mirrors static/new/src/styles.css) ---------- */
+      :root {
+        --brand: #fcf551;
+        --amber: #dfa52a;
+        --peach: #f8b99d;
+        --charcoal: #23201a;
+        --ink: #2b251c;
+        --brown: #6b4f33;
+        --dark-brown: #3b2f21;
+        --taupe: #9a8a74;
+        --olive: #5e7d4f;
+        --terracotta: #b0563b;
+        --bg: #f4efe3;
+        --panel: #fcfaf3;
+        --line: #e6ddc9;
+        --muted: #6f675a;
+        --ok-bg: #eef6ec;
+        --ok-fg: #3f6b35;
+        --ok-line: #cfe3c8;
+        --err-bg: #fbecec;
+        --err-fg: #8a3b35;
+        --err-line: #eccaca;
+        --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+        --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+        --radius: 12px;
+        --shadow-card: 0 1px 0 rgba(43, 37, 28, 0.05), 0 6px 18px -12px rgba(43, 37, 28, 0.35);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-ui);
+        font-size: 14px;
+        line-height: 1.45;
+        -webkit-font-smoothing: antialiased;
+      }
+      button { font-family: inherit; }
+      :focus-visible { outline: 2px solid var(--dark-brown); outline-offset: 2px; border-radius: 4px; }
+      code { font-family: var(--font-mono); font-size: 0.9em; }
+      a { color: var(--brown); }
+
+      /* ---------- shell ---------- */
+      .app { display: grid; grid-template-columns: 216px minmax(0, 1fr); min-height: 100vh; }
+      .content {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        max-width: 1560px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 26px 34px 54px;
+      }
+
+      /* ---------- nav (ported from styles.css) ---------- */
+      .nav {
+        position: sticky; top: 0; height: 100vh;
+        display: flex; flex-direction: column;
+        background: var(--charcoal); color: #ede6d6;
+        padding: 22px 14px 18px;
+      }
+      .nav__brand {
+        display: flex; align-items: center; gap: 10px;
+        padding: 0 8px 20px; margin-bottom: 16px;
+        border-bottom: 1px solid rgba(237, 230, 214, 0.14);
+      }
+      .nav__brand-mark {
+        width: 34px; height: 34px; border-radius: 9px;
+        background: var(--brand); color: var(--charcoal);
+        font-family: var(--font-display); font-weight: 700; font-size: 15px;
+        display: grid; place-items: center;
+      }
+      .nav__brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+      .nav__brand-name { font-family: var(--font-display); font-size: 13.5px; font-weight: 600; }
+      .nav__brand-sub {
+        font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+        color: rgba(237, 230, 214, 0.62);
+      }
+      .nav__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+      .nav__item {
+        width: 100%; display: flex; align-items: flex-start; gap: 10px;
+        padding: 9px 10px; border: none; border-radius: 8px;
+        background: transparent; color: rgba(237, 230, 214, 0.72);
+        font-size: 13.5px; font-weight: 500; text-align: left;
+        cursor: pointer; text-decoration: none;
+        transition: background 0.15s ease, color 0.15s ease;
+      }
+      .nav__item-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+      .nav__item small { font-size: 10.5px; color: rgba(237, 230, 214, 0.45); }
+      .nav__item:hover { background: rgba(252, 245, 81, 0.08); color: #ede6d6; }
+      .nav__item--active, .nav__item--active small {
+        background: var(--brand); color: var(--charcoal); font-weight: 600;
+      }
+      .nav__item--active small { color: rgba(43, 37, 28, 0.66); }
+      .nav__icon { flex: none; margin-top: 2px; color: rgba(237, 230, 214, 0.55); }
+      .nav__item--active .nav__icon { color: var(--charcoal); }
+      .nav__foot { margin-top: auto; padding: 0 8px; }
+      .nav__chip {
+        display: inline-block; font-size: 10.5px; font-weight: 600;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        color: var(--charcoal); background: var(--brand);
+        border-radius: 999px; padding: 3px 9px;
+      }
+      .nav__note { margin: 8px 0 0; font-size: 10.5px; color: rgba(237, 230, 214, 0.45); }
+
+      /* ---------- page head + controls ---------- */
+      .topbar { flex: 0 0 100%; display: flex; justify-content: flex-end; margin-bottom: 8px; }
+      .demo-badge {
+        display: inline-flex; align-items: center; gap: 7px;
+        font-size: 11.5px; font-weight: 600; letter-spacing: 0.03em;
+        color: var(--brown); background: #fff; border: 1px solid var(--line);
+        border-radius: 999px; padding: 6px 13px;
+      }
+      .demo-badge i {
+        width: 7px; height: 7px; border-radius: 50%;
+        background: var(--amber); display: block;
+      }
+      .page-head {
+        flex: 0 0 100%;
+        display: flex; align-items: center; flex-wrap: wrap; gap: 14px;
+        margin-bottom: 18px;
+      }
+      .page-head h1 {
+        margin: 0; font-family: var(--font-display); font-size: 30px;
+        font-weight: 600; letter-spacing: -0.01em; color: var(--dark-brown);
+      }
+      .page-head__sub { margin: 3px 0 0; font-size: 12.5px; color: var(--muted); flex: 1 1 320px; }
+      .controls { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+      .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; background: #fff; }
+      .seg button {
+        appearance: none; border: none; background: transparent; cursor: pointer;
+        font-size: 12.5px; font-weight: 600; color: var(--muted); padding: 8px 13px;
+      }
+      .seg button + button { border-left: 1px solid var(--line); }
+      .seg button[aria-pressed='true'] { background: var(--dark-brown); color: #f6f1e3; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        border: 1px solid var(--line); border-radius: 9px;
+        background: transparent; color: var(--brown);
+        padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer;
+        transition: background 0.15s ease;
+      }
+      .btn:hover:not(:disabled) { border-color: #cbbf9e; background: #fffdf6; }
+      .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+      .btn--primary { background: var(--dark-brown); border-color: var(--dark-brown); color: #f6f1e3; }
+      .btn--primary:hover:not(:disabled) { background: #4b3a28; border-color: #4b3a28; color: #f6f1e3; }
+
+      /* ---------- two-column demo grid ---------- */
+      .demo-grid {
+        flex: 0 0 100%;
+        display: grid;
+        grid-template-columns: minmax(340px, 1fr) minmax(0, 1.08fr);
+        gap: 20px;
+        align-items: start;
+      }
+
+      /* ---------- chat column ---------- */
+      .chat {
+        display: flex; flex-direction: column;
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); box-shadow: var(--shadow-card);
+        overflow: hidden;
+      }
+      .presets { padding: 14px 16px 4px; }
+      .presets__label {
+        margin: 0 0 8px; font-size: 11px; font-weight: 700;
+        letter-spacing: 0.09em; text-transform: uppercase; color: var(--brown);
+      }
+      .presets__row { display: flex; flex-wrap: wrap; gap: 7px; }
+      .preset {
+        appearance: none; cursor: pointer;
+        border: 1px solid var(--line); border-radius: 999px;
+        background: #fff; color: var(--ink);
+        padding: 6px 13px; font-size: 12.5px; font-weight: 500;
+        transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      }
+      .preset:hover { border-color: #cbbf9e; background: #fffdf6; }
+      .preset[aria-current='true'] {
+        background: var(--charcoal); border-color: var(--charcoal);
+        color: #f4efe3; font-weight: 600;
+      }
+      .chat__messages {
+        height: 486px; overflow-y: auto; padding: 18px 18px 8px;
+        display: flex; flex-direction: column; gap: 12px;
+      }
+      .chat__msg { display: flex; flex-direction: column; }
+      .chat__msg--user { align-items: flex-end; }
+      .chat__msg--assistant { align-items: flex-start; }
+      .chat__bubble {
+        max-width: 84%; padding: 10px 14px; border-radius: 12px;
+        line-height: 1.7; white-space: pre-wrap; word-break: break-word; font-size: 13.5px;
+      }
+      .chat__msg--user .chat__bubble {
+        background: var(--brand); color: var(--charcoal); border-bottom-right-radius: 4px;
+      }
+      .chat__msg--assistant .chat__bubble {
+        background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 4px;
+      }
+      .chat__bubble--typing { color: var(--muted); font-style: italic; }
+      .chat__caret {
+        display: inline-block; width: 6px; height: 14px; margin-left: 2px;
+        vertical-align: -2px; background: var(--taupe);
+        animation: blink 1s steps(1) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      .chat__tools { font-size: 11px; color: var(--muted); margin-top: 5px; }
+      .chat__input {
+        display: flex; gap: 10px; padding: 12px 14px;
+        border-top: 1px solid var(--line); background: var(--panel);
+      }
+      .chat__input textarea {
+        flex: 1; resize: none; border: 1px solid var(--line); border-radius: 9px;
+        padding: 9px 12px; font-family: inherit; font-size: 13.5px; line-height: 1.5;
+        background: #fffdf7; color: var(--muted);
+      }
+      .chat__input textarea:disabled { cursor: not-allowed; }
+
+      /* ---------- flow column ---------- */
+      .flow { display: flex; flex-direction: column; gap: 14px; }
+      .flow__head {
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); box-shadow: var(--shadow-card);
+        padding: 15px 18px 16px;
+      }
+      .flow__title {
+        margin: 0 0 2px; font-family: var(--font-display); font-size: 17px;
+        font-weight: 600; color: var(--dark-brown);
+      }
+      .flow__sub { margin: 0 0 12px; font-size: 12px; color: var(--muted); }
+      .flow__rail { display: flex; flex-wrap: wrap; gap: 6px; }
+      .pill {
+        display: inline-flex; align-items: center; gap: 6px;
+        font-size: 11.5px; font-weight: 600; color: var(--taupe);
+        border: 1px solid var(--line); border-radius: 999px;
+        padding: 4px 11px 4px 5px; background: #fff;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+      .pill b {
+        display: grid; place-items: center; width: 19px; height: 19px;
+        border-radius: 50%; background: #efe8d7; color: var(--taupe);
+        font-size: 10px; font-weight: 700;
+      }
+      .pill--active { color: var(--charcoal); border-color: var(--amber); background: #fffdf2; }
+      .pill--active b { background: var(--brand); color: var(--charcoal); }
+      .pill--done { color: var(--brown); border-color: #ddd2b6; }
+      .pill--done b { background: var(--charcoal); color: var(--brand); }
+
+      .stage {
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); box-shadow: var(--shadow-card);
+        padding: 15px 18px 16px;
+        opacity: 0.3; transition: opacity 0.35s ease, border-color 0.35s ease;
+      }
+      .stage--active { opacity: 1; border-color: var(--amber); }
+      .stage--done { opacity: 1; }
+      .stage__head { display: flex; align-items: baseline; gap: 9px; }
+      .stage__n {
+        font-family: var(--font-display); font-size: 12px; font-weight: 700;
+        color: var(--charcoal); background: var(--brand);
+        border-radius: 5px; padding: 2px 6px;
+      }
+      .stage__title { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--dark-brown); }
+      .stage__en {
+        font-size: 10.5px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--taupe);
+        margin-left: auto;
+      }
+      .stage__body { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+      .stage__why {
+        margin: 4px 0 0; padding-top: 9px; border-top: 1px dashed var(--line);
+        font-size: 12px; line-height: 1.65; color: var(--muted);
+      }
+      .stage__why b { color: var(--brown); font-weight: 600; }
+      .stage__empty { margin: 0; font-size: 12.5px; color: var(--muted); font-style: italic; }
+      .stage__note {
+        margin: 0; font-size: 11.5px; color: var(--taupe); line-height: 1.6;
+        background: #f5f0e2; border-radius: 8px; padding: 7px 10px;
+      }
+
+      .kv { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 10px; align-items: start; }
+      .kv__k { font-size: 11.5px; font-weight: 600; color: var(--brown); padding-top: 1px; }
+      .kv__v { font-size: 12.5px; color: var(--ink); word-break: break-word; }
+      .kv__v--quote { color: var(--muted); line-height: 1.65; }
+      .kv__v b { color: var(--dark-brown); }
+
+      .conf { display: flex; align-items: center; gap: 8px; }
+      .conf__bar {
+        position: relative; flex: 1; height: 7px; border-radius: 99px;
+        background: #eae3d1; overflow: hidden; min-width: 80px;
+      }
+      .conf__fill { position: absolute; inset: 0 auto 0 0; border-radius: 99px; }
+      .conf__fill--pass { background: var(--olive); }
+      .conf__fill--fail { background: var(--terracotta); }
+      .conf__thr {
+        position: absolute; top: -2px; bottom: -2px; width: 2px;
+        background: var(--charcoal); opacity: 0.55;
+      }
+      .conf__num { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink); }
+
+      .tag {
+        display: inline-block; font-size: 11px; font-weight: 600;
+        border-radius: 999px; padding: 2px 9px; border: 1px solid;
+      }
+      .tag--local { background: var(--ok-bg); color: var(--ok-fg); border-color: var(--ok-line); }
+      .tag--llm { background: #fdf3e3; color: #8a6a1f; border-color: #ecd9b6; }
+      .tag--clarify { background: var(--err-bg); color: var(--err-fg); border-color: var(--err-line); }
+
+      .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+      .chip {
+        font-family: var(--font-mono); font-size: 10.5px;
+        border: 1px solid var(--line); border-radius: 6px;
+        background: #fff; color: var(--taupe); padding: 3px 7px;
+      }
+      .chip--on {
+        border-color: var(--dark-brown); background: var(--dark-brown);
+        color: var(--brand); font-weight: 600;
+      }
+      .chip--off { border-style: dashed; }
+
+      .pick {
+        border: 1px solid var(--line); border-radius: 9px;
+        background: #fffdf7; padding: 9px 11px;
+      }
+      .pick__head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+      .pick__args { font-family: var(--font-mono); font-size: 11px; color: var(--taupe); }
+      .pick__why { margin: 6px 0 0; font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+      .call { border: 1px solid var(--line); border-radius: 9px; background: #fffdf7; padding: 10px 12px; }
+      .call__head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
+      .call__name { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--dark-brown); }
+      .call__meta { font-size: 10.5px; color: var(--taupe); }
+      .call__sum { margin: 0 0 8px; font-size: 12px; color: var(--muted); }
+
+      table.mini { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+      table.mini th, table.mini td {
+        text-align: left; padding: 4px 8px; border-bottom: 1px solid #efe9da;
+        font-variant-numeric: tabular-nums;
+      }
+      table.mini th { color: var(--taupe); font-weight: 600; background: #f7f2e6; }
+      table.mini tr:last-child td { border-bottom: none; }
+
+      pre.json {
+        margin: 0; background: var(--charcoal); color: #f4efe3;
+        border-radius: 9px; padding: 12px 14px; font-family: var(--font-mono);
+        font-size: 11.5px; line-height: 1.6; overflow-x: auto;
+      }
+
+      .pieces { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+      .pieces li {
+        display: flex; gap: 9px; font-size: 12px;
+        border-left: 2px solid var(--line); padding-left: 9px;
+      }
+      .pieces b { color: var(--brown); font-weight: 600; flex: none; }
+
+      /* ---------- bottom panels ---------- */
+      .panel {
+        flex: 0 0 100%;
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); box-shadow: var(--shadow-card);
+        padding: 18px 20px; margin-top: 20px;
+      }
+      .panel summary {
+        cursor: pointer; font-family: var(--font-display);
+        font-size: 17px; font-weight: 600; color: var(--dark-brown);
+        list-style: none;
+      }
+      .panel summary::-webkit-details-marker { display: none; }
+      .panel summary::before {
+        content: '▸'; display: inline-block; margin-right: 8px;
+        color: var(--amber); transition: transform 0.15s ease;
+      }
+      .panel[open] summary::before { transform: rotate(90deg); }
+      .panel__desc { margin: 8px 0 14px; font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+      table.intents { width: 100%; border-collapse: collapse; font-size: 12px; }
+      table.intents th, table.intents td {
+        text-align: left; padding: 6px 9px; border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      table.intents th {
+        font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+        color: var(--taupe); font-weight: 700; background: #f7f2e6;
+      }
+      table.intents tr[data-current='true'] td { background: #fffbe6; }
+      table.intents td code { color: var(--brown); }
+      table.intents .policy { font-family: var(--font-mono); font-size: 11px; }
+      table.intents .policy--none { color: var(--terracotta); }
+      table.intents .policy--full { color: var(--olive); }
+
+      .demo-foot {
+        flex: 0 0 100%; margin-top: 18px; padding-top: 14px;
+        border-top: 1px solid var(--line);
+        font-size: 12px; color: var(--muted); line-height: 1.75;
+      }
+      .demo-foot p { margin: 0 0 5px; }
+      .demo-foot b { color: var(--brown); }
+
+      /* ---------- responsive ---------- */
+      @media (max-width: 1280px) {
+        .demo-grid { grid-template-columns: minmax(0, 1fr); }
+        .chat__messages { height: 420px; }
+      }
+      @media (max-width: 900px) {
+        .app { grid-template-columns: 1fr; }
+        .nav {
+          position: static; height: auto; flex-direction: row;
+          align-items: center; padding: 10px 14px; overflow-x: auto;
+        }
+        .nav__brand { border: none; margin: 0; padding: 0; flex: none; }
+        .nav__list { flex-direction: row; margin-left: 14px; }
+        .nav__item small, .nav__foot { display: none; }
+        .content { padding: 20px 16px 40px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <nav class="nav">
+        <div class="nav__brand">
+          <span class="nav__brand-mark">WB</span>
+          <div class="nav__brand-text">
+            <span class="nav__brand-name">Workbench</span>
+            <span class="nav__brand-sub">数据工作台</span>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li>
+            <a class="nav__item" href="./index.html">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              <span class="nav__item-text">
+                <span>数据看板</span>
+                <small>指标与图表，右侧筛选维度</small>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__item" href="./index.html">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+              <span class="nav__item-text">
+                <span>数据链接</span>
+                <small>数据链接与 API 接口</small>
+              </span>
+            </a>
+          </li>
+          <li>
+            <button type="button" class="nav__item nav__item--active" aria-current="page">
+              <svg class="nav__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3Z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg>
+              <span class="nav__item-text">
+                <span>AI 助手</span>
+                <small>基于已上传数据的对话</small>
+              </span>
+            </button>
+          </li>
+        </ul>
+        <div class="nav__foot">
+          <span class="nav__chip">静态演示</span>
+          <p class="nav__note">预设对话 · 无后端请求</p>
+        </div>
+      </nav>
+
+      <main class="content">
+        <div class="topbar">
+          <span class="demo-badge"><i></i>静态演示 · 预设对话与推理链</span>
+        </div>
+
+        <header class="page-head">
+          <div>
+            <h1>AI 助手</h1>
+            <p class="page-head__sub">
+              演示用静态版本：不连接模型、不发起网络请求。选择下方预设问法，右侧按步展开一条完整的工作流推理链。
+            </p>
+          </div>
+          <div class="controls">
+            <div class="seg" role="group" aria-label="播放模式">
+              <button type="button" id="modeAuto" aria-pressed="true">自动播放</button>
+              <button type="button" id="modeStep" aria-pressed="false">单步</button>
+            </div>
+            <button type="button" class="btn" id="btnPrev" disabled>上一步</button>
+            <button type="button" class="btn" id="btnNext" disabled>下一步</button>
+            <button type="button" class="btn btn--primary" id="btnReplay">重播</button>
+          </div>
+        </header>
+
+        <div class="demo-grid">
+          <section class="chat" aria-label="对话演示">
+            <div class="presets">
+              <p class="presets__label">预设问法</p>
+              <div class="presets__row" id="presets"></div>
+            </div>
+            <div class="chat__messages" id="messages"></div>
+            <div class="chat__input">
+              <textarea rows="2" disabled placeholder="静态演示：请选择上方预设问法"></textarea>
+              <button type="button" class="btn btn--primary" disabled>发送</button>
+            </div>
+          </section>
+
+          <aside class="flow" aria-label="工作流推理链">
+            <div class="flow__head">
+              <h2 class="flow__title">工作流推理链</h2>
+              <p class="flow__sub" id="flowSub">每一步的输入、决策与产出，按执行顺序展开。</p>
+              <div class="flow__rail" id="flowRail"></div>
+            </div>
+
+            <article class="stage" id="stageIntent">
+              <header class="stage__head">
+                <span class="stage__n">01</span>
+                <span class="stage__title">意图识别</span>
+                <span class="stage__en">Intent Recognition</span>
+              </header>
+              <div class="stage__body"></div>
+            </article>
+
+            <article class="stage" id="stageRoute">
+              <header class="stage__head">
+                <span class="stage__n">02</span>
+                <span class="stage__title">工具路由</span>
+                <span class="stage__en">Tool Routing</span>
+              </header>
+              <div class="stage__body"></div>
+            </article>
+
+            <article class="stage" id="stageExec">
+              <header class="stage__head">
+                <span class="stage__n">03</span>
+                <span class="stage__title">执行</span>
+                <span class="stage__en">Execution</span>
+              </header>
+              <div class="stage__body"></div>
+            </article>
+
+            <article class="stage" id="stageAssemble">
+              <header class="stage__head">
+                <span class="stage__n">04</span>
+                <span class="stage__title">输出拼装</span>
+                <span class="stage__en">Assembly</span>
+              </header>
+              <div class="stage__body"></div>
+            </article>
+
+            <article class="stage" id="stageRespond">
+              <header class="stage__head">
+                <span class="stage__n">05</span>
+                <span class="stage__title">返回内容</span>
+                <span class="stage__en">Response</span>
+              </header>
+              <div class="stage__body"></div>
+            </article>
+          </aside>
+        </div>
+
+        <details class="panel" open>
+          <summary>意图路由表 · 可识别的意图全集</summary>
+          <p class="panel__desc">
+            下表来自 <code>config/intent_schema.json</code>（v1.0）。识别顺序：本地字符 bigram + 余弦相似度 ≥
+            <b>0.25</b> 直接命中；否则交给已配置的模型做零样本分类，置信度 ≥ <b>0.6</b> 采信；仍不达标则落回
+            <code>clarify_abstain</code>，反问澄清而不是猜。「工具策略」决定这一轮向模型暴露哪些数据工具。
+          </p>
+          <table class="intents">
+            <thead>
+              <tr>
+                <th>意图</th>
+                <th>类别</th>
+                <th>数据上下文</th>
+                <th>工具策略</th>
+                <th>触发动作</th>
+              </tr>
+            </thead>
+            <tbody id="intentRows"></tbody>
+          </table>
+        </details>
+
+        <footer class="demo-foot">
+          <p><b>演示说明</b>：本页为静态演示——对话、推理链、置信度与数据均为预置内容，不发起任何网络请求，也不需要后端；数值取自工作台内置示例数据集。</p>
+          <p><b>对应实现</b>：意图识别 <code>src/new/intent_recognizer.py</code> + <code>config/intent_schema.json</code>；工具白名单 <code>src/new/ai_tools.py</code>；对话循环 <code>src/new/chat_service.py</code>；接口契约 <code>src/new/schemas.py</code>。</p>
+          <p><b>维护提示</b>：本文件位于 <code>docs/</code>，是手工维护的演示页。从 <code>static/new/src</code> 重新构建原型会覆盖 <code>docs/</code>，届时需要重新生成这一页。</p>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      /* =========================================================
+         Static data — grounded in the real modules named in the footer.
+         ========================================================= */
+
+      var ALL_TOOLS = [
+        ['get_dashboard_summary', '看板汇总：6 个核心指标 + 图表数据，可带维度筛选'],
+        ['get_monthly_trend', '月度趋势：入库 / 处理量 / 回收价值 / 成本'],
+        ['get_route_distribution', '回收去向分布（重量与占比）'],
+        ['get_source_distribution', '来源结构（按来源类型的批次与入库重量）'],
+        ['get_species_distribution', '物料组成（按树种的重量分布）'],
+        ['list_batches', '批次列表与经济性指标（成本/吨、价值/吨、净价值）'],
+        ['get_batch_detail', '单批次详情：物料、产出、成本分类、净价值']
+      ];
+
+      var STAGES = [
+        { id: 'Intent', n: '01', title: '意图识别' },
+        { id: 'Route', n: '02', title: '工具路由' },
+        { id: 'Exec', n: '03', title: '执行' },
+        { id: 'Assemble', n: '04', title: '输出拼装' },
+        { id: 'Respond', n: '05', title: '返回内容' }
+      ];
+
+      var SCENARIOS = [
+        {
+          chip: '即时分析',
+          q: '总入库量是多少？高值回收率呢？',
+          intent: {
+            method: '本地字符 bigram + 余弦相似度',
+            score: 0.41,
+            thr: 0.25,
+            id: 'ad_hoc_analysis',
+            name: '即时分析',
+            cat: 'analysis',
+            source: 'local',
+            sourceLabel: '本地命中（未触发 LLM 兜底）',
+            needs: true,
+            policy: 'full',
+            trigger: '生成单条查询 → 执行 → 返回',
+            constraint: '用户意图为【即时分析】。直接生成单条查询并调用工具取数，给出简洁结论与数字，不要过度展开。',
+            why: '本地相似度 0.41 已越过 0.25 阈值，直接判定，不必再花一次模型调用——省成本，也避免分类漂移。'
+          },
+          route: {
+            exposed: 7,
+            picks: [
+              {
+                name: 'get_dashboard_summary',
+                args: {},
+                why: '问的是总量口径、未限定任何维度，看板汇总一次调用即可覆盖全部 6 个核心指标。'
+              }
+            ],
+            why: 'tool_policy = full，7 个只读工具全部可用；但只挑与问题口径匹配的那一个，不撒网。'
+          },
+          exec: [
+            {
+              name: 'get_dashboard_summary',
+              args: '{}',
+              round: 1,
+              summary: '返回 6 个核心指标与 6 组图表数据（本问题只消费指标部分）',
+              cols: ['指标', '值', '口径'],
+              rows: [
+                ['入库量', '1,286.4 t', '期间内到达批次'],
+                ['处理量', '1,042.7 t', '期间内产出'],
+                ['高值回收率', '63.2 %', '快照'],
+                ['回收价值/吨', '184.5 ¥/t', '快照'],
+                ['成本/吨', '92.3 ¥/t', '快照'],
+                ['未解决物料', '38.6 t', '快照']
+              ]
+            }
+          ],
+          assemble: {
+            rounds: 1,
+            calls: 1,
+            pieces: [
+              ['系统约束', '注入该意图的 system_constraint（见 01）'],
+              ['工具结果', '以 role=tool 的 JSON 消息追加（≈1.3 KB）'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '数字只能从 role=tool 的消息里来；模型负责措辞与取舍，不负责计算。'
+          },
+          respond: {
+            text: '期间内总入库量 1,286.4 吨，处理量 1,042.7 吨，高值回收率 63.2%。\n回收价值 184.5 元/吨，成本 92.3 元/吨，未解决物料 38.6 吨。',
+            tools: ['get_dashboard_summary'],
+            why: '逐项引用工具返回值并带单位，不做二次换算，也不补一个"预计"数字。'
+          }
+        },
+        {
+          chip: '趋势分析',
+          q: '分月展示处理量与回收价值的变化',
+          intent: {
+            method: '本地字符 bigram + 余弦相似度',
+            score: 0.52,
+            thr: 0.25,
+            id: 'trend',
+            name: '趋势分析',
+            cat: 'analysis',
+            source: 'local',
+            sourceLabel: '本地命中（未触发 LLM 兜底）',
+            needs: true,
+            policy: 'full',
+            trigger: '时序查询 → 折线/面积图',
+            constraint: '用户意图为【趋势分析】。按时间维度取数并描述走势、拐点与同比/环比变化，优先用折线/面积图呈现。',
+            why: '"分月""变化"把问题钉在时间维度上，本地匹配稳定越过阈值，分类不必外包给模型。'
+          },
+          route: {
+            exposed: 7,
+            picks: [
+              {
+                name: 'get_monthly_trend',
+                args: {},
+                why: '未指定时间范围 → 取全区间（2026-01 ~ 2026-08）。时序问题固定走月度趋势工具，不让模型自由拼查询。'
+              }
+            ],
+            why: 'tool_policy = full，但本轮的实际目标只有一个——可选面越窄，模型选错的空间越小。'
+          },
+          exec: [
+            {
+              name: 'get_monthly_trend',
+              args: '{}',
+              round: 1,
+              summary: '返回 8 行月度时序（入库 / 处理量 / 回收价值）',
+              cols: ['月份', '处理量 (t)', '回收价值'],
+              rows: [
+                ['2026-01', '118', '21.6'],
+                ['2026-02', '129', '23.8'],
+                ['2026-03', '140', '26.1'],
+                ['2026-04', '134', '24.7'],
+                ['2026-05', '149', '27.9'],
+                ['2026-06', '141', '25.9'],
+                ['2026-07', '132', '24.3'],
+                ['2026-08', '99', '18.2']
+              ]
+            }
+          ],
+          assemble: {
+            rounds: 1,
+            calls: 1,
+            pieces: [
+              ['系统约束', '注入该意图的 system_constraint（见 01）'],
+              ['工具结果', '8 行时序数组（≈0.6 KB）'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '工具已把数据聚合到月粒度，模型的活是描述走势与拐点，而不是重新聚合——同一份数据不核算两遍，口径就不会打架。'
+          },
+          respond: {
+            text: '2026-01 ~ 2026-08 处理量与回收价值：\n01 月 118 t / 21.6\n02 月 129 t / 23.8\n03 月 140 t / 26.1\n04 月 134 t / 24.7\n05 月 149 t / 27.9　← 区间峰值\n06 月 141 t / 25.9\n07 月 132 t / 24.3\n08 月  99 t / 18.2　← 区间低点\n\n处理量自 05 月起连续回落，08 月环比 07 月下降 25.0%；回收价值同步走低。',
+            tools: ['get_monthly_trend'],
+            why: '结论只描述工具返回的 8 个数，拐点来自对比而非模型记忆；工具没覆盖的时间段就不发言。'
+          }
+        },
+        {
+          chip: '对比分析',
+          q: 'Residential Demolition 和 Commercial Strip-out 哪个回收量更高？',
+          intent: {
+            method: '本地字符 bigram + 余弦相似度',
+            score: 0.47,
+            thr: 0.25,
+            id: 'comparison',
+            name: '对比分析',
+            cat: 'analysis',
+            source: 'local',
+            sourceLabel: '本地命中（未触发 LLM 兜底）',
+            needs: true,
+            policy: 'full',
+            trigger: '双路查询 → 对比视图',
+            constraint: '用户意图为【对比分析】。请分别取数后并排对比，突出差异点与关键数字，可用对比视图呈现。',
+            why: '"哪个更高"是比较型句式，两个对象都是专有名词——不依赖模型的常识去补全指代。'
+          },
+          route: {
+            exposed: 7,
+            picks: [
+              {
+                name: 'get_source_distribution',
+                args: {},
+                why: '两个对比对象同处一份来源结构 → 单次聚合即可覆盖，得出的两行天然同口径。'
+              }
+            ],
+            why: 'schema 给的触发动作是"双路查询"；这里按可复用性收敛成一次调用——同口径优先于形式上的两次取数。'
+          },
+          exec: [
+            {
+              name: 'get_source_distribution',
+              args: '{}',
+              round: 1,
+              summary: '返回 5 行来源结构（批次与入库重量）',
+              cols: ['来源', '入库重量 (t)'],
+              rows: [
+                ['Residential Demolition', '486.2'],
+                ['Commercial Strip-out', '312.4'],
+                ['Construction Offcut', '201.8'],
+                ['Pallet & Crate', '88.5'],
+                ['Orchard Removal', '57.3']
+              ]
+            }
+          ],
+          assemble: {
+            rounds: 1,
+            calls: 1,
+            pieces: [
+              ['系统约束', '注入该意图的 system_constraint（见 01）'],
+              ['工具结果', '5 行来源聚合（≈0.4 KB）'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '同一次聚合出来的两行，比较时不会出现"你用的时间段和我用的不一样"这类隐性错位。'
+          },
+          respond: {
+            text: 'Residential Demolition 入库 486.2 吨，Commercial Strip-out 312.4 吨。\n前者高 173.8 吨（+55.6%）。在五个来源中，两者分别占 42.4% 和 27.3%。',
+            tools: ['get_source_distribution'],
+            why: '先给两个绝对值，再给差值与相对幅度，最后落到占比——结论落地，但不越界解释原因。'
+          }
+        },
+        {
+          chip: '异常归因',
+          q: '为什么 8 月处理量突然下降？',
+          intent: {
+            method: '本地字符 bigram + 余弦相似度',
+            score: 0.58,
+            thr: 0.25,
+            id: 'anomaly_rootcause',
+            name: '异常归因',
+            cat: 'analysis',
+            source: 'local',
+            sourceLabel: '本地命中（未触发 LLM 兜底）',
+            needs: true,
+            policy: 'full',
+            trigger: '下钻 + 归因推理链 → HITL 闸门确认',
+            constraint: '用户意图为【异常归因】。请先定位异常点，再下钻取数寻找可能原因，区分"已验证事实"与"推断"，推断需明确标注。归因结论在 HITL 闸门确认后再正式给出。',
+            why: '"为什么""突然"把问题标成归因类。它比一般分析多一条硬约束——推断必须打标签，不能被读成事实。'
+          },
+          route: {
+            exposed: 7,
+            picks: [
+              {
+                name: 'get_monthly_trend',
+                args: {},
+                why: '第一步先定位异常点：哪个月掉了、掉了多少。'
+              },
+              {
+                name: 'list_batches',
+                args: {},
+                why: '第二步看同期批次与处理状态，检查是否存在未回填或长期未解决的记录。'
+              }
+            ],
+            why: '一个意图未必对应一个工具：归因需要两路证据。两路都在 tool_policy = full 的白名单内，SQL 与文件系统始终不开放。'
+          },
+          exec: [
+            {
+              name: 'get_monthly_trend',
+              args: '{}',
+              round: 1,
+              summary: '返回 8 行月度时序，用于定位拐点',
+              cols: ['月份', '入库量 (t)', '处理量 (t)'],
+              rows: [
+                ['2026-06', '172', '141'],
+                ['2026-07', '161', '132'],
+                ['2026-08', '134', '99']
+              ]
+            },
+            {
+              name: 'list_batches',
+              args: '{}',
+              round: 1,
+              summary: '返回 36 个批次及状态分布（含未解决物料 38.6 t）',
+              cols: ['批次状态', '重量 (t)'],
+              rows: [
+                ['Received', '184.2'],
+                ['Sorted', '256.8'],
+                ['Processing', '312.5'],
+                ['Recovered', '509.6'],
+                ['Unresolved', '38.6']
+              ]
+            }
+          ],
+          assemble: {
+            rounds: 1,
+            calls: 2,
+            pieces: [
+              ['系统约束', '注入该意图的 system_constraint（含"区分事实与推断"）'],
+              ['工具结果 ×2', '两段 JSON 追加为两条 role=tool 消息（≈1.1 KB）'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '两路证据都进来之后才轮到模型说话；工具没返回的内容，不允许出现在结论里。',
+            note: 'intent_schema 中该意图的触发动作还包含 HITL 闸门确认——本演示不渲染该环节，仅作为下游设计标注。'
+          },
+          respond: {
+            text: '【已验证】8 月处理量 99 吨，环比 7 月 132 吨下降 25.0%；同期入库量 134 吨，环比 161 吨下降 16.8%。物料状态中未解决 38.6 吨。\n【推断·待确认】入库同步下滑，说明 8 月原料到货减少是处理量下降的主要来源；未解决物料占比不高，单看它不足以解释这 25% 的缺口。需要我下钻到具体批次吗？',
+            tools: ['get_monthly_trend', 'list_batches'],
+            why: '事实段只出现工具返回的数字；推断段显式标注并给出待确认点——读的人能一眼看出哪句可以引用、哪句还需要核实。'
+          }
+        },
+        {
+          chip: '闲聊',
+          q: '你好呀',
+          intent: {
+            method: '本地字符 bigram + 余弦相似度',
+            score: 0.72,
+            thr: 0.25,
+            id: 'chitchat',
+            name: '闲聊',
+            cat: 'conversation',
+            source: 'local',
+            sourceLabel: '本地命中（未触发 LLM 兜底）',
+            needs: false,
+            policy: 'none',
+            trigger: '直连 LLM，绕过所有数据工具',
+            constraint: '当前为【闲聊】意图。直接自然回应，不要调用任何数据工具，也不要假装分析数据。',
+            why: '闲聊命中真正的意义不在答案，而在于把 tool_policy 收成 none——这一轮模型连工具清单都拿不到，也就无法"顺手"去查一遍库。'
+          },
+          route: {
+            exposed: 0,
+            picks: [],
+            why: 'tool_policy = none：本轮不向模型暴露任何工具，也就没有可路由的目标。既省一次往返，也不会用无关查询污染会话上下文。'
+          },
+          exec: [],
+          assemble: {
+            rounds: 0,
+            calls: 0,
+            pieces: [
+              ['系统约束', '注入该意图的 system_constraint（见 01）'],
+              ['工具结果', '无（needs_data_context = false）'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '没有工具结果要拼，上下文只剩系统约束加用户这一句——响应更快，也不会把上一轮的查询结论误当成本轮依据。'
+          },
+          respond: {
+            text: '你好！我是这个数据工作台的助手。你上传的木材回收数据我看得到，可以直接问我入库量、处理量、回收去向、批次经济性这类问题；也可以让我分月看趋势、做来源对比或排查异常。',
+            tools: [],
+            why: '回答里给的是能力边界而不是数字——这一轮压根没有取数，也不该有数字。'
+          }
+        },
+        {
+          chip: '澄清兜底',
+          q: '帮我看一下那个东西',
+          intent: {
+            method: '本地匹配 → 模型零样本兜底 → 澄清兜底',
+            score: 0.11,
+            thr: 0.25,
+            llm: { conf: 0.4, thr: 0.6 },
+            id: 'clarify_abstain',
+            name: '澄清 / 拒答',
+            cat: 'control',
+            source: 'clarify',
+            sourceLabel: '两级门槛都没过 → 落回 clarify_abstain',
+            needs: false,
+            policy: 'none',
+            trigger: '反问澄清 / 安全拒答',
+            constraint: '未能确定用户意图或请求超出本工作台能力。不要臆测意图去取数；以友好方式反问澄清，或说明能力边界。',
+            why: '本地 0.11、模型 0.40，两个门槛都没过。此时代价最低的动作是反问一次，而不是赌一个意图去查库——查错了要用户从头解释，成本更高。'
+          },
+          route: {
+            exposed: 0,
+            picks: [],
+            why: 'tool_policy = none。意图不确定时不暴露工具，避免"用错数据把问题答顺"。'
+          },
+          exec: [],
+          assemble: {
+            rounds: 0,
+            calls: 0,
+            pieces: [
+              ['系统约束', '注入澄清意图的 system_constraint（见 01）'],
+              ['工具结果', '无'],
+              ['会话历史', 'user 1 条']
+            ],
+            why: '不取数、不推测，只把 clarification_prompt 作为回复骨架返回。'
+          },
+          respond: {
+            text: '我没太理解你的需求。你可以换个说法，或参考这些问法：取数（列出华东区批次）、专题分析（拆解利润结构）、趋势（月度处理量走势）、可视化（画来源结构饼图）。',
+            tools: [],
+            why: '兜底话术里带具体问法示例，把"看不懂"变成一次可操作的引导，而不是一句抱歉。'
+          }
+        }
+      ];
+
+      var INTENT_TABLE = [
+        ['专题分析', 'thematic_analysis', 'analysis', true, 'full', '进入分析规划（analysis round）→ HITL 闸门 → 渲染'],
+        ['即时分析', 'ad_hoc_analysis', 'analysis', true, 'full', '生成单条查询 → 执行 → 返回'],
+        ['取数', 'data_fetch', 'retrieval', true, 'full', '生成 SQL → 执行 → 表格/文件返回'],
+        ['对比分析', 'comparison', 'analysis', true, 'full', '双路查询 → 对比视图'],
+        ['趋势分析', 'trend', 'analysis', true, 'full', '时序查询 → 折线/面积图'],
+        ['异常归因', 'anomaly_rootcause', 'analysis', true, 'full', '下钻 + 归因推理链 → HITL 闸门确认'],
+        ['可视化制图', 'visualization', 'analysis', true, 'full', '选图 → 渲染图表'],
+        ['报表导出', 'reporting_export', 'analysis', true, 'full', '汇总 → HITL 闸门 → 文档/导出'],
+        ['总结', 'summarization', 'conversation', false, 'none', 'LLM 摘要，不碰原始工具'],
+        ['数据推测', 'data_inference', 'analysis', true, 'full', '取基准数据 → 标注"推测"边界后推理'],
+        ['闲聊', 'chitchat', 'conversation', false, 'none', '直连 LLM，绕过所有数据工具'],
+        ['帮助引导', 'help_guidance', 'control', false, 'none', '返回能力菜单 / 示例问法'],
+        ['澄清 / 拒答', 'clarify_abstain', 'control', false, 'none', '反问澄清 / 安全拒答']
+      ];
+
+      /* =========================================================
+         Rendering
+         ========================================================= */
+
+      var el = function (id) { return document.getElementById(id); };
+      var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; });
+      }
+      function dictFmt(o) {
+        var keys = Object.keys(o || {});
+        if (!keys.length) return '{}';
+        return '{ ' + keys.map(function (k) { return k + ': ' + JSON.stringify(o[k]); }).join(', ') + ' }';
+      }
+
+      var state = { si: 0, reached: 0, mode: 'auto', timers: [], typing: null };
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function clearTimers() {
+        state.timers.forEach(function (t) { window.clearTimeout(t); });
+        state.timers = [];
+        if (state.typing) { window.clearInterval(state.typing); state.typing = null; }
+      }
+      function later(fn, ms) {
+        var t = window.setTimeout(fn, ms);
+        state.timers.push(t);
+        return t;
+      }
+
+      function confBar(score, thr, pass) {
+        var pct = Math.max(4, Math.min(100, Math.round(score * 100)));
+        var thrPct = Math.max(0, Math.min(100, Math.round(thr * 100)));
+        return '<span class="conf">' +
+          '<span class="conf__bar">' +
+            '<span class="conf__fill conf__fill--' + (pass ? 'pass' : 'fail') + '" style="width:' + pct + '%"></span>' +
+            '<span class="conf__thr" style="left:' + thrPct + '%"></span>' +
+          '</span>' +
+          '<span class="conf__num">' + score.toFixed(2) + ' / 阈值 ' + thr.toFixed(2) + '</span>' +
+        '</span>';
+      }
+
+      function miniTable(cols, rows) {
+        return '<table class="mini"><thead><tr>' +
+          cols.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') +
+          '</tr></thead><tbody>' +
+          rows.map(function (r) {
+            return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>';
+          }).join('') +
+          '</tbody></table>';
+      }
+
+      function kv(k, v, cls) {
+        return '<div class="kv"><span class="kv__k">' + esc(k) + '</span>' +
+          '<span class="kv__v' + (cls ? ' ' + cls : '') + '">' + v + '</span></div>';
+      }
+
+      function why(text) {
+        return '<p class="stage__why"><b>设计要点</b>　' + esc(text) + '</p>';
+      }
+
+      /* ---------- stage bodies ---------- */
+
+      function bodyIntent(it, sc) {
+        var h = '';
+        h += kv('命中方式', esc(it.method));
+        h += kv('匹配意图', '<b>' + esc(it.name) + '</b> <code>' + esc(it.id) + '</code>');
+        h += kv('类别', esc(it.cat));
+        h += kv('置信度', confBar(it.score, it.thr, it.source !== 'clarify'));
+        if (it.llm) {
+          h += kv('模型兜底', '零样本分类返回 ' + it.llm.conf.toFixed(2) + ' &lt; ' + it.llm.thr.toFixed(2) + ' → 不采信');
+        }
+        h += kv('判定来源', '<span class="tag tag--' + esc(it.source) + '">' + esc(it.sourceLabel) + '</span>');
+        h += kv('数据上下文', it.needs ? '需要（needs_data_context = true）' : '不需要（needs_data_context = false）');
+        h += kv('工具策略', '<code>tool_policy = ' + esc(it.policy) + '</code>');
+        h += kv('触发动作', esc(it.trigger));
+        h += kv('注入约束', esc(it.constraint), 'kv__v--quote');
+        return h + why(it.why);
+      }
+
+      function bodyRoute(r) {
+        var h = '';
+        if (r.exposed === 0) {
+          h += kv('暴露工具', '<span class="chip chip--off">0 个 —— 不向模型提供任何工具</span>');
+        } else {
+          h += kv('暴露工具', ALL_TOOLS.length + ' 个只读工具（白名单）');
+          var picked = r.picks.map(function (p) { return p.name; });
+          h += '<div class="chips">' + ALL_TOOLS.map(function (t) {
+            var on = picked.indexOf(t[0]) !== -1;
+            return '<span class="chip' + (on ? ' chip--on' : '') + '" title="' + esc(t[1]) + '">' + esc(t[0]) + '</span>';
+          }).join('') + '</div>';
+        }
+        h += kv('本轮选中', r.picks.length
+          ? r.picks.map(function (p) { return '<code>' + esc(p.name) + '</code>'; }).join(' ＋ ')
+          : '无');
+        h += r.picks.map(function (p) {
+          return '<div class="pick"><div class="pick__head"><code>' + esc(p.name) + '</code>' +
+            '<span class="pick__args">' + esc(dictFmt(p.args)) + '</span></div>' +
+            '<p class="pick__why">' + esc(p.why) + '</p></div>';
+        }).join('');
+        return h + why(r.why);
+      }
+
+      function bodyExec(exec) {
+        if (!exec.length) {
+          return '<p class="stage__empty">未产生工具调用（tool_policy = none），模型直接作答。</p>' +
+            why('零工具这一轮没有执行环节——不查库就没有执行，也就没有"用错误数据把问题答顺"的余地。');
+        }
+        var h = exec.map(function (c) {
+          return '<div class="call">' +
+            '<div class="call__head"><span class="call__name">' + esc(c.name) + '</span>' +
+            '<span class="call__meta">' + esc(c.args) + ' · 第 ' + c.round + ' 轮</span></div>' +
+            '<p class="call__sum">' + esc(c.summary) + '</p>' +
+            miniTable(c.cols, c.rows) +
+            '</div>';
+        }).join('');
+        return h + why(exec.length > 1
+          ? '只读、结构化、可截断：每次调用都有明确的入参与返回体，模型拿到的是数据而不是数据库。两个调用同属一轮，因为两者互不依赖。'
+          : '只读、结构化、可截断：每次调用都有明确的入参与返回体，模型拿到的是数据而不是数据库。');
+      }
+
+      function bodyAssemble(a) {
+        var h = '';
+        h += kv('工具轮次', a.rounds + ' 轮');
+        h += kv('工具调用', a.calls + ' 次');
+        h += kv('拼入上下文', '');
+        h += '<ul class="pieces">' + a.pieces.map(function (p) {
+          return '<li><b>' + esc(p[0]) + '</b><span>' + esc(p[1]) + '</span></li>';
+        }).join('') + '</ul>';
+        if (a.note) h += '<p class="stage__note">' + esc(a.note) + '</p>';
+        return h + why(a.why);
+      }
+
+      function bodyRespond(rs) {
+        var payload = {
+          reply: '（即左侧这条回复）',
+          conversation_id: 'conv_<uuid>',
+          tools_used: rs.tools,
+          model: '<取自服务端配置>',
+          provider: 'openai-compatible'
+        };
+        return '<p class="stage__sub" style="margin:0 0 6px;font-size:12px;color:var(--muted)">接口返回体（<code>POST /api/new/ai/chat</code>）：</p>' +
+          '<pre class="json">' + esc(JSON.stringify(payload, null, 2)) + '</pre>' +
+          why(rs.why);
+      }
+
+      var BODIES = {
+        Intent: bodyIntent,
+        Route: bodyRoute,
+        Exec: bodyExec,
+        Assemble: bodyAssemble,
+        Respond: bodyRespond
+      };
+
+      /* ---------- chat ---------- */
+
+      function setThinking() {
+        var box = el('assistantMsg');
+        if (!box) return;
+        var bubble = box.querySelector('.chat__bubble');
+        bubble.className = 'chat__bubble chat__bubble--typing';
+        bubble.textContent = '思考中…';
+        var tools = box.querySelector('.chat__tools');
+        if (tools) box.removeChild(tools);
+      }
+
+      function renderChatUser(q) {
+        el('messages').innerHTML =
+          '<div class="chat__msg chat__msg--user"><div class="chat__bubble">' + esc(q) + '</div></div>' +
+          '<div class="chat__msg chat__msg--assistant" id="assistantMsg">' +
+            '<div class="chat__bubble chat__bubble--typing">思考中…</div>' +
+          '</div>';
+        el('messages').scrollTop = 0;
+      }
+
+      function showAnswer(rs, instant) {
+        var box = el('assistantMsg');
+        if (!box) return;
+        var bubble = box.querySelector('.chat__bubble');
+        var prev = box.querySelector('.chat__tools');
+        if (prev) box.removeChild(prev);
+        bubble.className = 'chat__bubble';
+        if (instant || reduceMotion) {
+          bubble.textContent = rs.text;
+        } else {
+          var i = 0;
+          bubble.textContent = '';
+          state.typing = window.setInterval(function () {
+            i += 2;
+            bubble.textContent = rs.text.slice(0, i);
+            box.parentNode.scrollTop = box.parentNode.scrollHeight;
+            if (i >= rs.text.length) {
+              window.clearInterval(state.typing);
+              state.typing = null;
+              bubble.textContent = rs.text;
+            }
+          }, 14);
+        }
+        var tools = rs.tools.length
+          ? '<div class="chat__tools">调用了工具：' + esc(rs.tools.join(' · ')) + '</div>'
+          : '<div class="chat__tools">未调用任何工具</div>';
+        box.insertAdjacentHTML('beforeend', tools);
+      }
+
+      /* ---------- stage machinery ---------- */
+
+      function paintStage(index, sc) {
+        var stage = STAGES[index];
+        var node = el('stage' + stage.id);
+        var body = node.querySelector('.stage__body');
+        body.innerHTML = BODIES[stage.id](sc[stage.id.toLowerCase()] || sc.assemble, sc);
+        node.classList.remove('stage--active');
+        node.classList.add('stage--done');
+      }
+
+      function paintRail(reached) {
+        el('flowRail').innerHTML = STAGES.map(function (s, i) {
+          var cls = i < reached - 1 ? 'pill--done' : (i === reached - 1 ? 'pill--active' : '');
+          return '<span class="pill ' + cls + '"><b>' + s.n + '</b>' + esc(s.title) + '</span>';
+        }).join('');
+      }
+
+      function clearStages() {
+        STAGES.forEach(function (s) {
+          var node = el('stage' + s.id);
+          node.classList.remove('stage--active', 'stage--done');
+          node.querySelector('.stage__body').innerHTML = '';
+        });
+      }
+
+      function setStageActive(index) {
+        STAGES.forEach(function (s, i) {
+          var node = el('stage' + s.id);
+          node.classList.toggle('stage--active', i === index);
+        });
+        paintRail(index + 1);
+        el('flowSub').textContent = '第 ' + (index + 1) + ' / 5 步 · ' + STAGES[index].title + '（' + SCENARIOS[state.si].chip + '）';
+        updateButtons(index + 1);
+      }
+
+      function updateButtons(reached) {
+        el('btnPrev').disabled = reached <= 0;
+        el('btnNext').disabled = state.mode !== 'step' || reached >= STAGES.length;
+        el('btnNext').textContent = reached >= STAGES.length ? '已完成' : '下一步';
+      }
+
+      function revealUpTo(n, sc) {
+        clearStages();
+        for (var i = 0; i < n; i++) paintStage(i, sc);
+        state.reached = n;
+        if (n === 0) {
+          paintRail(0);
+          el('flowSub').textContent = '每一步的输入、决策与产出，按执行顺序展开。';
+          updateButtons(0);
+          return;
+        }
+        setStageActive(n - 1);
+      }
+
+      /* ---------- scenario control ---------- */
+
+      function resetScenario(index) {
+        clearTimers();
+        state.si = index;
+        var sc = SCENARIOS[index];
+        Array.prototype.forEach.call(document.querySelectorAll('.preset'), function (b, i) {
+          b.setAttribute('aria-current', i === index ? 'true' : 'false');
+        });
+        renderChatUser(sc.q);
+        revealUpTo(0, sc);
+      }
+
+      function run() {
+        var sc = SCENARIOS[state.si];
+        if (state.mode === 'step') {
+          if (state.reached < STAGES.length) {
+            revealUpTo(state.reached + 1, sc);
+            if (state.reached === STAGES.length) showAnswer(sc.respond, false);
+          }
+          return;
+        }
+        clearTimers();
+        revealUpTo(0, sc);
+        renderChatUser(sc.q);
+        var gap = reduceMotion ? 10 : 640;
+        STAGES.forEach(function (s, i) {
+          later(function () {
+            revealUpTo(i + 1, sc);
+            if (i === STAGES.length - 1) later(function () { showAnswer(sc.respond, false); }, 320);
+          }, 360 + i * gap);
+        });
+      }
+
+      function setMode(mode) {
+        state.mode = mode;
+        el('modeAuto').setAttribute('aria-pressed', mode === 'auto' ? 'true' : 'false');
+        el('modeStep').setAttribute('aria-pressed', mode === 'step' ? 'true' : 'false');
+        updateButtons(state.reached);
+        if (mode === 'auto') run();
+      }
+
+      /* ---------- boot ---------- */
+
+      function boot() {
+        el('presets').innerHTML = SCENARIOS.map(function (s, i) {
+          return '<button type="button" class="preset" data-i="' + i + '" aria-current="false">' + esc(s.chip) + '</button>';
+        }).join('');
+        el('presets').addEventListener('click', function (e) {
+          var t = e.target.closest ? e.target.closest('.preset') : null;
+          if (!t) return;
+          resetScenario(Number(t.getAttribute('data-i')));
+          if (state.mode === 'auto') run();
+        });
+
+        el('intentRows').innerHTML = INTENT_TABLE.map(function (r) {
+          return '<tr><td><b>' + esc(r[0]) + '</b><br><code>' + esc(r[1]) + '</code></td>' +
+            '<td>' + esc(r[2]) + '</td>' +
+            '<td>' + (r[3] ? '需要' : '不需要') + '</td>' +
+            '<td class="policy policy--' + esc(r[4]) + '">' + esc(r[4]) + '</td>' +
+            '<td>' + esc(r[5]) + '</td></tr>';
+        }).join('');
+
+        el('modeAuto').addEventListener('click', function () { setMode('auto'); });
+        el('modeStep').addEventListener('click', function () { setMode('step'); });
+        el('btnReplay').addEventListener('click', function () {
+          resetScenario(state.si);
+          if (state.mode === 'auto') run();
+        });
+        el('btnNext').addEventListener('click', function () { run(); });
+        el('btnPrev').addEventListener('click', function () {
+          clearTimers();
+          revealUpTo(Math.max(0, state.reached - 1), SCENARIOS[state.si]);
+          setThinking();
+        });
+
+        resetScenario(0);
+        if (reduceMotion) {
+          revealUpTo(STAGES.length, SCENARIOS[0]);
+          showAnswer(SCENARIOS[0].respond, true);
+        } else {
+          run();
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+      } else {
+        boot();
+      }
+    </script>
+  </body>
+</html>
