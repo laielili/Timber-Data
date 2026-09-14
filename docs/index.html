@@ -1,19 +1,21 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="zh-CN" data-page-node-id="JUbs6s3HFQVqx4g6MZxcq1">
+  <head data-page-node-id="EDCPJksb7jVxq52EFPdOPZ">
+    <meta charset="UTF-8" data-page-node-id="k6RNgwz4xILN6BaleW2pTe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="CRndCQMmBLxd67amVZCDly" />
     <title>Workbench · 数据工作台</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="z5qdKXlDhUE3Pq3Ij8hJFX" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="oNsbjzHXmjXce7b1mnirWy" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="stylesheet" data-page-node-id="nvf15F7vtgY7k9bNFpHqBL"
     />
-    <script type="module" crossorigin src="./assets/index-DbbhTwe7.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-czQ7AxXb.css">
-    <!-- Static demo entry: hand-written page, not part of the SPA bundle.
-         Re-copying `static/new/dist` over docs/ removes the entry — restore it then. -->
+    <script type="module" crossorigin src="./assets/index-C-DUx4pu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-czQ7AxXb.css" data-page-node-id="yZp39kjlPiYRUYt7lep6QU">
+    <!-- Hand-maintained bits, NOT part of the SPA bundle:
+           · `.demo-entry` pill          -> floating shortcut to the demo page
+           · the capture-phase click hook -> routes the nav "AI Assistant" tab there
+         Re-copying `static/new/dist` over docs/ wipes this whole block — restore it then. -->
     <style>
       .demo-entry {
         position: fixed;
@@ -34,8 +36,38 @@
       .demo-entry:hover { background: #3b2f21; }
     </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <a class="demo-entry" href="./ai-workflow.html">AI Assistant demo →</a>
+  <body data-page-node-id="Ud7GmD8nllvrptebHvhUOI">
+    <div id="root" data-page-node-id="b7MTiYgj36DMDsict2FI43"></div>
+    <a class="demo-entry" href="./ai-workflow.html" data-page-node-id="AuTME1iHHZKoOv6PCoZZLL">AI Assistant demo →</a>
+
+    <!-- The nav renders as React <button>s, so a plain <a> cannot reach it.
+         Listen in the capture phase on `document`: this fires before React's
+         root-container listener, and stopPropagation keeps React's onClick from
+         ever seeing the click — so `page` never flips to 'ai' and the
+         backend-dependent ChatPage is never mounted. -->
+    <script>
+      (function () {
+        // Both languages: the nav label is re-rendered as zh/en by the toggle.
+        var LABELS = ['AI 助手', 'AI Assistant'];
+        document.addEventListener(
+          'click',
+          function (e) {
+            var t = e.target;
+            var item = t && t.closest && t.closest('.nav__list .nav__item');
+            if (!item) return;
+            var text = item.textContent || '';
+            for (var i = 0; i < LABELS.length; i++) {
+              if (text.indexOf(LABELS[i]) !== -1) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = './ai-workflow.html';
+                return;
+              }
+            }
+          },
+          true
+        );
+      })();
+    </script>
   </body>
 </html>

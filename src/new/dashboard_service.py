@@ -128,6 +128,7 @@ def _kpi(conn, scope: _Scope) -> list[dict]:
         JOIN Batches b ON b.batch_id = c.batch_id
         JOIN SourceProjects sp ON sp.source_id = b.source_id
         WHERE {bwhere} AND {scope.period_where('c.cost_date')}
+          AND EXISTS (SELECT 1 FROM RecoveryOutputs o WHERE o.batch_id = c.batch_id)
         """,
         scope.params,
     )["v"]
@@ -153,7 +154,7 @@ def _kpi(conn, scope: _Scope) -> list[dict]:
         _kpi_item("value_per_t", "回收价值/吨", _r2(gross / processed) if processed else 0.0, "AUD/t",
                   "期间内产出", "毛回收价值 / 处理量。"),
         _kpi_item("cost_per_t", "成本/吨", _r2(float(cost) / processed) if processed else 0.0, "AUD/t",
-                  "期间内产出", "成本台账总成本 / 处理量。"),
+                  "期间内产出", "产出批次的成本台账总成本 / 处理量。"),
         _kpi_item("unresolved", "未解决物料", round(unresolved, 2), "t",
                   "快照", "状态为 Unresolved 的物料总重量。"),
     ]
@@ -224,7 +225,9 @@ def _chart_monthly(conn, scope: _Scope) -> dict:
         SELECT substr(c.cost_date,1,7) AS m, SUM(c.total_cost_aud) AS v FROM CostLedger c
         JOIN Batches b ON b.batch_id=c.batch_id
         JOIN SourceProjects sp ON sp.source_id=b.source_id
-        WHERE {bwhere} GROUP BY m
+        WHERE {bwhere}
+          AND EXISTS (SELECT 1 FROM RecoveryOutputs o WHERE o.batch_id=c.batch_id)
+        GROUP BY m
         """,
         scope.params,
     )
