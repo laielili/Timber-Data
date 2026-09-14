@@ -10,8 +10,13 @@ import type {
   TableSchemaInfo,
   UploadResult,
 } from './types';
+import { mockDashboard, mockMeta, mockHealth, mockUploadTables, mockDimensions } from './mock';
 
 const BASE = '/api';
+
+// Static-prototype mode: when true, the frontend serves bundled mock data so the
+// demo runs with no backend. Flip to false (and rebuild) to talk to a real API.
+const USE_MOCK = true;
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, init);
@@ -42,15 +47,19 @@ function qs(filters: Filters): string {
 
 export const api = {
   dashboard(filters: Filters = {}): Promise<DashboardResponse> {
+    if (USE_MOCK) return Promise.resolve(mockDashboard());
     return request(`/new/dashboard${qs(filters)}`);
   },
   dimensions(): Promise<DashboardResponse['dimensions']> {
+    if (USE_MOCK) return Promise.resolve(mockDimensions());
     return request('/new/dashboard/dimensions');
   },
   meta(): Promise<MetaResponse> {
+    if (USE_MOCK) return Promise.resolve(mockMeta());
     return request('/new/meta');
   },
   uploadTables(): Promise<TableSchemaInfo[]> {
+    if (USE_MOCK) return Promise.resolve(mockUploadTables());
     return request('/new/upload/tables');
   },
   uploadCsv(file: File, table: string, mode: string): Promise<UploadResult> {
@@ -76,6 +85,7 @@ export const api = {
     return request(`/new/demo?mode=${mode}`, { method: 'POST' });
   },
   health(): Promise<{ status: string; database: string; dataset_type: string; total_rows: number }> {
+    if (USE_MOCK) return Promise.resolve(mockHealth());
     return request('/new/health');
   },
   getAiSettings(): Promise<AISettings> {

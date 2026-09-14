@@ -64,7 +64,7 @@ export function DashboardPage({ goUpload }: { goUpload: () => void }) {
           <h1>{t('数据看板')}</h1>
           <p className="page-head__sub">
             {empty
-              ? t('尚未上传数据——看板会随您的数据实时更新。')
+              ? t('尚未数据链接——看板会随您的数据实时更新。')
               : `${t('共')} ${data.meta.total_rows.toLocaleString()} ${t('行')} · ${applied ? t('已应用筛选') : t('显示全量数据')}`}
           </p>
           {loading && <span className="loading-hint">{t('更新中…')}</span>}
@@ -75,7 +75,7 @@ export function DashboardPage({ goUpload }: { goUpload: () => void }) {
             <h2>{t('数据集为空')}</h2>
             <p>{t('上传符合 timber schema 的数据后，看板与 AI 将自动读取；也可以先载入示例数据体验完整流程。')}</p>
             <div className="empty-state__actions">
-              <button className="btn btn--primary" onClick={goUpload}>{t('去上传数据')}</button>
+              <button className="btn btn--primary" onClick={goUpload}>{t('去数据链接')}</button>
               <button className="btn" onClick={handleDemo}>{t('载入示例数据')}</button>
             </div>
             {demoMsg && <p className="demo-msg">{demoMsg}</p>}

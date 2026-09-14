@@ -1,0 +1,281 @@
+{
+  "version": "1.0",
+  "scene": "对话式数据分析 AI 助手（Timber-Data 圆木回收数据工作台）",
+  "recognition": {
+    "local_threshold": 0.25,
+    "llm_fallback": true,
+    "global_confidence": 0.6,
+    "note": "识别策略：本地字符 bigram + TF-IDF 余弦相似度匹配 examples/keywords 为主；低于 local_threshold 时复用已配置的 LLM 做 schema-prompted zero-shot 分类兜底；LLM 置信度仍低于 global_confidence 则落入 clarify_abstain。"
+  },
+  "intents": [
+    {
+      "id": "thematic_analysis",
+      "name_zh": "专题分析",
+      "name_en": "Thematic Analysis",
+      "category": "analysis",
+      "description": "围绕某一业务主题做结构化、多维度的深度分析。",
+      "examples": [
+        "帮我分析一下本月华东区的销售情况",
+        "做一个关于用户留存的专题分析",
+        "从品类维度拆解一下利润结构",
+        "系统分析一下回收去向的构成"
+      ],
+      "keywords": ["专题分析", "拆解", "维度", "结构分析", "系统性分析", "深入", "剖析"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "chart_tool", "analysis_plan"],
+      "system_constraint": "用户意图为【专题分析】。请先规划分析维度与步骤，再调用数据工具逐项取数，最后给出结构化结论与关键数字。禁止凭空编造数据。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "进入分析规划（analysis round）→ HITL 闸门 → 渲染",
+      "clarification_prompt": "你想做哪个主题的专题分析？例如某个区域、树种、回收去向或时间段，我可以据此拆解维度。"
+    },
+    {
+      "id": "ad_hoc_analysis",
+      "name_zh": "即时分析",
+      "name_en": "Ad-hoc Analysis",
+      "category": "analysis",
+      "description": "临时起意的单点问答（对应业务侧“及时分析”诉求），通常一次查询即可回答。",
+      "examples": [
+        "上月处理了多少吨",
+        "华南区的总成本是多少",
+        "最近一周入库了多少批次",
+        "及时看一下本月毛利"
+      ],
+      "keywords": ["及时分析", "看一下", "多少吨", "总成本", "毛利", "查一下", "本月", "上月", "这个月", "这月", "赚了多少", "挣了多少", "盈利"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine"],
+      "system_constraint": "用户意图为【即时分析】。直接生成单条查询并调用工具取数，给出简洁结论与数字，不要过度展开。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "生成单条查询 → 执行 → 返回",
+      "clarification_prompt": "你想了解哪个指标或哪个范围？例如某区域/某时间段的重量、成本或价值。"
+    },
+    {
+      "id": "data_fetch",
+      "name_zh": "取数",
+      "name_en": "Data Fetch",
+      "category": "retrieval",
+      "description": "拉取或导出具体明细、聚合数据，不要求分析。",
+      "examples": [
+        "把华东区的批次都列出来",
+        "导出上个月的成本明细",
+        "给我看 construction 来源的批次",
+        "列出净价值最低的 10 个批次"
+      ],
+      "keywords": ["取数", "列出", "导出", "明细", "批次", "全部", "拉取", "给我看", "挑出来", "查出来"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine"],
+      "system_constraint": "用户意图为【取数】。只调用数据工具返回真实数据，禁止编造；以表格或要点呈现原始结果，不要自行做过多解读。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "生成 SQL → 执行 → 表格/文件返回",
+      "clarification_prompt": "你想取哪部分数据？例如某区域/状态/树种的批次，或某时间段的成本明细。"
+    },
+    {
+      "id": "comparison",
+      "name_zh": "对比分析",
+      "name_en": "Comparison",
+      "category": "analysis",
+      "description": "两个对象或时间段之间的维度对比。",
+      "examples": [
+        "对比一下华东和华南的回收量",
+        "今年和去年的毛利对比",
+        "construction 和 municipal 来源哪个更赚钱",
+        "比较两种树种的净价值"
+      ],
+      "keywords": ["对比", "比较", "vs", " versus", "哪个更", "和…区别", "差异", "哪个高", "利润高", "哪个利润", "哪边更", "两个…哪个"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "chart_tool"],
+      "system_constraint": "用户意图为【对比分析】。请分别取数后并排对比，突出差异点与关键数字，可用对比视图呈现。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "双路查询 → 对比视图",
+      "clarification_prompt": "你想对比哪两个对象？例如两个区域、两个时间段或两个来源类型。"
+    },
+    {
+      "id": "trend",
+      "name_zh": "趋势分析",
+      "name_en": "Trend",
+      "category": "analysis",
+      "description": "时间序列走势、同比/环比变化。",
+      "examples": [
+        "近半年入库量趋势怎么样",
+        "月度处理量走势",
+        "成本环比变化大吗",
+        "画一下毛价值的时间趋势"
+      ],
+      "keywords": ["趋势", "走势", "环比", "同比", "月度", "近半年", "随时间", "变化", "时间趋势"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "chart_tool"],
+      "system_constraint": "用户意图为【趋势分析】。按时间维度取数并描述走势、拐点与同比/环比变化，优先用折线/面积图呈现。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "时序查询 → 折线/面积图",
+      "clarification_prompt": "你想看哪个指标的时间趋势？例如入库量、处理量、成本或毛价值，以及时间范围。"
+    },
+    {
+      "id": "anomaly_rootcause",
+      "name_zh": "异常归因",
+      "name_en": "Anomaly & Root Cause",
+      "category": "analysis",
+      "description": "对异常波动、下跌或异常值的下钻与原因推断。",
+      "examples": [
+        "为什么上星期成本突然涨了",
+        "哪个批次净价值异常低",
+        "毛利下跌的原因是什么",
+        "找出异常高的回收成本"
+      ],
+      "keywords": ["为什么", "原因", "异常", "突然", "下跌", "波动", "归因", "哪…低", "哪…高", "怎么就"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "analysis_plan"],
+      "system_constraint": "用户意图为【异常归因】。请先定位异常点，再下钻取数寻找可能原因，区分“已验证事实”与“推断”，推断需明确标注。归因结论在 HITL 闸门确认后再正式给出。",
+      "confidence_threshold": 0.65,
+      "on_trigger": "下钻 + 归因推理链 → HITL 闸门确认",
+      "clarification_prompt": "你发现或想排查哪个指标的异常？例如成本的突增、净价值的异常低值，以及大致时间。"
+    },
+    {
+      "id": "visualization",
+      "name_zh": "可视化制图",
+      "name_en": "Visualization",
+      "category": "analysis",
+      "description": "明确要求生成图表。",
+      "examples": [
+        "画一个来源结构饼图",
+        "做个回收去向的分布图",
+        "把月度趋势可视化",
+        "用柱状图展示各区域重量"
+      ],
+      "keywords": ["画", "图表", "可视化", "饼图", "柱状图", "折线图", "分布图", "图展示", "做个图", "占比", "各树种", "各区域", "展示一下", "可视化一下"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "chart_tool"],
+      "system_constraint": "用户意图为【可视化制图】。取数后选择合适的图表类型呈现，并配一句结论说明。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "选图 → 渲染图表",
+      "clarification_prompt": "你想可视化哪个指标或维度？例如来源结构、回收去向或月度趋势。"
+    },
+    {
+      "id": "reporting_export",
+      "name_zh": "报表导出",
+      "name_en": "Report / Export",
+      "category": "analysis",
+      "description": "汇总生成或导出报告。",
+      "examples": [
+        "生成一份本月运营报告",
+        "导出一个给管理层的 summary",
+        "把分析结果整理成报告",
+        "做个周报"
+      ],
+      "keywords": ["报告", "报表", "导出", "周报", "月报", "summary", "汇总", "整理成", "写个周报", "运营报告"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "report_tool"],
+      "system_constraint": "用户意图为【报表导出】。先取数汇总，再组织成报告结构（摘要 + 关键指标 + 图表）。报告内容需经 HITL 闸门确认后再导出。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "汇总 → HITL 闸门 → 文档/导出",
+      "clarification_prompt": "你想生成什么范围的报告？例如本月运营报告、某区域周报，以及交付格式。"
+    },
+    {
+      "id": "summarization",
+      "name_zh": "总结",
+      "name_en": "Summarization",
+      "category": "conversation",
+      "description": "对已有结果、对话或报告做归纳。",
+      "examples": [
+        "总结一下我们刚才聊的结论",
+        "把上面的分析概括一下",
+        "用三句话总结这份报告",
+        "帮我归纳关键发现"
+      ],
+      "keywords": ["总结", "概括", "归纳", "摘要", "三句话", "关键点", "结论", "说明什么", "什么意思", "想说明", "讲讲结论", "说一下"],
+      "needs_data_context": false,
+      "tool_policy": "none",
+      "required_capabilities": ["llm_summary"],
+      "system_constraint": "用户意图为【总结】。基于对话上下文做简洁归纳，不要调用任何数据工具，也不要重新取数；仅当上下文已有数据结论时引用。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "LLM 摘要，不碰原始工具",
+      "clarification_prompt": "你想总结哪部分内容？例如我们刚才的分析结论，还是某份已有报告。"
+    },
+    {
+      "id": "data_inference",
+      "name_zh": "数据推测",
+      "name_en": "Data Inference",
+      "category": "analysis",
+      "description": "基于现有数据做外推、预测或假设推演。",
+      "examples": [
+        "按目前趋势下个月大概能处理多少",
+        "如果成本降 10% 净价值会怎样",
+        "推测一下年底的累计回收量",
+        "假设明年量翻倍利润多少",
+        "明年估计能回收多少吨"
+      ],
+      "keywords": ["推测", "预测", "假设", "如果…会", "大概", "估算", "外推", "下个月", "年底", "估计能", "明年", "会怎样", "会是多少", "翻倍"],
+      "needs_data_context": true,
+      "tool_policy": "full",
+      "required_capabilities": ["sql_engine", "inference"],
+      "system_constraint": "用户意图为【数据推测】。可基于已有数据做外推或假设推演，但必须在回答开头明确标注【推测 / 非实测】，并说明假设前提与不确定性，禁止把推测写成确定事实。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "取基准数据 → 标注“推测”边界后推理",
+      "clarification_prompt": "你想推测什么？例如基于趋势外推某指标，或在某个假设（如成本下降 X%）下看结果。"
+    },
+    {
+      "id": "chitchat",
+      "name_zh": "闲聊",
+      "name_en": "Chitchat",
+      "category": "conversation",
+      "description": "非任务性的日常对话。",
+      "examples": [
+        "你好",
+        "你是谁",
+        "今天天气不错",
+        "谢谢你"
+      ],
+      "keywords": ["你好", "你是谁", "谢谢", "在吗", "哈哈", "天气", "聊聊", "真好啊"],
+      "needs_data_context": false,
+      "tool_policy": "none",
+      "required_capabilities": [],
+      "system_constraint": "当前为【闲聊】意图。直接自然回应，不要调用任何数据工具，也不要假装分析数据。",
+      "confidence_threshold": 0.5,
+      "on_trigger": "直连 LLM，绕过所有数据工具",
+      "clarification_prompt": ""
+    },
+    {
+      "id": "help_guidance",
+      "name_zh": "帮助引导",
+      "name_en": "Help / Guidance",
+      "category": "control",
+      "description": "询问能力边界或如何使用。",
+      "examples": [
+        "你能做什么",
+        "怎么用这个助手",
+        "有哪些分析功能",
+        "给我几个示例问法"
+      ],
+      "keywords": ["你能", "怎么用", "功能", "示例", "帮助", "干嘛", "会什么", "分析啥", "能干嘛"],
+      "needs_data_context": false,
+      "tool_policy": "none",
+      "required_capabilities": [],
+      "system_constraint": "当前为【帮助引导】意图。向用户介绍本工作台可做的分析能力（取数、专题/对比/趋势/异常归因分析、可视化、报表导出、数据推测）并给出示例问法，不要调用数据工具。",
+      "confidence_threshold": 0.6,
+      "on_trigger": "返回能力菜单 / 示例问法",
+      "clarification_prompt": ""
+    },
+    {
+      "id": "clarify_abstain",
+      "name_zh": "澄清 / 拒答",
+      "name_en": "Clarify / Abstain",
+      "category": "control",
+      "description": "意图不清或超出能力范围时的兜底意图。",
+      "examples": [],
+      "keywords": [],
+      "needs_data_context": false,
+      "tool_policy": "none",
+      "required_capabilities": [],
+      "system_constraint": "未能确定用户意图或请求超出本工作台能力。不要臆测意图去取数；以友好方式反问澄清，或说明能力边界。",
+      "confidence_threshold": 0.0,
+      "on_trigger": "反问澄清 / 安全拒答",
+      "clarification_prompt": "我没太理解你的需求。你可以换个说法，或参考这些问法：取数（列出华东区批次）、专题分析（拆解利润结构）、趋势（月度处理量走势）、可视化（画来源结构饼图）。"
+    }
+  ]
+}

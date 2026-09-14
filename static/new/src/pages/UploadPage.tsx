@@ -157,7 +157,7 @@ export function UploadPage({ onDataChanged }: { onDataChanged: () => void }) {
   return (
     <div className="upload">
       <header className="page-head">
-        <h1>{t('数据上传')}</h1>
+        <h1>{t('数据链接')}</h1>
         <p className="page-head__sub">
           {t('上传符合 timber schema 的数据（CSV / JSON），替换或扩充当前数据集。上传后看板与 AI 自动读取新数据。')}
         </p>

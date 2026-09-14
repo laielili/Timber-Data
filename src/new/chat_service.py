@@ -20,6 +20,17 @@ from .ai_errors import AIAnalystError, AIProviderError
 from .ai_provider import ModelProvider, ToolCall
 from . import ai_settings, ai_tools
 from . import db as workbench_db
+from .intent_recognizer import IntentRecognizer
+
+_RECOGNIZER: "IntentRecognizer | None" = None
+
+
+def _get_recognizer() -> IntentRecognizer:
+    """Lazily build the singleton recognizer (import-safe; schema may load later)."""
+    global _RECOGNIZER
+    if _RECOGNIZER is None:
+        _RECOGNIZER = IntentRecognizer()
+    return _RECOGNIZER
 
 logger = logging.getLogger("workbench.ai.chat")
 
@@ -76,6 +87,7 @@ class ChatService:
             "tools_used": sorted(set(tools_used)),
             "model": provider.model,
             "provider": effective["provider"],
+            "intent": match.to_dict(),
         }
 
     async def _run(

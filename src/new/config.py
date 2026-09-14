@@ -56,3 +56,6 @@ SETTINGS_FILE = SECRETS_DIR / "ai_provider.json"
 
 # Upload limits (defensive; files are parsed as streaming CSV).
 MAX_UPLOAD_BYTES = int(os.environ.get("WB_MAX_UPLOAD_BYTES", str(50 * 1024 * 1024)))
+
+# Intent-recognition preset schema (harness step 1). Pure config, no code logic.
+INTENT_SCHEMA_PATH = PROJECT_ROOT / "config" / "intent_schema.json"

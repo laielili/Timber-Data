@@ -9,7 +9,7 @@ export type Page = 'dashboard' | 'upload' | 'ai';
 
 const NAV: { id: Page; label: string; hint: string; icon: (p: { size?: number; className?: string }) => React.ReactNode }[] = [
   { id: 'dashboard', label: '数据看板', hint: '指标与图表，右侧筛选维度', icon: IconGrid },
-  { id: 'upload', label: '数据上传', hint: '上传数据与 API 接口', icon: IconUpload },
+  { id: 'upload', label: '数据链接', hint: '数据链接与 API 接口', icon: IconUpload },
   { id: 'ai', label: 'AI 助手', hint: '基于已上传数据的对话', icon: IconSpark },
 ];
 

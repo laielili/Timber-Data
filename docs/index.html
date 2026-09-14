@@ -12,8 +12,30 @@
     />
     <script type="module" crossorigin src="./assets/index-DbbhTwe7.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-czQ7AxXb.css">
+    <!-- Static demo entry: hand-written page, not part of the SPA bundle.
+         Re-copying `static/new/dist` over docs/ removes the entry — restore it then. -->
+    <style>
+      .demo-entry {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 50;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: #23201a;
+        color: #fcf551;
+        font: 600 12.5px/1 Inter, -apple-system, 'Segoe UI', sans-serif;
+        text-decoration: none;
+        box-shadow: 0 6px 18px -10px rgba(43, 37, 28, 0.6);
+      }
+      .demo-entry:hover { background: #3b2f21; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <a class="demo-entry" href="./ai-workflow.html">AI Assistant demo →</a>
   </body>
 </html>

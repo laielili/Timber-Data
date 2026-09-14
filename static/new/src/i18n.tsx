@@ -5,10 +5,10 @@ export type Lang = 'zh' | 'en';
 const ZH_TO_EN: Record<string, string> = {
   // ---- App nav ----
   '数据看板': 'Data Dashboard',
-  '数据上传': 'Upload Data',
+  '数据链接': 'Data Connection',
   'AI 助手': 'AI Assistant',
   '指标与图表，右侧筛选维度': 'Metrics & charts, filter on the right',
-  '上传数据与 API 接口': 'Upload data & API endpoints',
+  '数据链接与 API 接口': 'Data Connection & API endpoints',
   '基于已上传数据的对话': 'Chat grounded on your uploaded data',
   '用户数据驱动': 'User-data driven',
   '数据存于 data/workbench.db': 'Data stored in data/workbench.db',
@@ -17,13 +17,13 @@ const ZH_TO_EN: Record<string, string> = {
   '加载失败': 'Failed to load',
   '重试': 'Retry',
   '加载中…': 'Loading…',
-  '尚未上传数据——看板会随您的数据实时更新。':
+  '尚未数据链接——看板会随您的数据实时更新。':
     'No data uploaded yet — the dashboard updates live as your data arrives.',
   '更新中…': 'Updating…',
   '数据集为空': 'Dataset is empty',
   '上传符合 timber schema 的数据后，看板与 AI 将自动读取；也可以先载入示例数据体验完整流程。':
     'After uploading data conforming to the timber schema, the dashboard and AI read it automatically. Or load the sample dataset first to explore the full flow.',
-  '去上传数据': 'Go to Upload',
+  '去数据链接': 'Go to Data Connection',
   '载入示例数据': 'Load Sample Data',
   '共': 'Total',
   '行': 'rows',
@@ -194,7 +194,7 @@ const I18nContext = createContext<I18nValue | null>(null);
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     const saved = localStorage.getItem('wb-lang');
-    return saved === 'en' || saved === 'zh' ? (saved as Lang) : 'zh';
+    return saved === 'en' || saved === 'zh' ? (saved as Lang) : 'en';
   });
 
   useEffect(() => {
