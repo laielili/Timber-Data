@@ -774,6 +774,7 @@
         var icon = wrap.querySelector('.trace__icon');
         var label = wrap.querySelector('.trace__label');
         var toggle = wrap.querySelector('.trace__toggle');
+        var panel = wrap.querySelector('.trace__panel');
 
         icon.className = 'trace__icon trace__icon--ok';
         icon.textContent = '✓';
@@ -781,11 +782,20 @@
         toggle.disabled = false;
         trace.classList.add('trace--done');
 
-        wrap.querySelector('.trace__panel').innerHTML =
+        panel.innerHTML =
           '<ol class="trace__steps">' + sc.trace.map(function (s) {
             return '<li><p class="trace__say">' + esc(s[0]) + '</p>' +
               '<p class="trace__ev">' + s[1] + '</p></li>';
           }).join('') + '</ol>';
+
+        /* Ships expanded. The label already says "How I got here", so leaving
+           the body folded makes the reader click to find out what the label
+           just promised. Clicking the toggle still folds it back, and because
+           both the animated run and the language-switch repaint funnel through
+           here, the two can never disagree about the default. */
+        panel.hidden = false;
+        trace.classList.add('trace--open');
+        toggle.setAttribute('aria-expanded', 'true');
       }
 
       function typeAnswer(wrap, text, onDone) {
