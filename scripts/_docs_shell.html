@@ -1,0 +1,51 @@
+<style>
+      .demo-entry {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 50;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: #23201a;
+        color: #fcf551;
+        font: 600 12.5px/1 Inter, -apple-system, 'Segoe UI', sans-serif;
+        text-decoration: none;
+        box-shadow: 0 6px 18px -10px rgba(43, 37, 28, 0.6);
+      }
+      .demo-entry:hover { background: #3b2f21; }
+    </style>
+<!--SPLIT-->
+<a class="demo-entry" href="./ai-workflow.html">AI Assistant demo →</a>
+
+    <!-- The nav renders as React <button>s, so a plain <a> cannot reach it.
+         Listen in the capture phase on `document`: this fires before React's
+         root-container listener, and stopPropagation keeps React's onClick from
+         ever seeing the click — so `page` never flips to 'ai' and the
+         backend-dependent ChatPage is never mounted. -->
+    <script>
+      (function () {
+        // Both languages: the nav label is re-rendered as zh/en by the toggle.
+        var LABELS = ['AI 助手', 'AI Assistant'];
+        document.addEventListener(
+          'click',
+          function (e) {
+            var t = e.target;
+            var item = t && t.closest && t.closest('.nav__list .nav__item');
+            if (!item) return;
+            var text = item.textContent || '';
+            for (var i = 0; i < LABELS.length; i++) {
+              if (text.indexOf(LABELS[i]) !== -1) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = './ai-workflow.html';
+                return;
+              }
+            }
+          },
+          true
+        );
+      })();
+    </script>

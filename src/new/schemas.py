@@ -67,27 +67,67 @@ class DimensionValues(BaseModel):
     current_stages: list[str] = Field(default_factory=list)
 
 
+class NorthStar(BaseModel):
+    """M0 — the single number every other metric has to explain."""
+
+    id: str
+    label: str
+    value: float
+    unit: str
+    net_value_aud: float
+    incoming_t: float
+    processed_t: float
+    basis: str
+    description: str
+    identity: str  # e.g. "M0 ≡ M1.2 × M3.1 − M2.2"
+    expression: dict[str, float]  # value_per_processed_t / processing_rate / cost_per_incoming_t
+
+
 class Kpi(BaseModel):
     id: str
     label: str
     value: float
     unit: str
+    basis: str  # names the tonne denominator — this is what keeps the identity honest
+    description: str
+    group: str        # s1 value | s2 cost | s3 conversion
+    group_label: str
+
+
+class Guardrail(BaseModel):
+    """A counterweight metric: each one blocks a specific way to inflate M0."""
+
+    id: str
+    label: str
+    value: float
+    unit: str
     basis: str
+    status: str  # ok | watch
     description: str
 
 
 class Chart(BaseModel):
     id: str
     title: str
-    type: str  # bar | line | pie | scatter
+    type: str  # bar | line | pie | scatter | matrix
     rows: list[dict[str, Any]] = Field(default_factory=list)
+    group: str = "slices"  # matrix | drivers | slices
+    bars: Optional[list[str]] = None          # explicit series, so auto-detection cannot
+    lines: Optional[list[str]] = None         # plot a count against a dollar figure
+    dual_axis: bool = False
+    series_labels: Optional[dict[str, str]] = None  # legend text per series key
+    columns: Optional[list[dict[str, str]]] = None  # matrix tables only    note: Optional[str] = None
+    total: Optional[dict[str, Any]] = None
+    output_wt: Optional[float] = None
 
 
 class DashboardResponse(BaseModel):
     meta: dict[str, Any]
     filters: FilterParams
     dimensions: DimensionValues
+    north_star: Optional[NorthStar] = None
     kpis: list[Kpi]
+    guardrails: list[Guardrail] = Field(default_factory=list)
     charts: list[Chart]
 
 

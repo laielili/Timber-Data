@@ -394,21 +394,30 @@ button {
 
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  /* three cards per strategy group (M1×3 / M2×3 / M3×3) */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 18px;
 }
 
 .kpi-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: 14px 15px 13px;
-  display: flex;
-  flex-direction: column;
-  min-height: 118px;
+  padding: 13px 15px;
+  min-height: 84px;
   cursor: default;
+}
+
+/* Sized to its content; the sparkline takes whatever is left over. */
+.kpi-card__main {
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .kpi-card__label {
@@ -421,28 +430,37 @@ button {
 }
 
 .kpi-card__value {
-  margin-top: 10px;
+  margin-top: 9px;
   font-family: var(--font-display);
-  font-size: 27px;
+  font-size: 26px;
   font-weight: 650;
   line-height: 1;
   letter-spacing: -0.01em;
   color: var(--dark-brown);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
+/* The unit sits on its own line. Sharing the value's line forced "AUD/处理t" to
+   wrap mid-word in en ("AUD/processed t" is wide), which reads as two units. */
 .kpi-card__unit {
-  font-size: 13px;
+  display: block;
+  margin: 5px 0 0;
+  font-size: 11.5px;
   font-weight: 500;
+  line-height: 1.3;
   color: var(--taupe);
-  margin-left: 4px;
 }
 
-.kpi-card__basis {
-  margin: auto 0 0;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.4;
+/* ---------- card sparkline ---------- */
+.sparkline {
+  display: block;
+  /* Absorbs the leftover width: a short value like "44.92" gives it room to
+     expand, a long one like "317,440.04" squeezes it back to 56px. */
+  flex: 1 1 88px;
+  min-width: 56px;
+  max-width: 142px;
+  height: 48px;
 }
 
 .charts-grid {
@@ -1114,3 +1132,493 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ============================================================
+   Metric system — North Star / strategy groups / guardrails / matrix.
+   Layout reads top-down as the argument: anchor → counterweights →
+   three drivers → reconciliation → breakdowns.
+   ============================================================ */
+
+/* ---------- top row: North Star anchor + its own trend ---------- */
+.top-row {
+  display: grid;
+  grid-template-columns: minmax(184px, 208px) minmax(0, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ---------- North Star trend (zoomable) ---------- */
+.trend-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 12px 15px 8px;
+}
+
+.trend-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.trend-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--dark-brown);
+}
+
+/* Same size and colour as the axis tick labels — a note, not a headline. */
+.trend-card__hint {
+  font-size: 11px;
+  color: var(--taupe);
+  white-space: nowrap;
+}
+
+.trend-card__body {
+  flex: 1;
+  min-height: 138px;
+  min-width: 0;
+}
+
+/* ---------- North Star anchor ---------- */
+.north-star {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: var(--panel);
+  border: 1px solid #cbbf9e;
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+}
+
+.north-star__eyebrow {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.north-star__label {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.north-star__value {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--dark-brown);
+  font-variant-numeric: tabular-nums;
+}
+
+.north-star__unit {
+  margin-left: 5px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--taupe);
+}
+
+/* ---------- guardrails (full-width row under the North Star) ---------- */
+.guardrails {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 13px 15px 15px;
+  margin-bottom: 20px;
+}
+
+.guardrails__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 11px;
+}
+
+.guardrails__title {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.guardrails__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 9px;
+  flex: 1;
+}
+
+.guardrail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  /* right inset keeps the value clear of the alert light (7px wide, 11px in) */
+  padding: 9px 22px 10px 11px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: #faf7ee;
+}
+
+/* Alert light: a filled disc with a soft halo. Three states, not two — a
+   guardrail that can only say "fine / not fine" cannot express "act now". */
+.guardrail__light {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ok-fg);
+  box-shadow: 0 0 0 3px rgba(63, 107, 53, 0.16);
+}
+
+.guardrail--warn {
+  border-color: #ecd9b4;
+  background: #fdf9ef;
+}
+
+.guardrail--warn .guardrail__light {
+  background: var(--amber);
+  box-shadow: 0 0 0 3px rgba(223, 165, 42, 0.22);
+}
+
+.guardrail--severe {
+  border-color: var(--err-line);
+  background: var(--err-bg);
+}
+
+.guardrail--severe .guardrail__light {
+  background: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(176, 86, 59, 0.22);
+}
+
+.guardrail__label {
+  font-size: 10.5px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.guardrail__value {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.1;
+  color: var(--dark-brown);
+  font-variant-numeric: tabular-nums;
+}
+
+.guardrail__unit {
+  margin-left: 3px;
+  font-family: var(--font-ui);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--taupe);
+}
+
+/* ---------- strategy groups ---------- */
+.kpi-group {
+  margin-bottom: 20px;
+}
+
+.kpi-group__head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+/* A thin colour rule replaces the old `S1` chip — the group still reads as
+   distinct at a glance without putting design-layer codes on the panel. */
+.kpi-group__accent {
+  flex: none;
+  width: 3px;
+  height: 17px;
+  border-radius: 2px;
+  background: var(--taupe);
+}
+
+.kpi-group__accent--s1 { background: var(--olive); }
+.kpi-group__accent--s2 { background: var(--amber); }
+.kpi-group__accent--s3 { background: #6c5fa8; }
+
+.kpi-group__label {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dark-brown);
+}
+
+.kpi-group__goal {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+/* ---------- chart sections ---------- */
+.chart-section {
+  margin-bottom: 20px;
+}
+
+.chart-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 11px;
+}
+
+.chart-section__head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dark-brown);
+}
+
+.chart-section__head span {
+  font-size: 11px;
+  color: var(--taupe);
+}
+
+.chart-card--wide {
+  margin-bottom: 20px;
+}
+
+.chart-card__body--matrix {
+  height: auto;
+}
+
+/* ---------- status matrix ---------- */
+.matrix {
+  overflow-x: auto;
+}
+
+.matrix__table {
+  width: 100%;
+  /* Fixed layout: columns share the width evenly and headers wrap, instead of
+     long uppercase headers (NET CONTRIBUTION AUD) forcing a horizontal
+     scrollbar on narrower viewports. */
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.matrix__table th,
+.matrix__table td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.matrix__table td {
+  white-space: nowrap;
+}
+
+.matrix__table th {
+  /* Headers wrap rather than forcing a horizontal scrollbar on narrower
+     viewports; the numeric cells below stay on one line. `overflow-wrap` keeps a
+     long word like CONTRIBUTION from spilling into the neighbouring column. */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  border-bottom-color: #cbbf9e;
+}
+
+.matrix__table .num {
+  text-align: right;
+}
+
+.matrix__row--output td {
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+}
+
+.matrix__table tfoot td {
+  border-top: 1px solid #cbbf9e;
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--dark-brown);
+  background: #faf7ee;
+}
+
+@media (max-width: 1180px) {
+  /* stack the trend under the North Star once the 5-across guardrail strip
+     needs the full width */
+  .top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix__table th,
+  .matrix__table td {
+    padding: 8px 9px;
+    font-size: 12px;
+  }
+
+  .guardrails__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .guardrails__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------- hover annotations ----------
+   The card face carries only the metric name and its value. Everything that
+   used to be printed underneath — the tonne denominator and the explanation —
+   arrives here on hover or keyboard focus. */
+.has-tip {
+  position: relative;
+}
+
+.has-tip:hover,
+.has-tip:focus-within {
+  z-index: 45;
+}
+
+.has-tip:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.metric-tip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 9px);
+  z-index: 44;
+  width: max-content;
+  max-width: 304px;
+  padding: 10px 12px 11px;
+  border-radius: 10px;
+  border: 1px solid #cbbf9e;
+  background: #fdfbf4;
+  box-shadow: 0 18px 34px -18px rgba(43, 37, 28, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-5px);
+  transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s;
+  pointer-events: none;
+}
+
+.has-tip:hover .metric-tip,
+.has-tip:focus-within .metric-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.metric-tip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-left: 1px solid #cbbf9e;
+  border-top: 1px solid #cbbf9e;
+  background: #fdfbf4;
+  transform: rotate(45deg);
+}
+
+.metric-tip__level {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 1px solid transparent;
+}
+
+.metric-tip__level--ok {
+  background: var(--ok-bg);
+  border-color: var(--ok-line);
+  color: var(--ok-fg);
+}
+
+.metric-tip__level--warn {
+  background: #fdf3d8;
+  border-color: #ecd9b4;
+  color: #854f0b;
+}
+
+.metric-tip__level--severe {
+  background: var(--err-bg);
+  border-color: var(--err-line);
+  color: var(--err-fg);
+}
+
+.metric-tip__basis {
+  margin: 0 0 7px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--brown);
+}
+
+.metric-tip__basis--source {
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-tip__key {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: #f0e9d8;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #7a6a4e;
+  vertical-align: 1px;
+}
+
+.metric-tip__desc {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Keep the 5-across guardrail strip from pushing its annotation off-screen. */
+.guardrails__grid .guardrail:first-child .metric-tip { left: 0; transform: translateX(0) translateY(-5px); }
+.guardrails__grid .guardrail:first-child .metric-tip::before { left: 24px; }
+.guardrails__grid .guardrail:first-child:hover .metric-tip,
+.guardrails__grid .guardrail:first-child:focus-within .metric-tip { transform: translateX(0) translateY(0); }
+.guardrails__grid .guardrail:last-child .metric-tip { left: auto; right: 0; transform: translateX(0) translateY(-5px); }
+.guardrails__grid .guardrail:last-child .metric-tip::before { left: auto; right: 24px; margin-left: 0; margin-right: -4px; }
+.guardrails__grid .guardrail:last-child:hover .metric-tip,
+.guardrails__grid .guardrail:last-child:focus-within .metric-tip { transform: translateX(0) translateY(0); }
+

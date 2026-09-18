@@ -3,15 +3,82 @@ export interface Kpi {
   label: string;
   value: number;
   unit: string;
+  /** Names the tonne denominator (per processed t for value, per incoming t for cost). */
   basis: string;
   description: string;
+  /** s1 value | s2 cost | s3 conversion */
+  group: string;
+  group_label: string;
+  /** Monthly series for the card sparkline. Empty for snapshot metrics. */
+  trend: number[];
+}
+
+/** M0 — the one number every other metric has to explain. */
+export interface NorthStar {
+  id: string;
+  label: string;
+  value: number;
+  unit: string;
+  net_value_aud: number;
+  incoming_t: number;
+  processed_t: number;
+  basis: string;
+  description: string;
+  identity: string;
+  expression: {
+    value_per_processed_t: number;
+    processing_rate: number;
+    cost_per_incoming_t: number;
+  };
+}
+
+/** A counterweight metric: blocks a specific way of inflating the North Star. */
+export interface Guardrail {
+  id: string;
+  label: string;
+  value: number;
+  unit: string;
+  basis: string;
+  /** ok 正常 | warn 预警 | severe 严重 */
+  level: 'ok' | 'warn' | 'severe';
+  description: string;
+}
+
+export interface ChartColumn {
+  key: string;
+  label: string;
+  type: string;
+  /** money | weight | per_t — drives decimal precision in matrix tables. */
+  format?: string;
 }
 
 export interface Chart {
   id: string;
   title: string;
   type: string;
+  /** matrix (reconciliation table) | drivers (identity decomposition) | slices (endowment) */
+  group: string;
   rows: Record<string, unknown>[];
+  bars?: string[];
+  lines?: string[];
+  dual_axis?: boolean;
+  /** Legend text per series key, so raw column names never reach the reader. */
+  series_labels?: Record<string, string>;
+  columns?: ChartColumn[];
+  note?: string;
+  total?: Record<string, number>;
+  output_wt?: number;
+}
+
+export interface LastUpload {
+  upload_id: string;
+  table_name: string;
+  filename: string;
+  mode: string;
+  row_count: number;
+  status: string;
+  message: string;
+  created_at: string;
 }
 
 export interface DashboardMeta {
@@ -21,7 +88,7 @@ export interface DashboardMeta {
   empty: boolean;
   tables: Record<string, number>;
   total_rows: number;
-  last_upload: { upload_id: string; table_name: string; row_count: number; created_at: string } | null;
+  last_upload: LastUpload | null;
 }
 
 export interface Dimensions {
@@ -52,7 +119,9 @@ export interface DashboardResponse {
   meta: DashboardMeta;
   filters: Filters;
   dimensions: Dimensions;
+  north_star: NorthStar | null;
   kpis: Kpi[];
+  guardrails: Guardrail[];
   charts: Chart[];
 }
 
