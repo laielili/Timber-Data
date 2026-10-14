@@ -18,15 +18,12 @@
 //   python scripts/_sync_mock.py .workbuddy/tmp/dash.json
 
 import type {
-  ApiEndpoint,
   Chart,
   DashboardResponse,
   Dimensions,
   Guardrail,
   Kpi,
-  MetaResponse,
   NorthStar,
-  TableSchemaInfo,
 } from './types';
 
 const SOURCE_TYPES = ['Commercial Demolition', 'Direct Salvage Purchase', 'Industrial Renewal', 'Infrastructure Salvage', 'Residential Demolition', 'Warehouse Deconstruction'];
@@ -1161,100 +1158,6 @@ export function mockDashboard(): DashboardResponse {
     charts: CHARTS,
   };
 }
-function endpoint(
-  method: string,
-  path: string,
-  summary: string,
-  fields: ApiEndpoint['fields'],
-  example: string,
-): ApiEndpoint {
-  return { method, path, summary, content_type: 'application/json', fields, example };
-}
-
-export function mockMeta(): MetaResponse {
-  return {
-    dataset: {
-      tables: TABLE_COUNTS,
-      total_rows: TOTAL_ROWS,
-      last_upload: {
-        upload_id: 'demo_inspectionevents',
-        table_name: 'InspectionEvents',
-        row_count: 490,
-        created_at: '2026-08-24 15:36:31',
-      },
-    },
-    api_reference: [
-      endpoint(
-        'GET',
-        '/api/new/dashboard',
-        '数据看板（支持维度筛选查询参数）',
-        [
-          { name: 'source_type', type: 'string', required: false, description: '来源类型，如 Residential Demolition' },
-          { name: 'region', type: 'string', required: false, description: '区域' },
-          { name: 'species', type: 'string', required: false, description: '树种' },
-          { name: 'recovery_route', type: 'string', required: false, description: '回收去向' },
-          { name: 'period_start', type: 'date', required: false, description: '起始日期' },
-          { name: 'period_end', type: 'date', required: false, description: '结束日期' },
-        ],
-        'curl -X GET "http://127.0.0.1:8100/api/new/dashboard?source_type=Residential%20Demolition"',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/upload/csv',
-        '上传 CSV 到指定表',
-        [
-          { name: 'file', type: 'file', required: true, description: 'UTF-8 编码的 CSV，首行为表头' },
-          { name: 'table', type: 'string', required: true, description: '目标表名，如 Batches' },
-          { name: 'mode', type: 'string', required: true, description: 'append（默认，按主键 upsert）或 replace（清空后写入）' },
-        ],
-        'curl -X POST "http://127.0.0.1:8100/api/new/upload/csv" -F "file=@batches.csv" -F "table=Batches" -F "mode=append"',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/upload/json',
-        '上传 JSON 行数据到指定表',
-        [
-          { name: 'file', type: 'file', required: true, description: 'JSON 文件：{"rows": [...]} 或直接是行数组' },
-          { name: 'table', type: 'string', required: true, description: '目标表名' },
-          { name: 'mode', type: 'string', required: true, description: '写入模式' },
-        ],
-        'curl -X POST "http://127.0.0.1:8100/api/new/upload/json" -F "file=@rows.json" -F "table=Materials" -F "mode=append"',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/upload/bundle',
-        '上传多表 JSON bundle',
-        [{ name: 'file', type: 'file', required: true, description: '多表 JSON bundle' }],
-        'curl -X POST "http://127.0.0.1:8100/api/new/upload/bundle" -F "file=@bundle.json"',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/demo',
-        '载入合成示例数据（可选，非预设）',
-        [{ name: 'mode', type: 'string', required: false, description: 'append 或 replace' }],
-        'curl -X POST "http://127.0.0.1:8100/api/new/demo?mode=append"',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/ai/chat',
-        'AI 对话（基于已上传数据的问答）',
-        [
-          { name: 'messages', type: 'json', required: true, description: '对话消息数组' },
-          { name: 'conversation_id', type: 'string', required: false, description: '会话 ID（可选）' },
-        ],
-        'curl -X POST "http://127.0.0.1:8100/api/new/ai/chat" -H "Content-Type: application/json" -d \'{"messages":[{"role":"user","content":"总入库量是多少？"}]}\'',
-      ),
-      endpoint(
-        'POST',
-        '/api/new/ai/test',
-        '测试 AI 服务连接',
-        [{ name: 'api_key', type: 'string', required: false, description: '可选，覆盖服务端配置' }],
-        'curl -X POST "http://127.0.0.1:8100/api/new/ai/test"',
-      ),
-    ],
-  };
-}
-
 export function mockHealth() {
   return {
     status: 'ok',
@@ -1262,83 +1165,4 @@ export function mockHealth() {
     dataset_type: 'timber',
     total_rows: TOTAL_ROWS,
   };
-}
-
-export function mockUploadTables(): TableSchemaInfo[] {
-  return [
-    {
-      table_name: 'SourceProjects',
-      primary_key: 'project_id',
-      columns: [
-        { name: 'project_id', type: 'string', nullable: false, required: true },
-        { name: 'source_type', type: 'string', nullable: false, required: true },
-        { name: 'region', type: 'string', nullable: true, required: false },
-        { name: 'contact', type: 'string', nullable: true, required: false },
-      ],
-    },
-    {
-      table_name: 'Batches',
-      primary_key: 'batch_id',
-      columns: [
-        { name: 'batch_id', type: 'string', nullable: false, required: true },
-        { name: 'project_id', type: 'string', nullable: false, required: true },
-        { name: 'arrival_date', type: 'date', nullable: false, required: true },
-        { name: 'species', type: 'string', nullable: true, required: false },
-        { name: 'incoming_t', type: 'float', nullable: false, required: true },
-        { name: 'batch_status', type: 'string', nullable: false, required: true },
-      ],
-    },
-    {
-      table_name: 'Materials',
-      primary_key: 'material_id',
-      columns: [
-        { name: 'material_id', type: 'string', nullable: false, required: true },
-        { name: 'batch_id', type: 'string', nullable: false, required: true },
-        { name: 'material_form', type: 'string', nullable: false, required: true },
-        { name: 'weight_t', type: 'float', nullable: false, required: true },
-        { name: 'current_stage', type: 'string', nullable: false, required: true },
-      ],
-    },
-    {
-      table_name: 'RecoveryOutputs',
-      primary_key: 'output_id',
-      columns: [
-        { name: 'output_id', type: 'string', nullable: false, required: true },
-        { name: 'material_id', type: 'string', nullable: false, required: true },
-        { name: 'recovery_route', type: 'string', nullable: false, required: true },
-        { name: 'weight_t', type: 'float', nullable: false, required: true },
-        { name: 'gross_value', type: 'float', nullable: true, required: false },
-      ],
-    },
-    {
-      table_name: 'CostLedger',
-      primary_key: 'cost_id',
-      columns: [
-        { name: 'cost_id', type: 'string', nullable: false, required: true },
-        { name: 'batch_id', type: 'string', nullable: false, required: true },
-        { name: 'cost_category', type: 'string', nullable: false, required: true },
-        { name: 'amount', type: 'float', nullable: false, required: true },
-      ],
-    },
-    {
-      table_name: 'ProcessingEvents',
-      primary_key: 'event_id',
-      columns: [
-        { name: 'event_id', type: 'string', nullable: false, required: true },
-        { name: 'batch_id', type: 'string', nullable: false, required: true },
-        { name: 'stage', type: 'string', nullable: false, required: true },
-        { name: 'timestamp', type: 'datetime', nullable: false, required: true },
-      ],
-    },
-    {
-      table_name: 'InspectionEvents',
-      primary_key: 'inspection_id',
-      columns: [
-        { name: 'inspection_id', type: 'string', nullable: false, required: true },
-        { name: 'material_id', type: 'string', nullable: false, required: true },
-        { name: 'result', type: 'string', nullable: false, required: true },
-        { name: 'inspector', type: 'string', nullable: true, required: false },
-      ],
-    },
-  ];
 }

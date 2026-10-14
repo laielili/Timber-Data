@@ -11,21 +11,6 @@ from ..dependencies import get_conn
 router = APIRouter(prefix="/api/new", tags=["upload"])
 
 
-@router.get("/upload/tables", summary="可上传的表及其字段定义")
-def list_tables():
-    return [
-        {
-            "table_name": table,
-            "primary_key": db.UPLOAD_TABLES[table],
-            "columns": [
-                {"name": name, "type": ctype, "nullable": nullable, "required": required}
-                for name, (ctype, nullable, required) in cols.items()
-            ],
-        }
-        for table, cols in db.SCHEMA.items()
-    ]
-
-
 @router.get("/upload/schema/{table}", summary="某张表的字段定义与示例行")
 def table_schema(table: str):
     if table not in db.SCHEMA:

@@ -3,8 +3,8 @@
 `mock.ts` is declared to be the verbatim output of
 `dashboard_service.get_dashboard()`, so the static prototype in `docs/` cannot
 drift away from the real implementation. This script rewrites only the generated
-region — everything from `const SOURCE_TYPES` up to `function endpoint(` — and
-leaves the hand-written tail (mockMeta / mockHealth / mockUploadTables) alone.
+region — everything from `const SOURCE_TYPES` up to `export function mockHealth(`
+— and leaves the hand-written tail (mockHealth) alone.
 
     python scripts/_dump_dashboard.py > .workbuddy/tmp/dash.json
     python scripts/_sync_mock.py .workbuddy/tmp/dash.json
@@ -145,17 +145,15 @@ def main() -> None:
     text = MOCK.read_text(encoding="utf-8")
 
     start = text.index("const SOURCE_TYPES")
-    end = text.index("function endpoint(")
+    end = text.index("export function mockHealth()")
 
     imports = (
         "import type {\n"
-        "  ApiEndpoint,\n"
         "  Chart,\n"
         "  DashboardResponse,\n"
         "  Dimensions,\n"
         "  Guardrail,\n"
         "  Kpi,\n"
-        "  MetaResponse,\n"
         "  NorthStar,\n"
         "  TableSchemaInfo,\n"
         "} from './types';"

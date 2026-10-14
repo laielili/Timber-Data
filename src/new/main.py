@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from . import config, db
-from .routers import ai, dashboard, meta, upload
+from .routers import ai, dashboard, upload
 
 app = FastAPI(
     title="Workbench — 数据工作台",
@@ -39,7 +39,6 @@ def _startup() -> None:
 app.include_router(upload.router)
 app.include_router(dashboard.router)
 app.include_router(ai.router)
-app.include_router(meta.router)
 
 
 @app.get("/health", tags=["system"], summary="健康检查")

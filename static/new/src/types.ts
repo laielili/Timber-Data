@@ -125,19 +125,6 @@ export interface DashboardResponse {
   charts: Chart[];
 }
 
-export interface TableColumn {
-  name: string;
-  type: string;
-  nullable: boolean;
-  required: boolean;
-}
-
-export interface TableSchemaInfo {
-  table_name: string;
-  primary_key: string;
-  columns: TableColumn[];
-}
-
 export interface UploadResult {
   upload_id: string;
   table_name: string;
@@ -147,20 +134,6 @@ export interface UploadResult {
   status: string;
   message: string;
   errors: string[];
-}
-
-export interface ApiEndpoint {
-  method: string;
-  path: string;
-  summary: string;
-  content_type: string;
-  fields: { name: string; type: string; required: boolean; description: string }[];
-  example: string;
-}
-
-export interface MetaResponse {
-  dataset: { tables: Record<string, number>; total_rows: number; last_upload: unknown };
-  api_reference: ApiEndpoint[];
 }
 
 export interface ChatMessage {

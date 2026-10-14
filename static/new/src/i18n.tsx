@@ -8,7 +8,7 @@ const ZH_TO_EN: Record<string, string> = {
   '数据链接': 'Data Connection',
   'AI 助手': 'AI Assistant',
   '指标与图表，右侧筛选维度': 'Metrics & charts, filter on the right',
-  '数据链接与 API 接口': 'Data Connection & API endpoints',
+  '上传与示例数据': 'Upload & sample data',
   '基于已上传数据的对话': 'Chat grounded on your uploaded data',
   '用户数据驱动': 'User-data driven',
   '数据存于 data/workbench.db': 'Data stored in data/workbench.db',
@@ -206,22 +206,6 @@ const ZH_TO_EN: Record<string, string> = {
   '高值回收去向重量占处理量的比例。': 'Share of higher-value recovery route weight within processed volume.',
   '状态为 Unresolved 的物料总重量。': 'Total weight of materials in the Unresolved state.',
 
-  // ---- API reference (backend meta) ----
-  '上传 CSV 到指定表': 'Upload CSV to a table',
-  '上传 JSON 行数据到指定表': 'Upload JSON row data to a table',
-  '上传多表 JSON bundle': 'Upload multi-table JSON bundle',
-  '载入合成示例数据（可选，非预设）': 'Load synthetic sample data (optional, not a preset)',
-  '可上传的表及字段定义': 'Uploadable tables and field definitions',
-  '数据看板（支持维度筛选查询参数）': 'Data dashboard (supports dimension filter params)',
-  'AI 对话（基于已上传数据的问答）': 'AI chat (Q&A on your uploaded data)',
-  '测试 AI 服务连接': 'Test AI service connection',
-  'UTF-8 编码的 CSV，首行为表头': 'UTF-8 CSV with a header row',
-  '目标表名，如 Batches': 'Target table name, e.g. Batches',
-  'append（默认，按主键 upsert）或 replace（清空后写入）': 'append (default, upsert by primary key) or replace (clear then write)',
-  'JSON 文件：{"rows": [...]} 或直接是行数组': 'JSON file: {"rows": [...]} or a raw array of rows',
-  '目标表名': 'Target table name',
-  '会话 ID（可选）': 'Conversation ID (optional)',
-
   // ---- Upload page ----
   '数据工作台': 'Data Workbench',
   '上传符合 timber schema 的数据（CSV / JSON），替换或扩充当前数据集。上传后看板与 AI 自动读取新数据。':
@@ -245,23 +229,7 @@ const ZH_TO_EN: Record<string, string> = {
   '将合成示例数据集（36 批次 · 1239 物料）导入工作台，用于快速体验看板与 AI。这不是预设——由您决定是否载入。工作台已有数据时，按钮会切换为「重置为示例数据」（确认后清空现有数据并重新载入）。':
     'Imports a synthetic sample dataset (36 batches · 1239 materials) into the workbench to quickly explore the dashboard and AI. This is not a preset — you decide whether to load it. When data already exists, the button switches to “Reset to sample data” (clears existing data and reloads after confirmation).',
   '重置为示例数据': 'Reset to sample data',
-  '4. 表结构参考': '4. Table schema reference',
-  '主键：': 'Primary key: ',
-  '字段': 'Field',
-  '类型': 'Type',
   '必填': 'Required',
-  '是': 'Yes',
-  '否': 'No',
-  '5. API 接口 · 文档与测试台': '5. API endpoints · docs & console',
-  '工作台提供真实 REST 端点（文档见 Swagger UI）。下面可直接选择端点并调用。':
-    'The workbench exposes real REST endpoints (docs at Swagger UI). Select and call an endpoint directly below.',
-  '端点': 'Endpoint',
-  '文件': 'File',
-  'curl 示例：': 'curl example: ',
-  '调用': 'Call',
-  '（点击“调用”查看返回结果）': '(click “Call” to see the response)',
-  '执行中…': 'Running…',
-  '错误：': 'Error: ',
   '将清空工作台现有数据并载入示例数据，是否继续？': 'This will clear the workbench’s current data and load the sample data. Continue?',
 
   // ---- Chat page ----

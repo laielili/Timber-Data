@@ -610,8 +610,6 @@ button {
 .filter-field select,
 .config-form input,
 .config-form select,
-.console input,
-.console select,
 .upload-form select,
 .upload-form input {
   width: 100%;
@@ -627,8 +625,6 @@ button {
 .filter-field input:focus,
 .filter-field select:focus,
 .config-form input:focus,
-.console input:focus,
-.console select:focus,
 .upload-form input:focus,
 .upload-form select:focus {
   outline: none;
@@ -709,90 +705,10 @@ button {
   border-color: var(--err-line);
 }
 
-.table-schemas {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.table-schema summary {
-  cursor: pointer;
-  padding: 8px 10px;
-  background: #f0e9d8;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--dark-brown);
-}
-
 .muted {
   color: var(--muted);
   font-weight: 400;
   font-size: 12px;
-}
-
-.schema-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-  font-size: 12px;
-}
-
-.schema-table th,
-.schema-table td {
-  text-align: left;
-  padding: 5px 8px;
-  border-bottom: 1px solid var(--line);
-}
-
-.schema-table th {
-  color: var(--muted);
-  font-weight: 500;
-}
-
-/* ---------- api console ---------- */
-.console {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.console__row label,
-.console__fields > label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--brown);
-}
-
-.console__fields {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.console__example pre {
-  background: #f0e9d8;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 12px;
-  overflow-x: auto;
-  margin: 4px 0 0;
-}
-
-.console__output pre {
-  background: var(--charcoal);
-  color: #f4efe3;
-  border-radius: 9px;
-  padding: 14px;
-  font-size: 12px;
-  max-height: 320px;
-  overflow: auto;
-  margin: 0;
 }
 
 /* ---------- empty state ---------- */
