@@ -18,8 +18,6 @@ import types
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-# `src/` must come first: the project root also holds `new.py`, which would
-# otherwise shadow the `new` package under `src/`.
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 

@@ -1,13 +1,11 @@
 """Workbench — one-command full-stack launcher (new application).
 
 Usage:
-    py new.py serve
+    py main.py serve
 
 Starts the new FastAPI backend (src/new/, http://127.0.0.1:8100) and the new
 Vite frontend (static/new/, http://127.0.0.1:5174) concurrently. Both processes
 are terminated together on exit (Ctrl+C).
-
-The original prototype stack (py main.py serve) is untouched.
 """
 from __future__ import annotations
 

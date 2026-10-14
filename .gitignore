@@ -35,3 +35,7 @@ htmlcov/
 # OS noise
 .DS_Store
 Thumbs.db
+
+#archived
+archived
+SOP.md
